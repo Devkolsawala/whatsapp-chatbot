@@ -1,11 +1,9 @@
 import json
-import numpy as np
-import tensorflow as tf
-from transformers import BertTokenizer
 from langdetect import detect, DetectorFactory
 import re
 from flask import Flask, request, jsonify, render_template_string
 import logging
+from rapidfuzz import fuzz
 
 app = Flask(__name__)
 
@@ -13,20 +11,6 @@ app = Flask(__name__)
 logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger(__name__)
 DetectorFactory.seed = 0
-
-# Load tokenizer and TFLite model
-logger.info("Loading tokenizer and TFLite model...")
-tokenizer = BertTokenizer.from_pretrained('huawei-noah/TinyBERT_General_4L_312D')
-try:
-    interpreter = tf.lite.Interpreter(model_path='finetuned_tinybert_multilingual.tflite')
-    interpreter.allocate_tensors()
-except Exception as e:
-    logger.error(f"Failed to load TFLite model: {e}")
-    exit(1)
-
-# Get input and output details
-input_details = interpreter.get_input_details()
-output_details = interpreter.get_output_details()
 
 # Text normalization
 def normalize(text):
@@ -85,35 +69,31 @@ def detect_language_and_check_greeting(text):
 
     return lang, is_greeting
 
-# TFLite classification
-def classify(text):
-    inputs = tokenizer(
-        text, padding='max_length', truncation=True, max_length=128,
-        return_tensors="np", return_attention_mask=True
-    )
-    input_ids = inputs["input_ids"].astype(np.int32)
-    attention_mask = inputs["attention_mask"].astype(np.int32)
-    interpreter.set_tensor(input_details[0]['index'], input_ids)
-    interpreter.set_tensor(input_details[1]['index'], attention_mask)
-    interpreter.invoke()
-    output = interpreter.get_tensor(output_details[0]['index'])
-    scale, zero_point = output_details[0]['quantization']
-    output = (output.astype(np.float32) - zero_point) * scale
-    return output
-
 # Load FAQ data
 try:
     with open('whatsapp_faq_multilingual.json', 'r', encoding='utf-8') as f:
         faqs = json.load(f)
 except FileNotFoundError:
     logger.error("whatsapp_faq_multilingual.json not found")
-    exit(1)
+    faqs = []  # Fallback to empty list if file is missing
 
-# Process FAQ data
-label_to_answer = {"en": {}, "hi": {}, "id": {}}
+# Prepare FAQ questions for fuzzy matching
+faq_questions = {lang: [] for lang in ["en", "hi", "id"]}
+faq_answers = {lang: {} for lang in ["en", "hi", "id"]}
 for idx, item in enumerate(faqs):
     for lang in ["en", "hi", "id"]:
-        label_to_answer[lang][idx] = item["answer"][lang]
+        faq_questions[lang].append(item["question"][lang])
+        faq_answers[lang][item["question"][lang]] = item["answer"][lang]
+
+# Function to find best match for a question with grammatical tolerance
+def find_best_match(question, lang):
+    normalized_question = normalize(question)
+    if not faq_questions[lang]:
+        return None, 0.0
+    best_match = max(faq_questions[lang], key=lambda x: fuzz.partial_ratio(normalized_question, normalize(x)), default=None)
+    similarity = fuzz.partial_ratio(normalized_question, normalize(best_match)) if best_match else 0.0
+    # Lower threshold to 60 to handle grammatical errors (e.g., missing articles, wrong verb forms)
+    return best_match, similarity if similarity >= 60 else 0.0
 
 # HTML template
 html_template = """
@@ -189,13 +169,14 @@ def chat():
     normalized_input = normalize(user_input)
     if not normalized_input.strip():
         return jsonify({"response": "Please enter a valid question."})
-    probabilities = classify(normalized_input)
-    predicted_label = np.argmax(probabilities, axis=1)[0]
-    confidence = probabilities[0, predicted_label]
-    if confidence >= 0.7:
-        response = label_to_answer[lang].get(predicted_label, "Unknown category")
+
+    # Find the best matching question with tolerance for grammatical errors
+    best_match, similarity = find_best_match(user_input, lang)
+    if best_match and similarity >= 60:  # Lower threshold for grammatical flexibility
+        response = faq_answers[lang][best_match]
     else:
         response = "I'm not sure how to answer that. Try rephrasing your question."
+
     return jsonify({"response": response})
 
 if __name__ == '__main__':
