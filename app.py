@@ -30,18 +30,21 @@ output_details = interpreter.get_output_details()
 
 # Text normalization
 def normalize(text):
-    text = text.lower()
-    text = re.sub(r"[^\w\s?!]", "", text)
-    text = re.sub(r"[!?]+", " ", text)
-    text = re.sub(r"\s+", " ", text)
-    manual_typos = {
-        "helo": "hello", "watsap": "whatsapp", "whastapp": "whatsapp", "downlaod": "download",
-        "हेलो": "नमस्ते", "वाट्सप": "व्हाट्सएप", "डाउनलोड्ड": "डाउनलोड",
-        "halo": "hai", "undh": "unduh", "wa": "whatsapp"
-    }
-    words = text.split()
-    corrected_words = [manual_typos.get(word, word) for word in words]
-    return " ".join(corrected_words).strip()
+    if isinstance(text, str):
+        text = text.lower()
+        # Use Unicode range for Devanagari (Hindi) characters: \u0900-\u097F
+        text = re.sub(r"[^\w\s\u0900-\u097F\!\?]", "", text)  # Preserve Hindi characters
+        text = re.sub(r"[!?]+", " ", text)
+        text = re.sub(r"\s+", " ", text)
+        manual_typos = {
+            "helo": "hello", "watsap": "whatsapp", "whastapp": "whatsapp", "downlaod": "download",
+            "हेलो": "नमस्ते", "वाट्सप": "व्हाट्सएप", "डाउनलोड्ड": "डाउनलोड",
+            "halo": "hai", "undh": "unduh", "wa": "whatsapp"
+        }
+        words = text.split()
+        corrected_words = [manual_typos.get(word, word) for word in words]
+        return " ".join(corrected_words).strip()
+    return text
 
 # Language detection and greeting handling
 english_greetings = {"hi", "hello", "hey", "good morning", "good evening"}
@@ -73,7 +76,7 @@ def detect_language_and_check_greeting(text):
             lang = "en"
 
     # If not a greeting, detect language
-    if not is_greeting:
+    if not is_greeting and normalized_text.strip():
         try:
             lang = detect(text)
             lang = lang if lang in ["hi", "id"] else "en"
@@ -184,6 +187,8 @@ def chat():
         return jsonify({"response": greeting_responses[lang]})
 
     normalized_input = normalize(user_input)
+    if not normalized_input.strip():
+        return jsonify({"response": "Please enter a valid question."})
     probabilities = classify(normalized_input)
     predicted_label = np.argmax(probabilities, axis=1)[0]
     confidence = probabilities[0, predicted_label]
