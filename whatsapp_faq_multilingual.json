@@ -1362,5 +1362,446 @@
       "hi": "ऐप आपके डिवाइस पर पहले से मौजूद मीडिया को सहेजता है। कृपया दूसरों की गोपनीयता का सम्मान करें और सहेजी गई सामग्री साझा करने से पहले अनुमति लें।",
       "id": "Aplikasi menyimpan media yang sudah ada di perangkat Anda. Harap hormati privasi orang lain dan dapatkan izin sebelum membagikan konten yang disimpan."
     }
+  },
+
+  {
+    "question": {
+      "en": "Can I share a saved status directly to other apps?",
+      "hi": "क्या मैं सहेजे गए स्टेटस को सीधे अन्य ऐप्स पर साझा कर सकता हूं?",
+      "id": "Bisakah saya membagikan status yang disimpan langsung ke aplikasi lain?"
+    },
+    "paraphrases": {
+      "en": [
+        "Share saved status to other apps",
+        "Post saved status to different apps",
+        "Can I send status to other platforms",
+        "Directly share downloaded status",
+        "Share WA status to external apps",
+        "Export saved status to other apps",
+        "Send status to other applications",
+        "Share status from app to others"
+      ],
+      "hi": [
+        "सहेजे गए स्टेटस को अन्य ऐप्स पर साझा करें",
+        "सहेजे गए स्टेटस को अलग-अलग ऐप्स पर पोस्ट करें",
+        "क्या मैं स्टेटस को अन्य प्लेटफॉर्म पर भेज सकता हूं",
+        "डाउनलोड किए गए स्टेटस को सीधे साझा करें",
+        "WA स्टेटस को बाहरी ऐप्स पर साझा करें",
+        "सहेजे गए स्टेटस को अन्य ऐप्स पर निर्यात करें",
+        "स्टेटस को अन्य एप्लिकेशन पर भेजें",
+        "ऐप से स्टेटस को दूसरों के साथ साझा करें"
+      ],
+      "id": [
+        "Bagikan status tersimpan ke aplikasi lain",
+        "Posting status tersimpan ke aplikasi berbeda",
+        "Bisakah saya mengirim status ke platform lain",
+        "Bagikan status yang diunduh langsung",
+        "Bagikan status WA ke aplikasi eksternal",
+        "Ekspor status tersimpan ke aplikasi lain",
+        "Kirim status ke aplikasi lain",
+        "Bagikan status dari aplikasi ke yang lain"
+      ]
+    },
+    "answer": {
+      "en": "Yes, after saving a status, tap the share icon in the app to send it to other apps like Instagram, Facebook, or email.",
+      "hi": "हां, स्टेटस सहेजने के बाद, ऐप में शेयर आइकन पर टैप करें ताकि इसे इंस्टाग्राम, फेसबुक, या ईमेल जैसे अन्य ऐप्स पर भेजा जा सके।",
+      "id": "Ya, setelah menyimpan status, ketuk ikon bagikan di aplikasi untuk mengirimnya ke aplikasi lain seperti Instagram, Telegram, atau email."
+    }
+  },
+  {
+    "question": {
+      "en": "Does the app support saving statuses from WhatsApp groups?",
+      "hi": "क्या ऐप व्हाट्सएप समूहों से स्टेटस सहेजने का समर्थन करता है?",
+      "id": "Apakah aplikasi mendukung penyimpanan status dari grup WhatsApp?"
+    },
+    "paraphrases": {
+      "en": [
+        "Save statuses from WhatsApp groups",
+        "Download group status on WhatsApp",
+        "Can I get group statuses",
+        "Store statuses from WA groups",
+        "Support for group status downloads",
+        "Capture WhatsApp group statuses",
+        "Save status from group chats",
+        "Download statuses in WhatsApp groups"
+      ],
+      "hi": [
+        "व्हाट्स समूहों से स्टेटस सहेजें",
+        "व्हाट्सएप पर समूह स्टेटस डाउनलोड करें",
+        "क्या मैं समूह स्टेटस प्राप्त कर सकता हूं",
+        "WA समूहों से स्टेटस स्टोर करें",
+        "समूह स्टेटस डाउनलोड के लिए समर्थन",
+        "व्हाट्स समूह स्टेटस कैप्चर करें",
+        "समूह चैट्स से स्टेटस सहेजें",
+        "व्हाट्स समूहों में स्टेटस डाउनलोड करें"
+      ],
+      "id": [
+        "Simpan status dari grup WhatsApp",
+        "Unduh status grup di WhatsApp",
+        "Bisakah saya mendapatkan status grup",
+        "Simpan status dari grup WA",
+        "Dukungan untuk unduhan status grup",
+        "Tangkap status grup WhatsApp",
+        "Simpan status dari obrolan grup",
+        "Unduh status di grup WhatsApp"
+      ]
+    },
+    "answer": {
+      "en": "Yes, you can save statuses posted by group members, provided you have viewed them in WhatsApp.",
+      "hi": "हां, आप समूह के सदस्यों द्वारा पोस्ट किए गए स्टेटस को सहेज सकते हैं, बशर्ते आपने उन्हें व्हाट्सएप में देखा हो।",
+      "id": "Ya, Anda bisa menyimpan status yang diposting oleh anggota grup, asalkan Anda telah melihatnya di WhatsApp."
+    }
+  },
+  {
+    "question": {
+      "en": "Why does the app take so long to load statuses?",
+      "hi": "ऐप स्टेटस लोड करने में इतना समय क्यों लेता है?",
+      "id": "Mengapa aplikasi lama memuat status?"
+    },
+    "paraphrases": {
+      "en": [
+        "Slow status loading in app",
+        "Why is app slow to show statuses",
+        "App takes time to load statuses",
+        "Delay in loading WhatsApp statuses",
+        "Why does status loading take long",
+        "App is slow to display statuses",
+        "Long wait for status loading",
+        "Status load time is too long"
+      ],
+      "hi": [
+        "ऐप में स्टेटस लोडिंग धीमी",
+        "ऐप स्टेटस दिखाने में धीमा क्यों है",
+        "ऐप स्टेटस लोड करने में समय लेता है",
+        "व्हाट्सएप स्टेटस लोडिंग में देरी",
+        "स्टेटस लोडिंग में समय क्यों लगता है",
+        "ऐप स्टेटस प्रदर्शित करने में धीमा है",
+        "स्टेटस लोडिंग के लिए लंबा इंतजार",
+        "स्टेटस लोड समय बहुत लंबा है"
+      ],
+      "id": [
+        "Pemuatan status lambat di aplikasi",
+        "Mengapa aplikasi lambat menampilkan status",
+        "Aplikasi membutuhkan waktu untuk memuat status",
+        "Keterlambatan dalam memuat status WhatsApp",
+        "Mengapa pemuatan status lama",
+        "Aplikasi lambat menampilkan status",
+        "Menunggu lama untuk pemuatan status",
+        "Waktu muat status terlalu lama"
+      ]
+    },
+    "answer": {
+      "en": "Slow loading may be due to a large number of statuses or limited device storage. Clear some space or restart the app to improve performance.",
+      "hi": "धीमी लोडिंग का कारण बड़ी संख्या में स्टेटस या सीमित डिवाइस स्टोरेज हो सकता है। कुछ जगह खाली करें या ऐप को पुनरारंभ करें।",
+      "id": "Pemuatan lambat mungkin karena jumlah status yang banyak atau penyimpanan perangkat terbatas. Kosongkan ruang atau mulai ulang aplikasi untuk meningkatkan kinerja."
+    }
+  },
+  {
+    "question": {
+      "en": "Can I save statuses on my computer using this app?",
+      "hi": "क्या मैं इस ऐप का उपयोग करके अपने कंप्यूटर पर स्टेटस सहेज सकता हूं?",
+      "id": "Bisakah saya menyimpan status di komputer menggunakan aplikasi ini?"
+    },
+    "paraphrases": {
+      "en": [
+        "Save WhatsApp statuses on PC",
+        "Download statuses to computer",
+        "Can I use app on computer",
+        "Store statuses on my PC",
+        "Save WA statuses via desktop",
+        "Download statuses using PC app",
+        "Use app to save statuses on computer",
+        "Transfer statuses to computer"
+      ],
+      "hi": [
+        "व्हाट्सएप स्टेटस को पीसी पर सहेजें",
+        "कंप्यूटर पर स्टेटस डाउनलोड करें",
+        "क्या मैं कंप्यूटर पर ऐप उपयोग कर सकता हूं",
+        "मेरे पीसी पर स्टेटस स्टोर करें",
+        "डेस्कटॉप के माध्यम से WA स्टेटस सहेजें",
+        "पीसी ऐप का उपयोग करके स्टेटस डाउनलोड करें",
+        "ऐप का उपयोग करके कंप्यूटर पर स्टेटस सहेजें",
+        "कंप्यूटर पर स्टेटस स्थानांतरित करें"
+      ],
+      "id": [
+        "Simpan status WhatsApp di PC",
+        "Unduh status ke komputer",
+        "Bisakah saya menggunakan aplikasi di komputer",
+        "Simpan status di PC saya",
+        "Simpan status WA melalui desktop",
+        "Unduh status menggunakan aplikasi PC",
+        "Gunakan aplikasi untuk menyimpan status di komputer",
+        "Transfer status ke komputer"
+      ]
+    },
+    "answer": {
+      "en": "No, the app is designed for mobile devices only. To save statuses on a computer, transfer saved files from your phone.",
+      "hi": "नहीं, यह ऐप केवल मोबाइल डिवाइस के लिए डिज़ाइन किया गया है। कंप्यूटर पर स्टेटस सहेजने के लिए, अपने फोन से सहेजी गई फाइलें स्थानांतरित करें।",
+      "id": "Tidak, aplikasi ini hanya dirancang untuk perangkat seluler. Untuk menyimpan status di komputer, transfer file yang disimpan dari ponsel Anda."
+    }
+  },
+  {
+    "question": {
+      "en": "How do I update the app to the latest version?",
+      "hi": "मैं ऐप को नवीनतम संस्करण में कैसे अपडेट करूं?",
+      "id": "Bagaimana cara memperbarui aplikasi ke versi terbaru?"
+    },
+    "paraphrases": {
+      "en": [
+        "Update app to newest version",
+        "How to get latest app version",
+        "Install app’s latest update",
+        "Upgrade app to current version",
+        "Download new app version",
+        "How to update status saver app",
+        "Get the latest app release",
+        "Update to recent app version"
+      ],
+      "hi": [
+        "ऐप को नवीनतम संस्करण में अपडेट करें",
+        "नवीनतम ऐप संस्करण कैसे प्राप्त करें",
+        "ऐप का नवीनतम अपडेट स्थापित करें",
+        "ऐप को वर्तमान संस्करण में अपग्रेड करें",
+        "नया ऐप संस्करण डाउनलोड करें",
+        "स्टेटस सेवर ऐप को कैसे अपडेट करें",
+        "नवीनतम ऐप रिलीज़ प्राप्त करें",
+        "हाल के ऐप संस्करण में अपडेट करें"
+      ],
+      "id": [
+        "Perbarui aplikasi ke versi terbaru",
+        "Cara mendapatkan versi aplikasi terbaru",
+        "Pasang pembaruan terbaru aplikasi",
+        "Tingkatkan aplikasi ke versi saat ini",
+        "Unduh versi aplikasi baru",
+        "Cara memperbarui aplikasi penghemat status",
+        "Dapatkan rilis aplikasi terbaru",
+        "Perbarui ke versi aplikasi terbaru"
+      ]
+    },
+    "answer": {
+      "en": "Go to the Play Store, search for the app, and tap 'Update' if available. Enable auto-updates for future releases.",
+      "hi": "प्ले स्टोर पर जाएं, ऐप खोजें, और यदि उपलब्ध हो तो 'अपडेट' पर टैप करें। भविष्य के रिलीज़ के लिए ऑटो-अपडेट सक्षम करें।",
+      "id": "Buka Play Store, cari aplikasi, dan ketuk 'Perbarui' jika tersedia. Aktifkan pembaruan otomatis untuk rilis mendatang."
+    }
+  },
+  {
+    "question": {
+      "en": "Can I save statuses in a different format, like MP4 or JPEG?",
+      "hi": "क्या मैं स्टेटस को अलग प्रारूप में, जैसे MP4 या JPEG में सहेज सकता हूं?",
+      "id": "Bisakah saya menyimpan status dalam format lain, seperti MP4 atau JPEG?"
+    },
+    "paraphrases": {
+      "en": [
+        "Save statuses in MP4 or JPEG",
+        "Change status save format",
+        "Download statuses in different formats",
+        "Can I convert status to MP4",
+        "Save WA status as JPEG",
+        "Store statuses in other formats",
+        "Export status in MP4 format",
+        "Different file formats for statuses"
+      ],
+      "hi": [
+        "स्टेटस को MP4 या JPEG में सहेजें",
+        "स्टेटस सहेजने का प्रारूप बदलें",
+        "स्टेटस को अलग प्रारूप में डाउनलोड करें",
+        "क्या मैं स्टेटस को MP4 में बदल सकता हूं",
+        "WA स्टेटस को JPEG के रूप में सहेजें",
+        "स्टेटस को अन्य प्रारूपों में स्टोर करें",
+        "स्टेटस को MP4 प्रारूप में निर्यात करें",
+        "स्टेटस के लिए अलग फाइल प्रारूप"
+      ],
+      "id": [
+        "Simpan status dalam MP4 atau JPEG",
+        "Ubah format penyimpanan status",
+        "Unduh status dalam format berbeda",
+        "Bisakah saya mengonversi status ke MP4",
+        "Simpan status WA sebagai JPEG",
+        "Simpan status dalam format lain",
+        "Ekspor status dalam format MP4",
+        "Format file berbeda untuk status"
+      ]
+    },
+    "answer": {
+      "en": "The app saves statuses in their original format (e.g., MP4 for videos, JPEG for images). Conversion to other formats is not supported.",
+      "hi": "ऐप स्टेटस को उनके मूल प्रारूप में सहेजता है (जैसे, वीडियो के लिए MP4, छवियों के लिए JPEG)। अन्य प्रारूपों में रूपांतरण समर्थित नहीं है।",
+      "id": "Aplikasi menyimpan status dalam format aslinya (misalnya, MP4 untuk video, JPEG untuk gambar). Konversi ke format lain tidak didukung."
+    }
+  },
+  {
+    "question": {
+      "en": "Why are some statuses not showing in the app?",
+      "hi": "कुछ स्टेटस ऐप में क्यों नहीं दिख रहे हैं?",
+      "id": "Mengapa beberapa status tidak muncul di aplikasi?"
+    },
+    "paraphrases": {
+      "en": [
+        "Statuses missing in app",
+        "Why don’t all statuses appear",
+        "Some statuses not visible",
+        "App not showing all statuses",
+        "Missing WhatsApp statuses in app",
+        "Why are statuses hidden in app",
+        "Not all statuses displayed",
+        "Statuses not loading in app"
+      ],
+      "hi": [
+        "ऐप में स्टेटस गायब हैं",
+        "सभी स्टेटस क्यों नहीं दिखते",
+        "कुछ स्टेटस दिखाई नहीं दे रहे",
+        "ऐप सभी स्टेटस नहीं दिखा रहा",
+        "ऐप में व्हाट्सएप स्टेटस गायब",
+        "ऐप में स्टेटस क्यों छिपे हैं",
+        "सभी स्टेटस प्रदर्शित नहीं हो रहे",
+        "ऐप में स्टेटस लोड नहीं हो रहे"
+      ],
+      "id": [
+        "Status hilang di aplikasi",
+        "Mengapa tidak semua status muncul",
+        "Beberapa status tidak terlihat",
+        "Aplikasi tidak menampilkan semua status",
+        "Status WhatsApp hilang di aplikasi",
+        "Mengapa status tersembunyi di aplikasi",
+        "Tidak semua status ditampilkan",
+        "Status tidak dimuat di aplikasi"
+      ]
+    },
+    "answer": {
+      "en": "Ensure you’ve viewed the statuses in WhatsApp first. Also, check if the app has storage permissions and is updated to the latest version.",
+      "hi": "सुनिश्चित करें कि आपने पहले व्हाट्सएप में स्टेटस देखे हैं। साथ ही, जांचें कि ऐप को स्टोरेज अनुमति है और यह नवीनतम संस्करण में अपडेट है।",
+      "id": "Pastikan Anda telah melihat status di WhatsApp terlebih dahulu. Juga, periksa apakah aplikasi memiliki izin penyimpanan dan diperbarui ke versi terbaru."
+    }
+  },
+  {
+    "question": {
+      "en": "Can I recover a status I accidentally deleted from the app?",
+      "hi": "क्या मैं ऐप से गलती से हटाए गए स्टेटस को रिकवर कर सकता हूं?",
+      "id": "Bisakah saya memulihkan status yang tidak sengaja dihapus dari aplikasi?"
+    },
+    "paraphrases": {
+      "en": [
+        "Recover deleted status from app",
+        "Restore accidentally deleted status",
+        "Can I get back deleted statuses",
+        "Undo status deletion in app",
+        "Retrieve deleted WA statuses",
+        "Recover lost statuses in app",
+        "Get back removed statuses",
+        "Restore statuses deleted by mistake"
+      ],
+      "hi": [
+        "ऐप से हटाए गए स्टेटस को रिकवर करें",
+        "गलती से हटाए गए स्टेटस को पुनर्स्थापित करें",
+        "क्या मैं हटाए गए स्टेटस वापस पा सकता हूं",
+        "ऐप में स्टेटस हटाने को पूर्ववत करें",
+        "हटाए गए WA स्टेटस पुनर्प्राप्त करें",
+        "ऐप में खोए हुए स्टेटस रिकवर करें",
+        "हटाए गए स्टेटस वापस लें",
+        "गलती से हटाए गए स्टेटस पुनर्स्थापित करें"
+      ],
+      "id": [
+        "Pulihkan status yang dihapus dari aplikasi",
+        "Kembalikan status yang dihapus secara tidak sengaja",
+        "Bisakah saya mengembalikan status yang dihapus",
+        "Batalkan penghapusan status di aplikasi",
+        "Ambil kembali status WA yang dihapus",
+        "Pulihkan status yang hilang di aplikasi",
+        "Kembalikan status yang dihapus",
+        "Kembalikan status yang dihapus karena kesalahan"
+      ]
+    },
+    "answer": {
+      "en": "No, once a status is deleted from the app, it cannot be recovered unless you have a backup of the saved file.",
+      "hi": "नहीं, एक बार ऐप से स्टेटस हटा दिए जाने के बाद, इसे रिकवर नहीं किया जा सकता जब तक कि आपके पास सहेजी गई फाइल का बैकअप न हो।",
+      "id": "Tidak, setelah status dihapus dari aplikasi, itu tidak dapat dipulihkan kecuali Anda memiliki cadangan file yang disimpan."
+    }
+  },
+  {
+    "question": {
+      "en": "Does the app work with iOS devices?",
+      "hi": "क्या यह ऐप iOS डिवाइस के साथ काम करता है?",
+      "id": "Apakah aplikasi ini berfungsi dengan perangkat iOS?"
+    },
+    "paraphrases": {
+      "en": [
+        "Is app compatible with iOS",
+        "Works on iPhone devices",
+        "Can I use app on iOS",
+        "Support for iOS status saver",
+        "App functionality on iOS",
+        "Does it work on Apple devices",
+        "Save statuses on iOS",
+        "iOS compatibility for app"
+      ],
+      "hi": [
+        "क्या ऐप iOS के साथ संगत है",
+        "iPhone डिवाइस पर काम करता है",
+        "क्या मैं iOS पर ऐप उपयोग कर सकता हूं",
+        "iOS स्टेटस सेवर के लिए समर्थन",
+        "iOS पर ऐप कार्यक्षमता",
+        "क्या यह Apple डिवाइस पर काम करता है",
+        "iOS पर स्टेटस सहेजें",
+        "ऐप के लिए iOS संगतता"
+      ],
+      "id": [
+        "Apakah aplikasi kompatibel dengan iOS",
+        "Berfungsi di perangkat iPhone",
+        "Bisakah saya menggunakan aplikasi di iOS",
+        "Dukungan untuk penghemat status iOS",
+        "Fungsi aplikasi di iOS",
+        "Apakah berfungsi di perangkat Apple",
+        "Simpan status di iOS",
+        "Kompatibilitas iOS untuk aplikasi"
+      ]
+    },
+    "answer": {
+      "en": "Currently, the app is available only for Android devices. An iOS version is not supported at this time.",
+      "hi": "वर्तमान में, यह ऐप केवल एंड्रॉइड डिवाइस के लिए उपलब्ध है। iOS संस्करण अभी समर्थित नहीं है।",
+      "id": "Saat ini, aplikasi hanya tersedia untuk perangkat Android. Versi iOS belum didukung saat ini."
+    }
+  },
+  {
+    "question": {
+      "en": "How do I contact support if I have an issue with the app?",
+      "hi": "ऐप में समस्या होने पर मैं सपोर्ट से कैसे संपर्क करूं?",
+      "id": "Bagaimana cara menghubungi dukungan jika saya memiliki masalah dengan aplikasi?"
+    },
+    "paraphrases": {
+      "en": [
+        "Reach app support for issues",
+        "Contact help for app problems",
+        "How to get app support",
+        "Connect with app support team",
+        "Support contact for app issues",
+        "Get help for app troubles",
+        "How to reach customer support",
+        "App issue support contact"
+      ],
+      "hi": [
+        "समस्याओं के लिए ऐप सपोर्ट तक पहुंचें",
+        "ऐप समस्याओं के लिए सहायता से संपर्क करें",
+        "ऐप सपोर्ट कैसे प्राप्त करें",
+        "ऐप सपोर्ट टीम से कनेक्ट करें",
+        "ऐप समस्याओं के लिए सपोर्ट संपर्क",
+        "ऐप परेशानियों के लिए सहायता प्राप्त करें",
+        "ग्राहक सहायता तक कैसे पहुंचें",
+        "ऐप समस्या सपोर्ट संपर्क"
+      ],
+      "id": [
+        "Hubungi dukungan aplikasi untuk masalah",
+        "Kontak bantuan untuk masalah aplikasi",
+        "Cara mendapatkan dukungan aplikasi",
+        "Terhubung dengan tim dukungan aplikasi",
+        "Kontak dukungan untuk masalah aplikasi",
+        "Dapatkan bantuan untuk masalah aplikasi",
+        "Cara menghubungi dukungan pelanggan",
+        "Kontak dukungan masalah aplikasi"
+      ]
+    },
+    "answer": {
+      "en": "Go to the app’s Settings > Contact Us, or email our support team at the address listed in the Play Store description.",
+      "hi": "ऐप की सेटिंग्स > हमसे संपर्क करें पर जाएं, या प्ले स्टोर विवरण में सूचीबद्ध पते पर हमारी सपोर्ट टीम को ईमेल करें।",
+      "id": "Buka Pengaturan aplikasi > Hubungi Kami, atau kirim email ke tim dukungan kami di alamat yang tercantum di deskripsi Play Store."
+    }
   }
 ]
