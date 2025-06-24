@@ -1,882 +1,1366 @@
- [
+[
   {
     "question": {
-      "en": "How can I save a status without viewing it in WhatsApp first?",
-      "hi": "मैं व्हाट्सएप में पहले देखे बिना स्टेटस कैसे सहेज सकता हूं?",
-      "id": "Bagaimana cara menyimpan status tanpa melihatnya di WhatsApp terlebih dahulu?"
+      "en": "How do I save a video status from my friend?",
+      "hi": "मैं अपने दोस्त का वीडियो स्टेटस कैसे सहेजूं?",
+      "id": "Bagaimana cara menyimpan status video dari teman saya?"
     },
     "paraphrases": {
       "en": [
-        "save status without opening it",
-        "download status without watching",
-        "how to grab status without viewing",
-        "bypass viewing to save WA status",
-        "save unseen whatsapp status",
-        "get status without checking it",
-        "download story without seeing it",
-        "save status directly"
+        "Save a friend’s video status",
+        "Download video status from a contact",
+        "How to get a friend’s WhatsApp video",
+        "Save WhatsApp video status",
+        "Store friend’s status video",
+        "Download status video from WhatsApp",
+        "Capture video status from friend",
+        "Save video story from contact"
       ],
       "hi": [
-        "बिना खोले स्टेटस सहेजें",
-        "बिना देखे स्टेटस डाउनलोड करें",
-        "बिना देखे स्टेटस कैसे लें",
-        "देखने को बायपास करके WA स्टेटस सहेजें",
-        "बिना देखा व्हाट्सएप स्टेटस सहेजें",
-        "बिना चेक किए स्टेटस प्राप्त करें",
-        "बिना देखे स्टोरी डाउनलोड करें",
-        "सीधे स्टेटस सहेजें"
+        "दोस्त का वीडियो स्टेटस सहेजें",
+        "संपर्क से वीडियो स्टेटस डाउनलोड करें",
+        "व्हाट्सएप वीडियो स्टेटस कैसे प्राप्त करें",
+        "व्हाट्सएप वीडियो स्टेटस सहेजें",
+        "दोस्त के स्टेटस वीडियो को स्टोर करें",
+        "व्हाट्सएप से स्टेटस वीडियो डाउनलोड करें",
+        "दोस्त से वीडियो स्टेटस कैप्चर करें",
+        "संपर्क से वीडियो स्टोरी सहेजें"
       ],
       "id": [
-        "simpan status tanpa membukanya",
-        "unduh status tanpa menonton",
-        "cara mengambil status tanpa melihat",
-        "lewati penayangan untuk menyimpan status WA",
-        "simpan status whatsapp yang belum dilihat",
-        "dapatkan status tanpa memeriksanya",
-        "unduh cerita tanpa melihatnya",
-        "simpan status langsung"
+        "Simpan status video teman",
+        "Unduh status video dari kontak",
+        "Cara mendapatkan video WhatsApp teman",
+        "Simpan status video WhatsApp",
+        "Simpan video status teman",
+        "Unduh video status dari WhatsApp",
+        "Tangkap status video dari teman",
+        "Simpan cerita video dari kontak"
       ]
     },
     "answer": {
-      "en": "Currently, you must view the status in WhatsApp before it appears in our Status Saver app for downloading, as the app accesses the temporary files created after viewing.",
-      "hi": "वर्तमान में, आपको स्टेटस को व्हाट्सएप में देखना होगा तभी वह हमारे स्टेटस सेवर ऐप में डाउनलोड के लिए दिखाई देगा, क्योंकि ऐप देखने के बाद बनने वाली अस्थायी फाइलों तक पहुंचता है।",
-      "id": "Saat ini, Anda harus melihat status di WhatsApp sebelum muncul di aplikasi Penghemat Status kami untuk diunduh, karena aplikasi mengakses file sementara yang dibuat setelah dilihat."
+      "en": "View the full status in WhatsApp. Then open our app — you’ll see the viewed statuses. Tap the download icon to save.",
+      "hi": "व्हाट्सएप में पूरा स्टेटस देखें। फिर हमारा ऐप खोलें — आपको देखे गए स्टेटस दिखाई देंगे। डाउनलोड आइकन पर टैप करके सहेजें।",
+      "id": "Lihat status lengkap di WhatsApp. Kemudian buka aplikasi kami — Anda akan melihat status yang telah dilihat. Ketuk ikon unduh untuk menyimpan."
     }
   },
   {
     "question": {
-      "en": "Can I save statuses from blocked contacts?",
-      "hi": "क्या मैं ब्लॉक किए गए संपर्कों के स्टेटस सहेज सकता हूं?",
-      "id": "Bisakah saya menyimpan status dari kontak yang diblokir?"
+      "en": "Can I download pictures and GIFs?",
+      "hi": "क्या मैं तस्वीरें और GIF डाउनलोड कर सकता हूं?",
+      "id": "Bisakah saya mengunduh gambar dan GIF?"
     },
     "paraphrases": {
       "en": [
-        "download status from blocked user",
-        "save WA status from blocked contact",
-        "get status of someone I blocked",
-        "save story from blocked person",
-        "access blocked contact status",
-        "download blocked user’s story",
-        "save status after blocking",
-        "grab status from restricted contact"
+        "Save images and GIFs from statuses",
+        "Download WhatsApp photos and GIFs",
+        "Can I get pictures from statuses",
+        "Store WhatsApp GIFs and images",
+        "Download media from WA statuses",
+        "Save status photos and animations",
+        "Grab pictures and GIFs from WhatsApp",
+        "Can I download status images"
       ],
       "hi": [
-        "ब्लॉक किए गए उपयोगकर्ता का स्टेटस डाउनलोड करें",
-        "ब्लॉक किए गए संपर्क का WA स्टेटस सहेजें",
-        "मैंने जिसे ब्लॉक किया उसका स्टेटस प्राप्त करें",
-        "ब्लॉक किए गए व्यक्ति की स्टोरी सहेजें",
-        "ब्लॉक किए गए संपर्क के स्टेटस तक पहुंचें",
-        "ब्लॉक किए गए उपयोगकर्ता की स्टोरी डाउनलोड करें",
-        "ब्लॉक करने के बाद स्टेटस सहेजें",
-        "प्रतिबंधित संपर्क से स्टेटस लें"
+        "स्टेटस से तस्वीरें और GIF सहेजें",
+        "व्हाट्सएप फोटो और GIF डाउनलोड करें",
+        "क्या मैं स्टेटस से तस्वीरें प्राप्त कर सकता हूं",
+        "व्हाट्सएप GIF और तस्वीरें स्टोर करें",
+        "WA स्टेटस से मीडिया डाउनलोड करें",
+        "स्टेटस फोटो और एनिमेशन सहेजें",
+        "व्हाट्सएप से तस्वीरें और GIF लें",
+        "क्या मैं स्टेटस छवियां डाउनलोड कर सकता हूं"
       ],
       "id": [
-        "unduh status dari pengguna yang diblokir",
-        "simpan status WA dari kontak yang diblokir",
-        "dapatkan status seseorang yang saya blokir",
-        "simpan cerita dari orang yang diblokir",
-        "akses status kontak yang diblokir",
-        "unduh cerita pengguna yang diblokir",
-        "simpan status setelah memblokir",
-        "ambil status dari kontak yang dibatasi"
+        "Simpan gambar dan GIF dari status",
+        "Unduh foto dan GIF WhatsApp",
+        "Bisakah saya mendapatkan gambar dari status",
+        "Simpan GIF dan gambar WhatsApp",
+        "Unduh media dari status WA",
+        "Simpan foto dan animasi status",
+        "Ambil gambar dan GIF dari WhatsApp",
+        "Bisakah saya mengunduh gambar status"
       ]
     },
     "answer": {
-      "en": "No, you cannot save statuses from blocked contacts, as WhatsApp restricts access to their content, and our app can only access statuses visible to you.",
-      "hi": "नहीं, आप ब्लॉक किए गए संपर्कों के स्टेटस सहेज नहीं सकते, क्योंकि व्हाट्सएप उनके सामग्री तक पहुंच को प्रतिबंधित करता है, और हमारा ऐप केवल आपके लिए दृश्यमान स्टेटस तक पहुंच सकता है।",
-      "id": "Tidak, Anda tidak bisa menyimpan status dari kontak yang diblokir, karena WhatsApp membatasi akses ke konten mereka, dan aplikasi kami hanya bisa mengakses status yang terlihat oleh Anda."
+      "en": "Yes, our app supports downloading photos, videos, audio, and GIFs from WhatsApp statuses.",
+      "hi": "हां, हमारा ऐप व्हाट्सएप स्टेटस से तस्वीरें, वीडियो, ऑडियो और GIF डाउनलोड करने का समर्थन करता है।",
+      "id": "Ya, aplikasi kami mendukung pengunduhan foto, video, audio, dan GIF dari status WhatsApp."
     }
   },
   {
     "question": {
-      "en": "How do I save a status to an SD card instead of internal storage?",
-      "hi": "मैं स्टेटस को आंतरिक भंडारण के बजाय SD कार्ड में कैसे सहेजूं?",
-      "id": "Bagaimana cara menyimpan status ke kartu SD alih-alih penyimpanan internal?"
+      "en": "I forgot to save a status from two days ago. Is it too late?",
+      "hi": "मैं दो दिन पहले का स्टेटस सहेजना भूल गया। क्या अब देर हो चुकी है?",
+      "id": "Saya lupa menyimpan status dari dua hari lalu. Apakah sudah terlambat?"
     },
     "paraphrases": {
       "en": [
-        "store status on SD card",
-        "save WA status to external storage",
-        "download status to memory card",
-        "move status to SD card",
-        "save story on external SD",
-        "set SD card as status storage",
-        "save status outside internal memory",
-        "download status to SD"
+        "Can I save an old status from two days ago",
+        "Is it possible to download a status after two days",
+        "Recover a status I forgot to save",
+        "Save a status from a couple of days back",
+        "Is it too late for an old status",
+        "Download a status I missed two days ago",
+        "Get a status from two days earlier",
+        "Can I still save past statuses"
       ],
       "hi": [
-        "SD कार्ड पर स्टेटस स्टोर करें",
-        "WA स्टेटस को बाहरी भंडारण में सहेजें",
-        "मेमोरी कार्ड में स्टेटस डाउनलोड करें",
-        "SD कार्ड में स्टेटस स्थानांतरित करें",
-        "बाहरी SD पर स्टोरी सहेजें",
-        "SD कार्ड को स्टेटस भंडारण के रूप में सेट करें",
-        "आंतरिक मेमोरी के बाहर स्टेटस सहेजें",
-        "SD में स्टेटस डाउनलोड करें"
+        "क्या मैं दो दिन पुराना स्टेटस सहेज सकता हूं",
+        "दो दिन बाद स्टेटस डाउनलोड करना संभव है",
+        "मैंने जो स्टेटस सहेजना भूला उसे रिकवर करें",
+        "कुछ दिन पुराने स्टेटस को सहेजें",
+        "पुराने स्टेटस के लिए देर हो गई है",
+        "दो दिन पहले छूटे स्टेटस को डाउनलोड करें",
+        "दो दिन पहले का स्टेटस प्राप्त करें",
+        "क्या मैं अभी भी पुराने स्टेटस सहेज सकता हूं"
       ],
       "id": [
-        "simpan status di kartu SD",
-        "simpan status WA ke penyimpanan eksternal",
-        "unduh status ke kartu memori",
-        "pindahkan status ke kartu SD",
-        "simpan cerita di SD eksternal",
-        "tetapkan kartu SD sebagai penyimpanan status",
-        "simpan status di luar memori internal",
-        "unduh status ke SD"
+        "Bisakah saya menyimpan status lama dari dua hari lalu",
+        "Apakah mungkin mengunduh status setelah dua hari",
+        "Pulihkan status yang lupa saya simpan",
+        "Simpan status dari beberapa hari lalu",
+        "Apakah terlambat untuk status lama",
+        "Unduh status yang terlewat dua hari lalu",
+        "Dapatkan status dari dua hari sebelumnya",
+        "Bisakah saya masih menyimpan status lama"
       ]
     },
     "answer": {
-      "en": "In the Status Saver app, go to Settings and look for the 'Storage Location' option. Select your SD card as the default save location if your device supports it.",
-      "hi": "स्टेटस सेवर ऐप में, सेटिंग्स में जाएं और 'भंडारण स्थान' विकल्प देखें। यदि आपका डिवाइस समर्थन करता है तो अपने SD कार्ड को डिफ़ॉल्ट सहेजने के स्थान के रूप में चुनें।",
-      "id": "Di aplikasi Penghemat Status, buka Pengaturan dan cari opsi 'Lokasi Penyimpanan'. Pilih kartu SD Anda sebagai lokasi penyimpanan default jika perangkat Anda mendukungnya."
+      "en": "No, you can still save any status viewed within the last 7 days using the “7 Days older status” button.",
+      "hi": "नहीं, आप पिछले 7 दिनों में देखे गए किसी भी स्टेटस को “7 दिन पुराना स्टेटस” बटन का उपयोग करके सहेज सकते हैं।",
+      "id": "Tidak, Anda masih bisa menyimpan status yang dilihat dalam 7 hari terakhir menggunakan tombol “Status lebih lama 7 hari”."
     }
   },
   {
     "question": {
-      "en": "Why does the app ask for access to my contacts?",
-      "hi": "ऐप मेरे संपर्कों तक पहुंच क्यों मांगता है?",
-      "id": "Mengapa aplikasi meminta akses ke kontak saya?"
+      "en": "How can I save statuses automatically?",
+      "hi": "मैं स्टेटस को स्वचालित रूप से कैसे सहेज सकता हूं?",
+      "id": "Bagaimana cara menyimpan status secara otomatis?"
     },
     "paraphrases": {
       "en": [
-        "why need contact permission",
-        "app wants contacts access",
-        "reason for contacts permission",
-        "why does status saver need contacts",
-        "contact access for WA status",
-        "why app reads my contacts",
-        "status app contact permission",
-        "purpose of contacts access"
+        "Set up automatic status saving",
+        "Auto-download WhatsApp statuses",
+        "Enable auto-save for statuses",
+        "Save statuses without manual download",
+        "How to automatically store statuses",
+        "Download statuses automatically",
+        "Auto-capture WhatsApp statuses",
+        "Make status saving automatic"
       ],
       "hi": [
-        "संपर्क अनुमति क्यों चाहिए",
-        "ऐप संपर्कों तक पहुंच चाहता है",
-        "संपर्क अनुमति का कारण",
-        "स्टेटस सेवर को संपर्कों की आवश्यकता क्यों है",
-        "WA स्टेटस के लिए संपर्क एक्सेस",
-        "ऐप मेरे संपर्क क्यों पढ़ता है",
-        "स्टेटस ऐप संपर्क अनुमति",
-        "संपर्क एक्सेस का उद्देश्य"
+        "स्वचालित स्टेटस सहेजने की सेटिंग करें",
+        "व्हाट्सएप स्टेटस ऑटो-डाउनलोड करें",
+        "स्टेटस के लिए ऑटो-सेव सक्षम करें",
+        "मैन्युअल डाउनलोड के बिना स्टेटस सहेजें",
+        "स्टेटस को स्वचालित रूप से कैसे स्टोर करें",
+        "स्टेटस स्वचालित रूप से डाउनलोड करें",
+        "व्हाट्सएप स्टेटस ऑटो-कैप्चर करें",
+        "स्टेटस सहेजना स्वचालित करें"
       ],
       "id": [
-        "mengapa perlu izin kontak",
-        "aplikasi ingin akses kontak",
-        "alasan untuk izin kontak",
-        "mengapa penghemat status perlu kontak",
-        "akses kontak untuk status WA",
-        "mengapa aplikasi membaca kontak saya",
-        "izin kontak aplikasi status",
-        "tujuan akses kontak"
+        "Atur penyimpanan status otomatis",
+        "Unduh status WhatsApp secara otomatis",
+        "Aktifkan simpan otomatis untuk status",
+        "Simpan status tanpa unduhan manual",
+        "Cara menyimpan status secara otomatis",
+        "Unduh status secara otomatis",
+        "Tangkap status WhatsApp secara otomatis",
+        "Jadikan penyimpanan status otomatis"
       ]
     },
     "answer": {
-      "en": "The app may request contact access to enhance features like identifying status posters, but it’s optional. You can deny this permission, and core status-saving functions will still work.",
-      "hi": "ऐप स्टेटस पोस्टर की पहचान जैसे फीचर्स को बढ़ाने के लिए संपर्क एक्सेस का अनुरोध कर सकता है, लेकिन यह वैकल्पिक है। आप इस अनुमति को अस्वीकार कर सकते हैं, और मुख्य स्टेटस-सहेजने के कार्य फिर भी काम करेंगे।",
-      "id": "Aplikasi mungkin meminta akses kontak untuk meningkatkan fitur seperti mengidentifikasi pengirim status, tetapi ini opsional. Anda bisa menolak izin ini, dan fungsi penyimpanan status utama tetap akan berfungsi."
+      "en": "Enable Notification Access in settings. Then, viewed statuses are saved automatically.",
+      "hi": "सेटिंग्स में नोटिफिकेशन एक्सेस सक्षम करें। फिर, देखे गए स्टेटस स्वचालित रूप से सहेजे जाते हैं।",
+      "id": "Aktifkan Akses Notifikasi di pengaturan. Kemudian, status yang dilihat akan disimpan secara otomatis."
     }
   },
   {
     "question": {
-      "en": "Can I save statuses in a custom folder name?",
-      "hi": "क्या मैं स्टेटस को कस्टम फ़ोल्डर नाम में सहेज सकता हूं?",
-      "id": "Bisakah saya menyimpan status di nama folder khusus?"
+      "en": "Can I download more than one status at a time?",
+      "hi": "क्या मैं एक साथ कई स्टेटस डाउनलोड कर सकता हूं?",
+      "id": "Bisakah saya mengunduh lebih dari satu status sekaligus?"
     },
     "paraphrases": {
       "en": [
-        "custom folder for status",
-        "save status in my own folder",
-        "set folder name for saved status",
-        "choose folder for WA status",
-        "personalized status folder",
-        "save story in custom directory",
-        "name folder for status downloads",
-        "custom storage for statuses"
+        "Download multiple statuses at once",
+        "Save several statuses simultaneously",
+        "Can I get multiple statuses together",
+        "Batch download WhatsApp statuses",
+        "Download more than one status",
+        "Save multiple WA statuses at a time",
+        "Grab several statuses in one go",
+        "Can I download statuses in bulk"
       ],
       "hi": [
-        "स्टेटस के लिए कस्टम फ़ोल्डर",
-        "मेरे अपने फ़ोल्डर में स्टेटस सहेजें",
-        "सहेजे गए स्टेटस के लिए फ़ोल्डर नाम सेट करें",
-        "WA स्टेटस के लिए फ़ोल्डर चुनें",
-        "वैयक्तिकृत स्टेटस फ़ोल्डर",
-        "कस्टम डायरेक्टरी में स्टोरी सहेजें",
-        "स्टेटस डाउनलोड के लिए फ़ोल्डर नाम दें",
-        "स्टेटस के लिए कस्टम भंडारण"
+        "एक साथ कई स्टेटस डाउनलोड करें",
+        "कई स्टेटस एक साथ सहेजें",
+        "क्या मैं कई स्टेटस एक साथ प्राप्त कर सकता हूं",
+        "व्हाट्सएप स्टेटस बैच डाउनलोड करें",
+        "एक से अधिक स्टेटस डाउनलोड करें",
+        "एक बार में कई WA स्टेटस सहेजें",
+        "एक बार में कई स्टेटस लें",
+        "क्या मैं स्टेटस को बल्क में डाउनलोड कर सकता हूं"
       ],
       "id": [
-        "folder khusus untuk status",
-        "simpan status di folder saya sendiri",
-        "atur nama folder untuk status tersimpan",
-        "pilih folder untuk status WA",
-        "folder status yang dipersonalisasi",
-        "simpan cerita di direktori khusus",
-        "beri nama folder untuk unduhan status",
-        "penyimpanan khusus untuk status"
+        "Unduh beberapa status sekaligus",
+        "Simpan beberapa status secara bersamaan",
+        "Bisakah saya mendapatkan beberapa status bersama",
+        "Unduh status WhatsApp secara batch",
+        "Unduh lebih dari satu status",
+        "Simpan beberapa status WA sekaligus",
+        "Ambil beberapa status dalam sekali jalan",
+        "Bisakah saya mengunduh status secara massal"
       ]
     },
     "answer": {
-      "en": "Yes, in the app’s Settings, you can choose a custom folder name under 'Storage Location' to organize your saved statuses as preferred.",
-      "hi": "हाँ, ऐप की सेटिंग्स में, आप 'भंडारण स्थान' के तहत एक कस्टम फ़ोल्डर नाम चुन सकते हैं ताकि अपने सहेजे गए स्टेटस को अपनी पसंद के अनुसार व्यवस्थित कर सकें।",
-      "id": "Ya, di Pengaturan aplikasi, Anda bisa memilih nama folder khusus di bawah 'Lokasi Penyimpanan' untuk mengatur status tersimpan sesuai keinginan Anda."
+      "en": "Yes, long-press to enter selection mode and choose multiple statuses to download at once.",
+      "hi": "हां, चयन मोड में प्रवेश करने के लिए लंबे समय तक दबाएं और एक साथ डाउनलोड करने के लिए कई स्टेटस चुनें।",
+      "id": "Ya, tekan lama untuk masuk ke mode seleksi dan pilih beberapa status untuk diunduh sekaligus."
     }
   },
   {
     "question": {
-      "en": "How do I stop the app from saving duplicate statuses?",
-      "hi": "मैं ऐप को डुप्लिकेट स्टेटस सहेजने से कैसे रोकूं?",
-      "id": "Bagaimana cara menghentikan aplikasi dari menyimpan status duplikat?"
+      "en": "Does this app work for WhatsApp Business accounts?",
+      "hi": "क्या यह ऐप व्हाट्सएप बिजनेस अकाउंट्स के लिए काम करता है?",
+      "id": "Apakah aplikasi ini berfungsi untuk akun WhatsApp Business?"
     },
     "paraphrases": {
       "en": [
-        "prevent duplicate status saves",
-        "stop saving same status twice",
-        "avoid duplicate WA status",
-        "block repeated status downloads",
-        "no duplicate story saves",
-        "prevent status saver duplicates",
-        "stop double status saving",
-        "avoid saving status again"
+        "Is it compatible with WhatsApp Business",
+        "Save statuses from WA Business",
+        "Does it support business accounts",
+        "Can I use it with WhatsApp Business",
+        "Works with WA Business statuses",
+        "Download from business accounts",
+        "Is WhatsApp Business supported",
+        "Save business account statuses"
       ],
       "hi": [
-        "डुप्लिकेट स्टेटस सहेजने से रोकें",
-        "एक ही स्टेटस को दो बार सहेजना बंद करें",
-        "डुप्लिकेट WA स्टेटस से बचें",
-        "दोहराए गए स्टेटस डाउनलोड को ब्लॉक करें",
-        "डुप्लिकेट स्टोरी सहेजने से बचें",
-        "स्टेटस सेवर डुप्लिकेट्स रोकें",
-        "दोहरी स्टेटस सहेजना बंद करें",
-        "स्टेटस को फिर से सहेजने से बचें"
+        "क्या यह व्हाट्सएप बिजनेस के साथ संगत है",
+        "WA बिजनेस से स्टेटस सहेजें",
+        "क्या यह बिजनेस अकाउंट्स का समर्थन करता है",
+        "क्या मैं इसे व्हाट्सएप बिजनेस के साथ उपयोग कर सकता हूं",
+        "WA बिजनेस स्टेटस के साथ काम करता है",
+        "बिजनेस अकाउंट्स से डाउनलोड करें",
+        "क्या व्हाट्सएप बिजनेस समर्थित है",
+        "बिजनेस अकाउंट स्टेटस सहेजें"
       ],
       "id": [
-        "cegah penyimpanan status duplikat",
-        "hentikan menyimpan status yang sama dua kali",
-        "hindari status WA duplikat",
-        "blokir unduhan status berulang",
-        "tidak ada penyimpanan cerita duplikat",
-        "cegah duplikat penghemat status",
-        "hentikan penyimpanan status ganda",
-        "hindari menyimpan status lagi"
+        "Apakah kompatibel dengan WhatsApp Business",
+        "Simpan status dari WA Business",
+        "Apakah mendukung akun bisnis",
+        "Bisakah saya menggunakannya dengan WhatsApp Business",
+        "Berfungsi dengan status WA Business",
+        "Unduh dari akun bisnis",
+        "Apakah WhatsApp Business didukung",
+        "Simpan status akun bisnis"
       ]
     },
     "answer": {
-      "en": "Enable the 'Prevent Duplicates' option in the app’s Settings to automatically skip saving statuses that are already downloaded.",
-      "hi": "ऐप की सेटिंग्स में 'डुप्लिकेट रोकें' विकल्प को सक्षम करें ताकि पहले से डाउनलोड किए गए स्टेटस को स्वचालित रूप से सहेजने से बचा जा सके।",
-      "id": "Aktifkan opsi 'Cegah Duplikat' di Pengaturan aplikasi untuk secara otomatis melewati penyimpanan status yang sudah diunduh."
+      "en": "Yes, it's fully compatible with WhatsApp Business.",
+      "hi": "हां, यह व्हाट्सएप बिजनेस के साथ पूरी तरह से संगत है।",
+      "id": "Ya, ini sepenuhnya kompatibel dengan WhatsApp Business."
     }
   },
   {
     "question": {
-      "en": "Can I preview a status in the app before downloading?",
-      "hi": "क्या मैं डाउनलोड करने से पहले ऐप में स्टेटस का पूर्वावलोकन कर सकता हूं?",
-      "id": "Bisakah saya melihat pratinjau status di aplikasi sebelum mengunduh?"
+      "en": "I use a parallel space app to run two WhatsApp accounts. Can I save statuses from both?",
+      "hi": "मैं दो व्हाट्सएप अकाउंट चलाने के लिए पैरलल स्पेस ऐप का उपयोग करता हूं। क्या मैं दोनों से स्टेटस सहेज सकता हूं?",
+      "id": "Saya menggunakan aplikasi parallel space untuk menjalankan dua akun WhatsApp. Bisakah saya menyimpan status dari keduanya?"
     },
     "paraphrases": {
       "en": [
-        "preview status before saving",
-        "see status in app first",
-        "check status before download",
-        "view WA status before saving",
-        "preview story in status saver",
-        "look at status before downloading",
-        "status preview in app",
-        "see status content before saving"
+        "Save statuses from dual WhatsApp accounts",
+        "Download from both WhatsApp in parallel space",
+        "Can I get statuses from two WA accounts",
+        "Support for parallel space WhatsApp",
+        "Save statuses from multiple WA accounts",
+        "Download from dual space WhatsApp",
+        "Works with two WhatsApp in parallel",
+        "Can I save from both accounts in parallel space"
       ],
       "hi": [
-        "सहेजने से पहले स्टेटस का पूर्वावलोकन करें",
-        "पहले ऐप में स्टेटस देखें",
-        "डाउनलोड से पहले स्टेटस जांचें",
-        "सहेजने से पहले WA स्टेटस देखें",
-        "स्टेटस सेवर में स्टोरी का पूर्वावलोकन करें",
-        "डाउनलोड करने से पहले स्टेटस देखें",
-        "ऐप में स्टेटस पूर्वावलोकन",
-        "सहेजने से पहले स्टेटस सामग्री देखें"
+        "दोहरे व्हाट्सएप अकाउंट्स से स्टेटस सहेजें",
+        "पैरलल स्पेस में दोनों व्हाट्सएप से डाउनलोड करें",
+        "क्या मैं दो WA अकाउंट्स से स्टेटस प्राप्त कर सकता हूं",
+        "पैरलल स्पेस व्हाट्सएप के लिए समर्थन",
+        "कई WA अकाउंट्स से स्टेटस सहेजें",
+        "दोहरे स्पेस व्हाट्सएप से डाउनलोड करें",
+        "पैरलल में दो व्हाट्सएप के साथ काम करता है",
+        "क्या मैं पैरलल स्पेस में दोनों अकाउंट्स से सहेज सकता हूं"
       ],
       "id": [
-        "pratinjau status sebelum menyimpan",
-        "lihat status di aplikasi terlebih dahulu",
-        "periksa status sebelum mengunduh",
-        "lihat status WA sebelum menyimpan",
-        "pratinjau cerita di penghemat status",
-        "lihat status sebelum mengunduh",
-        "pratinjau status di aplikasi",
-        "lihat konten status sebelum menyimpan"
+        "Simpan status dari dua akun WhatsApp",
+        "Unduh dari kedua WhatsApp di parallel space",
+        "Bisakah saya mendapatkan status dari dua akun WA",
+        "Dukungan untuk WhatsApp parallel space",
+        "Simpan status dari beberapa akun WA",
+        "Unduh dari WhatsApp dual space",
+        "Berfungsi dengan dua WhatsApp di parallel",
+        "Bisakah saya menyimpan dari kedua akun di parallel space"
       ]
     },
     "answer": {
-      "en": "Yes, tap on any status in the Status Saver app to preview it before hitting the download button.",
-      "hi": "हाँ, स्टेटस सेवर ऐप में किसी भी स्टेटस पर टैप करें ताकि डाउनलोड बटन दबाने से पहले उसका पूर्वावलोकन किया जा सके।",
-      "id": "Ya, ketuk status apa pun di aplikasi Penghemat Status untuk melihat pratinjaunya sebelum menekan tombol unduh."
+      "en": "Yes, it supports parallel/dual spaces, but newer Android security may limit access in some devices.",
+      "hi": "हां, यह पैरलल/दोहरे स्पेस का समर्थन करता है, लेकिन नए एंड्रॉइड सिक्योरिटी कुछ डिवाइस में एक्सेस को सीमित कर सकती है।",
+      "id": "Ya, ini mendukung parallel/dual space, tetapi keamanan Android baru mungkin membatasi akses di beberapa perangkat."
     }
   },
   {
     "question": {
-      "en": "Why does the app show a blank screen after opening?",
-      "hi": "ऐप खोलने के बाद खाली स्क्रीन क्यों दिखाता है?",
-      "id": "Mengapa aplikasi menampilkan layar kosong setelah dibuka?"
+      "en": "Will this work with GB WhatsApp?",
+      "hi": "क्या यह GB व्हाट्सएप के साथ काम करेगा?",
+      "id": "Apakah ini berfungsi dengan GB WhatsApp?"
     },
     "paraphrases": {
       "en": [
-        "blank screen in status saver",
-        "app opens to empty screen",
-        "why is status app blank",
-        "no content on app startup",
-        "status saver shows nothing",
-        "empty screen after opening app",
-        "app loads blank page",
-        "no statuses on app open"
+        "Does it support GB WhatsApp",
+        "Save statuses from GB WhatsApp",
+        "Is GB WhatsApp compatible",
+        "Can I use it with GB WhatsApp",
+        "Download statuses from GB WA",
+        "Works with GB WhatsApp accounts",
+        "Support for GB WhatsApp statuses",
+        "Can I save GB WhatsApp stories"
       ],
       "hi": [
-        "स्टेटस सेवर में खाली स्क्रीन",
-        "ऐप खुलने पर खाली स्क्रीन",
-        "स्टेटस ऐप खाली क्यों है",
-        "ऐप शुरू होने पर कोई सामग्री नहीं",
-        "स्टेटस सेवर कुछ नहीं दिखाता",
-        "ऐप खोलने के बाद खाली स्क्रीन",
-        "ऐप खाली पेज लोड करता है",
-        "ऐप खुलने पर कोई स्टेटस नहीं"
+        "क्या यह GB व्हाट्सएप का समर्थन करता है",
+        "GB व्हाट्सएप से स्टेटस सहेजें",
+        "क्या GB व्हाट्सएप संगत है",
+        "क्या मैं इसे GB व्हाट्सएप के साथ उपयोग कर सकता हूं",
+        "GB WA से स्टेटस डाउनलोड करें",
+        "GB व्हाट्सएप अकाउंट्स के साथ काम करता है",
+        "GB व्हाट्सएप स्टेटस के लिए समर्थन",
+        "क्या मैं GB व्हाट्सएप स्टोरीज सहेज सकता हूं"
       ],
       "id": [
-        "layar kosong di penghemat status",
-        "aplikasi terbuka ke layar kosong",
-        "mengapa aplikasi status kosong",
-        "tidak ada konten saat aplikasi mulai",
-        "penghemat status tidak menampilkan apa-apa",
-        "layar kosong setelah membuka aplikasi",
-        "aplikasi memuat halaman kosong",
-        "tidak ada status saat aplikasi dibuka"
+        "Apakah mendukung GB WhatsApp",
+        "Simpan status dari GB WhatsApp",
+        "Apakah GB WhatsApp kompatibel",
+        "Bisakah saya menggunakannya dengan GB WhatsApp",
+        "Unduh status dari GB WA",
+        "Berfungsi dengan akun GB WhatsApp",
+        "Dukungan untuk status GB WhatsApp",
+        "Bisakah saya menyimpan cerita GB WhatsApp"
       ]
     },
     "answer": {
-      "en": "A blank screen may indicate missing storage permissions or no recently viewed statuses. Grant storage access via Settings and view a status in WhatsApp first.",
-      "hi": "खाली स्क्रीन स्टोरेज अनुमतियों की कमी या हाल ही में देखे गए स्टेटस की अनुपस्थिति का संकेत दे सकती है। सेटिंग्स के माध्यम से स्टोरेज एक्सेस प्रदान करें और पहले व्हाट्सएप में एक स्टेटस देखें।",
-      "id": "Layar kosong mungkin menunjukkan kurangnya izin penyimpanan atau tidak ada status yang baru dilihat. Berikan akses penyimpanan melalui Pengaturan dan lihat status di WhatsApp terlebih dahulu."
+      "en": "Yes, but we don’t endorse unofficial clients like GB WhatsApp due to security risks.",
+      "hi": "हां, लेकिन हम GB व्हाट्सएप जैसे अनौपचारिक क्लाइंट का समर्थन नहीं करते क्योंकि इसमें सुरक्षा जोखिम हैं।",
+      "id": "Ya, tetapi kami tidak mendukung klien tidak resmi seperti GB WhatsApp karena risiko keamanan."
     }
   },
   {
     "question": {
-      "en": "Can I save statuses from WhatsApp channels?",
-      "hi": "क्या मैं व्हाट्सएप चैनलों से स्टेटस सहेज सकता हूं?",
-      "id": "Bisakah saya menyimpan status dari kanal WhatsApp?"
+      "en": "Why does a status saver app need permission to read my notifications?",
+      "hi": "स्टेटस सेवर ऐप को मेरी नोटिफिकेशन पढ़ने की अनुमति क्यों चाहिए?",
+      "id": "Mengapa aplikasi penghemat status memerlukan izin untuk membaca notifikasi saya?"
     },
     "paraphrases": {
       "en": [
-        "download WhatsApp channel status",
-        "save status from WA channels",
-        "get channel story in status saver",
-        "save WhatsApp channel content",
-        "download channel status media",
-        "save story from channel",
-        "access WhatsApp channel status",
-        "grab channel status"
+        "Reason for notification permission",
+        "Why does the app read notifications",
+        "Need for notification access",
+        "Purpose of notification permissions",
+        "Why is notification reading required",
+        "Status saver notification access",
+        "Why does it need notification rights",
+        "Explain notification permission need"
       ],
       "hi": [
-        "व्हाट्सएप चैनल स्टेटस डाउनलोड करें",
-        "WA चैनलों से स्टेटस सहेजें",
-        "स्टेटस सेवर में चैनल स्टोरी प्राप्त करें",
-        "व्हाट्सएप चैनल सामग्री सहेजें",
-        "चैनल स्टेटस मीडिया डाउनलोड करें",
-        "चैनल से स्टोरी सहेजें",
-        "व्हाट्सएप चैनल स्टेटस तक पहुंचें",
-        "चैनल स्टेटस लें"
+        "नोटिफिकेशन अनुमति का कारण",
+        "ऐप नोटिफिकेशन क्यों पढ़ता है",
+        "नोटिफिकेशन एक्सेस की आवश्यकता",
+        "नोटिफिकेशन अनुमतियों का उद्देश्य",
+        "नोटिफिकेशन पढ़ना क्यों आवश्यक है",
+        "स्टेटस सेवर नोटिफिकेशन एक्सेस",
+        "इसे नोटिफिकेशन अधिकार क्यों चाहिए",
+        "नोटिफिकेशन अनुमति की आवश्यकता समझाएं"
       ],
       "id": [
-        "unduh status kanal WhatsApp",
-        "simpan status dari kanal WA",
-        "dapatkan cerita kanal di penghemat status",
-        "simpan konten kanal WhatsApp",
-        "unduh media status kanal",
-        "simpan cerita dari kanal",
-        "akses status kanal WhatsApp",
-        "ambil status kanal"
+        "Alasan untuk izin notifikasi",
+        "Mengapa aplikasi membaca notifikasi",
+        "Kebutuhan untuk akses notifikasi",
+        "Tujuan dari izin notifikasi",
+        "Mengapa diperlukan pembacaan notifikasi",
+        "Akses notifikasi penghemat status",
+        "Mengapa memerlukan hak notifikasi",
+        "Jelaskan kebutuhan izin notifikasi"
       ]
     },
     "answer": {
-      "en": "No, the Status Saver app currently does not support saving statuses from WhatsApp channels, as they are stored differently from personal or business statuses.",
-      "hi": "नहीं, स्टेटस सेवर ऐप वर्तमान में व्हाट्सएप चैनलों से स्टेटस सहेजने का समर्थन नहीं करता है, क्योंकि वे व्यक्तिगत या व्यावसायिक स्टेटस से अलग तरह से संग्रहीत होते हैं।",
-      "id": "Tidak, aplikasi Penghemat Status saat ini tidak mendukung penyimpanan status dari kanal WhatsApp, karena disimpan berbeda dari status pribadi atau bisnis."
+      "en": "For the optional “Deleted Message Recovery” feature, which captures messages from notifications before they're deleted.",
+      "hi": "वैकल्पिक “डिलीटेड मैसेज रिकवरी” फीचर के लिए, जो नोटिफिकेशन से मैसेज को डिलीट होने से पहले कैप्चर करता है।",
+      "id": "Untuk fitur opsional “Pemulihan Pesan yang Dihapus”, yang menangkap pesan dari notifikasi sebelum dihapus."
     }
   },
   {
     "question": {
-      "en": "How do I report a bug in the Status Saver app?",
-      "hi": "मैं स्टेटस सेवर ऐप में बग की रिपोर्ट कैसे करूं?",
-      "id": "Bagaimana cara melaporkan bug di aplikasi Penghemat Status?"
+      "en": "How does the message recovery work?",
+      "hi": "मैसेज रिकवरी कैसे काम करता है?",
+      "id": "Bagaimana cara kerja pemulihan pesan?"
     },
     "paraphrases": {
       "en": [
-        "report issue in status saver",
-        "how to submit app bug",
-        "notify about app problem",
-        "report status app error",
-        "tell developers about bug",
-        "send bug report for WA status",
-        "how to flag app issue",
-        "report glitch in status saver"
+        "Explain message recovery process",
+        "How to recover deleted messages",
+        "Mechanism of message restoration",
+        "How does deleted message recovery work",
+        "Functionality of message recovery",
+        "Restore messages with the app",
+        "How the app recovers messages",
+        "Process of retrieving deleted messages"
       ],
       "hi": [
-        "स्टेटस सेवर में समस्या की रिपोर्ट करें",
-        "ऐप बग कैसे सबमिट करें",
-        "ऐप की समस्या के बारे में सूचित करें",
-        "स्टेटस ऐप त्रुटि की रिपोर्ट करें",
-        "डेवलपर्स को बग के बारे में बताएं",
-        "WA स्टेटस के लिए बग रिपोर्ट भेजें",
-        "ऐप समस्या को कैसे चिह्नित करें",
-        "स्टेटस सेवर में गड़बड़ी की रिपोर्ट करें"
+        "मैसेज रिकवरी प्रक्रिया समझाएं",
+        "डिलीट किए गए मैसेज कैसे रिकवर करें",
+        "मैसेज रिस्टोरेशन का तंत्र",
+        "डिलीटेड मैसेज रिकवरी कैसे काम करता है",
+        "मैसेज रिकवरी की कार्यक्षमता",
+        "ऐप के साथ मैसेज रिस्टोर करें",
+        "ऐप मैसेज कैसे रिकवर करता है",
+        "डिलीट किए गए मैसेज पुनर्प्राप्त करने की प्रक्रिया"
       ],
       "id": [
-        "laporkan masalah di penghemat status",
-        "cara mengirimkan bug aplikasi",
-        "beri tahu tentang masalah aplikasi",
-        "laporkan kesalahan aplikasi status",
-        "beri tahu pengembang tentang bug",
-        "kirim laporan bug untuk status WA",
-        "cara menandai masalah aplikasi",
-        "laporkan gangguan di penghemat status"
+        "Jelaskan proses pemulihan pesan",
+        "Cara memulihkan pesan yang dihapus",
+        "Mekanisme pemulihan pesan",
+        "Bagaimana pemulihan pesan yang dihapus bekerja",
+        "Fungsi pemulihan pesan",
+        "Pulihkan pesan dengan aplikasi",
+        "Bagaimana aplikasi memulihkan pesan",
+        "Proses pengambilan pesan yang dihapus"
       ]
     },
     "answer": {
-      "en": "Go to the app’s Settings, select 'Report a Bug,' and describe the issue. Alternatively, contact the support team via the app’s listed email.",
-      "hi": "ऐप की सेटिंग्स में जाएं, 'रिपोर्ट ए बग' चुनें, और समस्या का वर्णन करें। वैकल्पिक रूप से, ऐप में सूचीबद्ध ईमेल के माध्यम से सहायता टीम से संपर्क करें।",
-      "id": "Buka Pengaturan aplikasi, pilih 'Laporkan Bug,' dan jelaskan masalahnya. Alternatifnya, hubungi tim dukungan melalui email yang tercantum di aplikasi."
+      "en": "When enabled, the app reads incoming message text from notifications and stores it before deletion.",
+      "hi": "जब सक्षम किया जाता है, ऐप नोटिफिकेशन से आने वाले मैसेज टेक्स्ट को पढ़ता है और डिलीट होने से पहले उसे स्टोर करता है।",
+      "id": "Saat diaktifkan, aplikasi membaca teks pesan masuk dari notifikasi dan menyimpannya sebelum dihapus."
     }
   },
   {
     "question": {
-      "en": "Does the app notify the user when I save their status?",
-      "hi": "क्या जब मैं किसी का स्टेटस सहेजता हूं तो ऐप उस उपयोगकर्ता को सूचित करता है?",
-      "id": "Apakah aplikasi memberi tahu pengguna saat saya menyimpan status mereka?"
+      "en": "Can I change the app's language?",
+      "hi": "क्या मैं ऐप की भाषा बदल सकता हूं?",
+      "id": "Bisakah saya mengubah bahasa aplikasi?"
     },
     "paraphrases": {
       "en": [
-        "will they know if I save their status",
-        "status save notification",
-        "is saving statuses anonymous",
-        "can people see if I download their story",
-        "privacy of saving status",
-        "does it alert the user",
-        "anonymous status download",
-        "save status without them knowing"
+        "Switch app language",
+        "Change language in the app",
+        "Set a different app language",
+        "Modify app language settings",
+        "Can I use another language",
+        "Alter the app’s language",
+        "Choose app language",
+        "Update language of the app"
       ],
       "hi": [
-        "क्या उन्हें पता चलेगा कि मैंने उनका स्टेटस सहेजा है",
-        "स्टेटस सहेजने की सूचना",
-        "क्या स्टेटस सहेजना गुमनाम है",
-        "क्या लोग देख सकते हैं कि मैंने उनकी स्टोरी डाउनलोड की है",
-        "स्टेटस सहेजने की गोपनीयता",
-        "क्या यह उपयोगकर्ता को सचेत करता है",
-        "गुमनाम स्टेटस डाउनलोड",
-        "बिना उनकी जानकारी के स्टेटस सहेजें"
+        "ऐप की भाषा बदलें",
+        "ऐप में भाषा बदलें",
+        "अलग ऐप भाषा सेट करें",
+        "ऐप भाषा सेटिंग्स संशोधित करें",
+        "क्या मैं दूसरी भाषा उपयोग कर सकता हूं",
+        "ऐप की भाषा बदलें",
+        "ऐप भाषा चुनें",
+        "ऐप की भाषा अपडेट करें"
       ],
       "id": [
-        "apakah mereka akan tahu jika saya menyimpan statusnya",
-        "notifikasi penyimpanan status",
-        "apakah menyimpan status itu anonim",
-        "bisakah orang melihat jika saya mengunduh cerita mereka",
-        "privasi menyimpan status",
-        "apakah ini memberi peringatan kepada pengguna",
-        "unduhan status anonim",
-        "simpan status tanpa sepengetahuan mereka"
+        "Ganti bahasa aplikasi",
+        "Ubah bahasa di aplikasi",
+        "Atur bahasa aplikasi yang berbeda",
+        "Ubah pengaturan bahasa aplikasi",
+        "Bisakah saya menggunakan bahasa lain",
+        "Ubah bahasa aplikasi",
+        "Pilih bahasa aplikasi",
+        "Perbarui bahasa aplikasi"
       ]
     },
     "answer": {
-      "en": "No, the app operates discreetly. It saves statuses without sending any notification to the contact whose status you have saved.",
-      "hi": "नहीं, ऐप गुप्त रूप से काम करता है। यह आपके संपर्क को कोई सूचना भेजे बिना स्टेटस सहेजता है जिसका स्टेटस आपने सहेजा है।",
-      "id": "Tidak, aplikasi beroperasi secara diam-diam. Ini menyimpan status tanpa mengirimkan pemberitahuan apa pun ke kontak yang statusnya telah Anda simpan."
+      "en": "Yes, go to Settings > Language and choose from multiple available languages.",
+      "hi": "हां, सेटिंग्स > भाषा पर जाएं और कई उपलब्ध भाषाओं में से चुनें।",
+      "id": "Ya, buka Pengaturan > Bahasa dan pilih dari beberapa bahasa yang tersedia."
     }
   },
   {
     "question": {
-      "en": "Can I save statuses from WhatsApp Business?",
-      "hi": "क्या मैं व्हाट्सएप बिजनेस से स्टेटस सहेज सकता हूं?",
-      "id": "Bisakah saya menyimpan status dari WhatsApp Business?"
+      "en": "The new version of the app is confusing. Everything is mixed together.",
+      "hi": "ऐप का नया संस्करण भ्रमित करने वाला है। सब कुछ मिला हुआ है।",
+      "id": "Versi baru aplikasi ini membingungkan. Semuanya bercampur."
     },
     "paraphrases": {
       "en": [
-        "does it work with WA Business",
-        "save status from business account",
-        "support for WhatsApp Business statuses",
-        "download business status",
-        "grab WA business story",
-        "is business whatsapp compatible",
-        "get status from a business profile",
-        "save commercial status"
+        "New app version is hard to use",
+        "App update is confusing",
+        "Everything is jumbled in new version",
+        "New app layout is unclear",
+        "Updated app is messy",
+        "New version mixes everything",
+        "App’s new design is confusing",
+        "Latest update is hard to navigate"
       ],
       "hi": [
-        "क्या यह डब्ल्यूए बिजनेस के साथ काम करता है",
-        "बिजनेस अकाउंट से स्टेटस सहेजें",
-        "व्हाट्सएप बिजनेस स्टेटस के लिए समर्थन",
-        "बिजनेस स्टेटस डाउनलोड करें",
-        "डब्ल्यूए बिजनेस स्टोरी पकड़ो",
-        "क्या बिजनेस व्हाट्सएप संगत है",
-        "एक बिजनेस प्रोफाइल से स्टेटस प्राप्त करें",
-        "कमर्शियल स्टेटस सहेजें"
+        "नया ऐप संस्करण उपयोग करना मुश्किल है",
+        "ऐप अपडेट भ्रमित करने वाला है",
+        "नए संस्करण में सब कुछ उलझा हुआ है",
+        "नया ऐप लेआउट अस्पष्ट है",
+        "अपडेटेड ऐप अव्यवस्थित है",
+        "नया संस्करण सब कुछ मिलाता है",
+        "ऐप का नया डिज़ाइन भ्रमित करने वाला है",
+        "नवीनतम अपडेट नेविगेट करना मुश्किल है"
       ],
       "id": [
-        "apakah berfungsi dengan WA Business",
-        "simpan status dari akun bisnis",
-        "dukungan untuk status WhatsApp Business",
-        "unduh status bisnis",
-        "ambil cerita bisnis WA",
-        "apakah whatsapp bisnis kompatibel",
-        "dapatkan status dari profil bisnis",
-        "simpan status komersial"
+        "Versi aplikasi baru sulit digunakan",
+        "Pembaruan aplikasi membingungkan",
+        "Semuanya bercampur di versi baru",
+        "Tata letak aplikasi baru tidak jelas",
+        "Aplikasi yang diperbarui berantakan",
+        "Versi baru mencampur semuanya",
+        "Desain aplikasi baru membingungkan",
+        "Pembaruan terbaru sulit dinavigasi"
       ]
     },
     "answer": {
-      "en": "Yes, the app is compatible with both standard WhatsApp and WhatsApp Business. You can view and save statuses from both versions.",
-      "hi": "हाँ, ऐप मानक व्हाट्सएप और व्हाट्सएप बिजनेस दोनों के साथ संगत है। आप दोनों संस्करणों से स्टेटस देख और सहेज सकते हैं।",
-      "id": "Ya, aplikasi ini kompatibel dengan WhatsApp standar dan WhatsApp Business. Anda dapat melihat dan menyimpan status dari kedua versi."
+      "en": "Thank you for the feedback. We’re improving layout. Use the separate ‘Images’ and ‘Videos’ tabs for easier navigation.",
+      "hi": "आपके फीडबैक के लिए धन्यवाद। हम लेआउट में सुधार कर रहे हैं। आसान नेविगेशन के लिए अलग ‘इमेज’ और ‘वीडियो’ टैब का उपयोग करें।",
+      "id": "Terima kasih atas masukannya. Kami sedang memperbaiki tata letak. Gunakan tab ‘Gambar’ dan ‘Video’ yang terpisah untuk navigasi yang lebih mudah."
     }
   },
   {
     "question": {
-      "en": "Are the saved statuses in high quality?",
-      "hi": "क्या सहेजे गए स्टेटस उच्च गुणवत्ता में होते हैं?",
-      "id": "Apakah status yang disimpan dalam kualitas tinggi?"
+      "en": "I used to be able to save written statuses, but now I can't. What happened?",
+      "hi": "मैं पहले लिखित स्टेटस सहेज सकता था, लेकिन अब नहीं कर सकता। क्या हुआ?",
+      "id": "Dulu saya bisa menyimpan status tertulis, tapi sekarang tidak bisa. Apa yang terjadi?"
     },
     "paraphrases": {
       "en": [
-        "status download quality",
-        "save status in HD",
-        "does the app reduce quality",
-        "get original quality status",
-        "high resolution status saving",
-        "are saved photos/videos clear",
-        "maintain original status quality",
-        "avoid blurry status downloads"
+        "Why can’t I save text statuses anymore",
+        "What happened to text status saving",
+        "Lost ability to save written statuses",
+        "Can’t download text-only statuses",
+        "Why is text status saving gone",
+        "Text status download stopped working",
+        "What changed with written status saving",
+        "Unable to save text statuses now"
       ],
       "hi": [
-        "स्टेटस डाउनलोड गुणवत्ता",
-        "एचडी में स्टेटस सहेजें",
-        "क्या ऐप गुणवत्ता कम करता है",
-        "मूल गुणवत्ता स्टेटस प्राप्त करें",
-        "उच्च रिज़ॉल्यूशन स्टेटस सहेजना",
-        "क्या सहेजी गई तस्वीरें/वीडियो स्पष्ट हैं",
-        "मूल स्टेटस गुणवत्ता बनाए रखें",
-        "धुंधले स्टेटस डाउनलोड से बचें"
+        "मैं अब टेक्स्ट स्टेटस क्यों नहीं सहेज सकता",
+        "टेक्स्ट स्टेटस सहेजने के साथ क्या हुआ",
+        "लिखित स्टेटस सहेजने की क्षमता खो गई",
+        "केवल टेक्स्ट स्टेटस डाउनलोड नहीं कर सकता",
+        "टेक्स्ट स्टेटस सहेजना क्यों बंद हो गया",
+        "टेक्स्ट स्टेटस डाउनलोड काम करना बंद कर दिया",
+        "लिखित स्टेटस सहेजने में क्या बदला",
+        "अब टेक्स्ट स्टेटस सहेजने में असमर्थ"
       ],
       "id": [
-        "kualitas unduhan status",
-        "simpan status dalam HD",
-        "apakah aplikasi mengurangi kualitas",
-        "dapatkan status kualitas asli",
-        "penyimpanan status resolusi tinggi",
-        "apakah foto/video yang disimpan jelas",
-        "pertahankan kualitas status asli",
-        "hindari unduhan status yang buram"
+        "Mengapa saya tidak bisa menyimpan status teks lagi",
+        "Apa yang terjadi dengan penyimpanan status teks",
+        "Kehilangan kemampuan menyimpan status tertulis",
+        "Tidak bisa mengunduh status hanya teks",
+        "Mengapa penyimpanan status teks hilang",
+        "Unduhan status teks berhenti berfungsi",
+        "Apa yang berubah dengan penyimpanan status tertulis",
+        "Tidak bisa menyimpan status teks sekarang"
       ]
     },
     "answer": {
-      "en": "The app saves statuses in the same quality that WhatsApp downloads them to your device. The quality depends on the original upload by the contact.",
-      "hi": "ऐप स्टेटस को उसी गुणवत्ता में सहेजता है जिसमें व्हाट्सएप उन्हें आपके डिवाइस पर डाउनलोड करता है। गुणवत्ता संपर्क द्वारा मूल अपलोड पर निर्भर करती है।",
-      "id": "Aplikasi menyimpan status dengan kualitas yang sama seperti yang diunduh WhatsApp ke perangkat Anda. Kualitasnya tergantung pada unggahan asli oleh kontak."
+      "en": "Recent updates removed text-only status saving, but we’re exploring reintroducing it.",
+      "hi": "हाल के अपडेट्स ने केवल टेक्स्ट स्टेटस सहेजने की सुविधा हटा दी, लेकिन हम इसे फिर से शुरू करने की संभावना तलाश रहे हैं।",
+      "id": "Pembaruan terbaru menghapus penyimpanan status hanya teks, tetapi kami sedang mengeksplorasi untuk mengembalikannya."
     }
   },
   {
     "question": {
-      "en": "Why are statuses not appearing in the app after I've viewed them?",
-      "hi": "स्टेटस देखने के बाद भी ऐप में क्यों नहीं दिख रहे हैं?",
-      "id": "Mengapa status tidak muncul di aplikasi setelah saya melihatnya?"
+      "en": "There are way too many ads in this app!",
+      "hi": "इस ऐप में बहुत सारे विज्ञापन हैं!",
+      "id": "Ada terlalu banyak iklan di aplikasi ini!"
     },
     "paraphrases": {
       "en": [
-        "viewed status not showing",
-        "app is not fetching statuses",
-        "status list is empty",
-        "can't see any statuses to save",
-        "statuses disappeared from app",
-        "why aren't new statuses loading",
-        "app not updating with new statuses",
-        "trouble syncing statuses"
+        "Too many ads in the app",
+        "App has excessive advertisements",
+        "Why so many ads in the app",
+        "Overloaded with app ads",
+        "Too much advertising in app",
+        "App is full of ads",
+        "Reduce the number of ads",
+        "Ads are overwhelming in the app"
       ],
       "hi": [
-        "देखा गया स्टेटस नहीं दिख रहा है",
-        "ऐप स्टेटस नहीं ला रहा है",
-        "स्टेटस सूची खाली है",
-        "सहेजने के लिए कोई स्टेटस नहीं दिख रहा है",
-        "ऐप से स्टेटस गायब हो गए",
-        "नए स्टेटस क्यों नहीं लोड हो रहे हैं",
-        "ऐप नए स्टेटस के साथ अपडेट नहीं हो रहा है",
-        "स्टेटस सिंक करने में समस्या"
+        "ऐप में बहुत सारे विज्ञापन",
+        "ऐप में अत्यधिक विज्ञापन हैं",
+        "ऐप में इतने सारे विज्ञापन क्यों",
+        "ऐप विज्ञापनों से भरा हुआ है",
+        "ऐप में बहुत अधिक विज्ञापन",
+        "ऐप विज्ञापनों से भरा है",
+        "विज्ञापनों की संख्या कम करें",
+        "ऐप में विज्ञापन भारी हैं"
       ],
       "id": [
-        "status yang dilihat tidak muncul",
-        "aplikasi tidak mengambil status",
-        "daftar status kosong",
-        "tidak bisa melihat status untuk disimpan",
-        "status hilang dari aplikasi",
-        "mengapa status baru tidak dimuat",
-        "aplikasi tidak memperbarui dengan status baru",
-        "masalah sinkronisasi status"
+        "Terlalu banyak iklan di aplikasi",
+        "Aplikasi memiliki iklan berlebihan",
+        "Mengapa begitu banyak iklan di aplikasi",
+        "Aplikasi penuh dengan iklan",
+        "Terlalu banyak iklan di aplikasi",
+        "Aplikasi dipenuhi iklan",
+        "Kurangi jumlah iklan",
+        "Iklan di aplikasi sangat mengganggu"
       ]
     },
     "answer": {
-      "en": "This can happen if WhatsApp has changed its storage location. Please check for an app update. Also, ensure the app has the correct storage permissions in your phone's settings and try restarting your device.",
-      "hi": "यह तब हो सकता है जब व्हाट्सएप ने अपना भंडारण स्थान बदल दिया हो। कृपया ऐप अपडेट की जांच करें। यह भी सुनिश्चित करें कि ऐप को आपके फोन की सेटिंग्स में सही भंडारण अनुमतियां हैं और अपने डिवाइस को पुनरारंभ करने का प्रयास करें।",
-      "id": "Ini bisa terjadi jika WhatsApp telah mengubah lokasi penyimpanannya. Silakan periksa pembaruan aplikasi. Juga, pastikan aplikasi memiliki izin penyimpanan yang benar di pengaturan ponsel Anda dan coba mulai ulang perangkat Anda."
+      "en": "Ads support the free version. For an ad-free experience, purchase the premium version via the main menu.",
+      "hi": "विज्ञापन मुफ्त संस्करण को समर्थन देते हैं। विज्ञापन-मुक्त अनुभव के लिए, मुख्य मेनू से प्रीमियम संस्करण खरीदें।",
+      "id": "Iklan mendukung versi gratis. Untuk pengalaman bebas iklan, beli versi premium melalui menu utama."
     }
   },
   {
     "question": {
-      "en": "How can I share a saved status directly from the app?",
-      "hi": "मैं ऐप से सीधे सहेजे गए स्टेटस को कैसे साझा कर सकता हूं?",
-      "id": "Bagaimana cara membagikan status yang disimpan langsung dari aplikasi?"
+      "en": "I want to buy the ad-free version, but I get an error about an old Play Store version.",
+      "hi": "मैं विज्ञापन-मुक्त संस्करण खरीदना चाहता हूं, लेकिन मुझे पुराने प्ले स्टोर संस्करण के बारे में त्रुटि मिलती है।",
+      "id": "Saya ingin membeli versi bebas iklan, tetapi saya mendapatkan kesalahan tentang versi Play Store yang lama."
     },
     "paraphrases": {
       "en": [
-        "share saved status",
-        "repost a status I saved",
-        "send saved video to others",
-        "forward a downloaded status",
-        "options for sharing from app",
-        "share to other apps",
-        "how to use the share button",
-        "post saved status on my profile"
+        "Error buying ad-free app version",
+        "Can’t purchase premium due to Play Store",
+        "Play Store version error for ad-free",
+        "Issue with ad-free version purchase",
+        "Old Play Store blocks premium buy",
+        "Trouble buying ad-free app",
+        "Play Store error for premium version",
+        "Can’t buy ad-free due to old Play Store"
       ],
       "hi": [
-        "सहेजे गए स्टेटस को साझा करें",
-        "मेरे द्वारा सहेजे गए स्टेटस को फिर से पोस्ट करें",
-        "सहेजे गए वीडियो को दूसरों को भेजें",
-        "डाउनलोड किए गए स्टेटस को फॉरवर्ड करें",
-        "ऐप से साझा करने के विकल्प",
-        "अन्य ऐप्स पर साझा करें",
-        "शेयर बटन का उपयोग कैसे करें",
-        "मेरे प्रोफाइल पर सहेजे गए स्टेटस पोस्ट करें"
+        "विज्ञापन-मुक्त ऐप संस्करण खरीदने में त्रुटि",
+        "प्ले स्टोर के कारण प्रीमियम खरीद नहीं सकता",
+        "विज्ञापन-मुक्त के लिए प्ले स्टोर संस्करण त्रुटि",
+        "विज्ञापन-मुक्त संस्करण खरीदने में समस्या",
+        "पुराना प्ले स्टोर प्रीमियम खरीद को ब्लॉक करता है",
+        "विज्ञापन-मुक्त ऐप खरीदने में परेशानी",
+        "प्रीमियम संस्करण के लिए प्ले स्टोर त्रुटि",
+        "पुराने प्ले स्टोर के कारण विज्ञापन-मुक्त खरीद नहीं सकता"
       ],
       "id": [
-        "bagikan status yang disimpan",
-        "posting ulang status yang saya simpan",
-        "kirim video yang disimpan ke orang lain",
-        "teruskan status yang diunduh",
-        "opsi untuk berbagi dari aplikasi",
-        "bagikan ke aplikasi lain",
-        "cara menggunakan tombol bagikan",
-        "posting status yang disimpan di profil saya"
+        "Kesalahan membeli versi aplikasi bebas iklan",
+        "Tidak bisa membeli premium karena Play Store",
+        "Kesalahan versi Play Store untuk bebas iklan",
+        "Masalah dengan pembelian versi bebas iklan",
+        "Play Store lama memblokir pembelian premium",
+        "Kesulitan membeli aplikasi bebas iklan",
+        "Kesalahan Play Store untuk versi premium",
+        "Tidak bisa membeli bebas iklan karena Play Store lama"
       ]
     },
     "answer": {
-      "en": "Go to the 'Saved' section in the app, tap on the status you want to share, and use the 'Share' icon. You can then choose to share it on your own WhatsApp status or other social media apps.",
-      "hi": "ऐप में 'सहेजे गए' अनुभाग पर जाएं, उस स्टेटस पर टैप करें जिसे आप साझा करना चाहते हैं, और 'शेयर' आइकन का उपयोग करें। फिर आप इसे अपने व्हाट्सएप स्टेटस या अन्य सोशल मीडिया ऐप्स पर साझा करना चुन सकते हैं।",
-      "id": "Buka bagian 'Tersimpan' di aplikasi, ketuk status yang ingin Anda bagikan, dan gunakan ikon 'Bagikan'. Anda kemudian dapat memilih untuk membagikannya di status WhatsApp Anda sendiri atau aplikasi media sosial lainnya."
+      "en": "Try updating your Play Store app via Settings > About > Play Store Version. Also clear its cache and restart your device.",
+      "hi": "सेटिंग्स > अबाउट > प्ले स्टोर संस्करण के माध्यम से अपने प्ले स्टोर ऐप को अपडेट करने का प्रयास करें। साथ ही इसका कैश साफ करें और अपने डिवाइस को पुनरारंभ करें।",
+      "id": "Coba perbarui aplikasi Play Store melalui Pengaturan > Tentang > Versi Play Store. Juga hapus cache-nya dan mulai ulang perangkat Anda."
     }
   },
   {
     "question": {
-      "en": "Is it possible to save video statuses with sound?",
-      "hi": "क्या ध्वनि के साथ वीडियो स्टेटस सहेजना संभव है?",
-      "id": "Apakah mungkin menyimpan status video dengan suara?"
+      "en": "The app keeps crashing. / The app won't open. / The app is frozen.",
+      "hi": "ऐप बार-बार क्रैश हो रहा है। / ऐप खुल नहीं रहा। / ऐप फ्रीज हो गया है।",
+      "id": "Aplikasi terus mogok. / Aplikasi tidak bisa dibuka. / Aplikasi macet."
     },
     "paraphrases": {
       "en": [
-        "saved video has no sound",
-        "download video status with audio",
-        "why is there no sound in saved videos",
-        "audio not working on downloaded status",
-        "save video with sound included",
-        "video sound problem",
-        "get audio in saved WA videos",
-        "enable sound for video downloads"
+        "App crashes repeatedly",
+        "Can’t open the app",
+        "App is stuck or frozen",
+        "Why does the app keep crashing",
+        "App fails to launch",
+        "App freezes on use",
+        "Trouble with app crashing",
+        "App stops working suddenly"
       ],
       "hi": [
-        "सहेजे गए वीडियो में कोई ध्वनि नहीं है",
-        "ऑडियो के साथ वीडियो स्टेटस डाउनलोड करें",
-        "सहेजे गए वीडियो में ध्वनि क्यों नहीं है",
-        "डाउनलोड किए गए स्टेटस पर ऑडियो काम नहीं कर रहा है",
-        "ध्वनि सहित वीडियो सहेजें",
-        "वीडियो ध्वनि समस्या",
-        "सहेजे गए डब्ल्यूए वीडियो में ऑडियो प्राप्त करें",
-        "वीडियो डाउनलोड के लिए ध्वनि सक्षम करें"
+        "ऐप बार-बार क्रैश करता है",
+        "ऐप खोल नहीं सकता",
+        "ऐप अटक गया या फ्रीज हो गया",
+        "ऐप बार-बार क्रैश क्यों करता है",
+        "ऐप लॉन्च होने में विफल",
+        "ऐप उपयोग में फ्रीज हो जाता है",
+        "ऐप क्रैश होने की समस्या",
+        "ऐप अचानक काम करना बंद कर देता है"
       ],
       "id": [
-        "video yang disimpan tidak ada suaranya",
-        "unduh status video dengan audio",
-        "mengapa tidak ada suara di video yang disimpan",
-        "audio tidak berfungsi pada status yang diunduh",
-        "simpan video dengan suara disertakan",
-        "masalah suara video",
-        "dapatkan audio di video WA yang disimpan",
-        "aktifkan suara untuk unduhan video"
+        "Aplikasi mogok berulang kali",
+        "Tidak bisa membuka aplikasi",
+        "Aplikasi macet atau beku",
+        "Mengapa aplikasi terus mogok",
+        "Aplikasi gagal diluncurkan",
+        "Aplikasi macet saat digunakan",
+        "Masalah dengan aplikasi mogok",
+        "Aplikasi tiba-tiba berhenti bekerja"
       ]
     },
     "answer": {
-      "en": "Yes, all video statuses are saved with their original audio. If you experience no sound, please check your device's media volume, not the ringer volume. Also, ensure your video player supports the audio format.",
-      "hi": "हाँ, सभी वीडियो स्टेटस उनके मूल ऑडियो के साथ सहेजे जाते हैं। यदि आपको कोई ध्वनि नहीं सुनाई देती है, तो कृपया अपने डिवाइस का मीडिया वॉल्यूम जांचें, न कि रिंगर वॉल्यूम। यह भी सुनिश्चित करें कि आपका वीडियो प्लेयर ऑडियो प्रारूप का समर्थन करता है।",
-      "id": "Ya, semua status video disimpan dengan audio aslinya. Jika Anda tidak mendengar suara, silakan periksa volume media perangkat Anda, bukan volume dering. Juga, pastikan pemutar video Anda mendukung format audio."
+      "en": "Try restarting your phone, updating the app via Play Store, and clearing the app cache (Settings > Apps > Storage > Clear Cache).",
+      "hi": "अपना फोन पुनरारंभ करने, प्ले स्टोर के माध्यम से ऐप को अपडेट करने, और ऐप कैश साफ करने का प्रयास करें (सेटिंग्स > ऐप्स > स्टोरेज > कैश साफ करें)।",
+      "id": "Coba mulai ulang ponsel Anda, perbarui aplikasi melalui Play Store, dan hapus cache aplikasi (Pengaturan > Aplikasi > Penyimpanan > Hapus Cache)."
     }
   },
   {
     "question": {
-      "en": "Is the Status Saver app free to use?",
-      "hi": "क्या स्टेटस सेवर ऐप का उपयोग मुफ्त है?",
-      "id": "Apakah aplikasi Penghemat Status gratis untuk digunakan?"
+      "en": "The app says 'this status is no longer available.' What does that mean?",
+      "hi": "ऐप कहता है 'यह स्टेटस अब उपलब्ध नहीं है।' इसका क्या मतलब है?",
+      "id": "Aplikasi mengatakan 'status ini tidak lagi tersedia.' Apa artinya?"
     },
     "paraphrases": {
       "en": [
-        "do I have to pay for this app",
-        "is the app free",
-        "cost of using status saver",
-        "are there any hidden charges",
-        "is it a paid app",
-        "free vs premium features",
-        "how much does the app cost",
-        "is it completely free"
+        "Why does it say status unavailable",
+        "Meaning of status not available",
+        "What is status no longer available",
+        "App shows status unavailable error",
+        "Why can’t I access the status",
+        "Status not available message",
+        "Explain status unavailable in app",
+        "What causes status not available"
       ],
       "hi": [
-        "क्या मुझे इस ऐप के लिए भुगतान करना होगा",
-        "क्या ऐप मुफ्त है",
-        "स्टेटस सेवर का उपयोग करने की लागत",
-        "क्या कोई छिपा हुआ शुल्क है",
-        "क्या यह एक पेड ऐप है",
-        "मुफ्त बनाम प्रीमियम सुविधाएँ",
-        "ऐप की कीमत कितनी है",
-        "क्या यह पूरी तरह से मुफ्त है"
+        "यह क्यों कहता है कि स्टेटस अनुपलब्ध है",
+        "स्टेटस उपलब्ध नहीं होने का अर्थ",
+        "स्टेटस अब उपलब्ध नहीं है क्या है",
+        "ऐप स्टेटस अनुपलब्ध त्रुटि दिखाता है",
+        "मैं स्टेटस क्यों नहीं एक्सेस कर सकता",
+        "स्टेटस उपलब्ध नहीं है संदेश",
+        "ऐप में स्टेटस अनुपलब्ध समझाएं",
+        "स्टेटस उपलब्ध नहीं होने का कारण"
       ],
       "id": [
-        "apakah saya harus membayar untuk aplikasi ini",
-        "apakah aplikasinya gratis",
-        "biaya penggunaan penghemat status",
-        "apakah ada biaya tersembunyi",
-        "apakah ini aplikasi berbayar",
-        "fitur gratis vs premium",
-        "berapa biaya aplikasinya",
-        "apakah ini sepenuhnya gratis"
+        "Mengapa dikatakan status tidak tersedia",
+        "Arti dari status tidak tersedia",
+        "Apa itu status tidak lagi tersedia",
+        "Aplikasi menunjukkan kesalahan status tidak tersedia",
+        "Mengapa saya tidak bisa mengakses status",
+        "Pesan status tidak tersedia",
+        "Jelaskan status tidak tersedia di aplikasi",
+        "Apa penyebab status tidak tersedia"
       ]
     },
     "answer": {
-      "en": "Yes, the core features of the Status Saver app are completely free to use. The app is supported by ads. Some apps may offer a premium, ad-free version for a small fee.",
-      "hi": "हाँ, स्टेटस सेवर ऐप की मुख्य सुविधाएँ पूरी तरह से मुफ्त हैं। ऐप विज्ञापनों द्वारा समर्थित है। कुछ ऐप्स एक छोटे से शुल्क के लिए एक प्रीमियम, विज्ञापन-मुक्त संस्करण की पेशकश कर सकते हैं।",
-      "id": "Ya, fitur inti dari aplikasi Penghemat Status sepenuhnya gratis untuk digunakan. Aplikasi ini didukung oleh iklan. Beberapa aplikasi mungkin menawarkan versi premium bebas iklan dengan sedikit biaya."
+      "en": "The status expired (after 24 hrs), was deleted, or privacy settings prevent access.",
+      "hi": "स्टेटस समाप्त हो गया (24 घंटे बाद), हटा दिया गया, या गोपनीयता सेटिंग्स एक्सेस को रोकती हैं।",
+      "id": "Status telah kadaluarsa (setelah 24 jam), dihapus, atau pengaturan privasi mencegah akses."
     }
   },
   {
     "question": {
-      "en": "Will saved statuses be deleted if I clear the app's cache?",
-      "hi": "यदि मैं ऐप का कैश साफ़ कर दूं तो क्या सहेजे गए स्टेटस हटा दिए जाएंगे?",
-      "id": "Apakah status yang disimpan akan dihapus jika saya membersihkan cache aplikasi?"
+      "en": "The video I saved is blurry and not HD. Why?",
+      "hi": "मेरे द्वारा सहेजा गया वीडियो धुंधला है और HD नहीं है। क्यों?",
+      "id": "Video yang saya simpan buram dan bukan HD. Mengapa?"
     },
     "paraphrases": {
       "en": [
-        "clearing cache and saved statuses",
-        "does clearing cache remove downloads",
-        "where are statuses stored",
-        "will I lose my saved statuses",
-        "impact of clearing app data",
-        "difference between cache and storage",
-        "safe to clear cache",
-        "how to avoid deleting saved items"
+        "Why is saved video blurry",
+        "Video not in HD after saving",
+        "Cause of low-quality saved video",
+        "Why isn’t video HD when downloaded",
+        "Saved video is not clear",
+        "Blurry video download issue",
+        "Why does video lose quality",
+        "Low resolution saved video"
       ],
       "hi": [
-        "कैश साफ़ करना और सहेजे गए स्टेटस",
-        "क्या कैश साफ़ करने से डाउनलोड हट जाते हैं",
-        "स्टेटस कहाँ संग्रहीत होते हैं",
-        "क्या मैं अपने सहेजे गए स्टेटस खो दूंगा",
-        "ऐप डेटा साफ़ करने का प्रभाव",
-        "कैश और भंडारण के बीच अंतर",
-        "कैश साफ़ करना सुरक्षित है",
-        "सहेजी गई वस्तुओं को हटाने से कैसे बचें"
+        "सहेजा गया वीडियो धुंधला क्यों है",
+        "सहेजने के बाद वीडियो HD में नहीं है",
+        "कम गुणवत्ता वाले सहेजे गए वीडियो का कारण",
+        "डाउनलोड होने पर वीडियो HD क्यों नहीं है",
+        "सहेजा गया वीडियो स्पष्ट नहीं है",
+        "धुंधला वीडियो डाउनलोड समस्या",
+        "वीडियो गुणवत्ता क्यों खो देता है",
+        "कम रिज़ॉल्यूशन सहेजा गया वीडियो"
       ],
       "id": [
-        "membersihkan cache dan status yang disimpan",
-        "apakah membersihkan cache menghapus unduhan",
-        "di mana status disimpan",
-        "apakah saya akan kehilangan status yang saya simpan",
-        "dampak membersihkan data aplikasi",
-        "perbedaan antara cache dan penyimpanan",
-        "aman untuk membersihkan cache",
-        "cara menghindari penghapusan item yang disimpan"
+        "Mengapa video yang disimpan buram",
+        "Video tidak dalam HD setelah disimpan",
+        "Penyebab video berkualitas rendah",
+        "Mengapa video tidak HD saat diunduh",
+        "Video yang disimpan tidak jelas",
+        "Masalah unduhan video buram",
+        "Mengapa video kehilangan kualitas",
+        "Video beresolusi rendah yang disimpan"
       ]
     },
     "answer": {
-      "en": "No, clearing the app's cache will not delete your saved statuses. However, if you select 'Clear Data' or 'Clear Storage' in your phone's settings, it will remove all saved files from the app's folder.",
-      "hi": "नहीं, ऐप का कैश साफ़ करने से आपके सहेजे गए स्टेटस नहीं हटेंगे। हालाँकि, यदि आप अपने फ़ोन की सेटिंग्स में 'डेटा साफ़ करें' या 'भंडारण साफ़ करें' चुनते हैं, तो यह ऐप के फ़ोल्डर से सभी सहेजी गई फ़ाइलों को हटा देगा।",
-      "id": "Tidak, membersihkan cache aplikasi tidak akan menghapus status yang Anda simpan. Namun, jika Anda memilih 'Hapus Data' atau 'Hapus Penyimpanan' di pengaturan ponsel Anda, itu akan menghapus semua file yang tersimpan dari folder aplikasi."
+      "en": "WhatsApp compresses media, our app saves the same quality file from WhatsApp's servers.",
+      "hi": "व्हाट्सएप मीडिया को कंप्रेस करता है, हमारा ऐप व्हाट्सएप के सर्वर से उसी गुणवत्ता की फाइल सहेजता है।",
+      "id": "WhatsApp mengompresi media, aplikasi kami menyimpan file dengan kualitas sama dari server WhatsApp."
     }
   },
   {
     "question": {
-      "en": "Does the app work if I use a modified version of WhatsApp?",
-      "hi": "अगर मैं व्हाट्सएप का संशोधित संस्करण उपयोग करूं तो क्या ऐप काम करेगा?",
-      "id": "Apakah aplikasi berfungsi jika saya menggunakan versi modifikasi WhatsApp?"
+      "en": "Nothing is downloading today, what's wrong?",
+      "hi": "आज कुछ भी डाउनलोड नहीं हो रहा, क्या गलत है?",
+      "id": "Tidak ada yang diunduh hari ini, apa yang salah?"
     },
     "paraphrases": {
       "en": [
-        "support for GBWhatsApp",
-        "does it work with YoWhatsApp",
-        "compatibility with WhatsApp mods",
-        "using status saver with modded WA",
-        "why it's not working with my WA mod",
-        "status saver for third-party WhatsApp",
-        "support for unofficial whatsapp versions",
-        "can it find status from a mod app"
+        "Why isn’t anything downloading",
+        "Downloads not working today",
+        "What’s wrong with downloads",
+        "No downloads happening today",
+        "Why are downloads failing",
+        "Can’t download anything today",
+        "Issue with downloading statuses",
+        "Downloads stopped working"
       ],
       "hi": [
-        "जीबीव्हाट्सएप के लिए समर्थन",
-        "क्या यह योव्हाट्सएप के साथ काम करता है",
-        "व्हाट्सएप मॉड्स के साथ संगतता",
-        "मॉडेड डब्ल्यूए के साथ स्टेटस सेवर का उपयोग",
-        "यह मेरे डब्ल्यूए मोड के साथ क्यों काम नहीं कर रहा है",
-        "तीसरे पक्ष के व्हाट्सएप के लिए स्टेटस सेवर",
-        "अनौपचारिक व्हाट्सएप संस्करणों के लिए समर्थन",
-        "क्या यह एक मॉड ऐप से स्टेटस ढूंढ सकता है"
+        "कुछ क्यों नहीं डाउनलोड हो रहा है",
+        "आज डाउनलोड काम नहीं कर रहा है",
+        "डाउनलोड के साथ क्या गलत है",
+        "आज कोई डाउनलोड नहीं हो रहा",
+        "डाउनलोड क्यों विफल हो रहे हैं",
+        "आज कुछ भी डाउनलोड नहीं कर सकता",
+        "स्टेटस डाउनलोड करने में समस्या",
+        "डाउनलोड काम करना बंद हो गया"
       ],
       "id": [
-        "dukungan untuk GBWhatsApp",
-        "apakah berfungsi dengan YoWhatsApp",
-        "kompatibilitas dengan mod WhatsApp",
-        "menggunakan penghemat status dengan WA modifikasi",
-        "mengapa tidak berfungsi dengan mod WA saya",
-        "penghemat status untuk WhatsApp pihak ketiga",
-        "dukungan untuk versi whatsapp tidak resmi",
-        "bisakah ia menemukan status dari aplikasi mod"
+        "Mengapa tidak ada yang diunduh",
+        "Unduhan tidak berfungsi hari ini",
+        "Apa yang salah dengan unduhan",
+        "Tidak ada unduhan yang terjadi hari ini",
+        "Mengapa unduhan gagal",
+        "Tidak bisa mengunduh apa pun hari ini",
+        "Masalah dengan mengunduh status",
+        "Unduhan berhenti berfungsi"
       ]
     },
     "answer": {
-      "en": "Functionality with modified WhatsApp versions (like GBWhatsApp, YoWhatsApp) is not guaranteed. These apps often use different storage paths for statuses, which our app may not be able to detect. We recommend using the official WhatsApp for best results.",
-      "hi": "संशोधित व्हाट्सएप संस्करणों (जैसे जीबीव्हाट्सएप, योव्हाट्सएप) के साथ कार्यक्षमता की गारंटी नहीं है। ये ऐप्स अक्सर स्टेटस के लिए अलग-अलग स्टोरेज पथ का उपयोग करते हैं, जिसे हमारा ऐप शायद नहीं खोज पाता। हम सर्वोत्तम परिणामों के लिए आधिकारिक व्हाट्सएप का उपयोग करने की सलाह देते हैं।",
-      "id": "Fungsionalitas dengan versi WhatsApp yang dimodifikasi (seperti GBWhatsApp, YoWhatsApp) tidak dijamin. Aplikasi ini sering menggunakan jalur penyimpanan yang berbeda untuk status, yang mungkin tidak dapat dideteksi oleh aplikasi kami. Kami merekomendasikan penggunaan WhatsApp resmi untuk hasil terbaik."
+      "en": "WhatsApp servers might be temporarily down. Try again later or check DownDetector.",
+      "hi": "व्हाट्सएप के सर्वर अस्थायी रूप से डाउन हो सकते हैं। बाद में फिर से प्रयास करें या डाउनडिटेक्टर जांचें।",
+      "id": "Server WhatsApp mungkin sedang tidak aktif sementara. Coba lagi nanti atau periksa DownDetector."
     }
   },
   {
     "question": {
-      "en": "How do I delete a saved status from within the app?",
-      "hi": "मैं ऐप के भीतर से सहेजे गए स्टेटस को कैसे हटाऊं?",
-      "id": "Bagaimana cara menghapus status yang disimpan dari dalam aplikasi?"
+      "en": "My download keeps failing.",
+      "hi": "मेरा डाउनलोड बार-बार विफल हो रहा है।",
+      "id": "Unduhan saya terus gagal."
     },
     "paraphrases": {
       "en": [
-        "remove saved status",
-        "delete a download",
-        "how to get rid of saved statuses",
-        "manage saved content",
-        "delete multiple statuses",
-        "free up space by deleting",
-        "where is the delete button",
-        "clearing the saved list"
+        "Download keeps failing",
+        "Why does my download fail",
+        "Can’t complete downloads",
+        "Download errors repeatedly",
+        "Failed to download statuses",
+        "Download not working properly",
+        "Why are downloads unsuccessful",
+        "Trouble with download failures"
       ],
       "hi": [
-        "सहेजे गए स्टेटस को हटाएं",
-        "एक डाउनलोड हटाएं",
-        "सहेजे गए स्टेटस से कैसे छुटकारा पाएं",
-        "सहेजी गई सामग्री का प्रबंधन करें",
-        "कई स्टेटस हटाएं",
-        "हटाकर जगह खाली करें",
-        "डिलीट बटन कहाँ है",
-        "सहेजी गई सूची को साफ़ करना"
+        "डाउनलोड बार-बार विफल हो रहा",
+        "मेरा डाउनलोड क्यों विफल हो रहा है",
+        "डाउनलोड पूरा नहीं हो पा रहा",
+        "डाउनलोड त्रुटियां बार-बार",
+        "स्टेटस डाउनलोड करने में असफल",
+        "डाउनलोड ठीक से काम नहीं कर रहा",
+        "डाउनलोड असफल क्यों हो रहे हैं",
+        "डाउनलोड विफलताओं की समस्या"
       ],
       "id": [
-        "hapus status yang disimpan",
-        "hapus unduhan",
-        "cara menyingkirkan status yang disimpan",
-        "kelola konten yang disimpan",
-        "hapus beberapa status",
-        "bebaskan ruang dengan menghapus",
-        "di mana tombol hapus",
-        "membersihkan daftar yang disimpan"
+        "Unduhan terus gagal",
+        "Mengapa unduhan saya gagal",
+        "Tidak bisa menyelesaikan unduhan",
+        "Kesalahan unduhan berulang",
+        "Gagal mengunduh status",
+        "Unduhan tidak berfungsi dengan baik",
+        "Mengapa unduhan tidak berhasil",
+        "Masalah dengan kegagalan unduhan"
       ]
     },
     "answer": {
-      "en": "Navigate to the 'Saved' gallery in the app. Long-press on the status you wish to delete to select it, then tap the trash can or delete icon. You can often select multiple items to delete them all at once.",
-      "hi": "ऐप में 'सहेजे गए' गैलरी पर जाएं। जिस स्टेटस को आप हटाना चाहते हैं, उसे चुनने के लिए उस पर देर तक दबाएं, फिर ट्रैश कैन या डिलीट आइकन पर टैप करें। आप अक्सर एक साथ हटाने के लिए कई आइटम चुन सकते हैं।",
-      "id": "Arahkan ke galeri 'Tersimpan' di aplikasi. Tekan lama pada status yang ingin Anda hapus untuk memilihnya, lalu ketuk ikon tempat sampah atau hapus. Anda seringkali dapat memilih beberapa item untuk menghapusnya sekaligus."
+      "en": "Check your internet connection and phone storage. Both must be stable and sufficient.",
+      "hi": "अपना इंटरनेट कनेक्शन और फोन स्टोरेज जांचें। दोनों स्थिर और पर्याप्त होने चाहिए।",
+      "id": "Periksa koneksi internet dan penyimpanan ponsel Anda. Keduanya harus stabil dan cukup."
+    }
+  },
+  {
+    "question": {
+      "en": "I've checked my internet and storage, and it's still not working.",
+      "hi": "मैंने अपना इंटरनेट और स्टोरेज जांच लिया, और यह फिर भी काम नहीं कर रहा है।",
+      "id": "Saya sudah memeriksa internet dan penyimpanan, tetapi masih tidak berfungsi."
+    },
+    "paraphrases": {
+      "en": [
+        "Downloads fail after checking internet",
+        "Still not working after storage check",
+        "App not downloading despite checks",
+        "Why doesn’t it work after verifying internet",
+        "Download issues persist after checks",
+        "Can’t download after confirming storage",
+        "Trouble downloading post-checks",
+        "Not working after internet and storage verification"
+      ],
+      "hi": [
+        "इंटरनेट जांच के बाद डाउनलोड विफल",
+        "स्टोरेज जांच के बाद भी काम नहीं कर रहा",
+        "ऐप चेक के बावजूद डाउनलोड नहीं हो रहा",
+        "इंटरनेट सत्यापन के बाद काम क्यों नहीं करता",
+        "चेक के बाद डाउनलोड समस्याएं बनी रहती हैं",
+        "स्टोरेज की पुष्टि के बाद डाउनलोड नहीं कर सकता",
+        "चेक के बाद डाउनलोड करने में समस्या",
+        "इंटरनेट और स्टोरेज सत्यापन के बाद काम नहीं कर रहा"
+      ],
+      "id": [
+        "Unduhan gagal setelah memeriksa internet",
+        "Masih tidak berfungsi setelah memeriksa penyimpanan",
+        "Aplikasi tidak mengunduh meski sudah diperiksa",
+        "Mengapa tidak berfungsi setelah memverifikasi internet",
+        "Masalah unduhan tetap ada setelah pemeriksaan",
+        "Tidak bisa mengunduh setelah mengonfirmasi penyimpanan",
+        "Masalah mengunduh setelah pemeriksaan",
+        "Tidak berfungsi setelah verifikasi internet dan penyimpanan"
+      ]
+    },
+    "answer": {
+      "en": "Make sure your phone's date and time settings are correct and automatic.",
+      "hi": "सुनिश्चित करें कि आपके फोन की तारीख और समय सेटिंग्स सही और स्वचालित हैं।",
+      "id": "Pastikan pengaturan tanggal dan waktu ponsel Anda benar dan otomatis."
+    }
+  },
+  {
+    "question": {
+      "en": "I can see the list of statuses, but when I tap download, nothing happens.",
+      "hi": "मैं स्टेटस की सूची देख सकता हूं, लेकिन जब मैं डाउनलोड पर टैप करता हूं, कुछ नहीं होता।",
+      "id": "Saya bisa melihat daftar status, tetapi saat mengetuk unduh, tidak terjadi apa-apa."
+    },
+    "paraphrases": {
+      "en": [
+        "Download button doesn’t work",
+        "Nothing happens when I tap download",
+        "Can’t download from status list",
+        "Download fails to start",
+        "Tap download but no action",
+        "Status list download issue",
+        "Why doesn’t download work",
+        "No response on download tap"
+      ],
+      "hi": [
+        "डाउनलोड बटन काम नहीं करता",
+        "डाउनलोड टैप करने पर कुछ नहीं होता",
+        "स्टेटस सूची से डाउनलोड नहीं कर सकता",
+        "डाउनलोड शुरू होने में विफल",
+        "डाउनलोड टैप करें लेकिन कोई कार्रवाई नहीं",
+        "स्टेटस सूची डाउनलोड समस्या",
+        "डाउनलोड क्यों काम नहीं करता",
+        "डाउनलोड टैप पर कोई प्रतिक्रिया नहीं"
+      ],
+      "id": [
+        "Tombol unduh tidak berfungsi",
+        "Tidak terjadi apa-apa saat mengetuk unduh",
+        "Tidak bisa mengunduh dari daftar status",
+        "Unduhan gagal dimulai",
+        "Ketuk unduh tetapi tidak ada tindakan",
+        "Masalah unduhan daftar status",
+        "Mengapa unduhan tidak berfungsi",
+        "Tidak ada respons saat mengetuk unduh"
+      ]
+    },
+    "answer": {
+      "en": "The app likely lacks storage permissions. Grant access to save files.",
+      "hi": "ऐप को शायद स्टोरेज अनुमति की कमी है। फाइलें सहेजने के लिए एक्सेस दें।",
+      "id": "Aplikasi kemungkinan tidak memiliki izin penyimpanan. Berikan akses untuk menyimpan file."
+    }
+  },
+  {
+    "question": {
+      "en": "Do I need to be online to use the app?",
+      "hi": "क्या मुझे ऐप का उपयोग करने के लिए ऑनलाइन होना जरूरी है?",
+      "id": "Apakah saya harus online untuk menggunakan aplikasi?"
+    },
+    "paraphrases": {
+      "en": [
+        "Is internet required for the app",
+        "Can I use the app offline",
+        "Need to be online for app use",
+        "Does the app work without internet",
+        "Online requirement for app",
+        "Use app without internet",
+        "Is connectivity needed for app",
+        "App functionality offline"
+      ],
+      "hi": [
+        "क्या ऐप के लिए इंटरनेट आवश्यक है",
+        "क्या मैं ऐप को ऑफलाइन उपयोग कर सकता हूं",
+        "ऐप उपयोग के लिए ऑनलाइन होना जरूरी है",
+        "क्या ऐप बिना इंटरनेट के काम करता है",
+        "ऐप के लिए ऑनलाइन आवश्यकता",
+        "बिना इंटरनेट के ऐप उपयोग करें",
+        "ऐप के लिए कनेक्टिविटी की जरूरत है",
+        "ऑफलाइन ऐप कार्यक्षमता"
+      ],
+      "id": [
+        "Apakah internet diperlukan untuk aplikasi",
+        "Bisakah saya menggunakan aplikasi secara offline",
+        "Perlu online untuk menggunakan aplikasi",
+        "Apakah aplikasi berfungsi tanpa internet",
+        "Kebutuhan online untuk aplikasi",
+        "Gunakan aplikasi tanpa internet",
+        "Apakah konektivitas diperlukan untuk aplikasi",
+        "Fungsi aplikasi secara offline"
+      ]
+    },
+    "answer": {
+      "en": "Yes, to download new statuses. Once saved, you can view/share them offline.",
+      "hi": "हां, नए स्टेटस डाउनलोड करने के लिए। एक बार सहेजे जाने के बाद, आप उन्हें ऑफलाइन देख/शेयर कर सकते हैं।",
+      "id": "Ya, untuk mengunduh status baru. Setelah disimpan, Anda bisa melihat/membagikan secara offline."
+    }
+  },
+  {
+    "question": {
+      "en": "Why do I have to go through all these steps to give a permission? Other apps just ask for permission once.",
+      "hi": "मुझे अनुमति देने के लिए इन सभी चरणों से क्यों गुजरना पड़ता है? अन्य ऐप्स तो बस एक बार अनुमति मांगते हैं।",
+      "id": "Mengapa saya harus melalui semua langkah ini untuk memberikan izin? Aplikasi lain hanya meminta izin sekali."
+    },
+    "paraphrases": {
+      "en": [
+        "Why so many steps for permissions",
+        "Other apps need one permission request",
+        "Complex permission process in app",
+        "Why multiple steps for app permissions",
+        "Permission setup is too complicated",
+        "Why not single permission request",
+        "Tedious permission granting process",
+        "App permissions require many steps"
+      ],
+      "hi": [
+        "अनुमतियों के लिए इतने सारे चरण क्यों",
+        "अन्य ऐप्स को एक बार अनुमति चाहिए",
+        "ऐप में जटिल अनुमति प्रक्रिया",
+        "ऐप अनुमतियों के लिए कई चरण क्यों",
+        "अनुमति सेटअप बहुत जटिल है",
+        "एकल अनुमति अनुरोध क्यों नहीं",
+        "थकाऊ अनुमति देने की प्रक्रिया",
+        "ऐप अनुमतियों के लिए कई चरण चाहिए"
+      ],
+      "id": [
+        "Mengapa begitu banyak langkah untuk izin",
+        "Aplikasi lain hanya perlu satu permintaan izin",
+        "Proses izin yang rumit di aplikasi",
+        "Mengapa banyak langkah untuk izin aplikasi",
+        "Pengaturan izin terlalu rumit",
+        "Mengapa bukan permintaan izin tunggal",
+        "Proses pemberian izin yang melelahkan",
+        "Izin aplikasi memerlukan banyak langkah"
+      ]
+    },
+    "answer": {
+      "en": "Due to Android 11+ security changes, you must now manually grant folder-specific access. It’s a one-time, secure setup.",
+      "hi": "एंड्रॉइड 11+ सुरक्षा परिवर्तनों के कारण, आपको अब फोल्डर-विशिष्ट एक्सेस मैन्युअली देना होगा। यह एक बार का, सुरक्षित सेटअप है।",
+      "id": "Karena perubahan keamanan Android 11+, Anda sekarang harus memberikan akses spesifik folder secara manual. Ini adalah pengaturan sekali pakai yang aman."
+    }
+  },
+  {
+    "question": {
+      "en": "Is it safe to give this permission?",
+      "hi": "क्या यह अनुमति देना सुरक्षित है?",
+      "id": "Apakah aman memberikan izin ini?"
+    },
+    "paraphrases": {
+      "en": [
+        "Is granting permission secure",
+        "Safe to allow app permission",
+        "Can I trust giving permission",
+        "Is it okay to grant access",
+        "Security of app permissions",
+        "Is permission safe to provide",
+        "Risks of giving app permission",
+        "Is it secure to allow access"
+      ],
+      "hi": [
+        "क्या अनुमति देना सुरक्षित है",
+        "ऐप अनुमति देना सुरक्षित है",
+        "क्या मैं अनुमति देने पर भरोसा कर सकता हूं",
+        "एक्सेस देना ठीक है",
+        "ऐप अनुमतियों की सुरक्षा",
+        "क्या अनुमति देना सुरक्षित है",
+        "ऐप अनुमति देने के जोखिम",
+        "एक्सेस की अनुमति देना सुरक्षित है"
+      ],
+      "id": [
+        "Apakah memberikan izin aman",
+        "Aman untuk mengizinkan izin aplikasi",
+        "Bisakah saya percaya memberikan izin",
+        "Apakah boleh memberikan akses",
+        "Keamanan izin aplikasi",
+        "Apakah izin aman untuk diberikan",
+        "Risiko memberikan izin aplikasi",
+        "Apakah aman untuk mengizinkan akses"
+      ]
+    },
+    "answer": {
+      "en": "Yes, it only allows access to the WhatsApp status folder — not your personal files.",
+      "hi": "हां, यह केवल व्हाट्सएप स्टेटस फोल्डर तक एक्सेस की अनुमति देता है — आपके व्यक्तिगत फाइलों तक नहीं।",
+      "id": "Ya, ini hanya mengizinkan akses ke folder status WhatsApp — bukan file pribadi Anda."
+    }
+  },
+  {
+    "question": {
+      "en": "I followed the steps but it still isn't working.",
+      "hi": "मैंने चरणों का पालन किया, लेकिन यह फिर भी काम नहीं कर रहा है।",
+      "id": "Saya sudah mengikuti langkah-langkahnya, tetapi masih tidak berfungsi."
+    },
+    "paraphrases": {
+      "en": [
+        "App not working after following steps",
+        "Still fails despite instructions",
+        "Why doesn’t it work after steps",
+        "Followed guide but no success",
+        "App issue persists after steps",
+        "Not working after doing steps",
+        "Steps followed but app fails",
+        "Trouble after completing instructions"
+      ],
+      "hi": [
+        "चरणों का पालन करने के बाद ऐप काम नहीं कर रहा",
+        "निर्देशों के बावजूद अभी भी विफल",
+        "चरणों के बाद भी काम क्यों नहीं करता",
+        "गाइड का पालन किया लेकिन सफलता नहीं",
+        "चरणों के बाद भी ऐप समस्या बनी रहती है",
+        "चरण करने के बाद काम नहीं कर रहा",
+        "चरणों का पालन किया लेकिन ऐप विफल",
+        "निर्देशों को पूरा करने के बाद समस्या"
+      ],
+      "id": [
+        "Aplikasi tidak berfungsi setelah mengikuti langkah",
+        "Masih gagal meskipun mengikuti petunjuk",
+        "Mengapa tidak berfungsi setelah langkah-langkah",
+        "Mengikuti panduan tetapi tidak berhasil",
+        "Masalah aplikasi tetap ada setelah langkah",
+        "Tidak berfungsi setelah melakukan langkah",
+        "Langkah diikuti tetapi aplikasi gagal",
+        "Masalah setelah menyelesaikan petunjuk"
+      ]
+    },
+    "answer": {
+      "en": "Clear cache and data via Settings > Apps > Storage. Then reopen the app and re-grant permission.",
+      "hi": "सेटिंग्स > ऐप्स > स्टोरेज के माध्यम से कैश और डेटा साफ करें। फिर ऐप को फिर से खोलें और अनुमति दोबारा दें।",
+      "id": "Hapus cache dan data melalui Pengaturan > Aplikasi > Penyimpanan. Kemudian buka kembali aplikasi dan berikan ulang izin."
+    }
+  },
+  {
+    "question": {
+      "en": "I use WhatsApp Business. Are the steps different?",
+      "hi": "मैं व्हाट्सएप बिजनेस का उपयोग करता हूं। क्या चरण अलग हैं?",
+      "id": "Saya menggunakan WhatsApp Business. Apakah langkahnya berbeda?"
+    },
+    "paraphrases": {
+      "en": [
+        "Different steps for WhatsApp Business",
+        "WhatsApp Business setup steps",
+        "Are procedures different for WA Business",
+        "Steps for business account",
+        "Do I follow different steps for Business WA",
+        "WhatsApp Business permission steps",
+        "Is process different for WA Business",
+        "Unique steps for WhatsApp Business"
+      ],
+      "hi": [
+        "व्हाट्सएप बिजनेस के लिए अलग चरण",
+        "व्हाट्सएप बिजनेस सेटअप चरण",
+        "क्या WA बिजनेस के लिए प्रक्रियाएं अलग हैं",
+        "बिजनेस अकाउंट के लिए चरण",
+        "क्या Business WA के लिए अलग चरणों का पाल न करना पड़ता है",
+        "व्हाट्सएप बिजनेस अनुमति चरण",
+        "क्या WA बिजनेस के लिए प्रक्रिया अलग है",
+        "व्हाट्सएप बिजनेस के लिए अनूठे चरण"
+      ],
+      "id": [
+        "Langkah berbeda untuk WhatsApp Business",
+        "Langkah pengaturan WhatsApp Business",
+        "Apakah prosedur berbeda untuk WA Business",
+        "Langkah untuk akun bisnis",
+        "Apakah saya mengikuti langkah berbeda untuk WA Bisnis",
+        "Langkah izin WhatsApp Business",
+        "Apakah proses berbeda untuk WA Business",
+        "Langkah unik untuk WhatsApp Business"
+      ]
+    },
+    "answer": {
+      "en": "Yes, look for the folder named com.whatsapp.w4b instead of com.whatsapp during permission setup.",
+      "hi": "हां, अनुमति सेटअप के दौरान com.whatsapp के बजाय com.whatsapp.w4b नामक फोल्डर की तलाश करें।",
+      "id": "Ya, cari folder bernama com.whatsapp.w4b bukan com.whatsapp saat pengaturan izin."
+    }
+  },
+  {
+    "question": {
+      "en": "Is this app safe to use? Are you stealing my data or reading my messages?",
+      "hi": "क्या यह ऐप उपयोग करने के लिए सुरक्षित है? क्या आप मेरा डेटा चुरा रहे हैं या मेरे संदेश पढ़ रहे हैं?",
+      "id": "Apakah aplikasi ini aman digunakan? Apakah Anda mencuri data saya atau membaca pesan saya?"
+    },
+    "paraphrases": {
+      "en": [
+        "Is the app secure to use",
+        "Does it steal my data or messages",
+        "Safe to use the app",
+        "Is my data safe with this app",
+        "Does the app read my chats",
+        "App safety and data privacy",
+        "Can I trust the app with my data",
+        "Is it safe from data theft"
+      ],
+      "hi": [
+        "क्या ऐप उपयोग करने के लिए सुरक्षित है",
+        "क्या यह मेरा डेटा या संदेश चुराता है",
+        "ऐप उपयोग करने के लिए सुरक्षित",
+        "क्या मेरा डेटा इस ऐप के साथ सुरक्षित है",
+        "क्या ऐप मेरे चैट्स पढ़ता है",
+        "ऐप सुरक्षा और डेटा गोपनीयता",
+        "क्या मैं अपने डेटा के साथ ऐप पर भरोसा कर सकता हूं",
+        "क्या यह डेटा चोरी से सुरक्षित है"
+      ],
+      "id": [
+        "Apakah aplikasi aman untuk digunakan",
+        "Apakah mengambil data atau pesan saya",
+        "Aman menggunakan aplikasi",
+        "Apakah data saya aman dengan aplikasi ini",
+        "Apakah aplikasi membaca obrolan saya",
+        "Keamanan aplikasi dan privasi data",
+        "Bisakah saya mempercayai aplikasi dengan data saya",
+        "Apakah aman dari pencurian data"
+      ]
+    },
+    "answer": {
+      "en": "No, we never access your chats or personal info. We don’t collect your name, contacts, or WhatsApp privacy settings.",
+      "hi": "नहीं, हम कभी भी आपके चैट्स या व्यक्तिग्रत जानकारी तक नहीं पहुंचते हैं। हम आपका नाम, संपर्क, या व्हाट्सएप गोपनीयता सेटिंग्स एकत्र नहीं करते हैं।",
+      "id": "Tidak, kami tidak pernah mengakses obrolan atau informasi pribadi Anda. Kami tidak mengumpulkan nama, kontak, atau pengaturan privasi WhatsApp Anda."
+    }
+  },
+  {
+    "question": {
+      "en": "What information does your app collect from my phone?",
+      "hi": "आपका ऐप मेरे फोन से कौन सी जानकारी एकत्र करता है?",
+      "id": "Informasi apa yang dikumpulkan aplikasi Anda dari ponsel saya?"
+    },
+    "paraphrases": {
+      "en": [
+        "What data does the app collect",
+        "App’s phone data collection",
+        "Type of info app gathers",
+        "What does the app take from my phone",
+        "Data collected by the app",
+        "Info the app retrieves from device",
+        "What phone data does app use",
+        "Details app collects from my phone"
+      ],
+      "hi": [
+        "ऐप कौन सा डेटा एकत्र करता है",
+        "ऐप की फोन डेटा संग्रहण",
+        "ऐप किस प्रकार की जानकारी एकत्र करता है",
+        "ऐप मेरे फोन से क्या लेता है",
+        "ऐप द्वारा एकत्रित डेटा",
+        "ऐप डिवाइस से कौन सी जानकारी प्राप्त करता है",
+        "ऐप फोन डेटा का उपयोग करता है",
+        "ऐप मेरे फोन से कौन से विवरण एकत्र करता है"
+      ],
+      "id": [
+        "Data apa yang dikumpulkan aplikasi",
+        "Pengumpulan data ponsel aplikasi",
+        "Jenis informasi yang dikumpulkan aplikasi",
+        "Apa yang diambil aplikasi dari ponsel saya",
+        "Data yang dikumpulkan oleh aplikasi",
+        "Informasi yang diambil aplikasi dari perangkat",
+        "Data ponsel apa yang digunakan aplikasi",
+        "Detail yang dikumpulkan aplikasi dari ponsel saya"
+      ]
+    },
+    "answer": {
+      "en": "Only anonymous technical data like phone model and OS version — used to improve app performance.",
+      "hi": "केवल अनाम तकनीकी डेटा जैसे फोन मॉडल और ऑपरेटिंग सिस्टम संस्करण — ऐप प्रदर्शन को बेहतर करने के लिए उपयोग किया जाता है।",
+      "id": "Hanya data teknis anonim seperti model ponsel dan versi OS — digunakan untuk meningkatkan kinerja aplikasi."
+    }
+  },
+  {
+    "question": {
+      "en": "Is this an official app from WhatsApp?",
+      "hi": "क्या यह व्हाट्सएप का आधिकारिक ऐप है?",
+      "id": "Apakah ini aplikasi resmi dari WhatsApp?"
+    },
+    "paraphrases": {
+      "en": [
+        "Is it an official WhatsApp app",
+        "WhatsApp’s official application",
+        "Is the app made by WhatsApp",
+        "Official app from WhatsApp",
+        "Is it created by WhatsApp",
+        "WhatsApp authorized app",
+        "Is this WhatsApp’s own app",
+        "App officially by WhatsApp"
+      ],
+      "hi": [
+        "क्या यह व्हाट्सएप का आधिकारिक ऐप है",
+        "व्हाट्सएप का आधिकारिक एप्लिकेशन",
+        "क्या ऐप व्हाट्सएप द्वारा बनाया गया है",
+        "व्हाट्सएप से आधिकारिक ऐप",
+        "क्या यह व्हाट्सएप द्वारा बनाया गया है",
+        "व्हाट्सएप अधिकृत ऐप",
+        "क्या यह व्हाट्सएप का अपना ऐप है",
+        "व्हाट्सएप द्वारा आधिकारिक ऐप"
+      ],
+      "id": [
+        "Apakah ini aplikasi resmi WhatsApp",
+        "Aplikasi resmi WhatsApp",
+        "Apakah aplikasi dibuat oleh WhatsApp",
+        "Aplikasi resmi dari WhatsApp",
+        "Apakah dibuat oleh WhatsApp",
+        "Aplikasi resmi WhatsApp",
+        "Apakah ini aplikasi milik WhatsApp",
+        "Aplikasi resmi oleh WhatsApp"
+      ]
+    },
+    "answer": {
+      "en": "No, we are an independent third-party developer. We’re not affiliated with WhatsApp Inc.",
+      "hi": "नहीं, हम एक स्वतंत्र तृतीय-पक्ष डेवलपर हैं। हम व्हाट्सएप इंक से संबद्ध नहीं हैं।",
+      "id": "Tidak, kami adalah pengembang pihak ketiga independen. Kami tidak berafiliasi dengan WhatsApp Inc."
+    }
+  },
+  {
+    "question": {
+      "en": "Is it legal for me to save someone else's status?",
+      "hi": "क्या किसी और का स्टेटस सहेजना मेरे लिए कानूनी है?",
+      "id": "Apakah legal bagi saya untuk menyimpan status orang lain?"
+    },
+    "paraphrases": {
+      "en": [
+        "Is saving others’ statuses legal",
+        "Can I legally download someone’s status",
+        "Legality of saving statuses",
+        "Is it okay to save another’s status",
+        "Legal to save someone’s WA status",
+        "Can I save statuses legally",
+        "Is downloading others’ status allowed",
+        "Legal issues with saving statuses"
+      ],
+      "hi": [
+        "क्या दूसरों के स्टेटस सहेजना कानूनी है",
+        "क्या मैं किसी का स्टेटस कानूनी रूप से डाउनलोड कर सकता हूं",
+        "स्टेटस सहेजने की वैधता",
+        "क्या किसी और का स्टेटस सहेजना ठीक है",
+        "किसी के WA स्टेटस को कानूनी रूप से सहेजना",
+        "क्या मैं स्टेटस कानूनी रूप से सह सकता हूं",
+        "क्या दूसरों का स्टेटस डाउनलोड करना अनुमत है",
+        "स्टेटस सहेजने के कानूनी मुद्दे"
+      ],
+      "id": [
+        "Apakah menyimpan status orang lain legal",
+        "Bisakah saya mengunduh status seseorang secara legal",
+        "Legalitas menyimpan status",
+        "Apakah boleh menyimpan status orang lain",
+        "Legal menyimpan status WA seseorang",
+        "Bisakah saya menyimpan status secara legal",
+        "Apakah mengunduh status orang lain diizinkan",
+        "Masalah hukum dengan menyimpan status"
+      ]
+    },
+    "answer": {
+      "en": "The app saves media already on your device. Please respect others’ privacy and get permission before sharing saved content.",
+      "hi": "ऐप आपके डिवाइस पर पहले से मौजूद मीडिया को सहेजता है। कृपया दूसरों की गोपनीयता का सम्मान करें और सहेजी गई सामग्री साझा करने से पहले अनुमति लें।",
+      "id": "Aplikasi menyimpan media yang sudah ada di perangkat Anda. Harap hormati privasi orang lain dan dapatkan izin sebelum membagikan konten yang disimpan."
     }
   }
 ]
