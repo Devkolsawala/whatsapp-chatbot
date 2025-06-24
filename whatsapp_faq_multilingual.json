@@ -1,4 +1,4 @@
-[
+ [
   {
     "question": {
       "en": "How can I save a status without viewing it in WhatsApp first?",
@@ -437,6 +437,446 @@
       "en": "Go to the app’s Settings, select 'Report a Bug,' and describe the issue. Alternatively, contact the support team via the app’s listed email.",
       "hi": "ऐप की सेटिंग्स में जाएं, 'रिपोर्ट ए बग' चुनें, और समस्या का वर्णन करें। वैकल्पिक रूप से, ऐप में सूचीबद्ध ईमेल के माध्यम से सहायता टीम से संपर्क करें।",
       "id": "Buka Pengaturan aplikasi, pilih 'Laporkan Bug,' dan jelaskan masalahnya. Alternatifnya, hubungi tim dukungan melalui email yang tercantum di aplikasi."
+    }
+  },
+  {
+    "question": {
+      "en": "Does the app notify the user when I save their status?",
+      "hi": "क्या जब मैं किसी का स्टेटस सहेजता हूं तो ऐप उस उपयोगकर्ता को सूचित करता है?",
+      "id": "Apakah aplikasi memberi tahu pengguna saat saya menyimpan status mereka?"
+    },
+    "paraphrases": {
+      "en": [
+        "will they know if I save their status",
+        "status save notification",
+        "is saving statuses anonymous",
+        "can people see if I download their story",
+        "privacy of saving status",
+        "does it alert the user",
+        "anonymous status download",
+        "save status without them knowing"
+      ],
+      "hi": [
+        "क्या उन्हें पता चलेगा कि मैंने उनका स्टेटस सहेजा है",
+        "स्टेटस सहेजने की सूचना",
+        "क्या स्टेटस सहेजना गुमनाम है",
+        "क्या लोग देख सकते हैं कि मैंने उनकी स्टोरी डाउनलोड की है",
+        "स्टेटस सहेजने की गोपनीयता",
+        "क्या यह उपयोगकर्ता को सचेत करता है",
+        "गुमनाम स्टेटस डाउनलोड",
+        "बिना उनकी जानकारी के स्टेटस सहेजें"
+      ],
+      "id": [
+        "apakah mereka akan tahu jika saya menyimpan statusnya",
+        "notifikasi penyimpanan status",
+        "apakah menyimpan status itu anonim",
+        "bisakah orang melihat jika saya mengunduh cerita mereka",
+        "privasi menyimpan status",
+        "apakah ini memberi peringatan kepada pengguna",
+        "unduhan status anonim",
+        "simpan status tanpa sepengetahuan mereka"
+      ]
+    },
+    "answer": {
+      "en": "No, the app operates discreetly. It saves statuses without sending any notification to the contact whose status you have saved.",
+      "hi": "नहीं, ऐप गुप्त रूप से काम करता है। यह आपके संपर्क को कोई सूचना भेजे बिना स्टेटस सहेजता है जिसका स्टेटस आपने सहेजा है।",
+      "id": "Tidak, aplikasi beroperasi secara diam-diam. Ini menyimpan status tanpa mengirimkan pemberitahuan apa pun ke kontak yang statusnya telah Anda simpan."
+    }
+  },
+  {
+    "question": {
+      "en": "Can I save statuses from WhatsApp Business?",
+      "hi": "क्या मैं व्हाट्सएप बिजनेस से स्टेटस सहेज सकता हूं?",
+      "id": "Bisakah saya menyimpan status dari WhatsApp Business?"
+    },
+    "paraphrases": {
+      "en": [
+        "does it work with WA Business",
+        "save status from business account",
+        "support for WhatsApp Business statuses",
+        "download business status",
+        "grab WA business story",
+        "is business whatsapp compatible",
+        "get status from a business profile",
+        "save commercial status"
+      ],
+      "hi": [
+        "क्या यह डब्ल्यूए बिजनेस के साथ काम करता है",
+        "बिजनेस अकाउंट से स्टेटस सहेजें",
+        "व्हाट्सएप बिजनेस स्टेटस के लिए समर्थन",
+        "बिजनेस स्टेटस डाउनलोड करें",
+        "डब्ल्यूए बिजनेस स्टोरी पकड़ो",
+        "क्या बिजनेस व्हाट्सएप संगत है",
+        "एक बिजनेस प्रोफाइल से स्टेटस प्राप्त करें",
+        "कमर्शियल स्टेटस सहेजें"
+      ],
+      "id": [
+        "apakah berfungsi dengan WA Business",
+        "simpan status dari akun bisnis",
+        "dukungan untuk status WhatsApp Business",
+        "unduh status bisnis",
+        "ambil cerita bisnis WA",
+        "apakah whatsapp bisnis kompatibel",
+        "dapatkan status dari profil bisnis",
+        "simpan status komersial"
+      ]
+    },
+    "answer": {
+      "en": "Yes, the app is compatible with both standard WhatsApp and WhatsApp Business. You can view and save statuses from both versions.",
+      "hi": "हाँ, ऐप मानक व्हाट्सएप और व्हाट्सएप बिजनेस दोनों के साथ संगत है। आप दोनों संस्करणों से स्टेटस देख और सहेज सकते हैं।",
+      "id": "Ya, aplikasi ini kompatibel dengan WhatsApp standar dan WhatsApp Business. Anda dapat melihat dan menyimpan status dari kedua versi."
+    }
+  },
+  {
+    "question": {
+      "en": "Are the saved statuses in high quality?",
+      "hi": "क्या सहेजे गए स्टेटस उच्च गुणवत्ता में होते हैं?",
+      "id": "Apakah status yang disimpan dalam kualitas tinggi?"
+    },
+    "paraphrases": {
+      "en": [
+        "status download quality",
+        "save status in HD",
+        "does the app reduce quality",
+        "get original quality status",
+        "high resolution status saving",
+        "are saved photos/videos clear",
+        "maintain original status quality",
+        "avoid blurry status downloads"
+      ],
+      "hi": [
+        "स्टेटस डाउनलोड गुणवत्ता",
+        "एचडी में स्टेटस सहेजें",
+        "क्या ऐप गुणवत्ता कम करता है",
+        "मूल गुणवत्ता स्टेटस प्राप्त करें",
+        "उच्च रिज़ॉल्यूशन स्टेटस सहेजना",
+        "क्या सहेजी गई तस्वीरें/वीडियो स्पष्ट हैं",
+        "मूल स्टेटस गुणवत्ता बनाए रखें",
+        "धुंधले स्टेटस डाउनलोड से बचें"
+      ],
+      "id": [
+        "kualitas unduhan status",
+        "simpan status dalam HD",
+        "apakah aplikasi mengurangi kualitas",
+        "dapatkan status kualitas asli",
+        "penyimpanan status resolusi tinggi",
+        "apakah foto/video yang disimpan jelas",
+        "pertahankan kualitas status asli",
+        "hindari unduhan status yang buram"
+      ]
+    },
+    "answer": {
+      "en": "The app saves statuses in the same quality that WhatsApp downloads them to your device. The quality depends on the original upload by the contact.",
+      "hi": "ऐप स्टेटस को उसी गुणवत्ता में सहेजता है जिसमें व्हाट्सएप उन्हें आपके डिवाइस पर डाउनलोड करता है। गुणवत्ता संपर्क द्वारा मूल अपलोड पर निर्भर करती है।",
+      "id": "Aplikasi menyimpan status dengan kualitas yang sama seperti yang diunduh WhatsApp ke perangkat Anda. Kualitasnya tergantung pada unggahan asli oleh kontak."
+    }
+  },
+  {
+    "question": {
+      "en": "Why are statuses not appearing in the app after I've viewed them?",
+      "hi": "स्टेटस देखने के बाद भी ऐप में क्यों नहीं दिख रहे हैं?",
+      "id": "Mengapa status tidak muncul di aplikasi setelah saya melihatnya?"
+    },
+    "paraphrases": {
+      "en": [
+        "viewed status not showing",
+        "app is not fetching statuses",
+        "status list is empty",
+        "can't see any statuses to save",
+        "statuses disappeared from app",
+        "why aren't new statuses loading",
+        "app not updating with new statuses",
+        "trouble syncing statuses"
+      ],
+      "hi": [
+        "देखा गया स्टेटस नहीं दिख रहा है",
+        "ऐप स्टेटस नहीं ला रहा है",
+        "स्टेटस सूची खाली है",
+        "सहेजने के लिए कोई स्टेटस नहीं दिख रहा है",
+        "ऐप से स्टेटस गायब हो गए",
+        "नए स्टेटस क्यों नहीं लोड हो रहे हैं",
+        "ऐप नए स्टेटस के साथ अपडेट नहीं हो रहा है",
+        "स्टेटस सिंक करने में समस्या"
+      ],
+      "id": [
+        "status yang dilihat tidak muncul",
+        "aplikasi tidak mengambil status",
+        "daftar status kosong",
+        "tidak bisa melihat status untuk disimpan",
+        "status hilang dari aplikasi",
+        "mengapa status baru tidak dimuat",
+        "aplikasi tidak memperbarui dengan status baru",
+        "masalah sinkronisasi status"
+      ]
+    },
+    "answer": {
+      "en": "This can happen if WhatsApp has changed its storage location. Please check for an app update. Also, ensure the app has the correct storage permissions in your phone's settings and try restarting your device.",
+      "hi": "यह तब हो सकता है जब व्हाट्सएप ने अपना भंडारण स्थान बदल दिया हो। कृपया ऐप अपडेट की जांच करें। यह भी सुनिश्चित करें कि ऐप को आपके फोन की सेटिंग्स में सही भंडारण अनुमतियां हैं और अपने डिवाइस को पुनरारंभ करने का प्रयास करें।",
+      "id": "Ini bisa terjadi jika WhatsApp telah mengubah lokasi penyimpanannya. Silakan periksa pembaruan aplikasi. Juga, pastikan aplikasi memiliki izin penyimpanan yang benar di pengaturan ponsel Anda dan coba mulai ulang perangkat Anda."
+    }
+  },
+  {
+    "question": {
+      "en": "How can I share a saved status directly from the app?",
+      "hi": "मैं ऐप से सीधे सहेजे गए स्टेटस को कैसे साझा कर सकता हूं?",
+      "id": "Bagaimana cara membagikan status yang disimpan langsung dari aplikasi?"
+    },
+    "paraphrases": {
+      "en": [
+        "share saved status",
+        "repost a status I saved",
+        "send saved video to others",
+        "forward a downloaded status",
+        "options for sharing from app",
+        "share to other apps",
+        "how to use the share button",
+        "post saved status on my profile"
+      ],
+      "hi": [
+        "सहेजे गए स्टेटस को साझा करें",
+        "मेरे द्वारा सहेजे गए स्टेटस को फिर से पोस्ट करें",
+        "सहेजे गए वीडियो को दूसरों को भेजें",
+        "डाउनलोड किए गए स्टेटस को फॉरवर्ड करें",
+        "ऐप से साझा करने के विकल्प",
+        "अन्य ऐप्स पर साझा करें",
+        "शेयर बटन का उपयोग कैसे करें",
+        "मेरे प्रोफाइल पर सहेजे गए स्टेटस पोस्ट करें"
+      ],
+      "id": [
+        "bagikan status yang disimpan",
+        "posting ulang status yang saya simpan",
+        "kirim video yang disimpan ke orang lain",
+        "teruskan status yang diunduh",
+        "opsi untuk berbagi dari aplikasi",
+        "bagikan ke aplikasi lain",
+        "cara menggunakan tombol bagikan",
+        "posting status yang disimpan di profil saya"
+      ]
+    },
+    "answer": {
+      "en": "Go to the 'Saved' section in the app, tap on the status you want to share, and use the 'Share' icon. You can then choose to share it on your own WhatsApp status or other social media apps.",
+      "hi": "ऐप में 'सहेजे गए' अनुभाग पर जाएं, उस स्टेटस पर टैप करें जिसे आप साझा करना चाहते हैं, और 'शेयर' आइकन का उपयोग करें। फिर आप इसे अपने व्हाट्सएप स्टेटस या अन्य सोशल मीडिया ऐप्स पर साझा करना चुन सकते हैं।",
+      "id": "Buka bagian 'Tersimpan' di aplikasi, ketuk status yang ingin Anda bagikan, dan gunakan ikon 'Bagikan'. Anda kemudian dapat memilih untuk membagikannya di status WhatsApp Anda sendiri atau aplikasi media sosial lainnya."
+    }
+  },
+  {
+    "question": {
+      "en": "Is it possible to save video statuses with sound?",
+      "hi": "क्या ध्वनि के साथ वीडियो स्टेटस सहेजना संभव है?",
+      "id": "Apakah mungkin menyimpan status video dengan suara?"
+    },
+    "paraphrases": {
+      "en": [
+        "saved video has no sound",
+        "download video status with audio",
+        "why is there no sound in saved videos",
+        "audio not working on downloaded status",
+        "save video with sound included",
+        "video sound problem",
+        "get audio in saved WA videos",
+        "enable sound for video downloads"
+      ],
+      "hi": [
+        "सहेजे गए वीडियो में कोई ध्वनि नहीं है",
+        "ऑडियो के साथ वीडियो स्टेटस डाउनलोड करें",
+        "सहेजे गए वीडियो में ध्वनि क्यों नहीं है",
+        "डाउनलोड किए गए स्टेटस पर ऑडियो काम नहीं कर रहा है",
+        "ध्वनि सहित वीडियो सहेजें",
+        "वीडियो ध्वनि समस्या",
+        "सहेजे गए डब्ल्यूए वीडियो में ऑडियो प्राप्त करें",
+        "वीडियो डाउनलोड के लिए ध्वनि सक्षम करें"
+      ],
+      "id": [
+        "video yang disimpan tidak ada suaranya",
+        "unduh status video dengan audio",
+        "mengapa tidak ada suara di video yang disimpan",
+        "audio tidak berfungsi pada status yang diunduh",
+        "simpan video dengan suara disertakan",
+        "masalah suara video",
+        "dapatkan audio di video WA yang disimpan",
+        "aktifkan suara untuk unduhan video"
+      ]
+    },
+    "answer": {
+      "en": "Yes, all video statuses are saved with their original audio. If you experience no sound, please check your device's media volume, not the ringer volume. Also, ensure your video player supports the audio format.",
+      "hi": "हाँ, सभी वीडियो स्टेटस उनके मूल ऑडियो के साथ सहेजे जाते हैं। यदि आपको कोई ध्वनि नहीं सुनाई देती है, तो कृपया अपने डिवाइस का मीडिया वॉल्यूम जांचें, न कि रिंगर वॉल्यूम। यह भी सुनिश्चित करें कि आपका वीडियो प्लेयर ऑडियो प्रारूप का समर्थन करता है।",
+      "id": "Ya, semua status video disimpan dengan audio aslinya. Jika Anda tidak mendengar suara, silakan periksa volume media perangkat Anda, bukan volume dering. Juga, pastikan pemutar video Anda mendukung format audio."
+    }
+  },
+  {
+    "question": {
+      "en": "Is the Status Saver app free to use?",
+      "hi": "क्या स्टेटस सेवर ऐप का उपयोग मुफ्त है?",
+      "id": "Apakah aplikasi Penghemat Status gratis untuk digunakan?"
+    },
+    "paraphrases": {
+      "en": [
+        "do I have to pay for this app",
+        "is the app free",
+        "cost of using status saver",
+        "are there any hidden charges",
+        "is it a paid app",
+        "free vs premium features",
+        "how much does the app cost",
+        "is it completely free"
+      ],
+      "hi": [
+        "क्या मुझे इस ऐप के लिए भुगतान करना होगा",
+        "क्या ऐप मुफ्त है",
+        "स्टेटस सेवर का उपयोग करने की लागत",
+        "क्या कोई छिपा हुआ शुल्क है",
+        "क्या यह एक पेड ऐप है",
+        "मुफ्त बनाम प्रीमियम सुविधाएँ",
+        "ऐप की कीमत कितनी है",
+        "क्या यह पूरी तरह से मुफ्त है"
+      ],
+      "id": [
+        "apakah saya harus membayar untuk aplikasi ini",
+        "apakah aplikasinya gratis",
+        "biaya penggunaan penghemat status",
+        "apakah ada biaya tersembunyi",
+        "apakah ini aplikasi berbayar",
+        "fitur gratis vs premium",
+        "berapa biaya aplikasinya",
+        "apakah ini sepenuhnya gratis"
+      ]
+    },
+    "answer": {
+      "en": "Yes, the core features of the Status Saver app are completely free to use. The app is supported by ads. Some apps may offer a premium, ad-free version for a small fee.",
+      "hi": "हाँ, स्टेटस सेवर ऐप की मुख्य सुविधाएँ पूरी तरह से मुफ्त हैं। ऐप विज्ञापनों द्वारा समर्थित है। कुछ ऐप्स एक छोटे से शुल्क के लिए एक प्रीमियम, विज्ञापन-मुक्त संस्करण की पेशकश कर सकते हैं।",
+      "id": "Ya, fitur inti dari aplikasi Penghemat Status sepenuhnya gratis untuk digunakan. Aplikasi ini didukung oleh iklan. Beberapa aplikasi mungkin menawarkan versi premium bebas iklan dengan sedikit biaya."
+    }
+  },
+  {
+    "question": {
+      "en": "Will saved statuses be deleted if I clear the app's cache?",
+      "hi": "यदि मैं ऐप का कैश साफ़ कर दूं तो क्या सहेजे गए स्टेटस हटा दिए जाएंगे?",
+      "id": "Apakah status yang disimpan akan dihapus jika saya membersihkan cache aplikasi?"
+    },
+    "paraphrases": {
+      "en": [
+        "clearing cache and saved statuses",
+        "does clearing cache remove downloads",
+        "where are statuses stored",
+        "will I lose my saved statuses",
+        "impact of clearing app data",
+        "difference between cache and storage",
+        "safe to clear cache",
+        "how to avoid deleting saved items"
+      ],
+      "hi": [
+        "कैश साफ़ करना और सहेजे गए स्टेटस",
+        "क्या कैश साफ़ करने से डाउनलोड हट जाते हैं",
+        "स्टेटस कहाँ संग्रहीत होते हैं",
+        "क्या मैं अपने सहेजे गए स्टेटस खो दूंगा",
+        "ऐप डेटा साफ़ करने का प्रभाव",
+        "कैश और भंडारण के बीच अंतर",
+        "कैश साफ़ करना सुरक्षित है",
+        "सहेजी गई वस्तुओं को हटाने से कैसे बचें"
+      ],
+      "id": [
+        "membersihkan cache dan status yang disimpan",
+        "apakah membersihkan cache menghapus unduhan",
+        "di mana status disimpan",
+        "apakah saya akan kehilangan status yang saya simpan",
+        "dampak membersihkan data aplikasi",
+        "perbedaan antara cache dan penyimpanan",
+        "aman untuk membersihkan cache",
+        "cara menghindari penghapusan item yang disimpan"
+      ]
+    },
+    "answer": {
+      "en": "No, clearing the app's cache will not delete your saved statuses. However, if you select 'Clear Data' or 'Clear Storage' in your phone's settings, it will remove all saved files from the app's folder.",
+      "hi": "नहीं, ऐप का कैश साफ़ करने से आपके सहेजे गए स्टेटस नहीं हटेंगे। हालाँकि, यदि आप अपने फ़ोन की सेटिंग्स में 'डेटा साफ़ करें' या 'भंडारण साफ़ करें' चुनते हैं, तो यह ऐप के फ़ोल्डर से सभी सहेजी गई फ़ाइलों को हटा देगा।",
+      "id": "Tidak, membersihkan cache aplikasi tidak akan menghapus status yang Anda simpan. Namun, jika Anda memilih 'Hapus Data' atau 'Hapus Penyimpanan' di pengaturan ponsel Anda, itu akan menghapus semua file yang tersimpan dari folder aplikasi."
+    }
+  },
+  {
+    "question": {
+      "en": "Does the app work if I use a modified version of WhatsApp?",
+      "hi": "अगर मैं व्हाट्सएप का संशोधित संस्करण उपयोग करूं तो क्या ऐप काम करेगा?",
+      "id": "Apakah aplikasi berfungsi jika saya menggunakan versi modifikasi WhatsApp?"
+    },
+    "paraphrases": {
+      "en": [
+        "support for GBWhatsApp",
+        "does it work with YoWhatsApp",
+        "compatibility with WhatsApp mods",
+        "using status saver with modded WA",
+        "why it's not working with my WA mod",
+        "status saver for third-party WhatsApp",
+        "support for unofficial whatsapp versions",
+        "can it find status from a mod app"
+      ],
+      "hi": [
+        "जीबीव्हाट्सएप के लिए समर्थन",
+        "क्या यह योव्हाट्सएप के साथ काम करता है",
+        "व्हाट्सएप मॉड्स के साथ संगतता",
+        "मॉडेड डब्ल्यूए के साथ स्टेटस सेवर का उपयोग",
+        "यह मेरे डब्ल्यूए मोड के साथ क्यों काम नहीं कर रहा है",
+        "तीसरे पक्ष के व्हाट्सएप के लिए स्टेटस सेवर",
+        "अनौपचारिक व्हाट्सएप संस्करणों के लिए समर्थन",
+        "क्या यह एक मॉड ऐप से स्टेटस ढूंढ सकता है"
+      ],
+      "id": [
+        "dukungan untuk GBWhatsApp",
+        "apakah berfungsi dengan YoWhatsApp",
+        "kompatibilitas dengan mod WhatsApp",
+        "menggunakan penghemat status dengan WA modifikasi",
+        "mengapa tidak berfungsi dengan mod WA saya",
+        "penghemat status untuk WhatsApp pihak ketiga",
+        "dukungan untuk versi whatsapp tidak resmi",
+        "bisakah ia menemukan status dari aplikasi mod"
+      ]
+    },
+    "answer": {
+      "en": "Functionality with modified WhatsApp versions (like GBWhatsApp, YoWhatsApp) is not guaranteed. These apps often use different storage paths for statuses, which our app may not be able to detect. We recommend using the official WhatsApp for best results.",
+      "hi": "संशोधित व्हाट्सएप संस्करणों (जैसे जीबीव्हाट्सएप, योव्हाट्सएप) के साथ कार्यक्षमता की गारंटी नहीं है। ये ऐप्स अक्सर स्टेटस के लिए अलग-अलग स्टोरेज पथ का उपयोग करते हैं, जिसे हमारा ऐप शायद नहीं खोज पाता। हम सर्वोत्तम परिणामों के लिए आधिकारिक व्हाट्सएप का उपयोग करने की सलाह देते हैं।",
+      "id": "Fungsionalitas dengan versi WhatsApp yang dimodifikasi (seperti GBWhatsApp, YoWhatsApp) tidak dijamin. Aplikasi ini sering menggunakan jalur penyimpanan yang berbeda untuk status, yang mungkin tidak dapat dideteksi oleh aplikasi kami. Kami merekomendasikan penggunaan WhatsApp resmi untuk hasil terbaik."
+    }
+  },
+  {
+    "question": {
+      "en": "How do I delete a saved status from within the app?",
+      "hi": "मैं ऐप के भीतर से सहेजे गए स्टेटस को कैसे हटाऊं?",
+      "id": "Bagaimana cara menghapus status yang disimpan dari dalam aplikasi?"
+    },
+    "paraphrases": {
+      "en": [
+        "remove saved status",
+        "delete a download",
+        "how to get rid of saved statuses",
+        "manage saved content",
+        "delete multiple statuses",
+        "free up space by deleting",
+        "where is the delete button",
+        "clearing the saved list"
+      ],
+      "hi": [
+        "सहेजे गए स्टेटस को हटाएं",
+        "एक डाउनलोड हटाएं",
+        "सहेजे गए स्टेटस से कैसे छुटकारा पाएं",
+        "सहेजी गई सामग्री का प्रबंधन करें",
+        "कई स्टेटस हटाएं",
+        "हटाकर जगह खाली करें",
+        "डिलीट बटन कहाँ है",
+        "सहेजी गई सूची को साफ़ करना"
+      ],
+      "id": [
+        "hapus status yang disimpan",
+        "hapus unduhan",
+        "cara menyingkirkan status yang disimpan",
+        "kelola konten yang disimpan",
+        "hapus beberapa status",
+        "bebaskan ruang dengan menghapus",
+        "di mana tombol hapus",
+        "membersihkan daftar yang disimpan"
+      ]
+    },
+    "answer": {
+      "en": "Navigate to the 'Saved' gallery in the app. Long-press on the status you wish to delete to select it, then tap the trash can or delete icon. You can often select multiple items to delete them all at once.",
+      "hi": "ऐप में 'सहेजे गए' गैलरी पर जाएं। जिस स्टेटस को आप हटाना चाहते हैं, उसे चुनने के लिए उस पर देर तक दबाएं, फिर ट्रैश कैन या डिलीट आइकन पर टैप करें। आप अक्सर एक साथ हटाने के लिए कई आइटम चुन सकते हैं।",
+      "id": "Arahkan ke galeri 'Tersimpan' di aplikasi. Tekan lama pada status yang ingin Anda hapus untuk memilihnya, lalu ketuk ikon tempat sampah atau hapus. Anda seringkali dapat memilih beberapa item untuk menghapusnya sekaligus."
     }
   }
 ]
