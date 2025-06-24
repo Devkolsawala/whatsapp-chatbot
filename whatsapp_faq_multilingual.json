@@ -1803,5 +1803,491 @@
       "hi": "ऐप की सेटिंग्स > हमसे संपर्क करें पर जाएं, या प्ले स्टोर विवरण में सूचीबद्ध पते पर हमारी सपोर्ट टीम को ईमेल करें।",
       "id": "Buka Pengaturan aplikasi > Hubungi Kami, atau kirim email ke tim dukungan kami di alamat yang tercantum di deskripsi Play Store."
     }
+  },
+  [
+  {
+    "question": {
+      "en": "Why am I seeing so many advertisements in the status saver app?",
+      "hi": "मुझे स्थिति सहेजक ऐप में इतने सारे विज्ञापन क्यों दिखाई दे रहे हैं?",
+      "es": "¿Por qué veo tantos anuncios en la aplicación para guardar estados?"
+    },
+    "paraphrase": {
+      "en": [
+        "Why does the status saver app show so many ads?",
+        "What causes the frequent advertisements in the app?",
+        "Why are there constant ads when using the status saver?",
+        "How come the app displays so many promotional ads?",
+        "Why is the status saver app filled with advertisements?",
+        "What’s the reason for the high number of ads in the app?",
+        "Why do I encounter so many ads while saving statuses?",
+        "Why are advertisements popping up often in the app?"
+      ],
+      "hi": [
+        "स्थिति सहेजक ऐप में इतने विज्ञापन क्यों दिखते हैं?",
+        "ऐप में बार-बार विज्ञापन दिखने का कारण क्या है?",
+        "स्थिति सहेजक में लगातार विज्ञापन क्यों आते हैं?",
+        "ऐप में इतने प्रचारात्मक विज्ञापन क्यों प्रदर्शित होते हैं?",
+        "स्थिति सहेजक ऐप विज्ञापनों से भरा क्यों है?",
+        "ऐप में विज्ञापनों की अधिक संख्या का कारण क्या है?",
+        "स्टेटस सहेजते समय इतने विज्ञापन क्यों दिखाई देते हैं?",
+        "ऐप में विज्ञापन बार-बार क्यों उभरते हैं?"
+      ],
+      "es": [
+        "¿Por qué muestra tantos anuncios la app para guardar estados?",
+        "¿Cuál es la causa de los anuncios frecuentes en la aplicación?",
+        "¿Por qué hay anuncios constantes al usar la app de estados?",
+        "¿Cómo es que la aplicación muestra tantos anuncios promocionales?",
+        "¿Por qué está llena de anuncios la app para guardar estados?",
+        "¿Cuál es el motivo de la gran cantidad de anuncios en la app?",
+        "¿Por qué aparecen tantos anuncios mientras guardo estados?",
+        "¿Por qué surgen anuncios a menudo en la aplicación?"
+      ]
+    },
+    "answer": {
+      "en": "The free version of the status saver app includes ads to support its development and maintenance. To enjoy an ad-free experience, you can upgrade to the Pro version through an in-app purchase. Alternatively, check the app settings for options to reduce ad frequency.",
+      "hi": "स्थिति सहेजक ऐप का मुफ्त संस्करण इसके विकास और रखरखाव के लिए विज्ञापनों को शामिल करता है। विज्ञापन-मुक्त अनुभव के लिए, आप इन-ऐप खरीदारी के माध्यम से प्रो संस्करण में अपग्रेड कर सकते हैं। वैकल्पिक रूप से, विज्ञापन की आवृत्ति कम करने के लिए ऐप सेटिंग्स की जाँच करें।",
+      "es": "La versión gratuita de la aplicación para guardar estados incluye anuncios para financiar su desarrollo y mantenimiento. Para una experiencia sin anuncios, puedes actualizar a la versión Pro mediante una compra dentro de la aplicación. También puedes revisar la configuración de la app para reducir la frecuencia de los anuncios."
+    }
+  },
+  {
+    "question": {
+      "en": "How can I stop the app from adding promotional text to shared statuses?",
+      "hi": "मैं ऐप को स्टेटस साझा करते समय प्रचारात्मक टेक्स्ट जोड़ने से कैसे रोक सकता हूँ?",
+      "es": "¿Cómo evito que la aplicación añada texto promocional al compartir estados?"
+    },
+    "paraphrase": {
+      "en": [
+        "How do I prevent the app from including promotional messages in shared statuses?",
+        "What can I do to avoid promotional text when sharing statuses?",
+        "How can I disable the app from adding ads to shared statuses?",
+        "Why does the app attach promotional text to statuses I share?",
+        "How do I stop promotional captions from appearing in shared statuses?",
+        "What steps can I take to remove promotional text from shared statuses?",
+        "How can I share statuses without the app’s promotional messages?",
+        "Is there a way to block promotional text in statuses I share?"
+      ],
+      "hi": [
+        "मैं ऐप को साझा किए गए स्टेटस में प्रचार संदेश शामिल करने से कैसे रोक सकता हूँ?",
+        "साझा किए गए स्टेटस में प्रचारात्मक टेक्स्ट से बचने के लिए मैं क्या कर सकता हूँ?",
+        "मैं ऐप को साझा किए गए स्टेटस में विज्ञापन जोड़ने से कैसे अक्षम कर सकता हूँ?",
+        "ऐप मेरे साझा किए गए स्टेटस में प्रचारात्मक टेक्स्ट क्यों जोड़ता है?",
+        "मैं साझा किए गए स्टेटस में प्रचारात्मक कैप्शन दिखने से कैसे रोक सकता हूँ?",
+        "साझा किए गए स्टेटस से प्रचारात्मक टेक्स्ट हटाने के लिए मैं क्या कदम उठा सकता हूँ?",
+        "मैं ऐप के प्रचार संदेशों के बिना स्टेटस कैसे साझा कर सकता हूँ?",
+        "क्या साझा किए गए स्टेटस में प्रचारात्मक टेक्स्ट को ब्लॉक करने का कोई तरीका है?"
+      ],
+      "es": [
+        "¿Cómo detengo que la app incluya mensajes promocionales al compartir estados?",
+        "¿Qué puedo hacer para evitar el texto promocional al compartir estados?",
+        "¿Cómo desactivo que la aplicación añada anuncios a los estados compartidos?",
+        "¿Por qué agrega la app texto promocional a los estados que comparto?",
+        "¿Cómo evito que aparezcan leyendas promocionales en los estados compartidos?",
+        "¿Qué pasos debo seguir para eliminar el texto promocional de los estados compartidos?",
+        "¿Cómo comparto estados sin los mensajes promocionales de la app?",
+        "¿Hay alguna forma de bloquear el texto promocional en los estados que comparto?"
+      ]
+    },
+    "answer": {
+      "en": "Currently, the app automatically adds promotional text when sharing statuses. To avoid this, you can manually delete the text before sharing. For a permanent solution, consider contacting the support team at luckajay93@gmail.com to request a feature to disable this in future updates.",
+      "hi": "वर्तमान में, ऐप स्टेटस साझा करते समय स्वचालित रूप से प्रचारात्मक टेक्स्ट जोड़ता है। इसे टालने के लिए, आप साझा करने से पहले टेक्स्ट को मैन्युअल रूप से हटा सकते हैं। स्थायी समाधान के लिए, भविष्य के अपडेट में इसे अक्षम करने की सुविधा के लिए luckajay93@gmail.com पर सहायता टीम से संपर्क करें।",
+      "es": "Por ahora, la aplicación añade automáticamente texto promocional al compartir estados. Para evitarlo, puedes eliminar el texto manualmente antes de compartir. Para una solución definitiva, contacta al equipo de soporte en luckajay93@gmail.com para solicitar una función que desactive esto en futuras actualizaciones."
+    }
+  },
+  {
+    "question": {
+      "en": "Why doesn’t the app show statuses from my secondary WhatsApp account?",
+      "hi": "ऐप मेरे द्वितीयक व्हाट्सएप खाते के स्टेटस क्यों नहीं दिखाता?",
+      "es": "¿Por qué no muestra la app los estados de mi cuenta secundaria de WhatsApp?"
+    },
+    "paraphrase": {
+      "en": [
+        "Why can’t I see statuses from my dual WhatsApp account in the app?",
+        "What prevents the app from displaying my second WhatsApp account’s statuses?",
+        "Why are statuses from my secondary WhatsApp missing in the app?",
+        "How come the app doesn’t show my dual WhatsApp statuses?",
+        "Why is the app not accessing statuses from my second WhatsApp account?",
+        "What’s stopping the app from showing my secondary WhatsApp statuses?",
+        "Why does the app only show statuses from my primary WhatsApp account?",
+        "Why are my dual WhatsApp account statuses not visible in the app?"
+      ],
+      "hi": [
+        "मैं ऐप में अपने डुअल व्हाट्सएप खाते के स्टेटस क्यों नहीं देख सकता?",
+        "ऐप को मेरे दूसरे व्हाट्सएप खाते के स्टेटस दिखाने से क्या रोकता है?",
+        "मेरे द्वितीयक व्हाट्सएप के स्टेटस ऐप में क्यों गायब हैं?",
+        "ऐप मेरे डुअल व्हाट्सएप स्टेटस क्यों नहीं दिखाता?",
+        "ऐप मेरे दूसरे व्हाट्सएप खाते के स्टेटस क्यों नहीं खोल रहा?",
+        "ऐप को मेरे द्वितीयक व्हाट्सएप स्टेटस दिखाने से क्या रोक रहा है?",
+        "ऐप केवल मेरे प्राथमिक व्हाट्सएप खाते के स्टेटस क्यों दिखाता है?",
+        "मेरे डुअल व्हाट्सएप खाते के स्टेटस ऐप में दिखाई क्यों नहीं दे रहे?"
+      ],
+      "es": [
+        "¿Por qué no puedo ver los estados de mi cuenta dual de WhatsApp en la app?",
+        "¿Qué impide que la app muestre los estados de mi segunda cuenta de WhatsApp?",
+        "¿Por qué faltan los estados de mi WhatsApp secundario en la aplicación?",
+        "¿Cómo es que la app no muestra los estados de mi WhatsApp dual?",
+        "¿Por qué no accede la app a los estados de mi segunda cuenta de WhatsApp?",
+        "¿Qué detiene a la aplicación de mostrar los estados de mi WhatsApp secundario?",
+        "¿Por qué solo muestra la app los estados de mi cuenta principal de WhatsApp?",
+        "¿Por qué no son visibles los estados de mi cuenta dual de WhatsApp en la app?"
+      ]
+    },
+    "answer": {
+      "en": "Support for dual WhatsApp accounts was discontinued on devices running Android 11 and above due to technical limitations. You can still access statuses from your primary WhatsApp account. For further assistance, reach out to the support team at luckajay93@gmail.com.",
+      "hi": "एंड्रॉइड 11 और उससे ऊपर के उपकरणों पर तकनीकी सीमाओं के कारण डुअल व्हाट्सएप खातों के लिए समर्थन बंद कर दिया गया है। आप अभी भी अपने प्राथमिक व्हाट्सएप खाते से स्टेटस देख सकते हैं। और सहायता के लिए, luckajay93@gmail.com पर सहायता टीम से संपर्क करें।",
+      "es": "El soporte para cuentas duales de WhatsApp se descontinuó en dispositivos con Android 11 o superior debido a limitaciones técnicas. Puedes seguir accediendo a los estados de tu cuenta principal de WhatsApp. Para más ayuda, contacta al equipo de soporte en luckajay93@gmail.com."
+    }
+  },
+  {
+    "question": {
+      "en": "What should I do if recent WhatsApp statuses aren’t appearing in the app?",
+      "hi": "यदि हाल के व्हाट्सएप स्टेटस ऐप में दिखाई नहीं दे रहे हैं तो मुझे क्या करना चाहिए?",
+      "es": "¿Qué hago si los estados recientes de WhatsApp no aparecen en la app?"
+    },
+    "paraphrase": {
+      "en": [
+        "Why aren’t the latest WhatsApp statuses showing up in the app?",
+        "How can I fix the app not displaying recent statuses?",
+        "What to do if newly viewed statuses don’t appear in the app?",
+        "Why does the app fail to show my recently viewed WhatsApp statuses?",
+        "How do I resolve the issue of missing recent statuses in the app?",
+        "Why are the newest statuses not visible in the status saver app?",
+        "What steps can I take if the app doesn’t show current statuses?",
+        "How can I make recent WhatsApp statuses appear in the app?"
+      ],
+      "hi": [
+        "नवीनतम व्हाट्सएप स्टेटस ऐप में क्यों नहीं दिख रहे हैं?",
+        "ऐप में हाल के स्टेटस न दिखने को मैं कैसे ठीक कर सकता हूँ?",
+        "यदि नव देखे गए स्टेटस ऐप में न दिखें तो क्या करें?",
+        "ऐप मेरे हाल ही में देखे गए व्हाट्सएप स्टेटस क्यों नहीं दिखाता?",
+        "हाल के स्टेटस गायब होने की समस्या को मैं कैसे हल करूँ?",
+        "नवीनतम स्टेटस स्थिति सहेजक ऐप में क्यों नहीं दिखते?",
+        "यदि ऐप वर्तमान स्टेटस नहीं दिखाता तो मैं क्या कदम उठा सकता हूँ?",
+        "हाल के व्हाट्सएप स्टेटस को ऐप में दिखाने के लिए मैं क्या कर सकता हूँ?"
+      ],
+      "es": [
+        "¿Por qué no aparecen los últimos estados de WhatsApp en la app?",
+        "¿Cómo soluciono que la app no muestre estados recientes?",
+        "¿Qué hacer si los estados recién vistos no se muestran en la app?",
+        "¿Por qué no muestra la app mis estados de WhatsApp vistos recientemente?",
+        "¿Cómo resuelvo el problema de estados recientes que faltan en la app?",
+        "¿Por qué no son visibles los estados más nuevos en la app de guardar estados?",
+        "¿Qué pasos debo seguir si la app no muestra los estados actuales?",
+        "¿Cómo hago que los estados recientes de WhatsApp aparezcan en la app?"
+      ]
+    },
+    "answer": {
+      "en": "Ensure you have viewed the statuses in WhatsApp first, as the app only displays statuses you’ve seen. If the issue persists, try clearing the app’s cache or reinstalling it. You can also contact support at luckajay93@gmail.com for help.",
+      "hi": "सुनिश्चित करें कि आपने पहले व्हाट्सएप में स्टेटस देखे हैं, क्योंकि ऐप केवल आपके द्वारा देखे गए स्टेटस दिखाता है। यदि समस्या बनी रहती है, तो ऐप का कैश साफ करें या इसे पुनः स्थापित करें। आप luckajay93@gmail.com पर सहायता के लिए संपर्क भी कर सकते हैं।",
+      "es": "Asegúrate de haber visto los estados en WhatsApp primero, ya que la app solo muestra los estados que has visualizado. Si el problema continúa, intenta borrar el caché de la aplicación o reinstalarla. También puedes contactar al soporte en luckajay93@gmail.com para obtener ayuda."
+    }
+  },
+  {
+    "question": {
+      "en": "Why do I still see ads after purchasing the Pro version of the app?",
+      "hi": "ऐप के प्रो संस्करण को खरीदने के बाद भी मुझे विज्ञापन क्यों दिखाई दे रहे हैं?",
+      "es": "¿Por qué sigo viendo anuncios tras comprar la versión Pro de la app?"
+    },
+    "paraphrase": {
+      "en": [
+        "Why are ads still appearing after I bought the Pro version?",
+        "How come I’m seeing ads despite upgrading to the Pro app?",
+        "Why do advertisements persist after purchasing the ad-free version?",
+        "What’s causing ads to show up after I paid for the Pro version?",
+        "Why am I getting ads even after subscribing to the Pro app?",
+        "Why doesn’t the Pro version remove all ads as expected?",
+        "How can I stop ads after buying the Pro version of the app?",
+        "Why are there still promotional ads after my Pro version purchase?"
+      ],
+      "hi": [
+        "प्रो संस्करण खरीदने के बाद भी विज्ञापन क्यों दिखाई दे रहे हैं?",
+        "प्रो ऐप में अपग्रेड करने के बावजूद मुझे विज्ञापन क्यों दिख रहे हैं?",
+        "विज्ञापन-मुक्त संस्करण खरीदने के बाद भी विज्ञापन क्यों बने रहते हैं?",
+        "प्रो संस्करण के लिए भुगतान करने के बाद विज्ञापन दिखने का कारण क्या है?",
+        "प्रो ऐप की सदस्यता लेने के बाद भी मुझे विज्ञापन क्यों मिल रहे हैं?",
+        "प्रो संस्करण अपेक्षित रूप से सभी विज्ञापन क्यों नहीं हटाता?",
+        "प्रो संस्करण खरीदने के बाद विज्ञापन रोकने के लिए मैं क्या कर सकता हूँ?",
+        "मेरे प्रो संस्करण खरीदने के बाद भी प्रचारात्मक विज्ञापन क्यों हैं?"
+      ],
+      "es": [
+        "¿Por qué siguen apareciendo anuncios después de comprar la versión Pro?",
+        "¿Cómo es que veo anuncios a pesar de actualizar a la app Pro?",
+        "¿Por qué persisten los anuncios tras adquirir la versión sin anuncios?",
+        "¿Qué causa que los anuncios se muestren después de pagar por la versión Pro?",
+        "¿Por qué recibo anuncios incluso tras suscribirme a la app Pro?",
+        "¿Por qué no elimina la versión Pro todos los anuncios como se espera?",
+        "¿Cómo detengo los anuncios después de comprar la versión Pro de la app?",
+        "¿Por qué hay anuncios promocionales tras mi compra de la versión Pro?"
+      ]
+    },
+    "answer": {
+      "en": "If you’re seeing ads after purchasing the Pro version, it might be due to a sync issue. Ensure you’re logged into the same account used for the purchase. Contact the support team at luckajay93@gmail.com with your order ID to restore your ad-free experience.",
+      "hi": "यदि आप प्रो संस्करण खरीदने के बाद भी विज्ञापन देख रहे हैं, तो यह सिंक समस्या के कारण हो सकता है। सुनिश्चित करें कि आप उसी खाते में लॉग इन हैं जिससे खरीदारी की गई थी। अपनी ऑर्डर आईडी के साथ luckajay93@gmail.com पर सहायता टीम से संपर्क करें ताकि विज्ञापन-मुक्त अनुभव बहाल हो सके।",
+      "es": "Si ves anuncios después de comprar la versión Pro, podría ser por un problema de sincronización. Asegúrate de estar conectado con la misma cuenta que usaste para la compra. Contacta al equipo de soporte en luckajay93@gmail.com con tu ID de pedido para restaurar la experiencia sin anuncios."
+    }
+  },
+  {
+    "question": {
+      "en": "How can I save multiple WhatsApp statuses at once in the app?",
+      "hi": "मैं ऐप में एक साथ कई व्हाट्सएप स्टेटस कैसे सहेज सकता हूँ?",
+      "es": "¿Cómo guardo varios estados de WhatsApp a la vez en la app?"
+    },
+    "paraphrase": {
+      "en": [
+        "Is there a way to download multiple statuses simultaneously in the app?",
+        "How do I save several WhatsApp statuses at the same time?",
+        "Can I bulk-save WhatsApp statuses using the app?",
+        "What’s the method to download multiple statuses together?",
+        "How can I select and save multiple statuses in one go?",
+        "Is it possible to save many statuses at once in the app?",
+        "How do I download a batch of WhatsApp statuses in the app?",
+        "What steps allow saving multiple statuses concurrently?"
+      ],
+      "hi": [
+        "क्या ऐप में एक साथ कई स्टेटस डाउनलोड करने का कोई तरीका है?",
+        "मैं एक साथ कई व्हाट्सएप स्टेटस कैसे सहेज सकता हूँ?",
+        "क्या मैं ऐप का उपयोग करके व्हाट्सएप स्टेटस को थोक में सहेज सकता हूँ?",
+        "कई स्टेटस एक साथ डाउनलोड करने की विधि क्या है?",
+        "मैं एक बार में कई स्टेटस चुनकर सहेजने के लिए क्या कर सकता हूँ?",
+        "क्या ऐप में एक साथ कई स्टेटस सहेजना संभव है?",
+        "मैं ऐप में व्हाट्सएप स्टेटस का एक बैच कैसे डाउनलोड करूँ?",
+        "कई स्टेटस एक साथ सहेजने की अनुमति देने वाले कदम क्या हैं?"
+      ],
+      "es": [
+        "¿Hay alguna forma de descargar varios estados al mismo tiempo en la app?",
+        "¿Cómo guardo varios estados de WhatsApp a la vez?",
+        "¿Puedo guardar estados de WhatsApp en masa usando la app?",
+        "¿Cuál es el método para descargar varios estados juntos?",
+        "¿Cómo selecciono y guardo varios estados de una vez?",
+        "¿Es posible guardar muchos estados a la vez en la app?",
+        "¿Cómo descargo un lote de estados de WhatsApp en la app?",
+        "¿Qué pasos permiten guardar varios estados simultáneamente?"
+      ]
+    },
+    "answer": {
+      "en": "The ability to save multiple statuses at once was removed in recent updates, but the developers are working to reintroduce this feature. For now, you can save statuses individually. Send feedback to luckajay93@gmail.com to prioritize this feature in future updates.",
+      "hi": "हाल के अपडेट में एक साथ कई स्टेटस सहेजने की सुविधा हटा दी गई थी, लेकिन डेवलपर्स इसे फिर से शामिल करने पर काम कर रहे हैं। अभी के लिए, आप स्टेटस को एक-एक करके सहेज सकते हैं। इस सुविधा को भविष्य के अपडेट में प्राथमिकता देने के लिए luckajay93@gmail.com पर प्रतिक्रिया भेजें।",
+      "es": "La función para guardar varios estados a la vez fue eliminada en actualizaciones recientes, pero los desarrolladores están trabajando para reincorporarla. Por ahora, puedes guardar los estados de uno en uno. Envía tus comentarios a luckajay93@gmail.com para priorizar esta función en futuras actualizaciones."
+    }
+  },
+  {
+    "question": {
+      "en": "Why does the app lag or freeze when loading WhatsApp statuses?",
+      "hi": "ऐप व्हाट्सएप स्टेटस लोड करते समय क्यों रुकता या जम जाता है?",
+      "es": "¿Por qué se retrasa o se congela la app al cargar estados de WhatsApp?"
+    },
+    "paraphrase": {
+      "en": [
+        "What causes the app to slow down when accessing statuses?",
+        "Why is the app freezing while loading WhatsApp statuses?",
+        "How come the app lags when I try to view statuses?",
+        "Why does the app become unresponsive during status loading?",
+        "What’s making the app sluggish when opening statuses?",
+        "Why does the status saver app hang when loading statuses?",
+        "How can I fix the app’s slow performance with statuses?",
+        "Why is the app delayed when displaying WhatsApp statuses?"
+      ],
+      "hi": [
+        "ऐप स्टेटस तक पहुँचते समय धीमा होने का कारण क्या है?",
+        "ऐप व्हाट्सएप स्टेटस लोड करते समय जम क्यों जाता है?",
+        "ऐप स्टेटस देखने की कोशिश करने पर क्यों रुकता है?",
+        "ऐप स्टेटस लोड करने के दौरान अनुत्तरदायी क्यों हो जाता है?",
+        "ऐप स्टेटस खोलते समय सुस्त क्यों हो रहा है?",
+        "स्थिति सहेजक ऐप स्टेटस लोड करते समय क्यों अटकता है?",
+        "ऐप के स्टेटस के साथ धीमे प्रदर्शन को मैं कैसे ठीक कर सकता हूँ?",
+        "ऐप व्हाट्सएप स्टेटस प्रदर्शित करने में विलंब क्यों करता है?"
+      ],
+      "es": [
+        "¿Qué causa que la app se ralentice al acceder a estados?",
+        "¿Por qué se congela la app mientras carga estados de WhatsApp?",
+        "¿Cómo es que la app se retrasa cuando intento ver estados?",
+        "¿Por qué se vuelve no receptiva la app durante la carga de estados?",
+        "¿Qué hace que la app sea lenta al abrir estados?",
+        "¿Por qué se cuelga la app de guardar estados al cargar estados?",
+        "¿Cómo arreglo el rendimiento lento de la app con los estados?",
+        "¿Por qué se demora la app al mostrar estados de WhatsApp?"
+      ]
+    },
+    "answer": {
+      "en": "A slow or frozen app may be due to a full cache or low device storage. Try clearing the app’s cache, restarting your device, or reinstalling the app. If the issue continues, contact the support team at luckajay93@gmail.com with your device details for assistance.",
+      "hi": "ऐप का धीमा या जम जाना भरे हुए कैश या कम डिवाइस स्टोरेज के कारण हो सकता है। ऐप का कैश साफ करने, डिवाइस को पुनरारंभ करने या ऐप को पुनः स्थापित करने का प्रयास करें। यदि समस्या बनी रहती है, तो सहायता के लिए अपने डिवाइस विवरण के साथ luckajay93@gmail.com पर सहायता टीम से संपर्क करें।",
+      "es": "Una aplicación lenta o que se congela puede deberse a un caché lleno o poco almacenamiento en el dispositivo. Intenta borrar el caché de la app, reiniciar tu dispositivo o reinstalar la aplicación. Si el problema persiste, contacta al equipo de soporte en luckajay93@gmail.com con los detalles de tu dispositivo para obtener ayuda."
+    }
+  },
+  {
+    "question": {
+      "en": "Can the status saver app retrieve deleted WhatsApp messages?",
+      "hi": "क्या स्थिति सहेजक ऐप हटाए गए व्हाट्सएप संदेशों को पुनर्प्राप्त कर सकता है?",
+      "es": "¿Puede la app para guardar estados recuperar mensajes eliminados de WhatsApp?"
+    },
+    "paraphrase": {
+      "en": [
+        "Is it possible to recover deleted WhatsApp messages with the app?",
+        "Does the status saver app support retrieving deleted messages?",
+        "Can I use the app to restore messages deleted from WhatsApp?",
+        "Will the app help me recover WhatsApp messages that were deleted?",
+        "Is there a way to retrieve deleted messages using the status saver?",
+        "Does the app have a feature to recover deleted WhatsApp chats?",
+        "Can the status saver app bring back messages removed from WhatsApp?",
+        "How can I use the app to access deleted WhatsApp messages?"
+      ],
+      "hi": [
+        "क्या ऐप के साथ हटाए गए व्हाट्सएप संदेशों को पुनर्प्राप्त करना संभव है?",
+        "क्या स्थिति सहेजक ऐप हटाए गए संदेशों को पुनर्प्राप्त करने का समर्थन करता है?",
+        "क्या मैं ऐप का उपयोग करके व्हाट्सएप से हटाए गए संदेशों को पुनर्स्थापित कर सकता हूँ?",
+        "क्या ऐप मुझे हटाए गए व्हाट्सएप संदेशों को पुनर्प्राप्त करने में मदद करेगा?",
+        "क्या स्थिति सहेजक का उपयोग करके हटाए गए संदेशों को पुनः प्राप्त करने का कोई तरीका है?",
+        "क्या ऐप में हटाए गए व्हाट्सएप चैट को पुनर्प्राप्त करने की सुविधा है?",
+        "क्या स्थिति सहेजक ऐप व्हाट्सएप से हटाए गए संदेशों को वापस ला सकता है?",
+        "मैं ऐप का उपयोग करके हटाए गए व्हाट्सएप संदेशों तक कैसे पहुँच सकता हूँ?"
+      ],
+      "es": [
+        "¿Es posible recuperar mensajes eliminados de WhatsApp con la app?",
+        "¿La app para guardar estados permite recuperar mensajes borrados?",
+        "¿Puedo usar la app para restaurar mensajes eliminados de WhatsApp?",
+        "¿Me ayudará la app a recuperar mensajes de WhatsApp que fueron borrados?",
+        "¿Hay alguna forma de recuperar mensajes eliminados con la app de estados?",
+        "¿Tiene la app una función para recuperar chats eliminados de WhatsApp?",
+        "¿Puede la app de guardar estados traer de vuelta mensajes eliminados de WhatsApp?",
+        "¿Cómo uso la app para acceder a mensajes eliminados de WhatsApp?"
+      ]
+    },
+    "answer": {
+      "en": "The status saver app is primarily designed to save WhatsApp statuses, not to recover deleted messages. Some users reported issues with this feature in recent updates. For help or to request improvements, contact the support team at luckajay93@gmail.com.",
+      "hi": "स्थिति सहेजक ऐप मुख्य रूप से व्हाट्सएप स्टेटस सहेजने के लिए डिज़ाइन किया गया है, न कि हटाए गए संदेशों को पुनर्प्राप्त करने के लिए। कुछ उपयोगकर्ताओं ने हाल के अपडेट में इस सुविधा के साथ समस्याओं की सूचना दी है। सहायता या सुधार के लिए, luckajay93@gmail.com पर सहायता टीम से संपर्क करें।",
+      "es": "La aplicación para guardar estados está diseñada principalmente para guardar estados de WhatsApp, no para recuperar mensajes eliminados. Algunos usuarios reportaron problemas con esta función en actualizaciones recientes. Para obtener ayuda o solicitar mejoras, contacta al equipo de soporte en luckajay93@gmail.com."
+    }
+  },
+  {
+    "question": {
+      "en": "Why does the app show videos or statuses from unknown contacts?",
+      "hi": "ऐप अज्ञात संपर्कों से वीडियो या स्टेटस क्यों दिखाता है?",
+      "es": "¿Por qué muestra la app videos o estados de contactos desconocidos?"
+    },
+    "paraphrase": {
+      "en": [
+        "Why am I seeing statuses from people I don’t know in the app?",
+        "What causes the app to display videos from unfamiliar sources?",
+        "Why does the app show content from non-contacts?",
+        "How come I see statuses from unknown users in the app?",
+        "Why are there videos from strangers in the status saver app?",
+        "What’s making the app show statuses from unrecognized contacts?",
+        "Why does the app include videos from sources I’m not connected to?",
+        "How can I stop seeing statuses from unknown people in the app?"
+      ],
+      "hi": [
+        "मुझे ऐप में उन लोगों के स्टेटस क्यों दिख रहे हैं जिन्हें मैं नहीं जानता?",
+        "ऐप को अपरिचित स्रोतों से वीडियो दिखाने का कारण क्या है?",
+        "ऐप गैर-संपर्कों का कंटेंट क्यों दिखाता है?",
+        "मुझे ऐप में अज्ञात उपयोगकर्ताओं के स्टेटस क्यों दिखाई दे रहे हैं?",
+        "स्थिति सहेजक ऐप में अजनबियों के वीडियो क्यों हैं?",
+        "ऐप को अपरिचित संपर्कों के स्टेटस दिखाने का क्या कारण है?",
+        "ऐप उन स्रोतों से वीडियो क्यों शामिल करता है जिनसे मैं जुड़ा नहीं हूँ?",
+        "मैं ऐप में अज्ञात लोगों के स्टेटस देखना कैसे रोक सकता हूँ?"
+      ],
+      "es": [
+        "¿Por qué veo estados de personas que no conozco en la app?",
+        "¿Qué hace que la app muestre videos de fuentes desconocidas?",
+        "¿Por qué muestra la app contenido de no contactos?",
+        "¿Cómo es que veo estados de usuarios desconocidos en la app?",
+        "¿Por qué hay videos de extraños en la app de guardar estados?",
+        "¿Qué causa que la app muestre estados de contactos no reconocidos?",
+        "¿Por qué incluye la app videos de fuentes con las que no estoy conectado?",
+        "¿Cómo evito ver estados de personas desconocidas en la app?"
+      ]
+    },
+    "answer": {
+      "en": "The ‘More Video Statuses’ feature may display videos from online sources, which can include content from non-contacts. You can adjust language filters in the app settings to refine the content or report irrelevant videos. For further customization, email luckajay93@gmail.com with your suggestions.",
+      "hi": "‘अधिक वीडियो स्टेटस’ सुविधा ऑनलाइन स्रोतों से वीडियो दिखा सकती है, जिसमें गैर-संपर्कों का कंटेंट शामिल हो सकता है। आप ऐप सेटिंग्स में भाषा फ़िल्टर समायोजित करके कंटेंट को परिष्कृत कर सकते हैं या अप्रासंगिक वीडियो की रिपोर्ट कर सकते हैं। और अनुकूलन के लिए, अपने सुझावों के साथ luckajay93@gmail.com पर ईमेल करें।",
+      "es": "La función ‘Más estados de video’ puede mostrar videos de fuentes en línea, que podrían incluir contenido de no contactos. Puedes ajustar los filtros de idioma en la configuración de la app para refinar el contenido o reportar videos irrelevantes. Para más personalización, envía un correo a luckajay93@gmail.com con tus sugerencias."
+    }
+  },
+  {
+    "question": {
+      "en": "How do I choose a custom folder for saving statuses in the app?",
+      "hi": "मैं ऐप में स्टेटस सहेजने के लिए कस्टम फ़ोल्डर कैसे चुन सकता हूँ?",
+      "es": "¿Cómo elijo una carpeta personalizada para guardar estados en la app?"
+    },
+    "paraphrase": {
+      "en": [
+        "How can I set a specific folder to save statuses in the app?",
+        "What steps are needed to change the storage location for statuses?",
+        "How do I select a custom directory for downloaded statuses?",
+        "Is there a way to pick a preferred folder for saving statuses?",
+        "How can I designate a folder for statuses in the app?",
+        "What’s the process to customize the save location for statuses?",
+        "How do I change where statuses are stored in the app?",
+        "Can I define a unique folder for saving WhatsApp statuses?"
+      ],
+      "hi": [
+        "मैं ऐप में स्टेटस सहेजने के लिए एक विशिष्ट फ़ोल्डर कैसे सेट कर सकता हूँ?",
+        "स्टेटस के स्टोरेज स्थान को बदलने के लिए कौन से कदम आवश्यक हैं?",
+        "मैं डाउनलोड किए गए स्टेटस के लिए कस्टम डायरेक्टरी कैसे चुन सकता हूँ?",
+        "क्या स्टेटस सहेजने के लिए पसंदीदा फ़ोल्डर चुनने का कोई तरीका है?",
+        "मैं ऐप में स्टेटस के लिए एक फ़ोल्डर कैसे नामित कर सकता हूँ?",
+        "स्टेटस के सहेजने के स्थान को अनुकूलित करने की प्रक्रिया क्या है?",
+        "मैं ऐप में स्टेटस कहाँ संग्रहीत होते हैं इसे कैसे बदल सकता हूँ?",
+        "क्या मैं व्हाट्सएप स्टेटस सहेजने के लिए एक अद्वितीय फ़ोल्डर परिभाषित कर सकता हूँ?"
+      ],
+      "es": [
+        "¿Cómo configuro una carpeta específica para guardar estados en la app?",
+        "¿Qué pasos debo seguir para cambiar la ubicación de almacenamiento de estados?",
+        "¿Cómo selecciono un directorio personalizado para los estados descargados?",
+        "¿Hay alguna forma de elegir una carpeta preferida para guardar estados?",
+        "¿Cómo designo una carpeta para los estados en la app?",
+        "¿Cuál es el proceso para personalizar la ubicación de guardado de estados?",
+        "¿Cómo cambio dónde se almacenan los estados en la app?",
+        "¿Puedo definir una carpeta única para guardar estados de WhatsApp?"
+      ]
+    },
+    "answer": {
+      "en": "You can change the download location for saved statuses in the app settings. Navigate to the storage options and select your preferred folder. If you encounter issues, ensure the app has the necessary storage permissions or contact support at luckajay93@gmail.com.",
+      "hi": "आप ऐप सेटिंग्स में सहेजे गए स्टेटस के डाउनलोड स्थान को बदल सकते हैं। स्टोरेज विकल्पों पर जाएँ और अपनी पसंदीदा फ़ोल्डर चुनें। यदि आपको समस्याएँ आती हैं, तो सुनिश्चित करें कि ऐप के पास आवश्यक स्टोरेज अनुमतियाँ हैं या luckajay93@gmail.com पर सहायता से संपर्क करें।",
+      "es": "Puedes cambiar la ubicación de descarga para los estados guardados en la configuración de la aplicación. Ve a las opciones de almacenamiento y selecciona la carpeta de tu preferencia. Si tienes problemas, asegúrate de que la app tenga los permisos de almacenamiento necesarios o contacta al soporte en luckajay93@gmail.com."
+    }
+  },
+  {
+    "question": {
+      "en": "Why are saved statuses not appearing in my phone’s gallery?",
+      "hi": "सहेजे गए स्टेटस मेरे फोन की गैलरी में क्यों नहीं दिखाई दे रहे हैं?",
+      "es": "¿Por qué no aparecen los estados guardados en la galería de mi teléfono?"
+    },
+    "paraphrase": {
+      "en": [
+        "Why don’t downloaded statuses show up in my phone’s gallery?",
+        "What causes saved statuses to be missing from my gallery?",
+        "How come the statuses I saved aren’t visible in my gallery?",
+        "Why are the app’s saved statuses not in my phone’s gallery?",
+        "What’s preventing saved statuses from appearing in my gallery?",
+        "Why do statuses downloaded by the app not show in the gallery?",
+        "How can I make saved statuses appear in my phone’s gallery?",
+        "Why aren’t the statuses I saved accessible in my gallery?"
+      ],
+      "hi": [
+        "डाउनलोड किए गए स्टेटस मेरे फोन की गैलरी में क्यों नहीं दिखते?",
+        "सहेजे गए स्टेटस गैलरी से गायब होने का कारण क्या है?",
+        "मेरे द्वारा सहेजे गए स्टेटस गैलरी में दिखाई क्यों नहीं दे रहे?",
+        "ऐप के सहेजे गए स्टेटस मेरे फोन की गैलरी में क्यों नहीं हैं?",
+        "सहेजे गए स्टेटस गैलरी में दिखाई देने से क्या रोक रहा है?",
+        "ऐप द्वारा डाउनलोड किए गए स्टेटस गैलरी में क्यों नहीं दिखते?",
+        "मैं सहेजे गए स्टेटस को फोन की गैलरी में दिखाने के लिए क्या कर सकता हूँ?",
+        "मेरे द्वारा सहेजे गए स्टेटस गैलरी में क्यों उपलब्ध नहीं हैं?"
+      ],
+      "es": [
+        "¿Por qué no se muestran los estados descargados en la galería de mi teléfono?",
+        "¿Qué causa que los estados guardados no estén en mi galería?",
+        "¿Cómo es que los estados que guardé no son visibles en mi galería?",
+        "¿Por qué no están los estados guardados por la app en la galería de mi teléfono?",
+        "¿Qué impide que los estados guardados aparezcan en mi galería?",
+        "¿Por qué no aparecen en la galería los estados descargados por la app?",
+        "¿Cómo hago que los estados guardados aparezcan en la galería de mi teléfono?",
+        "¿Por qué no están accesibles los estados que guardé en mi galería?"
+      ]
+    },
+    "answer": {
+      "en": "Saved statuses may not appear in your gallery if the app’s storage permissions are restricted or the save location is set to a hidden folder. Check the app’s storage settings to ensure statuses are saved to a visible folder and verify permissions in your device settings. For further help, contact luckajay93@gmail.com.",
+      "hi": "यदि ऐप की स्टोरेज अनुमतियाँ प्रतिबंधित हैं या सहेजने का स्थान एक छिपे हुए फ़ोल्डर पर सेट है, तो सहेजे गए स्टेटस आपकी गैलरी में दिखाई नहीं दे सकते। ऐप की स्टोरेज सेटिंग्स की जाँच करें ताकि स्टेटस एक दृश्यमान फ़ोल्डर में सहेजे जाएँ और अपने डिवाइस सेटिंग्स में अनुमतियों की पुष्टि करें। और सहायता के लिए, luckajay93@gmail.com से संपर्क करें।",
+      "es": "Los estados guardados podrían no aparecer en tu galería si los permisos de almacenamiento de la app están restringidos o la ubicación de guardado está configurada en una carpeta oculta. Verifica la configuración de almacenamiento de la app para asegurarte de que los estados se guarden en una carpeta visible y confirma los permisos en los ajustes de tu dispositivo. Para más ayuda, contacta a luckajay93@gmail.com."
+    }
   }
+]
 ]
