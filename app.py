@@ -22,6 +22,7 @@ def normalize(text):
         text = re.sub(r"\s+", " ", text)
         manual_typos = {
             "helo": "hello", "watsap": "whatsapp", "whastapp": "whatsapp", "downlaod": "download",
+            "statuss": "status", "statu": "status", "savee": "save", "downlod": "download",
             "हेलो": "नमस्ते", "वाट्सप": "व्हाट्सएप", "डाउनलोड्ड": "डाउनलोड",
             "halo": "hai", "undh": "unduh", "wa": "whatsapp"
         }
@@ -77,25 +78,42 @@ except FileNotFoundError:
     logger.error("whatsapp_faq_multilingual.json not found")
     faqs = []  # Fallback to empty list if file is missing
 
-# Prepare FAQ questions for fuzzy matching
-faq_questions = {lang: [] for lang in ["en", "hi", "id"]}
-faq_answers = {lang: {} for lang in ["en", "hi", "id"]}
-for idx, item in enumerate(faqs):
+# Prepare FAQ data with questions and paraphrases
+faq_data = {lang: [] for lang in ["en", "hi", "id"]}
+for item in faqs:
     for lang in ["en", "hi", "id"]:
-        faq_questions[lang].append(item["question"][lang])
-        faq_answers[lang][item["question"][lang]] = item["answer"][lang]
+        question = item["question"][lang]
+        paraphrases = item.get("paraphrases", {}).get(lang, [])
+        texts = [question] + paraphrases
+        answer = item["answer"][lang]
+        faq_data[lang].append({"texts": texts, "answer": answer})
 
-# Function to find best match for a question with grammatical tolerance
+# Function to compute similarity using multiple fuzzy ratios
+def compute_similarity(input_text, faq_text):
+    norm_input = normalize(input_text)
+    norm_faq = normalize(faq_text)
+    scores = [
+        fuzz.partial_ratio(norm_input, norm_faq),
+        fuzz.token_sort_ratio(norm_input, norm_faq),
+        fuzz.token_set_ratio(norm_input, norm_faq)
+    ]
+    return max(scores)
+
+# Function to find the best matching answer
 def find_best_match(question, lang):
-    normalized_question = normalize(question)
-    if not faq_questions[lang]:
-        return None, 0.0
-    best_match = max(faq_questions[lang], key=lambda x: fuzz.partial_ratio(normalized_question, normalize(x)), default=None)
-    similarity = fuzz.partial_ratio(normalized_question, normalize(best_match)) if best_match else 0.0
-    # Lower threshold to 60 to handle grammatical errors (e.g., missing articles, wrong verb forms)
-    return best_match, similarity if similarity >= 60 else 0.0
+    best_similarity = 0.0
+    best_answer = None
+    for faq_item in faq_data[lang]:
+        for text in faq_item["texts"]:
+            similarity = compute_similarity(question, text)
+            if similarity > best_similarity:
+                best_similarity = similarity
+                best_answer = faq_item["answer"]
+    if best_similarity >= 60:  # Threshold for match
+        return best_answer
+    return None
 
-# HTML template
+# HTML template (unchanged)
 html_template = """
 <!DOCTYPE html>
 <html lang="en">
@@ -138,7 +156,7 @@ html_template = """
 </head>
 <body>
     <div class="chat-container">
-        <h2>WhatsApp Status FAQ Chatbot</h2>
+             <h2>WhatsApp Status FAQ Chatbot</h2>
         <div id="chat" style="height: 400px; overflow-y: auto; border: 1px solid #ccc;"></div>
         <div class="input-box">
             <input type="text" id="user-input" placeholder="Ask about WhatsApp statuses..." onkeypress="checkEnter(event)">
@@ -166,14 +184,9 @@ def chat():
     if is_greeting:
         return jsonify({"response": greeting_responses[lang]})
 
-    normalized_input = normalize(user_input)
-    if not normalized_input.strip():
-        return jsonify({"response": "Please enter a valid question."})
-
-    # Find the best matching question with tolerance for grammatical errors
-    best_match, similarity = find_best_match(user_input, lang)
-    if best_match and similarity >= 60:  # Lower threshold for grammatical flexibility
-        response = faq_answers[lang][best_match]
+    answer = find_best_match(user_input, lang)
+    if answer:
+        response = answer
     else:
         response = "I'm not sure how to answer that. Try rephrasing your question."
 
