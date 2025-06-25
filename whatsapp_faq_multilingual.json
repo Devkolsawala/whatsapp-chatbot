@@ -7,27 +7,27 @@
     },
     "paraphrases": {
       "en": [
-        "Save a friend’s video status",
+        "Archive a friend’s video status",
         "Download video status from a contact",
         "How to get a friend’s WhatsApp video",
-        "Save WhatsApp video status",
+        "Keep a WhatsApp video status",
         "Store friend’s status video",
         "Download status video from WhatsApp",
         "Capture video status from friend",
         "Save video story from contact"
       ],
       "hi": [
-        "दोस्त का वीडियो स्टेटस सहेजें",
+        "दोस्त का वीडियो स्टेटस संग्रहित करें",
         "संपर्क से वीडियो स्टेटस डाउनलोड करें",
-        "व्हाट्सएप वीडियो स्टेटस कैसे प्राप्त करें",
-        "व्हाट्सएप वीडियो स्टेटस सहेजें",
+        "दोस्त का व्हाट्सएप वीडियो कैसे प्राप्त करें",
+        "व्हाट्सएप वीडियो स्टेटस रखें",
         "दोस्त के स्टेटस वीडियो को स्टोर करें",
         "व्हाट्सएप से स्टेटस वीडियो डाउनलोड करें",
         "दोस्त से वीडियो स्टेटस कैप्चर करें",
         "संपर्क से वीडियो स्टोरी सहेजें"
       ],
       "id": [
-        "Simpan status video teman",
+        "Arsipkan status video teman",
         "Unduh status video dari kontak",
         "Cara mendapatkan video WhatsApp teman",
         "Simpan status video WhatsApp",
@@ -53,7 +53,7 @@
       "en": [
         "Save images and GIFs from statuses",
         "Download WhatsApp photos and GIFs",
-        "Can I get pictures from statuses",
+        "Is it possible to get pictures from statuses",
         "Store WhatsApp GIFs and images",
         "Download media from WA statuses",
         "Save status photos and animations",
@@ -63,7 +63,7 @@
       "hi": [
         "स्टेटस से तस्वीरें और GIF सहेजें",
         "व्हाट्सएप फोटो और GIF डाउनलोड करें",
-        "क्या मैं स्टेटस से तस्वीरें प्राप्त कर सकता हूं",
+        "क्या स्टेटस से तस्वीरें प्राप्त करना संभव है",
         "व्हाट्सएप GIF और तस्वीरें स्टोर करें",
         "WA स्टेटस से मीडिया डाउनलोड करें",
         "स्टेटस फोटो और एनिमेशन सहेजें",
@@ -73,7 +73,7 @@
       "id": [
         "Simpan gambar dan GIF dari status",
         "Unduh foto dan GIF WhatsApp",
-        "Bisakah saya mendapatkan gambar dari status",
+        "Apakah mungkin untuk mendapatkan gambar dari status",
         "Simpan GIF dan gambar WhatsApp",
         "Unduh media dari status WA",
         "Simpan foto dan animasi status",
@@ -95,34 +95,34 @@
     },
     "paraphrases": {
       "en": [
-        "Can I save an old status from two days ago",
-        "Is it possible to download a status after two days",
-        "Recover a status I forgot to save",
+        "Can I retrieve an old status from two days ago",
+        "Is it possible to download a status after it expired",
+        "Fetch a status I forgot to save",
         "Save a status from a couple of days back",
-        "Is it too late for an old status",
+        "Is it too late for an old status download",
         "Download a status I missed two days ago",
         "Get a status from two days earlier",
         "Can I still save past statuses"
       ],
       "hi": [
-        "क्या मैं दो दिन पुराना स्टेटस सहेज सकता हूं",
-        "दो दिन बाद स्टेटस डाउनलोड करना संभव है",
-        "मैंने जो स्टेटस सहेजना भूला उसे रिकवर करें",
+        "क्या मैं दो दिन पुराना स्टेटस पुनः प्राप्त कर सकता हूं",
+        "क्या स्टेटस की समय सीमा समाप्त होने के बाद उसे डाउनलोड करना संभव है",
+        "एक स्टेटस जो मैं सहेजना भूल गया उसे प्राप्त करें",
         "कुछ दिन पुराने स्टेटस को सहेजें",
-        "पुराने स्टेटस के लिए देर हो गई है",
+        "क्या पुराने स्टेटस डाउनलोड के लिए अब बहुत देर हो चुकी है",
         "दो दिन पहले छूटे स्टेटस को डाउनलोड करें",
         "दो दिन पहले का स्टेटस प्राप्त करें",
-        "क्या मैं अभी भी पुराने स्टेटस सहेज सकता हूं"
+        "क्या मैं अभी भी पिछले स्टेटस सहेज सकता हूं"
       ],
       "id": [
-        "Bisakah saya menyimpan status lama dari dua hari lalu",
-        "Apakah mungkin mengunduh status setelah dua hari",
-        "Pulihkan status yang lupa saya simpan",
+        "Bisakah saya mengambil kembali status lama dari dua hari lalu",
+        "Apakah mungkin mengunduh status setelah kedaluwarsa",
+        "Ambil status yang lupa saya simpan",
         "Simpan status dari beberapa hari lalu",
-        "Apakah terlambat untuk status lama",
+        "Apakah terlambat untuk mengunduh status lama",
         "Unduh status yang terlewat dua hari lalu",
         "Dapatkan status dari dua hari sebelumnya",
-        "Bisakah saya masih menyimpan status lama"
+        "Bisakah saya masih menyimpan status yang lalu"
       ]
     },
     "answer": {
@@ -144,7 +144,7 @@
         "Enable auto-save for statuses",
         "Save statuses without manual download",
         "How to automatically store statuses",
-        "Download statuses automatically",
+        "Configure automatic status downloads",
         "Auto-capture WhatsApp statuses",
         "Make status saving automatic"
       ],
@@ -154,7 +154,7 @@
         "स्टेटस के लिए ऑटो-सेव सक्षम करें",
         "मैन्युअल डाउनलोड के बिना स्टेटस सहेजें",
         "स्टेटस को स्वचालित रूप से कैसे स्टोर करें",
-        "स्टेटस स्वचालित रूप से डाउनलोड करें",
+        "स्वचालित स्टेटस डाउनलोड कॉन्फ़िगर करें",
         "व्हाट्सएप स्टेटस ऑटो-कैप्चर करें",
         "स्टेटस सहेजना स्वचालित करें"
       ],
@@ -164,7 +164,7 @@
         "Aktifkan simpan otomatis untuk status",
         "Simpan status tanpa unduhan manual",
         "Cara menyimpan status secara otomatis",
-        "Unduh status secara otomatis",
+        "Konfigurasikan unduhan status otomatis",
         "Tangkap status WhatsApp secara otomatis",
         "Jadikan penyimpanan status otomatis"
       ]
@@ -187,7 +187,7 @@
         "Save several statuses simultaneously",
         "Can I get multiple statuses together",
         "Batch download WhatsApp statuses",
-        "Download more than one status",
+        "Is downloading more than one status possible",
         "Save multiple WA statuses at a time",
         "Grab several statuses in one go",
         "Can I download statuses in bulk"
@@ -197,7 +197,7 @@
         "कई स्टेटस एक साथ सहेजें",
         "क्या मैं कई स्टेटस एक साथ प्राप्त कर सकता हूं",
         "व्हाट्सएप स्टेटस बैच डाउनलोड करें",
-        "एक से अधिक स्टेटस डाउनलोड करें",
+        "क्या एक से अधिक स्टेटस डाउनलोड करना संभव है",
         "एक बार में कई WA स्टेटस सहेजें",
         "एक बार में कई स्टेटस लें",
         "क्या मैं स्टेटस को बल्क में डाउनलोड कर सकता हूं"
@@ -207,7 +207,7 @@
         "Simpan beberapa status secara bersamaan",
         "Bisakah saya mendapatkan beberapa status bersama",
         "Unduh status WhatsApp secara batch",
-        "Unduh lebih dari satu status",
+        "Apakah mungkin mengunduh lebih dari satu status",
         "Simpan beberapa status WA sekaligus",
         "Ambil beberapa status dalam sekali jalan",
         "Bisakah saya mengunduh status secara massal"
@@ -227,34 +227,34 @@
     },
     "paraphrases": {
       "en": [
-        "Is it compatible with WhatsApp Business",
-        "Save statuses from WA Business",
-        "Does it support business accounts",
+        "Is the app compatible with WhatsApp Business",
+        "Can I save statuses from WA Business",
+        "Does the app support business accounts",
         "Can I use it with WhatsApp Business",
-        "Works with WA Business statuses",
-        "Download from business accounts",
+        "Is the app functional with WA Business statuses",
+        "Can I download from business accounts",
         "Is WhatsApp Business supported",
-        "Save business account statuses"
+        "Can I save business account statuses"
       ],
       "hi": [
-        "क्या यह व्हाट्सएप बिजनेस के साथ संगत है",
-        "WA बिजनेस से स्टेटस सहेजें",
-        "क्या यह बिजनेस अकाउंट्स का समर्थन करता है",
+        "क्या यह ऐप व्हाट्सएप बिजनेस के साथ संगत है",
+        "क्या मैं WA बिजनेस से स्टेटस सहेज सकता हूं",
+        "क्या ऐप बिजनेस अकाउंट्स का समर्थन करता है",
         "क्या मैं इसे व्हाट्सएप बिजनेस के साथ उपयोग कर सकता हूं",
-        "WA बिजनेस स्टेटस के साथ काम करता है",
-        "बिजनेस अकाउंट्स से डाउनलोड करें",
+        "क्या ऐप WA बिजनेस स्टेटस के साथ कार्यात्मक है",
+        "क्या मैं बिजनेस अकाउंट्स से डाउनलोड कर सकता हूं",
         "क्या व्हाट्सएप बिजनेस समर्थित है",
-        "बिजनेस अकाउंट स्टेटस सहेजें"
+        "क्या मैं बिजनेस अकाउंट स्टेटस सहेज सकता हूं"
       ],
       "id": [
-        "Apakah kompatibel dengan WhatsApp Business",
-        "Simpan status dari WA Business",
-        "Apakah mendukung akun bisnis",
+        "Apakah aplikasi ini kompatibel dengan WhatsApp Business",
+        "Bisakah saya menyimpan status dari WA Business",
+        "Apakah aplikasi ini mendukung akun bisnis",
         "Bisakah saya menggunakannya dengan WhatsApp Business",
-        "Berfungsi dengan status WA Business",
-        "Unduh dari akun bisnis",
+        "Apakah aplikasi berfungsi dengan status WA Business",
+        "Bisakah saya mengunduh dari akun bisnis",
         "Apakah WhatsApp Business didukung",
-        "Simpan status akun bisnis"
+        "Bisakah saya menyimpan status akun bisnis"
       ]
     },
     "answer": {
@@ -277,7 +277,7 @@
         "Support for parallel space WhatsApp",
         "Save statuses from multiple WA accounts",
         "Download from dual space WhatsApp",
-        "Works with two WhatsApp in parallel",
+        "Is it functional with two WhatsApp in parallel",
         "Can I save from both accounts in parallel space"
       ],
       "hi": [
@@ -287,7 +287,7 @@
         "पैरलल स्पेस व्हाट्सएप के लिए समर्थन",
         "कई WA अकाउंट्स से स्टेटस सहेजें",
         "दोहरे स्पेस व्हाट्सएप से डाउनलोड करें",
-        "पैरलल में दो व्हाट्सएप के साथ काम करता है",
+        "क्या यह पैरलल में दो व्हाट्सएप के साथ काम करता है",
         "क्या मैं पैरलल स्पेस में दोनों अकाउंट्स से सहेज सकता हूं"
       ],
       "id": [
@@ -297,7 +297,7 @@
         "Dukungan untuk WhatsApp parallel space",
         "Simpan status dari beberapa akun WA",
         "Unduh dari WhatsApp dual space",
-        "Berfungsi dengan dua WhatsApp di parallel",
+        "Apakah berfungsi dengan dua WhatsApp secara paralel",
         "Bisakah saya menyimpan dari kedua akun di parallel space"
       ]
     },
@@ -315,32 +315,32 @@
     },
     "paraphrases": {
       "en": [
-        "Does it support GB WhatsApp",
-        "Save statuses from GB WhatsApp",
+        "Does the app support GB WhatsApp",
+        "Can I save statuses from GB WhatsApp",
         "Is GB WhatsApp compatible",
-        "Can I use it with GB WhatsApp",
-        "Download statuses from GB WA",
-        "Works with GB WhatsApp accounts",
+        "Can I use the app with GB WhatsApp",
+        "Can I download statuses from GB WA",
+        "Is the app functional with GB WhatsApp accounts",
         "Support for GB WhatsApp statuses",
         "Can I save GB WhatsApp stories"
       ],
       "hi": [
-        "क्या यह GB व्हाट्सएप का समर्थन करता है",
-        "GB व्हाट्सएप से स्टेटस सहेजें",
+        "क्या ऐप GB व्हाट्सएप का समर्थन करता है",
+        "क्या मैं GB व्हाट्सएप से स्टेटस सहेज सकता हूं",
         "क्या GB व्हाट्सएप संगत है",
-        "क्या मैं इसे GB व्हाट्सएप के साथ उपयोग कर सकता हूं",
-        "GB WA से स्टेटस डाउनलोड करें",
-        "GB व्हाट्सएप अकाउंट्स के साथ काम करता है",
+        "क्या मैं इस ऐप को GB व्हाट्सएप के साथ उपयोग कर सकता हूं",
+        "क्या मैं GB WA से स्टेटस डाउनलोड कर सकता हूं",
+        "क्या ऐप GB व्हाट्सएप अकाउंट्स के साथ काम करता है",
         "GB व्हाट्सएप स्टेटस के लिए समर्थन",
         "क्या मैं GB व्हाट्सएप स्टोरीज सहेज सकता हूं"
       ],
       "id": [
-        "Apakah mendukung GB WhatsApp",
-        "Simpan status dari GB WhatsApp",
+        "Apakah aplikasi mendukung GB WhatsApp",
+        "Bisakah saya menyimpan status dari GB WhatsApp",
         "Apakah GB WhatsApp kompatibel",
-        "Bisakah saya menggunakannya dengan GB WhatsApp",
-        "Unduh status dari GB WA",
-        "Berfungsi dengan akun GB WhatsApp",
+        "Bisakah saya menggunakan aplikasi ini dengan GB WhatsApp",
+        "Bisakah saya mengunduh status dari GB WA",
+        "Apakah aplikasi ini berfungsi dengan akun GB WhatsApp",
         "Dukungan untuk status GB WhatsApp",
         "Bisakah saya menyimpan cerita GB WhatsApp"
       ]
@@ -364,17 +364,17 @@
         "Need for notification access",
         "Purpose of notification permissions",
         "Why is notification reading required",
-        "Status saver notification access",
+        "What is the status saver notification access for",
         "Why does it need notification rights",
         "Explain notification permission need"
       ],
       "hi": [
         "नोटिफिकेशन अनुमति का कारण",
         "ऐप नोटिफिकेशन क्यों पढ़ता है",
-        "नोटिफिकेशन एक्सेस की आवश्यकता",
+        "नोटिफिकेशन एक्सेस की आवश्यकता क्यों है",
         "नोटिफिकेशन अनुमतियों का उद्देश्य",
         "नोटिफिकेशन पढ़ना क्यों आवश्यक है",
-        "स्टेटस सेवर नोटिफिकेशन एक्सेस",
+        "स्टेटस सेवर नोटिफिकेशन एक्सेस किस लिए है",
         "इसे नोटिफिकेशन अधिकार क्यों चाहिए",
         "नोटिफिकेशन अनुमति की आवश्यकता समझाएं"
       ],
@@ -384,7 +384,7 @@
         "Kebutuhan untuk akses notifikasi",
         "Tujuan dari izin notifikasi",
         "Mengapa diperlukan pembacaan notifikasi",
-        "Akses notifikasi penghemat status",
+        "Untuk apa akses notifikasi penghemat status",
         "Mengapa memerlukan hak notifikasi",
         "Jelaskan kebutuhan izin notifikasi"
       ]
@@ -403,34 +403,34 @@
     },
     "paraphrases": {
       "en": [
-        "Explain message recovery process",
-        "How to recover deleted messages",
-        "Mechanism of message restoration",
-        "How does deleted message recovery work",
-        "Functionality of message recovery",
-        "Restore messages with the app",
-        "How the app recovers messages",
+        "Explain message restoration process",
+        "How to restore deleted messages",
+        "Mechanism of message retrieval",
+        "How does deleted message restoration function",
+        "Functionality of message undelete",
+        "Undelete messages with the app",
+        "How the app restores messages",
         "Process of retrieving deleted messages"
       ],
       "hi": [
-        "मैसेज रिकवरी प्रक्रिया समझाएं",
-        "डिलीट किए गए मैसेज कैसे रिकवर करें",
-        "मैसेज रिस्टोरेशन का तंत्र",
-        "डिलीटेड मैसेज रिकवरी कैसे काम करता है",
-        "मैसेज रिकवरी की कार्यक्षमता",
-        "ऐप के साथ मैसेज रिस्टोर करें",
-        "ऐप मैसेज कैसे रिकवर करता है",
-        "डिलीट किए गए मैसेज पुनर्प्राप्त करने की प्रक्रिया"
+        "मैसेज पुनर्स्थापना प्रक्रिया समझाएं",
+        "हटाए गए संदेशों को कैसे पुनर्स्थापित करें",
+        "संदेश पुनर्प्राप्ति का तंत्र",
+        "हटाए गए संदेश पुनर्प्राप्ति कैसे काम करती है",
+        "संदेश अनडिलीट की कार्यक्षमता",
+        "ऐप के साथ संदेशों को अनडिलीट करें",
+        "ऐप संदेशों को कैसे पुनर्स्थापित करता है",
+        "हटाए गए संदेशों को पुनर्प्राप्त करने की प्रक्रिया"
       ],
       "id": [
         "Jelaskan proses pemulihan pesan",
         "Cara memulihkan pesan yang dihapus",
-        "Mekanisme pemulihan pesan",
-        "Bagaimana pemulihan pesan yang dihapus bekerja",
-        "Fungsi pemulihan pesan",
-        "Pulihkan pesan dengan aplikasi",
+        "Mekanisme pengambilan kembali pesan",
+        "Bagaimana fungsi pemulihan pesan yang dihapus",
+        "Fungsionalitas pembatalan penghapusan pesan",
+        "Batalkan penghapusan pesan dengan aplikasi",
         "Bagaimana aplikasi memulihkan pesan",
-        "Proses pengambilan pesan yang dihapus"
+        "Proses mengambil kembali pesan yang dihapus"
       ]
     },
     "answer": {
@@ -626,7 +626,7 @@
         "Error buying ad-free app version",
         "Can’t purchase premium due to Play Store",
         "Play Store version error for ad-free",
-        "Issue with ad-free version purchase",
+        "Purchase failed for ad-free version",
         "Old Play Store blocks premium buy",
         "Trouble buying ad-free app",
         "Play Store error for premium version",
@@ -636,7 +636,7 @@
         "विज्ञापन-मुक्त ऐप संस्करण खरीदने में त्रुटि",
         "प्ले स्टोर के कारण प्रीमियम खरीद नहीं सकता",
         "विज्ञापन-मुक्त के लिए प्ले स्टोर संस्करण त्रुटि",
-        "विज्ञापन-मुक्त संस्करण खरीदने में समस्या",
+        "विज्ञापन-मुक्त संस्करण के लिए खरीद विफल",
         "पुराना प्ले स्टोर प्रीमियम खरीद को ब्लॉक करता है",
         "विज्ञापन-मुक्त ऐप खरीदने में परेशानी",
         "प्रीमियम संस्करण के लिए प्ले स्टोर त्रुटि",
@@ -646,7 +646,7 @@
         "Kesalahan membeli versi aplikasi bebas iklan",
         "Tidak bisa membeli premium karena Play Store",
         "Kesalahan versi Play Store untuk bebas iklan",
-        "Masalah dengan pembelian versi bebas iklan",
+        "Pembelian gagal untuk versi bebas iklan",
         "Play Store lama memblokir pembelian premium",
         "Kesulitan membeli aplikasi bebas iklan",
         "Kesalahan Play Store untuk versi premium",
@@ -673,7 +673,7 @@
         "Why does the app keep crashing",
         "App fails to launch",
         "App freezes on use",
-        "Trouble with app crashing",
+        "Application is not responding",
         "App stops working suddenly"
       ],
       "hi": [
@@ -683,7 +683,7 @@
         "ऐप बार-बार क्रैश क्यों करता है",
         "ऐप लॉन्च होने में विफल",
         "ऐप उपयोग में फ्रीज हो जाता है",
-        "ऐप क्रैश होने की समस्या",
+        "एप्लिकेशन प्रतिसाद नहीं दे रहा है",
         "ऐप अचानक काम करना बंद कर देता है"
       ],
       "id": [
@@ -693,7 +693,7 @@
         "Mengapa aplikasi terus mogok",
         "Aplikasi gagal diluncurkan",
         "Aplikasi macet saat digunakan",
-        "Masalah dengan aplikasi mogok",
+        "Aplikasi tidak merespons",
         "Aplikasi tiba-tiba berhenti bekerja"
       ]
     },
@@ -760,7 +760,7 @@
         "Cause of low-quality saved video",
         "Why isn’t video HD when downloaded",
         "Saved video is not clear",
-        "Blurry video download issue",
+        "Blurry video download problem",
         "Why does video lose quality",
         "Low resolution saved video"
       ],
@@ -770,19 +770,19 @@
         "कम गुणवत्ता वाले सहेजे गए वीडियो का कारण",
         "डाउनलोड होने पर वीडियो HD क्यों नहीं है",
         "सहेजा गया वीडियो स्पष्ट नहीं है",
-        "धुंधला वीडियो डाउनलोड समस्या",
+        "धुंधला वीडियो डाउनलोड की समस्या",
         "वीडियो गुणवत्ता क्यों खो देता है",
         "कम रिज़ॉल्यूशन सहेजा गया वीडियो"
       ],
       "id": [
         "Mengapa video yang disimpan buram",
         "Video tidak dalam HD setelah disimpan",
-        "Penyebab video berkualitas rendah",
+        "Penyebab video berkualitas rendah yang disimpan",
         "Mengapa video tidak HD saat diunduh",
         "Video yang disimpan tidak jelas",
         "Masalah unduhan video buram",
         "Mengapa video kehilangan kualitas",
-        "Video beresolusi rendah yang disimpan"
+        "Video yang disimpan beresolusi rendah"
       ]
     },
     "answer": {
@@ -805,7 +805,7 @@
         "No downloads happening today",
         "Why are downloads failing",
         "Can’t download anything today",
-        "Issue with downloading statuses",
+        "Problem with downloading statuses",
         "Downloads stopped working"
       ],
       "hi": [
@@ -819,7 +819,7 @@
         "डाउनलोड काम करना बंद हो गया"
       ],
       "id": [
-        "Mengapa tidak ada yang diunduh",
+        "Mengapa tidak ada yang bisa diunduh",
         "Unduhan tidak berfungsi hari ini",
         "Apa yang salah dengan unduhan",
         "Tidak ada unduhan yang terjadi hari ini",
@@ -848,7 +848,7 @@
         "Can’t complete downloads",
         "Download errors repeatedly",
         "Failed to download statuses",
-        "Download not working properly",
+        "Download not functioning properly",
         "Why are downloads unsuccessful",
         "Trouble with download failures"
       ],
@@ -860,13 +860,13 @@
         "स्टेटस डाउनलोड करने में असफल",
         "डाउनलोड ठीक से काम नहीं कर रहा",
         "डाउनलोड असफल क्यों हो रहे हैं",
-        "डाउनलोड विफलताओं की समस्या"
+        "डाउनलोड विफलताओं के साथ परेशानी"
       ],
       "id": [
         "Unduhan terus gagal",
         "Mengapa unduhan saya gagal",
         "Tidak bisa menyelesaikan unduhan",
-        "Kesalahan unduhan berulang",
+        "Kesalahan unduhan berulang kali",
         "Gagal mengunduh status",
         "Unduhan tidak berfungsi dengan baik",
         "Mengapa unduhan tidak berhasil",
@@ -890,8 +890,8 @@
         "Downloads fail after checking internet",
         "Still not working after storage check",
         "App not downloading despite checks",
-        "Why doesn’t it work after verifying internet",
-        "Download issues persist after checks",
+        "Why doesn’t it function after verifying internet",
+        "Download problems persist after checks",
         "Can’t download after confirming storage",
         "Trouble downloading post-checks",
         "Not working after internet and storage verification"
@@ -900,7 +900,7 @@
         "इंटरनेट जांच के बाद डाउनलोड विफल",
         "स्टोरेज जांच के बाद भी काम नहीं कर रहा",
         "ऐप चेक के बावजूद डाउनलोड नहीं हो रहा",
-        "इंटरनेट सत्यापन के बाद काम क्यों नहीं करता",
+        "इंटरनेट सत्यापन के बाद यह काम क्यों नहीं करता",
         "चेक के बाद डाउनलोड समस्याएं बनी रहती हैं",
         "स्टोरेज की पुष्टि के बाद डाउनलोड नहीं कर सकता",
         "चेक के बाद डाउनलोड करने में समस्या",
@@ -936,8 +936,8 @@
         "Can’t download from status list",
         "Download fails to start",
         "Tap download but no action",
-        "Status list download issue",
-        "Why doesn’t download work",
+        "Status list download problem",
+        "Why doesn’t download function",
         "No response on download tap"
       ],
       "hi": [
@@ -1109,9 +1109,9 @@
       "en": [
         "App not working after following steps",
         "Still fails despite instructions",
-        "Why doesn’t it work after steps",
+        "Why doesn’t it function after steps",
         "Followed guide but no success",
-        "App issue persists after steps",
+        "App problem persists after steps",
         "Not working after doing steps",
         "Steps followed but app fails",
         "Trouble after completing instructions"
@@ -1363,7 +1363,6 @@
       "id": "Aplikasi menyimpan media yang sudah ada di perangkat Anda. Harap hormati privasi orang lain dan dapatkan izin sebelum membagikan konten yang disimpan."
     }
   },
-
   {
     "question": {
       "en": "Can I share a saved status directly to other apps?",
@@ -1680,32 +1679,32 @@
     },
     "paraphrases": {
       "en": [
-        "Recover deleted status from app",
-        "Restore accidentally deleted status",
+        "Restore deleted status from app",
+        "Undelete accidentally deleted status",
         "Can I get back deleted statuses",
         "Undo status deletion in app",
-        "Retrieve deleted WA statuses",
-        "Recover lost statuses in app",
+        "Retrieve deleted WA statuses from app",
+        "Get back a lost status in app",
         "Get back removed statuses",
         "Restore statuses deleted by mistake"
       ],
       "hi": [
-        "ऐप से हटाए गए स्टेटस को रिकवर करें",
-        "गलती से हटाए गए स्टेटस को पुनर्स्थापित करें",
+        "ऐप से हटाए गए स्टेटस को पुनर्स्थापित करें",
+        "गलती से हटाए गए स्टेटस को अनडिलीट करें",
         "क्या मैं हटाए गए स्टेटस वापस पा सकता हूं",
         "ऐप में स्टेटस हटाने को पूर्ववत करें",
-        "हटाए गए WA स्टेटस पुनर्प्राप्त करें",
-        "ऐप में खोए हुए स्टेटस रिकवर करें",
+        "ऐप से हटाए गए WA स्टेटस पुनर्प्राप्त करें",
+        "ऐप में खोए हुए स्टेटस वापस पाएं",
         "हटाए गए स्टेटस वापस लें",
         "गलती से हटाए गए स्टेटस पुनर्स्थापित करें"
       ],
       "id": [
         "Pulihkan status yang dihapus dari aplikasi",
-        "Kembalikan status yang dihapus secara tidak sengaja",
+        "Batalkan penghapusan status yang tidak sengaja dihapus",
         "Bisakah saya mengembalikan status yang dihapus",
         "Batalkan penghapusan status di aplikasi",
-        "Ambil kembali status WA yang dihapus",
-        "Pulihkan status yang hilang di aplikasi",
+        "Ambil kembali status WA yang dihapus dari aplikasi",
+        "Dapatkan kembali status yang hilang di aplikasi",
         "Kembalikan status yang dihapus",
         "Kembalikan status yang dihapus karena kesalahan"
       ]
@@ -1804,15 +1803,13 @@
       "id": "Buka Pengaturan aplikasi > Hubungi Kami, atau kirim email ke tim dukungan kami di alamat yang tercantum di deskripsi Play Store."
     }
   },
-
-  
   {
     "question": {
       "en": "Why do I see so many ads when using the status saver app?",
       "hi": "स्थिति सहेजक ऐप का उपयोग करते समय मुझे इतने सारे विज्ञापन क्यों दिखाई देते हैं?",
       "id": "Mengapa saya melihat begitu banyak iklan saat menggunakan aplikasi penyimpan status?"
     },
-    "paraphrase": {
+    "paraphrases": {
       "en": [
         "Why are there so many advertisements in the status saver app?",
         "What causes the frequent ads while using the app to save statuses?",
@@ -1856,7 +1853,7 @@
       "hi": "मैं ऐप को स्टेटस साझा करते समय प्रचारात्मक टेक्स्ट जोड़ने से कैसे रोक सकता हूँ?",
       "id": "Bagaimana cara mencegah aplikasi menambahkan teks promosi pada status yang dibagikan?"
     },
-    "paraphrase": {
+    "paraphrases": {
       "en": [
         "How do I stop the app from including promotional messages when sharing statuses?",
         "What can I do to avoid promotional text being added to statuses I share?",
@@ -1900,7 +1897,7 @@
       "hi": "मैं ऐप में अपने द्वितीयक व्हाट्सएप खाते के स्टेटस क्यों नहीं देख सकता?",
       "id": "Mengapa saya tidak bisa melihat status dari akun WhatsApp sekunder di aplikasi?"
     },
-    "paraphrase": {
+    "paraphrases": {
       "en": [
         "Why doesn't the app show statuses from my dual WhatsApp account?",
         "What prevents the app from displaying statuses from my second WhatsApp account?",
@@ -1944,7 +1941,7 @@
       "hi": "यदि ऐप हाल ही में देखे गए व्हाट्सएप स्टेटस दिखाने में विफल रहता है तो मुझे क्या करना चाहिए?",
       "id": "Apa yang harus saya lakukan jika aplikasi gagal menampilkan status WhatsApp yang baru dilihat?"
     },
-    "paraphrase": {
+    "paraphrases": {
       "en": [
         "Why doesn't the app display the latest WhatsApp statuses I viewed?",
         "How can I fix the app not showing recently viewed statuses?",
@@ -1988,7 +1985,7 @@
       "hi": "ऐप के प्रो संस्करण में अपग्रेड करने के बाद भी मुझे विज्ञापन क्यों दिख रहे हैं?",
       "id": "Mengapa saya masih melihat iklan setelah meningkatkan ke versi Pro aplikasi?"
     },
-    "paraphrase": {
+    "paraphrases": {
       "en": [
         "Why do ads appear even after purchasing the Pro version of the app?",
         "How come I'm still getting ads after buying the ad-free version?",
@@ -2032,7 +2029,7 @@
       "hi": "मैं ऐप में एक साथ कई स्टेटस कैसे डाउनलोड कर सकता हूँ?",
       "id": "Bagaimana cara mengunduh beberapa status sekaligus di aplikasi?"
     },
-    "paraphrase": {
+    "paraphrases": {
       "en": [
         "Is there a way to save multiple statuses simultaneously in the app?",
         "How do I download several statuses at once using the app?",
@@ -2076,7 +2073,7 @@
       "hi": "ऐप स्टेटस तक पहुँचते समय जम क्यों जाता है या धीरे लोड होता है?",
       "id": "Mengapa aplikasi membeku atau memuat lambat saat mengakses status?"
     },
-    "paraphrase": {
+    "paraphrases": {
       "en": [
         "What causes the app to lag or freeze when loading statuses?",
         "Why is the app slow or unresponsive when I try to view statuses?",
@@ -2120,36 +2117,36 @@
       "hi": "क्या स्थिति सहेजक ऐप हटाए गए व्हाट्सएप संदेशों को पुनर्प्राप्त कर सकता है?",
       "id": "Bisakah aplikasi penyimpan status memulihkan pesan WhatsApp yang dihapus?"
     },
-    "paraphrase": {
+    "paraphrases": {
       "en": [
         "Is it possible to retrieve deleted WhatsApp messages with the status saver app?",
-        "Does the app support recovering messages deleted from WhatsApp?",
-        "Can I use the status saver app to restore deleted WhatsApp chats?",
-        "Will the app help me recover messages removed from WhatsApp?",
+        "Does the app support restoring messages deleted from WhatsApp?",
+        "Can I use the status saver app to get back deleted WhatsApp chats?",
+        "Will the app help me restore messages removed from WhatsApp?",
         "Is there a way to get back deleted WhatsApp messages using this app?",
-        "Does the status saver tool allow recovery of deleted WhatsApp messages?",
-        "Can the app retrieve WhatsApp messages that were deleted?",
-        "Is the status saver capable of restoring deleted WhatsApp conversations?"
+        "Does the status saver tool allow retrieval of deleted WhatsApp messages?",
+        "Can the app get back WhatsApp messages that were deleted?",
+        "Is the status saver capable of undeleting WhatsApp conversations?"
       ],
       "hi": [
-        "क्या स्थिति सहेजक ऐप के साथ हटाए गए व्हाट्सएप संदेशों को पुनः प्राप्त करना संभव है?",
-        "क्या ऐप व्हाट्सएप से हटाए गए संदेशों को पुनर्प्राप्त करने का समर्थन करता है?",
-        "क्या मैं स्थिति सहेजक ऐप का उपयोग करके हटाए गए व्हाट्सएप चैट को पुनर्स्थापित कर सकता हूँ?",
-        "क्या ऐप मुझे व्हाट्सएप से हटाए गए संदेशों को पुनर्प्राप्त करने में मदद करेगा?",
+        "क्या स्थिति सहेजक ऐप से हटाए गए व्हाट्सएप संदेशों को पुनर्प्राप्त करना संभव है?",
+        "क्या ऐप व्हाट्सएप से हटाए गए संदेशों को पुनर्स्थापित करने का समर्थन करता है?",
+        "क्या मैं हटाए गए व्हाट्सएप चैट को वापस पाने के लिए स्थिति सहेजक ऐप का उपयोग कर सकता हूँ?",
+        "क्या ऐप मुझे व्हाट्सएप से हटाए गए संदेशों को पुनर्स्थापित करने में मदद करेगा?",
         "क्या इस ऐप का उपयोग करके हटाए गए व्हाट्सएप संदेशों को वापस पाने का कोई तरीका है?",
         "क्या स्थिति सहेजक उपकरण हटाए गए व्हाट्सएप संदेशों की पुनर्प्राप्ति की अनुमति देता है?",
-        "क्या ऐप उन व्हाट्सएप संदेशों को पुनः प्राप्त कर सकता है जो हटा दिए गए थे?",
-        "क्या स्थिति सहेजक हटाई गई व्हाट्सएप बातचीत को पुनर्स्थापित करने में सक्षम है?"
+        "क्या ऐप उन व्हाट्सएप संदेशों को वापस पा सकता है जो हटा दिए गए थे?",
+        "क्या स्थिति सहेजक हटाई गई व्हाट्सएप बातचीत को अनडिलीट करने में सक्षम है?"
       ],
       "id": [
-        "Apakah mungkin memulihkan pesan WhatsApp yang dihapus dengan aplikasi penyimpan status?",
+        "Apakah mungkin untuk mengambil kembali pesan WhatsApp yang dihapus dengan aplikasi penyimpan status?",
         "Apakah aplikasi mendukung pemulihan pesan yang dihapus dari WhatsApp?",
-        "Bisakah saya menggunakan aplikasi penyimpan status untuk mengembalikan obrolan WhatsApp yang dihapus?",
+        "Bisakah saya menggunakan aplikasi penyimpan status untuk mendapatkan kembali obrolan WhatsApp yang dihapus?",
         "Apakah aplikasi akan membantu saya memulihkan pesan yang dihapus dari WhatsApp?",
         "Adakah cara untuk mendapatkan kembali pesan WhatsApp yang dihapus menggunakan aplikasi ini?",
-        "Apakah alat penyimpan status memungkinkan pemulihan pesan WhatsApp yang dihapus?",
-        "Bisakah aplikasi mengambil pesan WhatsApp yang telah dihapus?",
-        "Apakah penyimpan status mampu mengembalikan percakapan WhatsApp yang dihapus?"
+        "Apakah alat penyimpan status memungkinkan pengambilan pesan WhatsApp yang dihapus?",
+        "Bisakah aplikasi mendapatkan kembali pesan WhatsApp yang telah dihapus?",
+        "Apakah penyimpan status mampu membatalkan penghapusan percakapan WhatsApp?"
       ]
     },
     "answer": {
@@ -2164,7 +2161,7 @@
       "hi": "ऐप अज्ञात स्रोतों से स्टेटस या वीडियो क्यों दिखाता है?",
       "id": "Mengapa aplikasi menampilkan status atau video dari sumber yang tidak dikenal?"
     },
-    "paraphrase": {
+    "paraphrases": {
       "en": [
         "Why am I seeing statuses from people I don’t know in the app?",
         "What causes the app to show videos from unfamiliar sources?",
@@ -2208,7 +2205,7 @@
       "hi": "मैं ऐप में स्टेटस सहेजने के लिए कस्टम फ़ोल्डर कैसे सेट कर सकता हूँ?",
       "id": "Bagaimana cara mengatur folder khusus untuk menyimpan status di aplikasi?"
     },
-    "paraphrase": {
+    "paraphrases": {
       "en": [
         "How can I choose a specific folder to save statuses in the app?",
         "What steps are needed to change the storage location for downloaded statuses?",
@@ -2225,7 +2222,7 @@
         "मैं ऐप में स्टेटस सहेजने के लिए कस्टम डायरेक्टरी कैसे चुनूँ?",
         "स्टेटस डाउनलोड के लिए व्यक्तिगत फ़ोल्डर सेट करने की प्रक्रिया क्या है?",
         "मैं ऐप में स्टेटस के लिए एक विशेष फ़ोल्डर कैसे नामित कर सकता हूँ?",
-        "ऐप स्टेटस सहेजने के लिए कस्टम स्थान चुनने के लिए मैं क्या करूँ?",
+        "ऐप स्टेटस सहेजने के लिए कस्टम स्थान चुनने के لیے मैं क्या करूँ?",
         "मैं ऐप को चुने हुए फ़ोल्डर में स्टेटस सहेजने के लिए कैसे कॉन्फ़िगर करूँ?",
         "स्टेटस के लिए विशिष्ट स्टोरेज पथ असाइन करने का तरीका क्या है?"
       ],
@@ -2246,14 +2243,13 @@
       "id": "Anda dapat mengubah lokasi unduhan untuk status yang disimpan di pengaturan aplikasi. Buka opsi penyimpanan dan pilih folder yang Anda inginkan. Jika Anda mengalami masalah, pastikan aplikasi memiliki izin penyimpanan yang diperlukan atau hubungi dukungan di luckajay93@gmail.com."
     }
   },
-  
   {
     "question": {
       "en": "Why do I see ads in my phone's notifications from the status saver app?",
       "hi": "मुझे स्थिति सहेजक ऐप से मेरे फोन की सूचनाओं में विज्ञापन क्यों दिखाई देते हैं?",
       "id": "Mengapa saya melihat iklan di notifikasi ponsel dari aplikasi penyimpan status?"
     },
-    "paraphrase": {
+    "paraphrases": {
       "en": [
         "Why are there ads in my notifications from the status saver app?",
         "What causes notification ads from the app to appear on my phone?",
@@ -2297,7 +2293,7 @@
       "hi": "ऐप मेरे द्वारा चयनित न की गई भाषाओं में वीडियो क्यों दिखाता है?",
       "id": "Mengapa aplikasi masih menampilkan video dalam bahasa yang tidak saya pilih?"
     },
-    "paraphrase": {
+    "paraphrases": {
       "en": [
         "Why are there videos in unselected languages in the app?",
         "What causes the app to display videos in languages I didn’t choose?",
@@ -2341,19 +2337,19 @@
       "hi": "मैं नए डिवाइस पर अपनी प्रो संस्करण खरीदारी को कैसे बहाल कर सकता हूँ?",
       "id": "Bagaimana cara memulihkan pembelian versi Pro saya di perangkat baru?"
     },
-    "paraphrase": {
+    "paraphrases": {
       "en": [
-        "How do I recover my Pro version on a new phone?",
-        "What steps restore my paid Pro version on another device?",
+        "How do I reactivate my Pro version on a new phone?",
+        "What steps reinstate my paid Pro version on another device?",
         "How can I get my Pro version back on a new device?",
         "What’s the process to reinstate my Pro purchase on a new phone?",
         "How do I transfer my Pro version to a different device?",
         "Why isn’t my Pro version active on my new device?",
         "How can I re-enable my Pro version on a new phone?",
-        "What do I do to restore my Pro subscription on another device?"
+        "What do I do to reactivate my Pro subscription on another device?"
       ],
       "hi": [
-        "मैं नए फोन पर अपनी प्रो संस्करण को कैसे रिकवर करूँ?",
+        "मैं नए फोन पर अपनी प्रो संस्करण को कैसे पुनः सक्रिय करूँ?",
         "किसी अन्य डिवाइस पर मेरे भुगतान किए गए प्रो संस्करण को बहाल करने के चरण क्या हैं?",
         "मैं नए डिवाइस पर अपनी प्रो संस्करण को वापस कैसे पा सकता हूँ?",
         "नए फोन पर मेरी प्रो खरीदारी को पुनः स्थापित करने की प्रक्रिया क्या है?",
@@ -2363,14 +2359,14 @@
         "मैं किसी अन्य डिवाइस पर अपनी प्रो सदस्यता को बहाल करने के लिए क्या करूँ?"
       ],
       "id": [
-        "Bagaimana cara memulihkan versi Pro saya di ponsel baru?",
+        "Bagaimana cara mengaktifkan kembali versi Pro saya di ponsel baru?",
         "Langkah apa yang memulihkan versi Pro berbayar saya di perangkat lain?",
         "Bagaimana cara mendapatkan kembali versi Pro saya di perangkat baru?",
         "Apa proses untuk mengembalikan pembelian Pro saya di ponsel baru?",
         "Bagaimana cara mentransfer versi Pro saya ke perangkat berbeda?",
         "Mengapa versi Pro saya tidak aktif di perangkat baru saya?",
         "Bagaimana cara mengaktifkan kembali versi Pro saya di ponsel baru?",
-        "Apa yang harus saya lakukan untuk memulihkan langganan Pro saya di perangkat lain?"
+        "Apa yang harus saya lakukan untuk mengaktifkan kembali langganan Pro saya di perangkat lain?"
       ]
     },
     "answer": {
@@ -2385,7 +2381,7 @@
       "hi": "ऐप बार-बार स्टोरेज एक्सेस क्यों मांगता है?",
       "id": "Mengapa aplikasi terus meminta akses penyimpanan berulang kali?"
     },
-    "paraphrase": {
+    "paraphrases": {
       "en": [
         "Why does the app keep requesting storage permission?",
         "What causes repeated storage access prompts in the app?",
@@ -2429,7 +2425,7 @@
       "hi": "मैं ऐप में 'अधिक वीडियो स्टेटस' सुविधा को कैसे अक्षम कर सकता हूँ?",
       "id": "Bagaimana cara menonaktifkan fitur 'Lebih Banyak Status Video' di aplikasi?"
     },
-    "paraphrase": {
+    "paraphrases": {
       "en": [
         "How do I turn off the 'More Video Statuses' option in the app?",
         "What steps disable the extra video statuses feature?",
@@ -2473,7 +2469,7 @@
       "hi": "सहेजे गए स्टेटस मेरी गैलरी में क्यों नहीं दिख रहे हैं?",
       "id": "Mengapa status yang disimpan tidak muncul di galeri saya?"
     },
-    "paraphrase": {
+    "paraphrases": {
       "en": [
         "Why don’t saved statuses show up in my gallery?",
         "What causes saved statuses to be missing from the gallery?",
@@ -2517,7 +2513,7 @@
       "hi": "ऐप नए स्टेटस के बजाय पुराने स्टेटस क्यों दिखाता है?",
       "id": "Mengapa aplikasi menampilkan status lama alih-alih yang baru?"
     },
-    "paraphrase": {
+    "paraphrases": {
       "en": [
         "Why are old statuses displayed instead of recent ones?",
         "What causes the app to show outdated statuses?",
@@ -2561,7 +2557,7 @@
       "hi": "मैं ऐप में अनुचित विज्ञापनों की रिपोर्ट कैसे कर सकता हूँ?",
       "id": "Bagaimana cara melaporkan iklan yang tidak pantas di aplikasi?"
     },
-    "paraphrase": {
+    "paraphrases": {
       "en": [
         "How do I report offensive ads in the status saver app?",
         "What steps allow me to flag inappropriate advertisements?",
@@ -2599,7 +2595,4 @@
       "id": "Laporkan iklan yang tidak pantas dengan mencatat detail iklan (misalnya, konten, waktu) dan mengirim email ke luckajay93@gmail.com. Tim akan menyelidiki dan berusaha memblokir iklan tersebut di pembaruan mendatang."
     }
   }
-
-
-  
 ]
