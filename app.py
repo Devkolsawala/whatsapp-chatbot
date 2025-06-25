@@ -12,18 +12,16 @@ logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger(__name__)
 DetectorFactory.seed = 0
 
-# Text normalization function
+# Text normalization
 def normalize(text):
     if isinstance(text, str):
         text = text.lower()
-        # Preserve Hindi characters (Devanagari: \u0900-\u097F)
-        text = re.sub(r"[^\w\s\u0900-\u097F\!\?]", "", text)
+        # Use Unicode range for Devanagari (Hindi) characters: \u0900-\u097F
+        text = re.sub(r"[^\w\s\u0900-\u097F\!\?]", "", text)  # Preserve Hindi characters
         text = re.sub(r"[!?]+", " ", text)
         text = re.sub(r"\s+", " ", text)
-        # Manual typo corrections
         manual_typos = {
             "helo": "hello", "watsap": "whatsapp", "whastapp": "whatsapp", "downlaod": "download",
-            "statuss": "status", "statu": "status", "savee": "save", "downlod": "download",
             "हेलो": "नमस्ते", "वाट्सप": "व्हाट्सएप", "डाउनलोड्ड": "डाउनलोड",
             "halo": "hai", "undh": "unduh", "wa": "whatsapp"
         }
@@ -77,44 +75,29 @@ try:
         faqs = json.load(f)
 except FileNotFoundError:
     logger.error("whatsapp_faq_multilingual.json not found")
-    faqs = []
+    faqs = []  # Fallback to empty list if file is missing
 
-# Prepare FAQ data with questions and paraphrases
-faq_data = {lang: [] for lang in ["en", "hi", "id"]}
-for item in faqs:
+# Prepare FAQ questions for fuzzy matching
+faq_questions = {lang: [] for lang in ["en", "hi", "id"]}
+faq_answers = {lang: {} for lang in ["en", "hi", "id"]}
+for idx, item in enumerate(faqs):
     for lang in ["en", "hi", "id"]:
-        question = item["question"][lang]
-        paraphrases = item.get("paraphrases", {}).get(lang, [])
-        texts = [question] + paraphrases
-        answer = item["answer"][lang]
-        faq_data[lang].append({"texts": texts, "answer": answer})
+        faq_questions[lang].append(item["question"][lang])
+        faq_answers[lang][item["question"][lang]] = item["answer"][lang]
 
-# Compute similarity using multiple fuzzy ratios
-def compute_similarity(input_text, faq_text):
-    norm_input = normalize(input_text)
-    norm_faq = normalize(faq_text)
-    scores = [
-        fuzz.partial_ratio(norm_input, norm_faq),
-        fuzz.token_sort_ratio(norm_input, norm_faq),
-        fuzz.token_set_ratio(norm_input, norm_faq)
-    ]
-    return max(scores)
-
-# Find the best matching answer
+# Function to find best match for a question with similarity score
 def find_best_match(question, lang):
-    best_similarity = 0.0
-    best_answer = None
-    for faq_item in faq_data[lang]:
-        for text in faq_item["texts"]:
-            similarity = compute_similarity(question, text)
-            if similarity > best_similarity:
-                best_similarity = similarity
-                best_answer = faq_item["answer"]
-    if best_similarity >= 60:  # Adjustable threshold
-        return best_answer
-    return None
+    normalized_question = normalize(question)
+    if not faq_questions[lang]:
+        return None, 0.0
+    best_match = max(faq_questions[lang], key=lambda x: fuzz.partial_ratio(normalized_question, normalize(x)), default=None)
+    similarity = fuzz.partial_ratio(normalized_question, normalize(best_match)) if best_match else 0.0
+    if similarity >= 75:
+        return best_match, similarity
+    else:
+        return None, 0.0
 
-# HTML template for the chatbot interface
+# HTML template
 html_template = """
 <!DOCTYPE html>
 <html lang="en">
@@ -178,6 +161,7 @@ def chat():
     if not user_input:
         return jsonify({"response": "Please enter a question."})
 
+    # Check for exit commands
     if user_input.lower() in ["exit", "quit"]:
         return jsonify({"response": "Goodbye!"})
 
@@ -185,11 +169,16 @@ def chat():
     if is_greeting:
         return jsonify({"response": greeting_responses[lang]})
 
-    answer = find_best_match(user_input, lang)
-    if answer:
-        response = answer
+    normalized_input = normalize(user_input)
+    if not normalized_input.strip():
+        return jsonify({"response": "Please enter a valid question."})
+
+    # Find the best matching question with similarity score
+    best_match, similarity = find_best_match(user_input, lang)
+    if best_match and similarity >= 60:
+        response = faq_answers[lang][best_match]
     else:
-        response = "I'm not sure how to answer that. Try rephrasing your question."
+        response = "I'm sorry, I didn’t understand that. Could you please rephrase your question or type 'exit' to end the conversation?"
 
     return jsonify({"response": response})
 
