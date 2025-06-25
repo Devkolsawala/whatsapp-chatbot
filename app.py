@@ -68,8 +68,8 @@ def detect_language_and_check_intent(text):
     # Check for exit intent with fuzzy matching
     for lang in LANGUAGES:
         if any(word in EXIT_COMMANDS for word in normalized_words):
-            best_exit_match = process.extractOne(normalized_text, EXIT_COMMANDS, scorer=fuzz.partial_ratio, score_cutoff=60)
-            if best_exit_match:
+            best_exit_match = process.extractOne(normalized_text, EXIT_COMMANDS, scorer=fuzz.partial_ratio)
+            if best_exit_match and best_exit_match[1] >= 60:  # Threshold for exit intent
                 return lang, False, True  # Language, not a greeting, is an exit
     
     # Check for greetings
@@ -125,7 +125,7 @@ def load_faq_data():
 def find_best_match(question, lang):
     """
     Finds the best matching question from the corpus using fuzzy string matching.
-    Uses multiple scorers for better accuracy.
+    Uses multiple scorers for better accuracy and handles threshold manually.
     """
     normalized_question = normalize(question)
     
@@ -139,17 +139,17 @@ def find_best_match(question, lang):
     best_match_result = process.extractOne(
         normalized_question,
         phrases,
-        scorer=lambda s1, s2: max(fuzz.partial_ratio(s1, s2), fuzz.token_sort_ratio(s1, s2)),
-        score_cutoff=SIMILARITY_THRESHOLD
+        scorer=lambda s1, s2: max(fuzz.partial_ratio(s1, s2), fuzz.token_sort_ratio(s1, s2))
     )
 
     if best_match_result:
         best_match_phrase, similarity, index = best_match_result
-        # Get the original question associated with the matched phrase
-        original_question = search_corpus[lang][index][1]
-        logger.info(f"Matched '{question}' to '{original_question}' with similarity {similarity:.2f}")
-        return original_question, similarity
-    logger.warning(f"No good match found for '{question}' in language '{lang}'.")
+        if similarity >= SIMILARITY_THRESHOLD:
+            # Get the original question associated with the matched phrase
+            original_question = search_corpus[lang][index][1]
+            logger.info(f"Matched '{question}' to '{original_question}' with similarity {similarity:.2f}")
+            return original_question, similarity
+    logger.warning(f"No good match found for '{question}' in language '{lang}' with similarity above {SIMILARITY_THRESHOLD}.")
     return None, 0.0
 
 # --- FLASK ROUTES ---
@@ -212,26 +212,31 @@ def home():
 
 @app.route('/chat', methods=['POST'])
 def chat():
-    user_input = request.json.get('message')
-    if not user_input or not user_input.strip():
-        return jsonify({"response": "Please enter a question."})
+    try:
+        user_input = request.json.get('message')
+        if not user_input or not user_input.strip():
+            return jsonify({"response": "Please enter a question."})
 
-    # Check for exit intent
-    lang, is_greeting, is_exit = detect_language_and_check_intent(user_input)
-    if is_exit:
-        return jsonify({"response": "Goodbye!"})
+        # Check for exit intent
+        lang, is_greeting, is_exit = detect_language_and_check_intent(user_input)
+        if is_exit:
+            return jsonify({"response": "Goodbye!"})
 
-    if is_greeting:
-        return jsonify({"response": GREETING_RESPONSES[lang]})
+        if is_greeting:
+            return jsonify({"response": GREETING_RESPONSES[lang]})
 
-    best_match_question, similarity = find_best_match(user_input, lang)
+        best_match_question, similarity = find_best_match(user_input, lang)
 
-    if best_match_question:
-        response = faq_answers[lang][best_match_question]
-    else:
-        response = "I'm sorry, I didn’t understand that. Could you please rephrase your question?"
+        if best_match_question:
+            response = faq_answers[lang][best_match_question]
+        else:
+            response = "I'm sorry, I didn’t understand that. Please check your spelling, rephrase your question, or type 'exit' to end the conversation."
+            logger.warning(f"No match found for '{user_input}' in language '{lang}'.")
 
-    return jsonify({"response": response})
+        return jsonify({"response": response})
+    except Exception as e:
+        logger.error(f"Exception in /chat: {e}")
+        return jsonify({"response": "An error occurred. Please try again later or contact support."})
 
 if __name__ == '__main__':
     load_faq_data()  # Load the data when the app starts
