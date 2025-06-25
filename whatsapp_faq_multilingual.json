@@ -2245,7 +2245,361 @@
       "hi": "आप ऐप सेटिंग्स में सहेजे गए स्टेटस के डाउनलोड स्थान को बदल सकते हैं। स्टोरेज विकल्पों पर जाएँ और अपनी पसंदीदा फ़ोल्डर चुनें। यदि आपको समस्याएँ आती हैं, तो सुनिश्चित करें कि ऐप के पास आवश्यक स्टोरेज अनुमतियाँ हैं या luckajay93@gmail.com पर सहायता से संपर्क करें।",
       "id": "Anda dapat mengubah lokasi unduhan untuk status yang disimpan di pengaturan aplikasi. Buka opsi penyimpanan dan pilih folder yang Anda inginkan. Jika Anda mengalami masalah, pastikan aplikasi memiliki izin penyimpanan yang diperlukan atau hubungi dukungan di luckajay93@gmail.com."
     }
+  },
+  
+  {
+    "question": {
+      "en": "Why do I see ads in my phone's notifications from the status saver app?",
+      "hi": "मुझे स्थिति सहेजक ऐप से मेरे फोन की सूचनाओं में विज्ञापन क्यों दिखाई देते हैं?",
+      "id": "Mengapa saya melihat iklan di notifikasi ponsel dari aplikasi penyimpan status?"
+    },
+    "paraphrase": {
+      "en": [
+        "Why are there ads in my notifications from the status saver app?",
+        "What causes notification ads from the app to appear on my phone?",
+        "Why does the status saver app send ads to my notifications?",
+        "How come I get advertisement notifications from the app?",
+        "What’s the reason for ads showing up in my phone’s notifications?",
+        "Why am I receiving push ads from the status saver app?",
+        "Why does the app display ads in my notification bar?",
+        "What triggers notification advertisements from the status saver tool?"
+      ],
+      "hi": [
+        "स्थिति सहेजक ऐप से मेरी सूचनाओं में विज्ञापन क्यों हैं?",
+        "ऐप से मेरे फोन पर सूचना विज्ञापन दिखने का कारण क्या है?",
+        "स्थिति सहेजक ऐप मेरी सूचनाओं में विज्ञापन क्यों भेजता है?",
+        "मुझे ऐप से विज्ञापन सूचनाएँ क्यों मिल रही हैं?",
+        "फोन की सूचनाओं में विज्ञापन दिखने का कारण क्या है?",
+        "मुझे स्थिति सहेजक ऐप से पुश विज्ञापन क्यों प्राप्त हो रहे हैं?",
+        "ऐप मेरी सूचना बार में विज्ञापन क्यों दिखाता है?",
+        "स्थिति सहेजक उपकरण से सूचना विज्ञापनों को क्या ट्रिगर करता है?"
+      ],
+      "id": [
+        "Mengapa ada iklan di notifikasi saya dari aplikasi penyimpan status?",
+        "Apa yang menyebabkan iklan notifikasi dari aplikasi muncul di ponsel saya?",
+        "Mengapa aplikasi penyimpan status mengirim iklan ke notifikasi saya?",
+        "Kenapa saya mendapatkan notifikasi iklan dari aplikasi?",
+        "Apa alasan iklan muncul di notifikasi ponsel saya?",
+        "Mengapa saya menerima iklan push dari aplikasi penyimpan status?",
+        "Mengapa aplikasi menampilkan iklan di bilah notifikasi saya?",
+        "Apa yang memicu iklan notifikasi dari alat penyimpan status?"
+      ]
+    },
+    "answer": {
+      "en": "Notification ads are part of the free version to support the app’s development. To disable them, upgrade to the Pro version via an in-app purchase or adjust notification settings in your device’s app settings.",
+      "hi": "सूचना विज्ञापन मुफ्त संस्करण का हिस्सा हैं जो ऐप के विकास का समर्थन करते हैं। इन्हें अक्षम करने के लिए, इन-ऐप खरीदारी के माध्यम से प्रो संस्करण में अपग्रेड करें या अपने डिवाइस की ऐप सेटिंग्स में सूचना सेटिंग्स समायोजित करें।",
+      "id": "Iklan notifikasi adalah bagian dari versi gratis untuk mendukung pengembangan aplikasi. Untuk menonaktifkannya, tingkatkan ke versi Pro melalui pembelian dalam aplikasi atau sesuaikan pengaturan notifikasi di pengaturan aplikasi perangkat Anda."
+    }
+  },
+  {
+    "question": {
+      "en": "Why does the app still show videos in languages I didn’t select?",
+      "hi": "ऐप मेरे द्वारा चयनित न की गई भाषाओं में वीडियो क्यों दिखाता है?",
+      "id": "Mengapa aplikasi masih menampilkan video dalam bahasa yang tidak saya pilih?"
+    },
+    "paraphrase": {
+      "en": [
+        "Why are there videos in unselected languages in the app?",
+        "What causes the app to display videos in languages I didn’t choose?",
+        "Why does the status saver show content in other languages?",
+        "How come I see videos in languages not set in the app?",
+        "What’s the reason for videos in different languages appearing?",
+        "Why is the app showing videos outside my selected languages?",
+        "Why do I get videos in languages I haven’t picked?",
+        "What leads to the app displaying videos in unwanted languages?"
+      ],
+      "hi": [
+        "ऐप में गैर-चयनित भाषाओं के वीडियो क्यों हैं?",
+        "ऐप मेरे द्वारा न चुनी गई भाषाओं में वीडियो दिखाने का कारण क्या है?",
+        "स्थिति सहेजक अन्य भाषाओं में सामग्री क्यों दिखाता है?",
+        "मुझे ऐप में सेट न की गई भाषाओं के वीडियो क्यों दिखाई दे रहे हैं?",
+        "विभिन्न भाषाओं में वीडियो दिखने का कारण क्या है?",
+        "ऐप मेरी चयनित भाषाओं के बाहर वीडियो क्यों दिखा रहा है?",
+        "मुझे उन भाषाओं में वीडियो क्यों मिल रहे हैं जो मैंने नहीं चुनीं?",
+        "ऐप अवांछित भाषाओं में वीडियो प्रदर्शित करने का क्या कारण है?"
+      ],
+      "id": [
+        "Mengapa ada video dalam bahasa yang tidak dipilih di aplikasi?",
+        "Apa yang menyebabkan aplikasi menampilkan video dalam bahasa yang tidak saya pilih?",
+        "Mengapa penyimpan status menunjukkan konten dalam bahasa lain?",
+        "Kenapa saya melihat video dalam bahasa yang tidak diatur di aplikasi?",
+        "Apa alasan video dalam bahasa berbeda muncul?",
+        "Mengapa aplikasi menampilkan video di luar bahasa yang saya pilih?",
+        "Mengapa saya mendapatkan video dalam bahasa yang belum saya pilih?",
+        "Apa yang menyebabkan aplikasi menampilkan video dalam bahasa yang tidak diinginkan?"
+      ]
+    },
+    "answer": {
+      "en": "The app’s language filters may not catch all content due to mixed-language videos. Report unwanted videos in the app or contact support at luckajay93@gmail.com to improve filtering in future updates.",
+      "hi": "ऐप के भाषा फ़िल्टर मिश्रित-भाषा वीडियो के कारण सभी सामग्री को पकड़ नहीं सकते। ऐप में अवांछित वीडियो की रिपोर्ट करें या भविष्य के अपडेट में फ़िल्टरिंग सुधारने के लिए luckajay93@gmail.com पर सहायता से संपर्क करें।",
+      "id": "Filter bahasa aplikasi mungkin tidak menangkap semua konten karena video berbahasa campuran. Laporkan video yang tidak diinginkan di aplikasi atau hubungi dukungan di luckajay93@gmail.com untuk meningkatkan penyaringan di pembaruan mendatang."
+    }
+  },
+  {
+    "question": {
+      "en": "How can I restore my Pro version purchase on a new device?",
+      "hi": "मैं नए डिवाइस पर अपनी प्रो संस्करण खरीदारी को कैसे बहाल कर सकता हूँ?",
+      "id": "Bagaimana cara memulihkan pembelian versi Pro saya di perangkat baru?"
+    },
+    "paraphrase": {
+      "en": [
+        "How do I recover my Pro version on a new phone?",
+        "What steps restore my paid Pro version on another device?",
+        "How can I get my Pro version back on a new device?",
+        "What’s the process to reinstate my Pro purchase on a new phone?",
+        "How do I transfer my Pro version to a different device?",
+        "Why isn’t my Pro version active on my new device?",
+        "How can I re-enable my Pro version on a new phone?",
+        "What do I do to restore my Pro subscription on another device?"
+      ],
+      "hi": [
+        "मैं नए फोन पर अपनी प्रो संस्करण को कैसे रिकवर करूँ?",
+        "किसी अन्य डिवाइस पर मेरे भुगतान किए गए प्रो संस्करण को बहाल करने के चरण क्या हैं?",
+        "मैं नए डिवाइस पर अपनी प्रो संस्करण को वापस कैसे पा सकता हूँ?",
+        "नए फोन पर मेरी प्रो खरीदारी को पुनः स्थापित करने की प्रक्रिया क्या है?",
+        "मैं अपने प्रो संस्करण को किसी अलग डिवाइस पर कैसे स्थानांतरित करूँ?",
+        "मेरे नए डिवाइस पर मेरा प्रो संस्करण सक्रिय क्यों नहीं है?",
+        "मैं नए फोन पर अपने प्रो संस्करण को फिर से कैसे सक्षम करूँ?",
+        "मैं किसी अन्य डिवाइस पर अपनी प्रो सदस्यता को बहाल करने के लिए क्या करूँ?"
+      ],
+      "id": [
+        "Bagaimana cara memulihkan versi Pro saya di ponsel baru?",
+        "Langkah apa yang memulihkan versi Pro berbayar saya di perangkat lain?",
+        "Bagaimana cara mendapatkan kembali versi Pro saya di perangkat baru?",
+        "Apa proses untuk mengembalikan pembelian Pro saya di ponsel baru?",
+        "Bagaimana cara mentransfer versi Pro saya ke perangkat berbeda?",
+        "Mengapa versi Pro saya tidak aktif di perangkat baru saya?",
+        "Bagaimana cara mengaktifkan kembali versi Pro saya di ponsel baru?",
+        "Apa yang harus saya lakukan untuk memulihkan langganan Pro saya di perangkat lain?"
+      ]
+    },
+    "answer": {
+      "en": "Ensure you’re signed into the same Google Play account used for the purchase. Open the app, go to Settings > Restore Purchase, and follow the prompts. If issues persist, email luckajay93@gmail.com with your order ID.",
+      "hi": "सुनिश्चित करें कि आप उसी Google Play खाते में साइन इन हैं जिसका उपयोग खरीदारी के लिए किया गया था। ऐप खोलें, सेटिंग्स > खरीदारी बहाल करें पर जाएँ, और संकेतों का पालन करें। यदि समस्या बनी रहती है, तो अपनी ऑर्डर ID के साथ luckajay93@gmail.com पर ईमेल करें।",
+      "id": "Pastikan Anda masuk ke akun Google Play yang sama yang digunakan untuk pembelian. Buka aplikasi, pergi ke Pengaturan > Pulihkan Pembelian, dan ikuti petunjuknya. Jika masalah berlanjut, kirim email ke luckajay93@gmail.com dengan ID pesanan Anda."
+    }
+  },
+  {
+    "question": {
+      "en": "Why does the app ask for storage access repeatedly?",
+      "hi": "ऐप बार-बार स्टोरेज एक्सेस क्यों मांगता है?",
+      "id": "Mengapa aplikasi terus meminta akses penyimpanan berulang kali?"
+    },
+    "paraphrase": {
+      "en": [
+        "Why does the app keep requesting storage permission?",
+        "What causes repeated storage access prompts in the app?",
+        "Why is the app constantly asking for storage access?",
+        "How come I get frequent storage permission requests?",
+        "What’s the reason for the app’s repeated storage prompts?",
+        "Why does the status saver app ask for storage access again?",
+        "Why am I prompted for storage permission multiple times?",
+        "What triggers the app to request storage access repeatedly?"
+      ],
+      "hi": [
+        "ऐप बार-बार स्टोरेज अनुमति क्यों मांगता है?",
+        "ऐप में बार-बार स्टोरेज एक्सेस प्रॉम्प्ट का कारण क्या है?",
+        "ऐप लगातार स्टोरेज एक्सेस क्यों मांग रहा है?",
+        "मुझे बार-बार स्टोरेज अनुमति अनुरोध क्यों मिल रहे हैं?",
+        "ऐप के बार-बार स्टोरेज प्रॉम्प्ट का कारण क्या है?",
+        "स्थिति सहेजक ऐप फिर से स्टोरेज एक्सेस क्यों मांगता है?",
+        "मुझे कई बार स्टोरेज अनुमति के लिए क्यों प्रॉम्प्ट किया जा रहा है?",
+        "ऐप को बार-बार स्टोरेज एक्सेस अनुरोध करने के लिए क्या ट्रिगर करता है?"
+      ],
+      "id": [
+        "Mengapa aplikasi terus meminta izin penyimpanan?",
+        "Apa yang menyebabkan prompt akses penyimpanan berulang di aplikasi?",
+        "Mengapa aplikasi terus-menerus meminta akses penyimpanan?",
+        "Kenapa saya sering mendapatkan permintaan izin penyimpanan?",
+        "Apa alasan prompt penyimpanan berulang dari aplikasi?",
+        "Mengapa aplikasi penyimpan status meminta akses penyimpanan lagi?",
+        "Mengapa saya diminta izin penyimpanan beberapa kali?",
+        "Apa yang memicu aplikasi untuk meminta akses penyimpanan berulang kali?"
+      ]
+    },
+    "answer": {
+      "en": "This may happen due to Android security restrictions or app resets. Grant storage access in the app settings and ensure permissions are not revoked. Contact luckajay93@gmail.com if the issue continues.",
+      "hi": "यह एंड्रॉइड सुरक्षा प्रतिबंधों या ऐप रीसेट के कारण हो सकता है। ऐप सेटिंग्स में स्टोरेज एक्सेस दें और सुनिश्चित करें कि अनुमतियाँ रद्द नहीं की गई हैं। यदि समस्या बनी रहती है, तो luckajay93@gmail.com पर संपर्क करें।",
+      "id": "Ini mungkin terjadi karena pembatasan keamanan Android atau reset aplikasi. Berikan akses penyimpanan di pengaturan aplikasi dan pastikan izin tidak dicabut. Hubungi luckajay93@gmail.com jika masalah berlanjut."
+    }
+  },
+  {
+    "question": {
+      "en": "How can I disable the 'More Video Statuses' feature in the app?",
+      "hi": "मैं ऐप में 'अधिक वीडियो स्टेटस' सुविधा को कैसे अक्षम कर सकता हूँ?",
+      "id": "Bagaimana cara menonaktifkan fitur 'Lebih Banyak Status Video' di aplikasi?"
+    },
+    "paraphrase": {
+      "en": [
+        "How do I turn off the 'More Video Statuses' option in the app?",
+        "What steps disable the extra video statuses feature?",
+        "How can I stop the app from showing more video statuses?",
+        "What’s the way to deactivate the 'More Video Statuses' function?",
+        "How do I remove the 'More Video Statuses' section from the app?",
+        "Can I disable the additional video statuses feature in the app?",
+        "How to prevent the app from displaying extra video content?",
+        "What can I do to switch off the 'More Video Statuses' feature?"
+      ],
+      "hi": [
+        "मैं ऐप में 'अधिक वीडियो स्टेटस' विकल्प को कैसे बंद करूँ?",
+        "अतिरिक्त वीडियो स्टेटस सुविधा को अक्षम करने के चरण क्या हैं?",
+        "मैं ऐप को अधिक वीडियो स्टेटस दिखाने से कैसे रोक सकता हूँ?",
+        "'अधिक वीडियो स्टेटस' फ़ंक्शन को निष्क्रिय करने का तरीका क्या है?",
+        "मैं ऐप से 'अधिक वीडियो स्टेटस' अनुभाग को कैसे हटाऊँ?",
+        "क्या मैं ऐप में अतिरिक्त वीडियो स्टेटस सुविधा को अक्षम कर सकता हूँ?",
+        "ऐप को अतिरिक्त वीडियो सामग्री प्रदर्शित करने से कैसे रोका जाए?",
+        "'अधिक वीडियो स्टेटस' सुविधा को बंद करने के लिए मैं क्या कर सकता हूँ?"
+      ],
+      "id": [
+        "Bagaimana cara mematikan opsi 'Lebih Banyak Status Video' di aplikasi?",
+        "Langkah apa yang menonaktifkan fitur status video tambahan?",
+        "Bagaimana cara menghentikan aplikasi menampilkan lebih banyak status video?",
+        "Apa cara untuk menonaktifkan fungsi 'Lebih Banyak Status Video'?",
+        "Bagaimana cara menghapus bagian 'Lebih Banyak Status Video' dari aplikasi?",
+        "Bisakah saya menonaktifkan fitur status video tambahan di aplikasi?",
+        "Bagaimana cara mencegah aplikasi menampilkan konten video tambahan?",
+        "Apa yang bisa saya lakukan untuk mematikan fitur 'Lebih Banyak Status Video'?"
+      ]
+    },
+    "answer": {
+      "en": "Currently, the 'More Video Statuses' feature cannot be disabled. You can ignore the section or contact luckajay93@gmail.com to request an option to turn it off in future updates.",
+      "hi": "वर्तमान में, 'अधिक वीडियो स्टेटस' सुविधा को अक्षम नहीं किया जा सकता। आप इस अनुभाग को अनदेखा कर सकते हैं या भविष्य के अपडेट में इसे बंद करने का विकल्प मांगने के लिए luckajay93@gmail.com पर संपर्क करें।",
+      "id": "Saat ini, fitur 'Lebih Banyak Status Video' tidak dapat dinonaktifkan. Anda bisa mengabaikan bagian ini atau hubungi luckajay93@gmail.com untuk meminta opsi menonaktifkannya di pembaruan mendatang."
+    }
+  },
+  {
+    "question": {
+      "en": "Why are saved statuses not appearing in my gallery?",
+      "hi": "सहेजे गए स्टेटस मेरी गैलरी में क्यों नहीं दिख रहे हैं?",
+      "id": "Mengapa status yang disimpan tidak muncul di galeri saya?"
+    },
+    "paraphrase": {
+      "en": [
+        "Why don’t saved statuses show up in my gallery?",
+        "What causes saved statuses to be missing from the gallery?",
+        "Why are downloaded statuses not visible in my phone’s gallery?",
+        "How come my saved statuses aren’t appearing in the gallery?",
+        "What’s the reason saved statuses don’t show in my gallery?",
+        "Why can’t I find saved statuses in my gallery app?",
+        "Why are statuses I saved not displayed in my gallery?",
+        "What prevents saved statuses from appearing in my photo gallery?"
+      ],
+      "hi": [
+        "सहेजे गए स्टेटस मेरी गैलरी में क्यों नहीं दिखते?",
+        "सहेजे गए स्टेटस के गैलरी से गायब होने का कारण क्या है?",
+        "डाउनलोड किए गए स्टेटस मेरे फोन की गैलरी में क्यों नहीं दिखाई दे रहे?",
+        "मेरे सहेजे गए स्टेटस गैलरी में क्यों नहीं दिख रहे हैं?",
+        "सहेजे गए स्टेटस गैलरी में न दिखने का कारण क्या है?",
+        "मैं अपनी गैलरी ऐप में सहेजे गए स्टेटस क्यों नहीं ढूंढ पा रहा हूँ?",
+        "मेरे द्वारा सहेजे गए स्टेटस गैलरी में क्यों प्रदर्शित नहीं हो रहे?",
+        "सहेजे गए स्टेटस को मेरी फोटो गैलरी में दिखने से क्या रोकता है?"
+      ],
+      "id": [
+        "Mengapa status yang disimpan tidak muncul di galeri saya?",
+        "Apa yang menyebabkan status yang disimpan hilang dari galeri?",
+        "Mengapa status yang diunduh tidak terlihat di galeri ponsel saya?",
+        "Kenapa status yang saya simpan tidak muncul di galeri?",
+        "Apa alasan status yang disimpan tidak tampil di galeri saya?",
+        "Mengapa saya tidak bisa menemukan status yang disimpan di aplikasi galeri saya?",
+        "Mengapa status yang saya simpan tidak ditampilkan di galeri?",
+        "Apa yang mencegah status yang disimpan muncul di galeri foto saya?"
+      ]
+    },
+    "answer": {
+      "en": "Check if the app has storage permissions enabled. Also, ensure the save location is set to a folder your gallery scans, like DCIM. If issues persist, contact luckajay93@gmail.com for assistance.",
+      "hi": "जांचें कि क्या ऐप को स्टोरेज अनुमतियाँ सक्षम हैं। साथ ही, सुनिश्चित करें कि सहेजने का स्थान ऐसी फ़ोल्डर पर सेट है जिसे आपकी गैलरी स्कैन करती है, जैसे DCIM। यदि समस्या बनी रहती है, तो सहायता के लिए luckajay93@gmail.com पर संपर्क करें।",
+      "id": "Periksa apakah aplikasi memiliki izin penyimpanan yang diaktifkan. Pastikan juga lokasi penyimpanan diatur ke folder yang dipindai galeri Anda, seperti DCIM. Jika masalah berlanjut, hubungi luckajay93@gmail.com untuk bantuan."
+    }
+  },
+  {
+    "question": {
+      "en": "Why does the app show old statuses instead of new ones?",
+      "hi": "ऐप नए स्टेटस के बजाय पुराने स्टेटस क्यों दिखाता है?",
+      "id": "Mengapa aplikasi menampilkan status lama alih-alih yang baru?"
+    },
+    "paraphrase": {
+      "en": [
+        "Why are old statuses displayed instead of recent ones?",
+        "What causes the app to show outdated statuses?",
+        "Why does the app only show old WhatsApp statuses?",
+        "How come I see stale statuses instead of new ones?",
+        "What’s the reason for the app showing previous statuses?",
+        "Why aren’t new statuses appearing in the app?",
+        "Why does the status saver load old statuses only?",
+        "What makes the app display old content instead of new statuses?"
+      ],
+      "hi": [
+        "हाल के स्टेटस के बजाय पुराने स्टेटस क्यों प्रदर्शित हो रहे हैं?",
+        "ऐप को पुराने स्टेटस दिखाने का कारण क्या है?",
+        "ऐप केवल पुराने व्हाट्सएप स्टेटस क्यों दिखाता है?",
+        "मुझे नए के बजाय पुराने स्टेटस क्यों दिखाई दे रहे हैं?",
+        "ऐप के पिछले स्टेटस दिखाने का कारण क्या है?",
+        "नए स्टेटस ऐप में क्यों नहीं दिख रहे हैं?",
+        "स्थिति सहेजक केवल पुराने स्टेटस क्यों लोड करता है?",
+        "ऐप नए स्टेटस के बजाय पुरानी सामग्री क्यों प्रदर्शित करता है?"
+      ],
+      "id": [
+        "Mengapa status lama ditampilkan alih-alih yang baru?",
+        "Apa yang menyebabkan aplikasi menampilkan status yang sudah ketinggalan zaman?",
+        "Mengapa aplikasi hanya menampilkan status WhatsApp lama?",
+        "Kenapa saya melihat status usang alih-alih yang baru?",
+        "Apa alasan aplikasi menampilkan status sebelumnya?",
+        "Mengapa status baru tidak muncul di aplikasi?",
+        "Mengapa penyimpan status hanya memuat status lama?",
+        "Apa yang membuat aplikasi menampilkan konten lama alih-alih status baru?"
+      ]
+    },
+    "answer": {
+      "en": "This may happen if the app’s cache is outdated. Clear the cache in Settings > Apps > Storage, view the statuses in WhatsApp again, and restart the app. Contact luckajay93@gmail.com if the issue persists.",
+      "hi": "ऐसा तब हो सकता है जब ऐप का कैश पुराना हो। सेटिंग्स > ऐप्स > स्टोरेज में कैश साफ करें, व्हाट्सएप में स्टेटस फिर से देखें, और ऐप को पुनरारंभ करें। यदि समस्या बनी रहती है, तो luckajay93@gmail.com पर संपर्क करें।",
+      "id": "Ini mungkin terjadi jika cache aplikasi sudah usang. Hapus cache di Pengaturan > Aplikasi > Penyimpanan, lihat kembali status di WhatsApp, dan mulai ulang aplikasi. Hubungi luckajay93@gmail.com jika masalah berlanjut."
+    }
+  },
+  {
+    "question": {
+      "en": "How can I report inappropriate ads in the app?",
+      "hi": "मैं ऐप में अनुचित विज्ञापनों की रिपोर्ट कैसे कर सकता हूँ?",
+      "id": "Bagaimana cara melaporkan iklan yang tidak pantas di aplikasi?"
+    },
+    "paraphrase": {
+      "en": [
+        "How do I report offensive ads in the status saver app?",
+        "What steps allow me to flag inappropriate advertisements?",
+        "How can I notify about unsuitable ads in the app?",
+        "What’s the process to report bad ads in the app?",
+        "How do I complain about improper ads in the app?",
+        "Can I report ads that are inappropriate in the app?",
+        "How to submit a report for offensive app ads?",
+        "What can I do to report unacceptable ads in the app?"
+      ],
+      "hi": [
+        "मैं स्थिति सहेजक ऐप में आपत्तिजनक विज्ञापनों की रिपोर्ट कैसे करूँ?",
+        "अनुचित विज्ञापनों को चिह्नित करने के लिए कौन से चरण हैं?",
+        "मैं ऐप में अयोग्य विज्ञापनों के बारे में कैसे सूचित कर सकता हूँ?",
+        "ऐप में खराब विज्ञापनों की रिपोर्ट करने की प्रक्रिया क्या है?",
+        "मैं ऐप में अनुचित विज्ञापनों की शिकायत कैसे करूँ?",
+        "क्या मैं ऐप में अनुचित विज्ञापनों की रिपोर्ट कर सकता हूँ?",
+        "आपत्तिजनक ऐप विज्ञापनों के लिए रिपोर्ट कैसे जमा करें?",
+        "ऐप में अस्वीकार्य विज्ञापनों की रिपोर्ट करने के लिए मैं क्या कर सकता हूँ?"
+      ],
+      "id": [
+        "Bagaimana cara melaporkan iklan yang menyinggung di aplikasi penyimpan status?",
+        "Langkah apa yang memungkinkan saya menandai iklan yang tidak pantas?",
+        "Bagaimana cara memberi tahu tentang iklan yang tidak cocok di aplikasi?",
+        "Apa proses untuk melaporkan iklan buruk di aplikasi?",
+        "Bagaimana cara mengeluh tentang iklan yang tidak pantas di aplikasi?",
+        "Bisakah saya melaporkan iklan yang tidak pantas di aplikasi?",
+        "Bagaimana cara mengirim laporan untuk iklan aplikasi yang menyinggung?",
+        "Apa yang bisa saya lakukan untuk melaporkan iklan yang tidak dapat diterima di aplikasi?"
+      ]
+    },
+    "answer": {
+      "en": "Report inappropriate ads by noting the ad details (e.g., content, time) and emailing luckajay93@gmail.com. The team will investigate and work to block such ads in future updates.",
+      "hi": "अनुचित विज्ञापनों की रिपोर्ट करने के लिए विज्ञापन विवरण (जैसे, सामग्री, समय) नोट करें और luckajay93@gmail.com पर ईमेल करें। टीम जांच करेगी और भविष्य के अपडेट में ऐसे विज्ञापनों को ब्लॉक करने का प्रयास करेगी।",
+      "id": "Laporkan iklan yang tidak pantas dengan mencatat detail iklan (misalnya, konten, waktu) dan mengirim email ke luckajay93@gmail.com. Tim akan menyelidiki dan berusaha memblokir iklan tersebut di pembaruan mendatang."
+    }
   }
+
 
   
 ]
