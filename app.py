@@ -16,7 +16,7 @@ logger = logging.getLogger(__name__)
 DetectorFactory.seed = 0
 
 # The confidence score required for a match to be considered valid.
-SIMILARITY_THRESHOLD = 75
+SIMILARITY_THRESHOLD = 70
 LANGUAGES = ["en", "hi", "id"]
 
 # --- TEXT NORMALIZATION ---
@@ -38,44 +38,53 @@ def normalize(text):
     manual_typos = {
         "helo": "hello", "watsap": "whatsapp", "whastapp": "whatsapp", "downlaod": "download",
         "हेलो": "नमस्ते", "वाट्सप": "व्हाट्सएप", "डाउनलोड्ड": "डाउनलोड",
-        "halo": "hai", "undh": "unduh", "wa": "whatsapp"
+        "halo": "hai", "undh": "unduh", "wa": "whatsapp",
+        "exir": "exit", "exittt": "exit", "quittt": "quit", "byee": "bye"  # Added exit-related typos
     }
     words = text.split()
     corrected_words = [manual_typos.get(word, word) for word in words]
     return " ".join(corrected_words)
 
-# --- GREETING HANDLING ---
+# --- GREETING AND EXIT HANDLING ---
 GREETINGS = {
     "en": {"hi", "hello", "hey", "good morning", "good evening"},
     "hi": {"नमस्ते", "हाय", "हेलो", "शुभ प्रभात", "शुभ संध्या"},
     "id": {"hai", "halo", "selamat pagi", "selamat malam"}
 }
+EXIT_COMMANDS = {"exit", "quit", "bye"}  # Base exit commands
 GREETING_RESPONSES = {
     "en": "Hello! How can I assist you with WhatsApp statuses?",
     "hi": "नमस्ते! मैं व्हाट्सएप स्टेटस के बारे में कैसे मदद कर सकता हूँ?",
     "id": "Hai! Bagaimana saya bisa membantu dengan status WhatsApp?"
 }
 
-def detect_language_and_check_greeting(text):
+def detect_language_and_check_intent(text):
     """
-    Detects the language of the input text and checks if it's a greeting.
+    Detects the language of the input text and checks if it's a greeting or exit intent.
     """
-    normalized_words = set(normalize(text).split())
+    normalized_text = normalize(text)
+    normalized_words = set(normalized_text.split())
     
-    # Check for greetings first
+    # Check for exit intent with fuzzy matching
+    for lang in LANGUAGES:
+        if any(word in EXIT_COMMANDS for word in normalized_words):
+            best_exit_match = process.extractOne(normalized_text, EXIT_COMMANDS, scorer=fuzz.partial_ratio, score_cutoff=60)
+            if best_exit_match:
+                return lang, False, True  # Language, not a greeting, is an exit
+    
+    # Check for greetings
     for lang, greetings in GREETINGS.items():
         if normalized_words.intersection(greetings):
-            return lang, True
+            return lang, True, False
 
-    # If not a greeting, perform language detection
+    # If not a greeting or exit, perform language detection
     try:
         lang = detect(text)
-        return lang if lang in LANGUAGES else "en", False
+        return lang if lang in LANGUAGES else "en", False, False
     except:
-        return "en", False # Default to English if detection fails
+        return "en", False, False  # Default to English if detection fails
 
 # --- FAQ DATA LOADING AND PREPARATION ---
-# These global variables will hold the prepared FAQ data.
 faq_answers = {lang: {} for lang in LANGUAGES}
 search_corpus = {lang: [] for lang in LANGUAGES}
 
@@ -100,7 +109,6 @@ def load_faq_data():
                 search_corpus[lang].append((normalize(original_question), original_question))
                 
                 # Add all paraphrases to the search corpus.
-                # Ensure paraphrases is a list, default to empty list if key is missing or not a list.
                 paraphrases = item.get("paraphrases", {}).get(lang, [])
                 if isinstance(paraphrases, list):
                     for p in paraphrases:
@@ -110,7 +118,6 @@ def load_faq_data():
 
     except FileNotFoundError:
         logger.error("FATAL: whatsapp_faq_multilingual.json not found. The chatbot cannot function without it.")
-        # In a real application, you might want to exit or handle this more gracefully.
     except (json.JSONDecodeError, KeyError) as e:
         logger.error(f"FATAL: Error processing JSON file: {e}")
 
@@ -118,21 +125,21 @@ def load_faq_data():
 def find_best_match(question, lang):
     """
     Finds the best matching question from the corpus using fuzzy string matching.
-    It now searches both questions and paraphrases.
+    Uses multiple scorers for better accuracy.
     """
     normalized_question = normalize(question)
     
+    if not search_corpus[lang]:
+        return None, 0.0
+
     # Extract just the phrases to search against
     phrases = [item[0] for item in search_corpus[lang]]
     
-    if not phrases:
-        return None, 0.0
-
-    # Use rapidfuzz's process.extractOne to find the best match
+    # Use process.extractOne with a combination of scorers
     best_match_result = process.extractOne(
-        normalized_question, 
-        phrases, 
-        scorer=fuzz.partial_ratio, 
+        normalized_question,
+        phrases,
+        scorer=lambda s1, s2: max(fuzz.partial_ratio(s1, s2), fuzz.token_sort_ratio(s1, s2)),
         score_cutoff=SIMILARITY_THRESHOLD
     )
 
@@ -140,63 +147,61 @@ def find_best_match(question, lang):
         best_match_phrase, similarity, index = best_match_result
         # Get the original question associated with the matched phrase
         original_question = search_corpus[lang][index][1]
+        logger.info(f"Matched '{question}' to '{original_question}' with similarity {similarity:.2f}")
         return original_question, similarity
-        
+    logger.warning(f"No good match found for '{question}' in language '{lang}'.")
     return None, 0.0
 
 # --- FLASK ROUTES ---
 html_template = """
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>FAQ Chatbot</title>
+    <meta charset="UTF-8">
+    <title>WhatsApp Status FAQ Chatbot</title>
     <style>
-        body { font-family: sans-serif; }
-        #chatbox { width: 400px; height: 500px; border: 1px solid #ccc; display: flex; flex-direction: column; }
-        #messages { flex-grow: 1; padding: 10px; overflow-y: auto; }
-        #userInput { display: flex; padding: 10px; }
-        #userInput input { flex-grow: 1; border: 1px solid #ccc; padding: 8px; }
-        #userInput button { padding: 8px 12px; border: none; background-color: #007bff; color: white; cursor: pointer; }
-        .user-message { text-align: right; color: blue; }
-        .bot-message { text-align: left; color: green; }
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .chat-container { max-width: 600px; margin: auto; }
+        .message { margin: 10px; padding: 10px; border-radius: 5px; }
+        .user { background: #e0f7fa; text-align: right; }
+        .bot { background: #f1f8e9; text-align: left; }
+        .input-box { margin-top: 20px; }
+        input[type="text"] { width: 80%; padding: 10px; }
+        button { padding: 10px; }
     </style>
-</head>
-<body>
-    <h1>WhatsApp Status FAQ Chatbot</h1>
-    <div id="chatbox">
-        <div id="messages"></div>
-        <div id="userInput">
-            <input type="text" id="message" placeholder="Ask a question..." autocomplete="off"/>
-            <button onclick="sendMessage()">Send</button>
-        </div>
-    </div>
     <script>
         function sendMessage() {
-            const input = document.getElementById('message');
-            const message = input.value;
+            const input = document.getElementById('user-input');
+            const message = input.value.trim();
             if (!message) return;
-
-            const messagesDiv = document.getElementById('messages');
-            messagesDiv.innerHTML += `<div class="user-message"><p><b>You:</b> ${message}</p></div>`;
-
+            const chat = document.getElementById('chat');
+            chat.innerHTML += `<div class="message user">${message}</div>`;
             fetch('/chat', {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ message: message })
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({message: message})
             })
             .then(response => response.json())
             .then(data => {
-                messagesDiv.innerHTML += `<div class="bot-message"><p><b>Bot:</b> ${data.response}</p></div>`;
-                messagesDiv.scrollTop = messagesDiv.scrollHeight;
+                chat.innerHTML += `<div class="message bot">${data.response}</div>`;
+                chat.scrollTop = chat.scrollHeight;
             });
             input.value = '';
         }
-        document.getElementById('message').addEventListener('keyup', function(event) {
-            if (event.key === 'Enter') {
-                sendMessage();
-            }
-        });
+        function checkEnter(event) {
+            if (event.key === 'Enter') sendMessage();
+        }
     </script>
+</head>
+<body>
+    <div class="chat-container">
+        <h2>WhatsApp Status FAQ Chatbot</h2>
+        <div id="chat" style="height: 400px; overflow-y: auto; border: 1px solid #ccc;"></div>
+        <div class="input-box">
+            <input type="text" id="user-input" placeholder="Ask about WhatsApp statuses..." onkeypress="checkEnter(event)">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
 </body>
 </html>
 """
@@ -211,11 +216,10 @@ def chat():
     if not user_input or not user_input.strip():
         return jsonify({"response": "Please enter a question."})
 
-    # Check for exit commands
-    if user_input.lower() in ["exit", "quit", "bye"]:
+    # Check for exit intent
+    lang, is_greeting, is_exit = detect_language_and_check_intent(user_input)
+    if is_exit:
         return jsonify({"response": "Goodbye!"})
-
-    lang, is_greeting = detect_language_and_check_greeting(user_input)
 
     if is_greeting:
         return jsonify({"response": GREETING_RESPONSES[lang]})
@@ -224,13 +228,11 @@ def chat():
 
     if best_match_question:
         response = faq_answers[lang][best_match_question]
-        logger.info(f"Matched '{user_input}' to '{best_match_question}' with similarity {similarity:.2f}")
     else:
         response = "I'm sorry, I didn’t understand that. Could you please rephrase your question?"
-        logger.warning(f"No good match found for '{user_input}' in language '{lang}'.")
 
     return jsonify({"response": response})
 
 if __name__ == '__main__':
-    load_faq_data() # Load the data when the app starts
+    load_faq_data()  # Load the data when the app starts
     app.run(host='0.0.0.0', port=5000)
