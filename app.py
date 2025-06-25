@@ -12,14 +12,15 @@ logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger(__name__)
 DetectorFactory.seed = 0
 
-# Text normalization
+# Text normalization function
 def normalize(text):
     if isinstance(text, str):
         text = text.lower()
-        # Use Unicode range for Devanagari (Hindi) characters: \u0900-\u097F
-        text = re.sub(r"[^\w\s\u0900-\u097F\!\?]", "", text)  # Preserve Hindi characters
+        # Preserve Hindi characters (Devanagari: \u0900-\u097F)
+        text = re.sub(r"[^\w\s\u0900-\u097F\!\?]", "", text)
         text = re.sub(r"[!?]+", " ", text)
         text = re.sub(r"\s+", " ", text)
+        # Manual typo corrections
         manual_typos = {
             "helo": "hello", "watsap": "whatsapp", "whastapp": "whatsapp", "downlaod": "download",
             "statuss": "status", "statu": "status", "savee": "save", "downlod": "download",
@@ -76,7 +77,7 @@ try:
         faqs = json.load(f)
 except FileNotFoundError:
     logger.error("whatsapp_faq_multilingual.json not found")
-    faqs = []  # Fallback to empty list if file is missing
+    faqs = []
 
 # Prepare FAQ data with questions and paraphrases
 faq_data = {lang: [] for lang in ["en", "hi", "id"]}
@@ -88,7 +89,7 @@ for item in faqs:
         answer = item["answer"][lang]
         faq_data[lang].append({"texts": texts, "answer": answer})
 
-# Function to compute similarity using multiple fuzzy ratios
+# Compute similarity using multiple fuzzy ratios
 def compute_similarity(input_text, faq_text):
     norm_input = normalize(input_text)
     norm_faq = normalize(faq_text)
@@ -99,7 +100,7 @@ def compute_similarity(input_text, faq_text):
     ]
     return max(scores)
 
-# Function to find the best matching answer
+# Find the best matching answer
 def find_best_match(question, lang):
     best_similarity = 0.0
     best_answer = None
@@ -109,11 +110,11 @@ def find_best_match(question, lang):
             if similarity > best_similarity:
                 best_similarity = similarity
                 best_answer = faq_item["answer"]
-    if best_similarity >= 60:  # Threshold for match
+    if best_similarity >= 60:  # Adjustable threshold
         return best_answer
     return None
 
-# HTML template (unchanged)
+# HTML template for the chatbot interface
 html_template = """
 <!DOCTYPE html>
 <html lang="en">
@@ -156,7 +157,7 @@ html_template = """
 </head>
 <body>
     <div class="chat-container">
-             <h2>WhatsApp Status FAQ Chatbot</h2>
+        <h2>WhatsApp Status FAQ Chatbot</h2>
         <div id="chat" style="height: 400px; overflow-y: auto; border: 1px solid #ccc;"></div>
         <div class="input-box">
             <input type="text" id="user-input" placeholder="Ask about WhatsApp statuses..." onkeypress="checkEnter(event)">
