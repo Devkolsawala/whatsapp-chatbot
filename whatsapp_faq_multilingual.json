@@ -102,7 +102,11 @@
         "Is it too late for an old status download",
         "Download a status I missed two days ago",
         "Get a status from two days earlier",
-        "Can I still save past statuses"
+        "Can I still save past statuses",
+        "Can I check previous status",
+        "How to see yesterday's status",
+        "Is it possible to get an expired status",
+        "Can I recover an old status"
       ],
       "hi": [
         "क्या मैं दो दिन पुराना स्टेटस पुनः प्राप्त कर सकता हूं",
@@ -112,7 +116,10 @@
         "क्या पुराने स्टेटस डाउनलोड के लिए अब बहुत देर हो चुकी है",
         "दो दिन पहले छूटे स्टेटस को डाउनलोड करें",
         "दो दिन पहले का स्टेटस प्राप्त करें",
-        "क्या मैं अभी भी पिछले स्टेटस सहेज सकता हूं"
+        "क्या मैं अभी भी पिछले स्टेटस सहेज सकता हूं",
+        "पिछला स्टेटस कैसे देखूं",
+        "कल का स्टेटस कैसे मिलेगा",
+        "क्या एक्सपायर्ड स्टेटस मिल सकता है"
       ],
       "id": [
         "Bisakah saya mengambil kembali status lama dari dua hari lalu",
@@ -122,7 +129,10 @@
         "Apakah terlambat untuk mengunduh status lama",
         "Unduh status yang terlewat dua hari lalu",
         "Dapatkan status dari dua hari sebelumnya",
-        "Bisakah saya masih menyimpan status yang lalu"
+        "Bisakah saya masih menyimpan status yang lalu",
+        "Bisakah saya memeriksa status sebelumnya",
+        "Cara melihat status kemarin",
+        "Apakah mungkin mendapatkan status yang sudah kedaluwarsa"
       ]
     },
     "answer": {
@@ -1473,7 +1483,7 @@
         "ऐप स्टेटस दिखाने में धीमा क्यों है",
         "ऐप स्टेटस लोड करने में समय लेता है",
         "व्हाट्सएप स्टेटस लोडिंग में देरी",
-        "स्टेटस लोडिंग में समय क्यों लगता है",
+        "स्टेटस लोडिंग में समय क्यों लगता है है",
         "ऐप स्टेटस प्रदर्शित करने में धीमा है",
         "स्टेटस लोडिंग के लिए लंबा इंतजार",
         "स्टेटस लोड समय बहुत लंबा है"
@@ -2222,7 +2232,7 @@
         "मैं ऐप में स्टेटस सहेजने के लिए कस्टम डायरेक्टरी कैसे चुनूँ?",
         "स्टेटस डाउनलोड के लिए व्यक्तिगत फ़ोल्डर सेट करने की प्रक्रिया क्या है?",
         "मैं ऐप में स्टेटस के लिए एक विशेष फ़ोल्डर कैसे नामित कर सकता हूँ?",
-        "ऐप स्टेटस सहेजने के लिए कस्टम स्थान चुनने के لیے मैं क्या करूँ?",
+        "ऐप स्टेटस सहेजने के लिए कस्टम स्थान चुनने के लिए मैं क्या करूँ?",
         "मैं ऐप को चुने हुए फ़ोल्डर में स्टेटस सहेजने के लिए कैसे कॉन्फ़िगर करूँ?",
         "स्टेटस के लिए विशिष्ट स्टोरेज पथ असाइन करने का तरीका क्या है?"
       ],
