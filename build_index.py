@@ -1,67 +1,61 @@
 import json
 import re
-import logging
+import os
+from collections import defaultdict
+from math import log
 
-# --- CONFIGURATION ---
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
-logger = logging.getLogger(__name__)
-LANGUAGES = ["en", "hi", "id"]
-FAQ_JSON_FILE = 'whatsapp_faq_multilingual.json'
-OUTPUT_INDEX_FILE = 'faq_index.json'
+SOURCE_FILE = 'whatsapp_faq_multilingual.json'
+INDEX_FILE = 'faq_index.json'
 
-# Define common "stop words" that should be ignored during search
-STOP_WORDS = {
-    'en': {'a', 'an', 'the', 'is', 'in', 'it', 'i', 'to', 'for', 'of', 'how', 'do', 'can', 'what', 'why', 'my'},
-    'hi': {'एक', 'में', 'है', 'की', 'मैं', 'यह', 'से', 'क्या', 'कैसे', 'क्यों', 'मेरा', 'मेरे'},
-    'id': {'di', 'ke', 'dari', 'dan', 'ini', 'itu', 'saya', 'untuk', 'bagaimana', 'apa', 'kenapa', 'bisa'}
-}
-
-def normalize_and_tokenize(text, lang):
-    """Normalizes text and splits it into important keywords."""
+def normalize(text):
     if not isinstance(text, str): return []
-    # Lowercase and remove punctuation
     text = text.lower()
     text = re.sub(r"[^\w\s\u0900-\u097F]", "", text)
-    # Tokenize (split into words)
-    words = text.split()
-    # Remove stop words
-    important_words = [word for word in words if word not in STOP_WORDS.get(lang, set())]
-    return important_words
+    return text.split()
 
-if __name__ == '__main__':
-    logger.info("Starting search index creation...")
-    
-    try:
-        with open(FAQ_JSON_FILE, 'r', encoding='utf-8') as f:
-            faqs = json.load(f)
-    except FileNotFoundError:
-        logger.error(f"FATAL: {FAQ_JSON_FILE} not found.")
-        exit()
+# Load the original multilingual questions
+with open(SOURCE_FILE, 'r', encoding='utf-8') as f:
+    raw_data = json.load(f)
 
-    # The final index will hold the processed questions and answers
-    search_data = {lang: [] for lang in LANGUAGES}
+# Build document list
+documents = []
+word_doc_freq = defaultdict(int)  # for IDF
 
-    for faq_item in faqs:
-        for lang in LANGUAGES:
-            original_question = faq_item['question'][lang]
-            answer = faq_item['answer'][lang]
-            
-            # Combine original question and paraphrases for indexing
-            all_phrases = [original_question] + faq_item.get('paraphrases', {}).get(lang, [])
-            
-            # Create a unique set of keywords for this entire FAQ entry
-            keywords = set()
-            for phrase in all_phrases:
-                keywords.update(normalize_and_tokenize(phrase, lang))
+for entry in raw_data:
+    doc_id = entry['id']
+    all_keywords = set()
 
-            search_data[lang].append({
-                "question": original_question,
-                "answer": answer,
-                "keywords": list(keywords) # Store as a list in the JSON
-            })
-            
-    # Save the processed data to a new index file
-    with open(OUTPUT_INDEX_FILE, 'w', encoding='utf-8') as f_out:
-        json.dump(search_data, f_out, ensure_ascii=False, indent=2)
+    # Collect paraphrases + base questions
+    for lang, question in entry.get('question', {}).items():
+        all_keywords.update(normalize(question))
 
-    logger.info(f"Successfully created search index file: '{OUTPUT_INDEX_FILE}'")
+    for lang, paraphrases in entry.get('paraphrases', {}).items():
+        for phr in paraphrases:
+            all_keywords.update(normalize(phr))
+
+    doc_keywords = list(all_keywords)
+    for word in doc_keywords:
+        word_doc_freq[word] += 1
+
+    documents.append({
+        "id": doc_id,
+        "keywords": doc_keywords,
+        "answers": entry.get('answer', {})
+    })
+
+# Compute IDF scores
+total_docs = len(documents)
+idf_scores = {}
+for word, doc_count in word_doc_freq.items():
+    idf_scores[word] = log((total_docs + 1) / (doc_count + 1)) + 1
+
+# Save the index
+final_index = {
+    "documents": documents,
+    "idf_scores": idf_scores
+}
+
+with open(INDEX_FILE, 'w', encoding='utf-8') as f:
+    json.dump(final_index, f, ensure_ascii=False, indent=2)
+
+print(f"Index built successfully and saved to '{INDEX_FILE}'")
