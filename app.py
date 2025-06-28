@@ -529,15 +529,18 @@ def home():
     return render_template_string(HTML_TEMPLATE)
 
 @app.route('/chat', methods=['POST'])
-@app.route('/chat', methods=['POST'])
 def chat():
     user_input = request.json.get('message', '').strip().lower()
     if not user_input:
         return jsonify({"response": "Please enter a question."})
 
-    # --- Custom hardcoded intents ---
-    if any(phrase in user_input for phrase in ["your role", "who are you", "what are you", "what is your job"]):
-        return jsonify({"response": "I'm a virtual assistant designed to answer common questions about the WhatsApp Status Saver app. Ask me anything!"})
+    # Handle greetings
+    if user_input in ["hi", "hello", "hey", "namaste", "hola", "hii", "helo", "hey there", "yo", "hai"]:
+        return jsonify({"response": "Hello! How can I assist you today?"})
+
+    # Handle bot identity questions
+    if any(phrase in user_input for phrase in ["your role", "who are you", "what are you", "what is your job", "tum kaun ho", "kya tum bot ho", "bot kaun hai"]):
+        return jsonify({"response": "I'm your WhatsApp FAQ Bot — a virtual assistant here to answer your questions about the Status Saver app!"})
 
     try:
         reply_lang = detect(user_input)
@@ -555,6 +558,7 @@ def chat():
         response_text = "I'm sorry, I didn't understand the question. Please rephrase your question and try to be more specific."
 
     return jsonify({"response": response_text})
+
 
 if __name__ == '__main__':
     logger.info("Starting WhatsApp FAQ Bot Flask server...")
