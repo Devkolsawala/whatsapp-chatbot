@@ -14,10 +14,10 @@
       "hinglish": "WhatsApp kholo, 'My Status' mein jao, status par tap karo aur menu se delete option select karo."
     },
     "paraphrases": {
-      "en": ["remove status", "delete my status", "how to erase status", "remove posted status"],
-      "hi": ["स्टेटस हटाएं", "स्टेटस मिटाएं"],
-      "id": ["hapus status", "hapus postingan status"],
-      "hinglish": ["status delete kaise kare", "apna status kaise hataye"]
+      "en": ["remove status", "delete my status", "how to erase status", "remove posted status", "delete my own status", "how to remove status post", "erase status from WhatsApp", "clear my status"],
+      "hi": ["स्टेटस हटाएं", "स्टेटस मिटाएं", "अपना स्टेटस डिलीट करें", "स्टेटस पोस्ट हटाएं", "व्हाट्सएप से स्टेटस हटाएं"],
+      "id": ["hapus status", "hapus postingan status", "hapus status saya", "bagaimana menghapus status sendiri", "hapus status dari WhatsApp"],
+      "hinglish": ["status delete kaise kare", "apna status kaise hataye", "status post kaise delete kare", "WhatsApp se status kaise hataye", "status erase kaise karen"]
     }
   },
   {
@@ -35,10 +35,10 @@
       "hinglish": "Main WhatsApp FAQ Bot hoon — app se related aapke sawalon ke jawab dene ke liye yahan hoon."
     },
     "paraphrases": {
-      "en": ["what is your role", "who are you", "what do you do", "what is your purpose", "are you a bot", "bot identity"],
-      "hi": ["तुम क्या करते हो", "तुम कौन हो", "तुम्हारा काम क्या है", "क्या तुम बॉट हो", "तुम्हारी पहचान क्या है"],
-      "id": ["apa tugas kamu", "apa peran kamu", "kamu siapa", "apakah kamu bot", "tujuan kamu apa"],
-      "hinglish": ["tum kaun ho", "bot kaun hai", "kya tum bot ho", "tumhara role kya hai", "bot ka kaam kya hai"]
+      "en": ["what is your role", "who are you", "what do you do", "what is your purpose", "are you a bot", "bot identity", "who made you", "what’s your job", "are you an AI"],
+      "hi": ["तुम क्या करते हो", "तुम कौन हो", "तुम्हारा काम क्या है", "क्या तुम बॉट हो", "तुम्हारी पहचान क्या है", "तुमने कौन बनाया", "तुम्हारा काम क्या है", "क्या तुम AI हो"],
+      "id": ["apa tugas kamu", "apa peran kamu", "kamu siapa", "apakah kamu bot", "tujuan kamu apa", "siapa yang membuatmu", "apa pekerjaanmu", "apakah kamu AI"],
+      "hinglish": ["tum kaun ho", "bot kaun hai", "kya tum bot ho", "tumhara role kya hai", "bot ka kaam kya hai", "tumhe kaun banaya", "kya tum AI ho", "tum kya karte ho"]
     }
   },
   {
@@ -54,10 +54,10 @@
       "id": "Untuk menyimpan status:\n1. Pertama, lihat status lengkap di aplikasi WhatsApp Anda.\n2. Buka aplikasi Penghemat Status kami, Anda akan melihat semua status yang telah Anda lihat.\n3. Ketuk ikon 'Unduh' pada yang ingin Anda simpan."
     },
     "paraphrases": {
-      "en": ["save a video status", "download status from a contact", "download pictures and GIFs", "save images", "how to get a video", "store friend’s status", "get a status", "yoink status", "how 2 save", "where is the save button", "i want to keep a status"],
-      "hi": ["दोस्त का वीडियो स्टेटस", "फोटो और GIF डाउनलोड करें", "स्टेटस फोटो सहेजें", "स्टेटस कैसे बचाएं", "फोटो कैसे मिलेगी"],
-      "hinglish": ["status kaise download karu", "me status kese download karu", "status download kese kare", "photo kaise download hoga", "video save karna hai", "status save karne ka tarika", "staus downlod karna h", "kaise save hoga"],
-      "id": ["simpan status video", "unduh status dari kontak", "unduh gambar dan GIF", "bagaimana cara mendapatkan status", "simpan foto status"]
+      "en": ["save a video status", "download status from a contact", "download pictures and GIFs", "save images", "how to get a video", "store friend’s status", "get a status", "yoink status", "how 2 save", "where is the save button", "i want to keep a status", "how to download status", "save WhatsApp status", "grab a status", "download a single status"],
+      "hi": ["दोस्त का वीडियो स्टेटस", "फोटो और GIF डाउनलोड करें", "स्टेटस फोटो सहेजें", "स्टेटस कैसे बचाएं", "फोटो कैसे मिलेगी", "व्हाट्सएप स्टेटस डाउनलोड करें", "स्टेटस कैसे ले", "एक स्टेटस डाउनलोड करें"],
+      "id": ["simpan status video", "unduh status dari kontak", "unduh gambar dan GIF", "bagaimana cara mendapatkan status", "simpan foto status", "unduh status WhatsApp", "ambil status", "simpan satu status"],
+      "hinglish": ["status kaise download karu", "me status kese download karu", "status download kese kare", "photo kaise download hoga", "video save karna hai", "status save karne ka tarika", "staus downlod karna h", "kaise save hoga", "WhatsApp status kaise save kare", "ek status kaise download kare", "save button kaha hai"]
     }
   },
   {
@@ -73,10 +73,10 @@
       "id": "Untuk menyimpan beberapa status sekaligus, tekan lama status mana pun untuk masuk ke 'mode seleksi'. Kemudian, ketuk semua status yang ingin Anda simpan dan tekan tombol unduh."
     },
     "paraphrases": {
-      "en": ["download many statuses", "batch save", "select and download all", "download lots of statuses", "save all statuses", "download in bulk"],
-      "hi": ["एक साथ कई स्टेटस डाउनलोड करें", "एक साथ कई स्टेटस सहेजें", "बहुत सारे स्टेटस", "सभी स्टेटस एक साथ"],
-      "hinglish": ["ek sath multiple status download", "sab status ek bar me save", "batch download kaise kare", "multiple status kaise download karu", "bohot sare status kaise download kary", "jyada status kaise download kare", "ek se jyada status"],
-      "id": ["unduh beberapa status sekaligus", "simpan secara batch", "unduh banyak status", "pilih semua status"]
+      "en": ["download many statuses", "batch save", "select and download all", "download lots of statuses", "save all statuses", "download in bulk", "download multiple statuses together", "save several statuses", "how to grab many statuses"],
+      "hi": ["एक साथ कई स्टेटस डाउनलोड करें", "एक साथ कई स्टेटस सहेजें", "बहुत सारे स्टेटस", "सभी स्टेटस एक साथ", "एक साथ कई स्टेटस कैसे लें"],
+      "id": ["unduh beberapa status sekaligus", "simpan secara batch", "unduh banyak status", "pilih semua status", "unduh beberapa status bersama"],
+      "hinglish": ["ek sath multiple status download", "sab status ek bar me save", "batch download kaise kare", "multiple status kaise download karu", "bohot sare status kaise download kary", "jyada status kaise download kare", "ek se jyada status", "sab status kaise save kare"]
     }
   },
   {
@@ -92,10 +92,10 @@
       "id": "Masalah undahan biasanya disebabkan oleh salah satu dari ini:\n1. **Tidak Ada Izin Penyimpanan:** Silakan buka Pengaturan ponsel Anda -> Aplikasi -> Aplikasi Kami -> Izin, dan berikan akses Penyimpanan.\n2. **Penyimpanan Telepon Rendah:** Pastikan Anda memiliki cukup ruang kosong di perangkat Anda.\n3. **Koneksi Internet Buruk/Masalah Server:** Diperlukan koneksi yang stabil. Server WhatsApp juga mungkin sedang down sementara."
     },
     "paraphrases": {
-      "en": ["download keeps failing", "download button doesn’t work", "nothing happens when I tap download", "cannot save status", "download error", "checked internet and storage, still not working", "nothing is downloading today", "save not working"],
-      "hi": ["डाउनलोड बार-बार विफल हो रहा", "डाउनलोड बटन काम नहीं करता", "स्टेटस सेव नहीं हो रहा है", "आज कुछ भी डाउनलोड नहीं हो रहा"],
-      "hinglish": ["download fail ho raha hai", "download kyu nahi ho raha", "status save nahi ho raha", "button kaam nahi kar raha", "internet storage check kar liya fir bhi nahi chal raha", "aaj download nahi ho raha", "error aa rha hai"],
-      "id": ["undahan terus gagal", "tombol unduh tidak berfungsi", "tidak terjadi apa-apa saat unduh", "tidak bisa menyimpan status", "undahan gagal hari ini"]
+      "en": ["download keeps failing", "download button doesn’t work", "nothing happens when I tap download", "cannot save status", "download error", "checked internet and storage, still not working", "nothing is downloading today", "save not working", "download stuck", "why can’t I save status"],
+      "hi": ["डाउनलोड बार-बार विफल हो रहा", "डाउनलोड बटन काम नहीं करता", "स्टेटस सेव नहीं हो रहा है", "आज कुछ भी डाउनलोड नहीं हो रहा", "डाउनलोड क्यों अटका है", "क्यों स्टेटस सेव नहीं हो रहा"],
+      "id": ["undahan terus gagal", "tombol unduh tidak berfungsi", "tidak terjadi apa-apa saat unduh", "tidak bisa menyimpan status", "undahan gagal hari ini", "mengapa tidak bisa simpan status"],
+      "hinglish": ["download fail ho raha hai", "download kyu nahi ho raha", "status save nahi ho raha", "button kaam nahi kar raha", "internet storage check kar liya fir bhi nahi chal raha", "aaj download nahi ho raha", "error aa rha hai", "download kyun stuck hai", "status kyun nahi save ho raha"]
     }
   },
   {
@@ -111,10 +111,10 @@
       "id": "Aplikasi kami menyimpan status dengan kualitas yang sama persis dengan yang disediakan WhatsApp. WhatsApp sering mengompresi video untuk menghemat data, yang dapat mengurangi kualitasnya. Sayangnya, kami tidak dapat meningkatkan kualitas melebihi apa yang tersedia dari WhatsApp."
     },
     "paraphrases": {
-      "en": ["saved video is blurry", "low quality video", "not hd video", "pixelated video", "bad quality"],
-      "hi": ["वीडियो धुंधला है", "वीडियो की क्वालिटी खराब है", "एचडी वीडियो नहीं"],
-      "hinglish": ["video etna blury kyu hai", "video quality kharab hai", "hd video save nahi hota", "blurry video problem", "video saaf nahi hai"],
-      "id": ["video yang disimpan buram", "kualitas video rendah", "video tidak hd"]
+      "en": ["saved video is blurry", "low quality video", "not hd video", "pixelated video", "bad quality", "why is my video not clear", "poor video quality after saving"],
+      "hi": ["वीडियो धुंधला है", "वीडियो की क्वालिटी खराब है", "एचडी वीडियो नहीं", "मेरा वीडियो क्यों साफ नहीं है", "सेव करने के बाद खराब क्वालिटी"],
+      "id": ["video yang disimpan buram", "kualitas video rendah", "video tidak hd", "mengapa video saya tidak jelas", "kualitas video buruk setelah disimpan"],
+      "hinglish": ["video etna blury kyu hai", "video quality kharab hai", "hd video save nahi hota", "blurry video problem", "video saaf nahi hai", "video kyun clear nahi hai", "save ke baad quality kharab kyun"]
     }
   },
   {
@@ -130,10 +130,10 @@
       "id": "Agar status muncul, Anda harus **melihatnya sepenuhnya di WhatsApp terlebih dahulu**. Jika Anda telah melihatnya dan masih tidak muncul atau tampak lama, silakan coba hapus cache aplikasi (Pengaturan > Aplikasi > Penyimpanan) lalu mulai ulang aplikasi kami."
     },
     "paraphrases": {
-      "en": ["some statuses not showing", "app shows old statuses instead of new ones", "statuses missing", "status no longer available error", "expired status", "can't see new status", "only old status visible"],
-      "hi": ["कुछ स्टेटस ऐप में क्यों नहीं दिख रहे हैं", "ऐप नए स्टेटस के बजाय पुराने स्टेटस क्यों दिखाता है", "स्टेटस गायब हैं", "पुराने स्टेटस दिख रहे हैं"],
-      "hinglish": ["kuch status nahi dikh rahe", "sab status kyu nahi aa rahe", "status missing hai", "purane status dikhata hai", "status not available error", "naya status nahi dikh raha"],
-      "id": ["beberapa status tidak muncul", "aplikasi menampilkan status lama", "status hilang", "tidak bisa lihat status baru"]
+      "en": ["some statuses not showing", "app shows old statuses instead of new ones", "statuses missing", "status no longer available error", "expired status", "can't see new status", "only old status visible", "why no new statuses", "status not loading"],
+      "hi": ["कुछ स्टेटस ऐप में क्यों नहीं दिख रहे हैं", "ऐप नए स्टेटस के बजाय पुराने स्टेटस क्यों दिखाता है", "स्टेटस गायब हैं", "पुराने स्टेटस दिख रहे हैं", "नए स्टेटस क्यों नहीं दिख रहे", "स्टेटस लोड क्यों नहीं हो रहा"],
+      "id": ["beberapa status tidak muncul", "aplikasi menampilkan status lama", "status hilang", "tidak bisa lihat status baru", "mengapa status lama muncul", "status tidak dimuat"],
+      "hinglish": ["kuch status nahi dikh rahe", "sab status kyu nahi aa rahe", "status missing hai", "purane status dikhata hai", "status not available error", "naya status nahi dikh raha", "status kyun nahi load ho raha", "naya status kyun nahi aata"]
     }
   },
   {
@@ -149,10 +149,10 @@
       "id": "Untuk berbagi, buka tab 'Tersimpan', ketuk status, lalu ketuk ikon 'Bagikan'. Harap selalu menghormati privasi orang lain dan meminta izin mereka sebelum membagikan konten mereka."
     },
     "paraphrases": {
-      "en": ["share downloaded status", "send saved status to other apps", "forward a status", "is it legal to save someone's status", "how to send a saved status", "share status legally", "can I share someone's status"],
-      "hi": ["डाउनलोड की गई स्थिति साझा करें", "सहेजे गए स्टेटस को कैसे भेजें", "क्या किसी और का स्टेटस सहेजना कानूनी है", "स्टेटस शेयर करने का तरीका", "क्या मैं किसी का स्टेटस शेयर कर सकता हूँ"],
-      "hinglish": ["saved status share kaise kare", "download status ko kaise bheje", "kya kisi ka status save karna legal hai", "status ko share kaise karen", "kisi ka status share karna safe hai kya", "status forward kaise kare"],
-      "id": ["bagikan status yang diunduh", "kirim status tersimpan", "apakah legal menyimpan status", "cara mengirim status tersimpan", "bisakah saya membagikan status orang lain", "bagikan status dengan legal"]
+      "en": ["share downloaded status", "send saved status to other apps", "forward a status", "is it legal to save someone's status", "how to send a saved status", "share status legally", "can I share someone's status", "how to share saved content", "is sharing status allowed", "export saved status"],
+      "hi": ["डाउनलोड की गई स्थिति साझा करें", "सहेजे गए स्टेटस को कैसे भेजें", "क्या किसी और का स्टेटस सहेजना कानूनी है", "स्टेटस शेयर करने का तरीका", "क्या मैं किसी का स्टेटस शेयर कर सकता हूँ", "सहेजा गया स्टेटस कैसे शेयर करें", "स्टेटस शेयर करना जायज है क्या"],
+      "id": ["bagikan status yang diunduh", "kirim status tersimpan", "apakah legal menyimpan status", "cara mengirim status tersimpan", "bisakah saya membagikan status orang lain", "bagikan status dengan legal", "ekspor status tersimpan", "apakah boleh membagikan status"],
+      "hinglish": ["saved status share kaise kare", "download status ko kaise bheje", "kya kisi ka status save karna legal hai", "status ko share kaise karen", "kisi ka status share karna safe hai kya", "status forward kaise kare", "status share karna legal hai kya", "saved status kaise bhejte hain"]
     }
   },
   {
@@ -168,10 +168,10 @@
       "id": "Ya, ini sepenuhnya kompatibel dengan **WhatsApp Business** (pilih folder 'com.whatsapp.w4b' saat pengaturan). Ini mungkin berfungsi dengan **GB WhatsApp**, tetapi kami tidak secara resmi mendukung klien tidak resmi karena risiko keamanan. Aplikasi ini **hanya tersedia untuk Android** dan tidak berfungsi di perangkat iOS."
     },
     "paraphrases": {
-      "en": ["works with WhatsApp Business", "save from WA Business", "compatible with GB WhatsApp", "does it work on iPhone", "iOS version", "parallel space support"],
-      "hi": ["व्हाट्सएप बिजनेस के लिए काम करता है", "जीबी व्हाट्सएप के साथ काम करेगा", "क्या यह ऐप आईओएस डिवाइस के साथ काम करता है"],
-      "hinglish": ["whatsapp business ke liye kaam karega", "gb whatsapp me chalega", "kya ye app iphone me chalega", "ios version hai kya", "parallel space se status save hoga"],
-      "id": ["berfungsi untuk akun WhatsApp Business", "berfungsi dengan GB WhatsApp", "apakah berfungsi dengan perangkat iOS", "dukungan parallel space"]
+      "en": ["works with WhatsApp Business", "save from WA Business", "compatible with GB WhatsApp", "does it work on iPhone", "iOS version", "parallel space support", "supports WhatsApp Business", "works with GB", "iOS compatibility"],
+      "hi": ["व्हाट्सएप बिजनेस के लिए काम करता है", "जीबी व्हाट्सएप के साथ काम करेगा", "क्या यह ऐप आईओएस डिवाइस के साथ काम करता है", "व्हाट्सएप बिजनेस सपोर्ट करता है", "आईओएस के लिए काम करता है"],
+      "id": ["berfungsi untuk akun WhatsApp Business", "berfungsi dengan GB WhatsApp", "apakah berfungsi dengan perangkat iOS", "dukungan parallel space", "kompatibel dengan iOS"],
+      "hinglish": ["whatsapp business ke liye kaam karega", "gb whatsapp me chalega", "kya ye app iphone me chalega", "ios version hai kya", "parallel space se status save hoga", "business ke liye kaam karta hai", "gb ke saath kaam karega"]
     }
   },
   {
@@ -187,10 +187,10 @@
       "id": "Iklan mendukung pengembangan versi gratis. Untuk menghapus semua iklan, Anda dapat membeli **versi Pro** dari menu utama.\nJika Anda melihat iklan di notifikasi ponsel Anda, Anda dapat menonaktifkannya di pengaturan aplikasi perangkat Anda untuk aplikasi kami.\nJika Anda telah membeli versi Pro tetapi masih melihat iklan, hubungi dukungan di luckajay93@gmail.com dengan ID pesanan Anda."
     },
     "paraphrases": {
-      "en": ["too many ads", "remove advertisements", "buy ad-free version", "still seeing ads after upgrading to pro", "report inappropriate ads", "ads in my phone's notifications", "stop notification ads"],
-      "hi": ["बहुत सारे विज्ञापन", "विज्ञापन-मुक्त संस्करण खरीदें", "प्रो संस्करण में अपग्रेड करने के बाद भी विज्ञापन दिख रहे हैं", "अनुचित विज्ञापनों की रिपोर्ट करें", "नोटिफिकेशन विज्ञापन बंद करो"],
-      "hinglish": ["itne ads kyu aate hai", "remove ads", "mai ads ko kaise hatau", "ad free version kharidne me error", "pro version me bhi ads", "gande ads ki complaint", "notification me ads", "notification kaise bandh karu", "notification band karo"],
-      "id": ["terlalu banyak iklan", "hapus iklan", "beli versi bebas iklan", "masih melihat iklan setelah pro", "laporkan iklan yang tidak pantas", "hentikan iklan notifikasi"]
+      "en": ["too many ads", "remove advertisements", "buy ad-free version", "still seeing ads after upgrading to pro", "report inappropriate ads", "ads in my phone's notifications", "stop notification ads", "how to get rid of ads", "why so many pop-ups"],
+      "hi": ["बहुत सारे विज्ञापन", "विज्ञापन-मुक्त संस्करण खरीदें", "प्रो संस्करण में अपग्रेड करने के बाद भी विज्ञापन दिख रहे हैं", "अनुचित विज्ञापनों की रिपोर्ट करें", "नोटिफिकेशन विज्ञापन बंद करो", "विज्ञापन कैसे हटाएं", "क्यों इतने पॉप-अप हैं"],
+      "id": ["terlalu banyak iklan", "hapus iklan", "beli versi bebas iklan", "masih melihat iklan setelah pro", "laporkan iklan yang tidak pantas", "hentikan iklan notifikasi", "bagaimana menghapus iklan", "mengapa banyak pop-up"],
+      "hinglish": ["itne ads kyu aate hai", "remove ads", "mai ads ko kaise hatau", "ad free version kharidne me error", "pro version me bhi ads", "gande ads ki complaint", "notification me ads", "notification kaise bandh karu", "ads kaise hataye", "kyu itne pop-ups hain"]
     }
   },
   {
@@ -206,10 +206,10 @@
       "id": "Ini bisa disebabkan oleh sejumlah besar file status atau cache yang penuh.\nSilakan coba langkah-langkah ini:\n1. **Hapus Cache:** Buka Pengaturan ponsel > Aplikasi > Aplikasi Kami > Penyimpanan dan 'Hapus Cache'.\n2. **Mulai Ulang Telepon:** Reboot sederhana seringkali menyelesaikan masalah kinerja.\n3. **Instal Ulang Aplikasi:** Sebagai upaya terakhir, menginstal ulang aplikasi dapat memperbaiki masalah yang persisten."
     },
     "paraphrases": {
-      "en": ["app keeps crashing", "app won't open", "app is frozen", "app is slow to load statuses", "app is stuck", "application not responding"],
-      "hi": ["ऐप बार-बार क्रैश हो रहा है", "ऐप खुल नहीं रहा", "ऐप फ्रीज हो गया है", "ऐप स्टेटस लोड करने में इतना समय क्यों लेता है"],
-      "hinglish": ["app crash ho raha hai", "app open nahi ho raha", "app hang kar raha hai", "app kaam nahi kar raha", "app itna slow kyu hai"],
-      "id": ["aplikasi terus mogok", "aplikasi tidak bisa dibuka", "aplikasi macet", "aplikasi lama memuat status"]
+      "en": ["app keeps crashing", "app won't open", "app is frozen", "app is slow to load statuses", "app is stuck", "application not responding", "why app freezes", "app lagging", "crash issue"],
+      "hi": ["ऐप बार-बार क्रैश हो रहा है", "ऐप खुल नहीं रहा", "ऐप फ्रीज हो गया है", "ऐप स्टेटस लोड करने में इतना समय क्यों लेता है", "ऐप क्यों फ्रीज होता है", "ऐप धीमा क्यों है", "क्रैश की समस्या"],
+      "id": ["aplikasi terus mogok", "aplikasi tidak bisa dibuka", "aplikasi macet", "aplikasi lama memuat status", "mengapa aplikasi membeku", "aplikasi lambat", "masalah crash"],
+      "hinglish": ["app crash ho raha hai", "app open nahi ho raha", "app hang kar raha hai", "app kaam nahi kar raha", "app itna slow kyu hai", "app kyun freeze ho raha", "app crash ki problem"]
     }
   },
   {
@@ -225,10 +225,10 @@
       "id": "Ya, aplikasi ini aman. Kami **tidak pernah mengakses atau mengumpulkan obrolan pribadi, kontak, atau file Anda**. Satu-satunya data yang dikumpulkan adalah data teknis anonim (seperti model ponsel dan versi OS Android Anda) yang digunakan untuk memperbaiki kerusakan dan meningkatkan kinerja."
     },
     "paraphrases": {
-      "en": ["is it safe to give permission", "are you stealing my data", "reading my messages", "what information does your app collect"],
-      "hi": ["क्या यह अनुमति देना सुरक्षित है", "क्या आप मेरा डेटा चुरा रहे हैं", "मेरे संदेश पढ़ रहे हैं", "आपका ऐप मेरे फोन से कौन सी जानकारी एकत्र करता है"],
-      "hinglish": ["permission dena safe hai", "kya main trust kar sakta hu", "mera data safe hai kya", "kya aap mere message padhte ho", "app kya kya data leta hai"],
-      "id": ["apakah aman memberikan izin", "apakah Anda mencuri data saya", "membaca pesan saya", "informasi apa yang dikumpulkan aplikasi"]
+      "en": ["is it safe to give permission", "are you stealing my data", "reading my messages", "what information does your app collect", "is my data secure", "does app access my chats", "privacy concerns"],
+      "hi": ["क्या यह अनुमति देना सुरक्षित है", "क्या आप मेरा डेटा चुरा रहे हैं", "मेरे संदेश पढ़ रहे हैं", "आपका ऐप मेरे फोन से कौन सी जानकारी एकत्र करता है", "मेरा डेटा सुरक्षित है क्या", "क्या ऐप मेरी चैट तक पहुँचता है", "प्राइवेसी की चिंता"],
+      "id": ["apakah aman memberikan izin", "apakah Anda mencuri data saya", "membaca pesan saya", "informasi apa yang dikumpulkan aplikasi", "apakah data saya aman", "apakah aplikasi mengakses chat saya", "masalah privasi"],
+      "hinglish": ["permission dena safe hai", "kya main trust kar sakta hu", "mera data safe hai kya", "kya aap mere message padhte ho", "app kya kya data leta hai", "mera data secure hai kya", "privacy ka issue hai kya"]
     }
   },
   {
@@ -244,10 +244,10 @@
       "id": "Ini adalah fitur opsional. Jika Anda mengaktifkannya, aplikasi memerlukan izin **Akses Notifikasi**. Kemudian menyimpan teks notifikasi yang masuk dari WhatsApp. Jika pengirim menghapus pesan mereka, Anda masih dapat melihat teks yang ditangkap dari notifikasi.\n\n*Catatan: Fitur ini hanya menangkap teks dan tidak dapat memulihkan media seperti foto atau video.*"
     },
     "paraphrases": {
-      "en": ["recover deleted messages", "why does app need notification permission", "restore deleted chats", "undelete messages"],
-      "hi": ["हटाए गए व्हाट्सएप संदेशों को पुनर्प्राप्त करें", "स्टेटस सेवर ऐप को मेरी नोटिफिकेशन पढ़ने की अनुमति क्यों चाहिए"],
-      "hinglish": ["deleted message recover honge", "delete message wapas kaise laye", "notification permission kyu chahiye", "message restore ka tarika"],
-      "id": ["pulihkan pesan yang dihapus", "mengapa aplikasi memerlukan izin notifikasi", "pulihkan obrolan yang dihapus"]
+      "en": ["recover deleted messages", "why does app need notification permission", "restore deleted chats", "undelete messages", "how to recover deleted texts", "message recovery process", "can I see deleted messages"],
+      "hi": ["हटाए गए व्हाट्सएप संदेशों को पुनर्प्राप्त करें", "स्टेटस सेवर ऐप को मेरी नोटिफिकेशन पढ़ने की अनुमति क्यों चाहिए", "हटाए गए संदेश कैसे देखें", "संदेश रिकवरी प्रक्रिया"],
+      "id": ["pulihkan pesan yang dihapus", "mengapa aplikasi memerlukan izin notifikasi", "pulihkan obrolan yang dihapus", "bagaimana cara melihat pesan yang dihapus", "proses pemulihan pesan"],
+      "hinglish": ["deleted message recover honge", "delete message wapas kaise laye", "notification permission kyu chahiye", "message restore ka tarika", "deleted message kaise dekhe", "message recovery kaise kare"]
     }
   }
 ]
