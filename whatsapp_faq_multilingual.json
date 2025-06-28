@@ -1,5 +1,26 @@
 [
   
+  {
+  "id": "status_delete_info",
+  "question": {
+    "en": "How do I delete a status?",
+    "hi": "मैं स्टेटस कैसे डिलीट करूं?",
+    "id": "Bagaimana cara menghapus status?",
+    "hinglish": "status kaise delete karen?"
+  },
+  "answer": {
+    "en": "To delete a status, open WhatsApp, go to the 'My Status' section, tap on the status, and use the delete option from the menu.",
+    "hi": "व्हाट्सएप खोलें, 'My Status' सेक्शन में जाएं, स्टेटस पर टैप करें और मेनू से डिलीट विकल्प चुनें।",
+    "id": "Buka WhatsApp, pergi ke bagian 'Status Saya', ketuk status, lalu pilih opsi hapus.",
+    "hinglish": "WhatsApp kholo, 'My Status' mein jao, status par tap karo aur menu se delete option select karo."
+  },
+  "paraphrases": {
+    "en": ["remove status", "delete my status", "how to erase status", "remove posted status"],
+    "hi": ["स्टेटस हटाएं", "स्टेटस मिटाएं"],
+    "id": ["hapus status", "hapus postingan status"],
+    "hinglish": ["status delete kaise kare", "apna status kaise hataye"]
+  }
+},
    {
   "id": "bot_identity",
   "question": {
