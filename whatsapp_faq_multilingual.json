@@ -1,49 +1,46 @@
 [
-  
   {
-  "id": "status_delete_info",
-  "question": {
-    "en": "How do I delete a status?",
-    "hi": "मैं स्टेटस कैसे डिलीट करूं?",
-    "id": "Bagaimana cara menghapus status?",
-    "hinglish": "status kaise delete karen?"
+    "id": "status_delete_info",
+    "question": {
+      "en": "How do I delete a status?",
+      "hi": "मैं स्टेटस कैसे डिलीट करूं?",
+      "id": "Bagaimana cara menghapus status?",
+      "hinglish": "status kaise delete karen?"
+    },
+    "answer": {
+      "en": "To delete a status, open WhatsApp, go to the 'My Status' section, tap on the status, and use the delete option from the menu.",
+      "hi": "व्हाट्सएप खोलें, 'My Status' सेक्शन में जाएं, स्टेटस पर टैप करें और मेनू से डिलीट विकल्प चुनें।",
+      "id": "Buka WhatsApp, pergi ke bagian 'Status Saya', ketuk status, lalu pilih opsi hapus.",
+      "hinglish": "WhatsApp kholo, 'My Status' mein jao, status par tap karo aur menu se delete option select karo."
+    },
+    "paraphrases": {
+      "en": ["remove status", "delete my status", "how to erase status", "remove posted status"],
+      "hi": ["स्टेटस हटाएं", "स्टेटस मिटाएं"],
+      "id": ["hapus status", "hapus postingan status"],
+      "hinglish": ["status delete kaise kare", "apna status kaise hataye"]
+    }
   },
-  "answer": {
-    "en": "To delete a status, open WhatsApp, go to the 'My Status' section, tap on the status, and use the delete option from the menu.",
-    "hi": "व्हाट्सएप खोलें, 'My Status' सेक्शन में जाएं, स्टेटस पर टैप करें और मेनू से डिलीट विकल्प चुनें।",
-    "id": "Buka WhatsApp, pergi ke bagian 'Status Saya', ketuk status, lalu pilih opsi hapus.",
-    "hinglish": "WhatsApp kholo, 'My Status' mein jao, status par tap karo aur menu se delete option select karo."
+  {
+    "id": "bot_identity",
+    "question": {
+      "en": "Who are you?",
+      "hi": "तुम कौन हो?",
+      "id": "Siapa kamu?",
+      "hinglish": "tum kaun ho?"
+    },
+    "answer": {
+      "en": "I am the WhatsApp FAQ Bot — your virtual assistant here to answer your queries about the app.",
+      "hi": "मैं WhatsApp FAQ बॉट हूँ — ऐप से जुड़े आपके सवालों के जवाब देने के लिए आपका वर्चुअल सहायक।",
+      "id": "Saya adalah WhatsApp FAQ Bot — asisten virtual Anda untuk menjawab pertanyaan tentang aplikasi.",
+      "hinglish": "Main WhatsApp FAQ Bot hoon — app se related aapke sawalon ke jawab dene ke liye yahan hoon."
+    },
+    "paraphrases": {
+      "en": ["what is your role", "who are you", "what do you do", "what is your purpose", "are you a bot", "bot identity"],
+      "hi": ["तुम क्या करते हो", "तुम कौन हो", "तुम्हारा काम क्या है", "क्या तुम बॉट हो", "तुम्हारी पहचान क्या है"],
+      "id": ["apa tugas kamu", "apa peran kamu", "kamu siapa", "apakah kamu bot", "tujuan kamu apa"],
+      "hinglish": ["tum kaun ho", "bot kaun hai", "kya tum bot ho", "tumhara role kya hai", "bot ka kaam kya hai"]
+    }
   },
-  "paraphrases": {
-    "en": ["remove status", "delete my status", "how to erase status", "remove posted status"],
-    "hi": ["स्टेटस हटाएं", "स्टेटस मिटाएं"],
-    "id": ["hapus status", "hapus postingan status"],
-    "hinglish": ["status delete kaise kare", "apna status kaise hataye"]
-  }
-},
-   {
-  "id": "bot_identity",
-  "question": {
-    "en": "Who are you?",
-    "hi": "तुम कौन हो?",
-    "id": "Siapa kamu?",
-    "hinglish": "tum kaun ho?"
-  },
-  "answer": {
-    "en": "I am the WhatsApp FAQ Bot — your virtual assistant here to answer your queries about the app.",
-    "hi": "मैं WhatsApp FAQ बॉट हूँ — ऐप से जुड़े आपके सवालों के जवाब देने के लिए आपका वर्चुअल सहायक।",
-    "id": "Saya adalah WhatsApp FAQ Bot — asisten virtual Anda untuk menjawab pertanyaan tentang aplikasi.",
-    "hinglish": "Main WhatsApp FAQ Bot hoon — app se related aapke sawalon ke jawab dene ke liye yahan hoon."
-  },
-  "paraphrases": {
-    "en": ["what is your role", "who are you", "what do you do", "what is your purpose", "are you a bot", "bot identity"],
-    "hi": ["तुम क्या करते हो", "तुम कौन हो", "तुम्हारा काम क्या है", "क्या तुम बॉट हो", "तुम्हारी पहचान क्या है"],
-    "id": ["apa tugas kamu", "apa peran kamu", "kamu siapa", "apakah kamu bot", "tujuan kamu apa"],
-    "hinglish": ["tum kaun ho", "bot kaun hai", "kya tum bot ho", "tumhara role kya hai", "bot ka kaam kya hai"]
-  }
-  },
-
- 
   {
     "id": "how_to_download_single",
     "question": {
@@ -76,10 +73,10 @@
       "id": "Untuk menyimpan beberapa status sekaligus, tekan lama status mana pun untuk masuk ke 'mode seleksi'. Kemudian, ketuk semua status yang ingin Anda simpan dan tekan tombol unduh."
     },
     "paraphrases": {
-        "en": ["download many statuses", "batch save", "select and download all", "download lots of statuses", "save all statuses", "download in bulk"],
-        "hi": ["एक साथ कई स्टेटस डाउनलोड करें", "एक साथ कई स्टेटस सहेजें", "बहुत सारे स्टेटस", "सभी स्टेटस एक साथ"],
-        "hinglish": ["ek sath multiple status download", "sab status ek bar me save", "batch download kaise kare", "multiple status kaise download karu", "bohot sare status kaise download kary", "jyada status kaise download kare", "ek se jyada status"],
-        "id": ["unduh beberapa status sekaligus", "simpan secara batch", "unduh banyak status", "pilih semua status"]
+      "en": ["download many statuses", "batch save", "select and download all", "download lots of statuses", "save all statuses", "download in bulk"],
+      "hi": ["एक साथ कई स्टेटस डाउनलोड करें", "एक साथ कई स्टेटस सहेजें", "बहुत सारे स्टेटस", "सभी स्टेटस एक साथ"],
+      "hinglish": ["ek sath multiple status download", "sab status ek bar me save", "batch download kaise kare", "multiple status kaise download karu", "bohot sare status kaise download kary", "jyada status kaise download kare", "ek se jyada status"],
+      "id": ["unduh beberapa status sekaligus", "simpan secara batch", "unduh banyak status", "pilih semua status"]
     }
   },
   {
@@ -87,37 +84,37 @@
     "question": {
       "en": "Why is my status download failing or not working?",
       "hi": "मेरा स्टेटस डाउनलोड क्यों फेल हो रहा है या काम नहीं कर रहा है?",
-      "id": "Mengapa unduhan status saya gagal atau tidak berfungsi?"
+      "id": "Mengapa undahan status saya gagal atau tidak berfungsi?"
     },
     "answer": {
       "en": "Download issues are usually caused by one of these:\n1. **No Storage Permission:** Please go to your phone's Settings > Apps > Our App > Permissions, and grant Storage access.\n2. **Low Phone Storage:** Ensure you have enough free space on your device.\n3. **Bad Internet/Server Issue:** A stable connection is required. WhatsApp servers might also be temporarily down.",
       "hi": "डाउनलोड समस्याएं आमतौर पर इन कारणों से होती हैं:\n1. **स्टोरेज की अनुमति नहीं:** कृपया अपने फोन की सेटिंग्स > ऐप्स > हमारा ऐप > अनुमतियाँ पर जाएं, और स्टोरेज एक्सेस प्रदान करें।\n2. **फोन का स्टोरेज कम होना:** सुनिश्चित करें कि आपके डिवाइस पर पर्याप्त खाली जगह है।\n3. **खराब इंटरनेट/सर्वर समस्या:** एक स्थिर कनेक्शन की आवश्यकता है। व्हाट्सएप सर्वर भी अस्थायी रूप से डाउन हो सकते हैं।",
-      "id": "Masalah unduhan biasanya disebabkan oleh salah satu dari ini:\n1. **Tidak Ada Izin Penyimpanan:** Silakan buka Pengaturan ponsel Anda -> Aplikasi -> Aplikasi Kami -> Izin, dan berikan akses Penyimpanan.\n2. **Penyimpanan Telepon Rendah:** Pastikan Anda memiliki cukup ruang kosong di perangkat Anda.\n3. **Koneksi Internet Buruk/Masalah Server:** Diperlukan koneksi yang stabil. Server WhatsApp juga mungkin sedang down sementara."
+      "id": "Masalah undahan biasanya disebabkan oleh salah satu dari ini:\n1. **Tidak Ada Izin Penyimpanan:** Silakan buka Pengaturan ponsel Anda -> Aplikasi -> Aplikasi Kami -> Izin, dan berikan akses Penyimpanan.\n2. **Penyimpanan Telepon Rendah:** Pastikan Anda memiliki cukup ruang kosong di perangkat Anda.\n3. **Koneksi Internet Buruk/Masalah Server:** Diperlukan koneksi yang stabil. Server WhatsApp juga mungkin sedang down sementara."
     },
     "paraphrases": {
       "en": ["download keeps failing", "download button doesn’t work", "nothing happens when I tap download", "cannot save status", "download error", "checked internet and storage, still not working", "nothing is downloading today", "save not working"],
       "hi": ["डाउनलोड बार-बार विफल हो रहा", "डाउनलोड बटन काम नहीं करता", "स्टेटस सेव नहीं हो रहा है", "आज कुछ भी डाउनलोड नहीं हो रहा"],
       "hinglish": ["download fail ho raha hai", "download kyu nahi ho raha", "status save nahi ho raha", "button kaam nahi kar raha", "internet storage check kar liya fir bhi nahi chal raha", "aaj download nahi ho raha", "error aa rha hai"],
-      "id": ["unduhan terus gagal", "tombol unduh tidak berfungsi", "tidak terjadi apa-apa saat unduh", "tidak bisa menyimpan status", "unduhan gagal hari ini"]
+      "id": ["undahan terus gagal", "tombol unduh tidak berfungsi", "tidak terjadi apa-apa saat unduh", "tidak bisa menyimpan status", "undahan gagal hari ini"]
     }
   },
   {
     "id": "video_quality_issue",
     "question": {
-        "en": "Why is the video I saved blurry and not HD?",
-        "hi": "मेरे द्वारा सहेजा गया वीडियो धुंधला और HD क्यों है?",
-        "id": "Mengapa video yang saya simpan buram dan bukan HD?"
+      "en": "Why is the video I saved blurry and not HD?",
+      "hi": "मेरे द्वारा सहेजा गया वीडियो धुंधला और HD क्यों है?",
+      "id": "Mengapa video yang saya simpan buram dan bukan HD?"
     },
     "answer": {
-        "en": "Our app saves the status in the exact same quality that WhatsApp provides. WhatsApp often compresses videos to save data, which can reduce their quality. Unfortunately, we cannot improve the quality beyond what is available from WhatsApp.",
-        "hi": "हमारा ऐप स्टेटस को उसी क्वालिटी में सेव करता है जो व्हाट्सएप प्रदान करता है। व्हाट्सएप अक्सर डेटा बचाने के लिए वीडियो को कंप्रेस करता है, जिससे उनकी क्वालिटी कम हो सकती है। दुर्भाग्य से, हम व्हाट्सएप से उपलब्ध क्वालिटी से बेहतर नहीं कर सकते।",
-        "id": "Aplikasi kami menyimpan status dengan kualitas yang sama persis dengan yang disediakan WhatsApp. WhatsApp sering mengompresi video untuk menghemat data, yang dapat mengurangi kualitasnya. Sayangnya, kami tidak dapat meningkatkan kualitas melebihi apa yang tersedia dari WhatsApp."
+      "en": "Our app saves the status in the exact same quality that WhatsApp provides. WhatsApp often compresses videos to save data, which can reduce their quality. Unfortunately, we cannot improve the quality beyond what is available from WhatsApp.",
+      "hi": "हमारा ऐप स्टेटस को उसी क्वालिटी में सेव करता है जो व्हाट्सएप प्रदान करता है। व्हाट्सएप अक्सर डेटा बचाने के लिए वीडियो को कंप्रेस करता है, जिससे उनकी क्वालिटी कम हो सकती है। दुर्भाग्य से, हम व्हाट्सएप से उपलब्ध क्वालिटी से बेहतर नहीं कर सकते।",
+      "id": "Aplikasi kami menyimpan status dengan kualitas yang sama persis dengan yang disediakan WhatsApp. WhatsApp sering mengompresi video untuk menghemat data, yang dapat mengurangi kualitasnya. Sayangnya, kami tidak dapat meningkatkan kualitas melebihi apa yang tersedia dari WhatsApp."
     },
     "paraphrases": {
-        "en": ["saved video is blurry", "low quality video", "not hd video", "pixelated video", "bad quality"],
-        "hi": ["वीडियो धुंधला है", "वीडियो की क्वालिटी खराब है", "एचडी वीडियो नहीं"],
-        "hinglish": ["video etna blury kyu hai", "video quality kharab hai", "hd video save nahi hota", "blurry video problem", "video saaf nahi hai"],
-        "id": ["video yang disimpan buram", "kualitas video rendah", "video tidak hd"]
+      "en": ["saved video is blurry", "low quality video", "not hd video", "pixelated video", "bad quality"],
+      "hi": ["वीडियो धुंधला है", "वीडियो की क्वालिटी खराब है", "एचडी वीडियो नहीं"],
+      "hinglish": ["video etna blury kyu hai", "video quality kharab hai", "hd video save nahi hota", "blurry video problem", "video saaf nahi hai"],
+      "id": ["video yang disimpan buram", "kualitas video rendah", "video tidak hd"]
     }
   },
   {
@@ -152,10 +149,10 @@
       "id": "Untuk berbagi, buka tab 'Tersimpan', ketuk status, lalu ketuk ikon 'Bagikan'. Harap selalu menghormati privasi orang lain dan meminta izin mereka sebelum membagikan konten mereka."
     },
     "paraphrases": {
-      "en": ["share downloaded status", "send saved status to other apps", "forward a status", "is it legal to save someone's status"],
-      "hi": ["डाउनलोड की गई स्थिति साझा करें", "सहेजे गए स्टेटस को कैसे भेजें", "क्या किसी और का स्टेटस सहेजना कानूनी है"],
-      "hinglish": ["saved status share kaise kare", "download status ko kaise bheje", "kya kisi ka status save karna legal hai", "bohot sare status kaise download kary"],
-      "id": ["bagikan status yang diunduh", "kirim status tersimpan", "apakah legal menyimpan status"]
+      "en": ["share downloaded status", "send saved status to other apps", "forward a status", "is it legal to save someone's status", "how to send a saved status", "share status legally", "can I share someone's status"],
+      "hi": ["डाउनलोड की गई स्थिति साझा करें", "सहेजे गए स्टेटस को कैसे भेजें", "क्या किसी और का स्टेटस सहेजना कानूनी है", "स्टेटस शेयर करने का तरीका", "क्या मैं किसी का स्टेटस शेयर कर सकता हूँ"],
+      "hinglish": ["saved status share kaise kare", "download status ko kaise bheje", "kya kisi ka status save karna legal hai", "status ko share kaise karen", "kisi ka status share karna safe hai kya", "status forward kaise kare"],
+      "id": ["bagikan status yang diunduh", "kirim status tersimpan", "apakah legal menyimpan status", "cara mengirim status tersimpan", "bisakah saya membagikan status orang lain", "bagikan status dengan legal"]
     }
   },
   {
