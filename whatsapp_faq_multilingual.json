@@ -1,4 +1,28 @@
 [
+  
+   {
+  "id": "bot_identity",
+  "question": {
+    "en": "Who are you?",
+    "hi": "तुम कौन हो?",
+    "id": "Siapa kamu?",
+    "hinglish": "tum kaun ho?"
+  },
+  "answer": {
+    "en": "I am the WhatsApp FAQ Bot — your virtual assistant here to answer your queries about the app.",
+    "hi": "मैं WhatsApp FAQ बॉट हूँ — ऐप से जुड़े आपके सवालों के जवाब देने के लिए आपका वर्चुअल सहायक।",
+    "id": "Saya adalah WhatsApp FAQ Bot — asisten virtual Anda untuk menjawab pertanyaan tentang aplikasi.",
+    "hinglish": "Main WhatsApp FAQ Bot hoon — app se related aapke sawalon ke jawab dene ke liye yahan hoon."
+  },
+  "paraphrases": {
+    "en": ["what is your role", "who are you", "what do you do", "what is your purpose", "are you a bot", "bot identity"],
+    "hi": ["तुम क्या करते हो", "तुम कौन हो", "तुम्हारा काम क्या है", "क्या तुम बॉट हो", "तुम्हारी पहचान क्या है"],
+    "id": ["apa tugas kamu", "apa peran kamu", "kamu siapa", "apakah kamu bot", "tujuan kamu apa"],
+    "hinglish": ["tum kaun ho", "bot kaun hai", "kya tum bot ho", "tumhara role kya hai", "bot ka kaam kya hai"]
+  }
+  },
+
+ 
   {
     "id": "how_to_download_single",
     "question": {
