@@ -529,10 +529,15 @@ def home():
     return render_template_string(HTML_TEMPLATE)
 
 @app.route('/chat', methods=['POST'])
+@app.route('/chat', methods=['POST'])
 def chat():
-    user_input = request.json.get('message', '').strip()
+    user_input = request.json.get('message', '').strip().lower()
     if not user_input:
         return jsonify({"response": "Please enter a question."})
+
+    # --- Custom hardcoded intents ---
+    if any(phrase in user_input for phrase in ["your role", "who are you", "what are you", "what is your job"]):
+        return jsonify({"response": "I'm a virtual assistant designed to answer common questions about the WhatsApp Status Saver app. Ask me anything!"})
 
     try:
         reply_lang = detect(user_input)
@@ -540,10 +545,10 @@ def chat():
             reply_lang = 'en'
     except Exception:
         reply_lang = 'en'
-        
+
     logger.info(f"Detected reply language: '{reply_lang}' for query: '{user_input}'")
     best_doc = find_best_match(user_input)
-    
+
     if best_doc:
         response_text = best_doc['answers'].get(reply_lang, best_doc['answers']['en'])
     else:
