@@ -222,7 +222,7 @@ def chat():
         # Use the detected language to pick the right answer from the matched document
         response_text = best_doc['answers'].get(reply_lang, best_doc['answers']['en'])
     else:
-        response_text = "I'm sorry, I didn’t understand that. Please rephrase your question."
+        response_text = "I'm sorry, I didn’t understand the question. Please rephrase your question and try to be more specific."
 
     return jsonify({"response": response_text})
 
