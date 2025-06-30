@@ -1,8 +1,9 @@
 import json
 import re
+import os
 from flask import Flask, request, jsonify, render_template_string
 import logging
-from langdetect import detect, DetectorFactory
+from langdetect import detect, DetectorFactory, LangDetectException
 from rapidfuzz import process, fuzz
 
 app = Flask(__name__)
@@ -14,26 +15,79 @@ DetectorFactory.seed = 0
 
 INDEX_FILE = 'faq_index.json'
 LANGUAGES = ["en", "hi", "id", "hinglish"]
-FUZZY_MATCH_THRESHOLD = 80
-MINIMUM_SCORE_THRESHOLD = 0.4
+FUZZY_MATCH_THRESHOLD = 75  # Slightly lowered for better matching
+MINIMUM_SCORE_THRESHOLD = 0.3  # Slightly lowered for better matching
 
-# --- Load search index ---
-try:
-    with open(INDEX_FILE, 'r', encoding='utf-8') as f:
-        search_index = json.load(f)
-    logger.info("Search index loaded successfully.")
-except FileNotFoundError:
-    logger.error(f"FATAL: '{INDEX_FILE}' not found. Please run build_index.py first.")
-    search_index = {"documents": [], "idf_scores": {}}
+# --- Load search index with better error handling ---
+def load_search_index():
+    try:
+        if not os.path.exists(INDEX_FILE):
+            logger.warning(f"Index file '{INDEX_FILE}' not found. Creating fallback data.")
+            return create_fallback_index()
+        
+        with open(INDEX_FILE, 'r', encoding='utf-8') as f:
+            search_index = json.load(f)
+        
+        # Validate index structure
+        if not isinstance(search_index, dict) or 'documents' not in search_index:
+            logger.warning("Invalid index structure. Creating fallback data.")
+            return create_fallback_index()
+            
+        logger.info(f"Search index loaded successfully with {len(search_index['documents'])} documents.")
+        return search_index
+        
+    except json.JSONDecodeError as e:
+        logger.error(f"JSON decode error in '{INDEX_FILE}': {e}")
+        return create_fallback_index()
+    except Exception as e:
+        logger.error(f"Error loading '{INDEX_FILE}': {e}")
+        return create_fallback_index()
 
-# --- Nonsense Filtering ---
+def create_fallback_index():
+    """Create a basic fallback index for common WhatsApp Status Saver questions"""
+    return {
+        "documents": [
+            {
+                "keywords": ["download", "status", "save", "whatsapp", "story"],
+                "answers": {
+                    "en": "To download WhatsApp status: 1. Open the app 2. Go to Status tab 3. Tap the status you want to save 4. Press the download button",
+                    "hi": "WhatsApp स्टेटस डाउनलोड करने के लिए: 1. ऐप खोलें 2. स्टेटस टैब पर जाएं 3. जिस स्टेटस को सेव करना है उस पर टैप करें 4. डाउनलोड बटन दबाएं",
+                    "hinglish": "WhatsApp status download karne ke liye: 1. App kholiye 2. Status tab mein jaiye 3. Jo status save karna hai usse tap kariye 4. Download button dabaye"
+                }
+            },
+            {
+                "keywords": ["permission", "storage", "access", "allow", "settings"],
+                "answers": {
+                    "en": "If download isn't working, check permissions: Go to Phone Settings > Apps > Status Saver > Permissions > Enable Storage permission",
+                    "hi": "अगर डाउनलोड काम नहीं कर रहा तो अनुमतियां जांचें: फोन सेटिंग्स > ऐप्स > स्टेटस सेवर > अनुमतियां > स्टोरेज अनुमति चालू करें",
+                    "hinglish": "Agar download kaam nahi kar raha to permissions check kariye: Phone Settings > Apps > Status Saver > Permissions > Storage permission enable kariye"
+                }
+            },
+            {
+                "keywords": ["error", "problem", "not", "working", "issue", "failed"],
+                "answers": {
+                    "en": "Common issues: 1. Storage permission not granted 2. Low phone storage 3. Poor internet connection 4. WhatsApp servers temporarily down",
+                    "hi": "आम समस्याएं: 1. स्टोरेज अनुमति नहीं दी गई 2. फोन में कम स्टोरेज 3. धीमा इंटरनेट कनेक्शन 4. WhatsApp सर्वर अस्थायी रूप से बंद",
+                    "hinglish": "Common problems: 1. Storage permission nahi di gayi 2. Phone mein kam storage 3. Slow internet connection 4. WhatsApp servers temporarily down"
+                }
+            }
+        ],
+        "idf_scores": {
+            "download": 0.8, "status": 0.9, "save": 0.7, "whatsapp": 0.6,
+            "permission": 0.8, "storage": 0.7, "error": 0.6, "problem": 0.6
+        }
+    }
+
+search_index = load_search_index()
+
+# --- Enhanced Nonsense Filtering ---
 IRRELEVANT_TOPICS = {
-    "vehicles": {"car", "bike", "truck", "bicycle", "scooter", "train", "aeroplane", "airplane", "jet", "boat", "ship"},
-    "appliances": {"fridge", "refrigerator", "oven", "stove", "fan", "bulb", "ac", "cooler", "mixer", "toaster"},
-    "animals": {"dog", "cat", "elephant", "horse", "monkey", "tiger", "lion", "goat", "cow"},
-    "foods": {"pizza", "burger", "cake", "bread", "milk", "apple", "rice", "chapati", "noodles", "icecream"},
-    "clothing": {"jeans", "shirt", "jacket", "tshirt", "saree", "kurta", "shoes", "cap"},
-    "other": {"road", "tree", "girl", "boy", "kid", "pen", "bottle", "house", "wall"}
+    "vehicles": {"car", "bike", "truck", "bicycle", "scooter", "train", "aeroplane", "airplane", "jet", "boat", "ship", "vehicle"},
+    "appliances": {"fridge", "refrigerator", "oven", "stove", "fan", "bulb", "ac", "cooler", "mixer", "toaster", "washing", "machine"},
+    "animals": {"dog", "cat", "elephant", "horse", "monkey", "tiger", "lion", "goat", "cow", "bird", "fish"},
+    "foods": {"pizza", "burger", "cake", "bread", "milk", "apple", "rice", "chapati", "noodles", "icecream", "food", "eat"},
+    "clothing": {"jeans", "shirt", "jacket", "tshirt", "saree", "kurta", "shoes", "cap", "dress", "clothes"},
+    "other": {"road", "tree", "girl", "boy", "kid", "pen", "bottle", "house", "wall", "weather", "time", "date"}
 }
 
 NONSENSE_FILTER = {
@@ -44,17 +98,55 @@ NONSENSE_FILTER = {
     "record": set.union(*IRRELEVANT_TOPICS.values())
 }
 
-def normalize_and_tokenize_query(text):
-    if not isinstance(text, str): return []
-    text = text.lower()
-    text = re.sub(r"[^\w\s\u0900-\u097F]", "", text)
-    return text.split()
+# Add more sophisticated filtering
+SPAM_PATTERNS = [
+    r'^[a-z]{1,3}$',  # Very short nonsense
+    r'^[0-9]+$',      # Only numbers
+    r'(.)\1{4,}',     # Repeated characters
+    r'^[^a-zA-Z0-9\s]+$'  # Only special characters
+]
 
-def is_nonsensical_query(tokens):
+def normalize_and_tokenize_query(text):
+    if not isinstance(text, str) or len(text.strip()) == 0:
+        return []
+    text = text.lower().strip()
+    # Remove excessive whitespace
+    text = re.sub(r'\s+', ' ', text)
+    # Keep alphanumeric, spaces, and common punctuation
+    text = re.sub(r"[^\w\s\u0900-\u097F?!.-]", "", text)
+    return [word for word in text.split() if len(word) > 1]  # Filter out single characters
+
+def is_nonsensical_query(text, tokens):
+    # Check for spam patterns
+    for pattern in SPAM_PATTERNS:
+        if re.search(pattern, text.lower()):
+            return True
+    
+    # Check for very short queries
+    if len(text.strip()) < 3:
+        return True
+    
+    # Check for irrelevant combinations
     for verb, invalid_targets in NONSENSE_FILTER.items():
         if verb in tokens and any(word in invalid_targets for word in tokens):
             return True
+    
+    # Check if query has any meaningful content
+    if len(tokens) == 0:
+        return True
+        
     return False
+
+def detect_language_safe(text):
+    """Safely detect language with fallback"""
+    try:
+        if len(text.strip()) < 3:
+            return 'en'
+        detected = detect(text)
+        return detected if detected in LANGUAGES else 'en'
+    except (LangDetectException, Exception) as e:
+        logger.debug(f"Language detection failed for '{text}': {e}")
+        return 'en'
 
 def find_best_match(user_query):
     user_keywords = normalize_and_tokenize_query(user_query)
@@ -63,33 +155,54 @@ def find_best_match(user_query):
 
     documents = search_index.get('documents', [])
     idf_scores = search_index.get('idf_scores', {})
+    
+    if not documents:
+        logger.warning("No documents in search index")
+        return None
 
     best_score = 0
     best_match_doc = None
 
     for doc in documents:
-        doc_keywords = doc['keywords']
+        doc_keywords = doc.get('keywords', [])
+        if not doc_keywords:
+            continue
+            
         current_doc_score = 0
+        matched_keywords = 0
 
         for user_word in user_keywords:
-            best_match = process.extractOne(user_word, doc_keywords, scorer=fuzz.ratio)
-            if best_match and best_match[1] >= FUZZY_MATCH_THRESHOLD:
-                matched_keyword = best_match[0]
-                keyword_importance = idf_scores.get(matched_keyword, 0.05)
-                current_doc_score += (best_match[1] / 100) * keyword_importance
+            # Try exact match first
+            if user_word in doc_keywords:
+                keyword_importance = idf_scores.get(user_word, 0.1)
+                current_doc_score += keyword_importance
+                matched_keywords += 1
+            else:
+                # Try fuzzy match
+                best_match = process.extractOne(user_word, doc_keywords, scorer=fuzz.ratio)
+                if best_match and best_match[1] >= FUZZY_MATCH_THRESHOLD:
+                    matched_keyword = best_match[0]
+                    keyword_importance = idf_scores.get(matched_keyword, 0.05)
+                    fuzzy_score = (best_match[1] / 100) * keyword_importance
+                    current_doc_score += fuzzy_score
+                    matched_keywords += 1
+
+        # Boost score based on number of matched keywords
+        if matched_keywords > 0:
+            current_doc_score *= (1 + (matched_keywords - 1) * 0.2)
 
         if current_doc_score > best_score:
             best_score = current_doc_score
             best_match_doc = doc
 
     if best_match_doc and best_score >= MINIMUM_SCORE_THRESHOLD:
-        logger.info(f"Found match for '{user_query}' with score {best_score:.2f}")
+        logger.info(f"Found match for '{user_query}' with score {best_score:.3f}")
         return best_match_doc
     else:
-        logger.warning(f"No good match found for '{user_query}' (score {best_score:.2f})")
+        logger.info(f"No good match found for '{user_query}' (best score: {best_score:.3f})")
         return None
 
-# --- HTML Template ---
+# --- HTML Template (same as before but with minor improvements) ---
 HTML_TEMPLATE = """
 <!DOCTYPE html>
 <html lang="en">
@@ -140,22 +253,9 @@ HTML_TEMPLATE = """
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
         
-        .chat-header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.1) 50%, transparent 70%);
-            opacity: 0.3;
-        }
-        
         .chat-header h1 {
             font-size: 1.1rem;
             font-weight: 500;
-            position: relative;
-            z-index: 1;
         }
         
         .chat-box {
@@ -163,9 +263,7 @@ HTML_TEMPLATE = """
             padding: 20px;
             overflow-y: auto;
             background-color: #e5ddd5;
-            background-image: url('https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png');
-            background-repeat: repeat;
-            background-size: auto;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"><circle cx="20" cy="20" r="1" fill="%23000" opacity="0.02"/></svg>');
         }
         
         .chat-box::-webkit-scrollbar {
@@ -221,36 +319,10 @@ HTML_TEMPLATE = """
             border-top-right-radius: 0;
         }
         
-        .user .message-content::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            right: -8px;
-            width: 0;
-            height: 0;
-            border: 8px solid transparent;
-            border-left-color: #dcf8c6;
-            border-bottom: none;
-            border-right: none;
-        }
-        
         .bot .message-content {
             background-color: #ffffff;
             color: #303030;
             border-top-left-radius: 0;
-        }
-        
-        .bot .message-content::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: -8px;
-            width: 0;
-            height: 0;
-            border: 8px solid transparent;
-            border-right-color: #ffffff;
-            border-bottom: none;
-            border-left: none;
         }
         
         .typing-indicator {
@@ -262,19 +334,6 @@ HTML_TEMPLATE = """
             align-items: center;
             box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
             animation: messageSlide 0.3s ease-out;
-        }
-        
-        .typing-indicator::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: -8px;
-            width: 0;
-            height: 0;
-            border: 8px solid transparent;
-            border-right-color: #ffffff;
-            border-bottom: none;
-            border-left: none;
         }
         
         .typing-indicator span {
@@ -291,12 +350,8 @@ HTML_TEMPLATE = """
         .typing-indicator span:nth-child(3) { animation-delay: -0.9s; }
         
         @keyframes bounce {
-            0%, 80%, 100% {
-                transform: scale(0);
-            }
-            40% {
-                transform: scale(1.0);
-            }
+            0%, 80%, 100% { transform: scale(0); }
+            40% { transform: scale(1.0); }
         }
         
         .input-area {
@@ -323,10 +378,6 @@ HTML_TEMPLATE = """
             box-shadow: 0 0 0 2px rgba(37, 211, 102, 0.3);
         }
         
-        #user-input::placeholder {
-            color: #999;
-        }
-        
         #send-btn {
             background: linear-gradient(135deg, #128C7E 0%, #075E54 100%);
             color: white;
@@ -349,52 +400,23 @@ HTML_TEMPLATE = """
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
         
-        #send-btn:active {
-            transform: translateY(0);
-        }
-        
         #send-btn:disabled {
             opacity: 0.6;
             cursor: not-allowed;
             transform: none;
         }
         
-        /* Mobile responsiveness */
-        @media (max-width: 480px) {
-            body {
-                padding: 10px;
-            }
-            
-            .chat-container {
-                height: 95vh;
-                border-radius: 0;
-            }
-            
-            .chat-header {
-                padding: 12px 16px;
-            }
-            
-            .chat-box {
-                padding: 16px;
-            }
-            
-            .input-area {
-                padding: 8px;
-            }
-            
-            .message {
-                max-width: 85%;
-            }
-        }
-        
-        /* Loading animation for send button */
-        .loading {
-            animation: spin 1s linear infinite;
-        }
+        .loading { animation: spin 1s linear infinite; }
         
         @keyframes spin {
             from { transform: rotate(0deg); }
             to { transform: rotate(360deg); }
+        }
+        
+        @media (max-width: 480px) {
+            body { padding: 10px; }
+            .chat-container { height: 95vh; border-radius: 0; }
+            .message { max-width: 85%; }
         }
     </style>
 </head>
@@ -405,12 +427,12 @@ HTML_TEMPLATE = """
         </div>
         <div class="chat-box" id="chat-box">
             <div class="message bot">
-                <div class="message-content">Hello! How can I assist you today?</div>
+                <div class="message-content">Hello! I'm here to help with WhatsApp Status Saver questions. Ask me anything about downloading or saving WhatsApp statuses!</div>
             </div>
         </div>
         <div class="input-area">
-            <input type="text" id="user-input" placeholder="Type your question..." autocomplete="off">
-            <button id="send-btn">&#10148;</button>
+            <input type="text" id="user-input" placeholder="Ask about WhatsApp status saving..." autocomplete="off" maxlength="200">
+            <button id="send-btn">➤</button>
         </div>
     </div>
 
@@ -426,12 +448,11 @@ HTML_TEMPLATE = """
             
             const messageContent = document.createElement('div');
             messageContent.classList.add('message-content');
-            messageContent.innerHTML = content.replace(/\\n/g, '<br>');
+            messageContent.textContent = content;
             
             messageDiv.appendChild(messageContent);
             chatBox.appendChild(messageDiv);
             
-            // Smooth scroll to bottom
             setTimeout(() => {
                 chatBox.scrollTop = chatBox.scrollHeight;
             }, 100);
@@ -472,9 +493,6 @@ HTML_TEMPLATE = """
 
             showTypingIndicator();
 
-            // Simulate network delay
-            await new Promise(resolve => setTimeout(resolve, 400));
-
             try {
                 const response = await fetch('/chat', {
                     method: 'POST',
@@ -482,22 +500,25 @@ HTML_TEMPLATE = """
                     body: JSON.stringify({ message: message })
                 });
 
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}`);
+                }
+
                 const data = await response.json();
                 hideTypingIndicator();
                 
-                // Add a small delay for better UX
                 setTimeout(() => {
-                    addMessage(data.response, 'bot');
-                }, 200);
+                    addMessage(data.response || 'Sorry, no response received.', 'bot');
+                }, 300);
 
             } catch (error) {
                 hideTypingIndicator();
-                addMessage('Sorry, something went wrong. Please try again.', 'bot');
                 console.error('Error:', error);
+                addMessage('Sorry, something went wrong. Please try again later.', 'bot');
             } finally {
                 isProcessing = false;
                 sendBtn.disabled = false;
-                sendBtn.innerHTML = '&#10148;';
+                sendBtn.innerHTML = '➤';
                 sendBtn.classList.remove('loading');
                 userInput.focus();
             }
@@ -506,23 +527,22 @@ HTML_TEMPLATE = """
         sendBtn.addEventListener('click', handleSendMessage);
         
         userInput.addEventListener('keypress', (e) => {
-            if (e.key === 'Enter') {
+            if (e.key === 'Enter' && !e.shiftKey) {
                 e.preventDefault();
                 handleSendMessage();
             }
         });
 
-        // Auto-focus input on load
+        // Auto-focus and input validation
         window.addEventListener('load', () => {
             userInput.focus();
         });
 
-        // Add some interactive feedback
-        userInput.addEventListener('input', () => {
-            if (userInput.value.trim()) {
-                sendBtn.style.opacity = '1';
-            } else {
-                sendBtn.style.opacity = '0.7';
+        userInput.addEventListener('input', (e) => {
+            // Basic input sanitization
+            const value = e.target.value;
+            if (value.length > 200) {
+                e.target.value = value.substring(0, 200);
             }
         });
     </script>
@@ -536,35 +556,620 @@ def home():
 
 @app.route('/chat', methods=['POST'])
 def chat():
-    user_input = request.json.get('message', '').strip().lower()
-    if not user_input:
-        return jsonify({"response": "Please enter a question."})
-
-    tokens = normalize_and_tokenize_query(user_input)
-
-    if is_nonsensical_query(tokens):
-        return jsonify({"response": "That doesn't seem related to WhatsApp or Status Saver. Please ask something relevant like 'how to save a status'."})
-
     try:
-        reply_lang = detect(user_input)
-        if reply_lang not in LANGUAGES:
-            reply_lang = 'en'
-    except:
-        reply_lang = 'en'
+        data = request.get_json()
+        if not data or 'message' not in data:
+            return jsonify({"response": "Please send a valid message."}), 400
 
-    best_doc = find_best_match(user_input)
+        user_input = data['message']
+        
+        # Input validation
+        if not isinstance(user_input, str):
+            return jsonify({"response": "Please send a text message."})
+        
+        user_input = user_input.strip()
+        if not user_input:
+            return jsonify({"response": "Please enter a question."})
+        
+        if len(user_input) > 200:
+            return jsonify({"response": "Please keep your question under 200 characters."})
 
-    if best_doc:
-        response_text = best_doc['answers'].get(reply_lang, best_doc['answers'].get('en', 'Sorry, no answer available.'))
-    else:
-        response_text = "I'm sorry, I couldn't understand that. Try asking something about WhatsApp Status Saver."
+        # Normalize and check for nonsense
+        tokens = normalize_and_tokenize_query(user_input)
+        
+        if is_nonsensical_query(user_input, tokens):
+            return jsonify({
+                "response": "I can help you with WhatsApp Status Saver questions. Try asking something like 'how to download status' or 'permission error'."
+            })
 
-    return jsonify({"response": response_text})
+        # Detect language
+        reply_lang = detect_language_safe(user_input)
+
+        # Find best matching document
+        best_doc = find_best_match(user_input)
+
+        if best_doc and 'answers' in best_doc:
+            response_text = best_doc['answers'].get(
+                reply_lang, 
+                best_doc['answers'].get('en', 'Sorry, no answer available in your language.')
+            )
+        else:
+            # Provide helpful fallback responses
+            fallback_responses = {
+                'en': "I couldn't find a specific answer to that. Try asking about:\n• How to download WhatsApp status\n• Permission or storage issues\n• App not working problems",
+                'hi': "मुझे इसका विशिष्ट उत्तर नहीं मिला। इनके बारे में पूछने की कोशिश करें:\n• WhatsApp स्टेटस कैसे डाउनलोड करें\n• अनुमति या स्टोरेज की समस्याएं\n• ऐप काम नहीं कर रहा",
+                'hinglish': "Mujhe iska specific answer nahi mila. Ye try kariye:\n• WhatsApp status kaise download kare\n• Permission ya storage issues\n• App kaam nahi kar raha"
+            }
+            response_text = fallback_responses.get(reply_lang, fallback_responses['en'])
+
+        return jsonify({"response": response_text})
+
+    except Exception as e:
+        logger.error(f"Error in chat endpoint: {e}")
+        return jsonify({
+            "response": "Sorry, I encountered an error. Please try again later."
+        }), 500
+
+@app.route('/health')
+def health():
+    """Health check endpoint"""
+    return jsonify({
+        "status": "healthy",
+        "documents_loaded": len(search_index.get('documents', [])),
+        "index_file_exists": os.path.exists(INDEX_FILE)
+    })
 
 if __name__ == '__main__':
     logger.info("Starting WhatsApp FAQ Bot...")
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    logger.info(f"Loaded {len(search_index.get('documents', []))} documents from index")
+    app.run(host='0.0.0.0', port=5000, debug=False)  # Changed debug to False for production
 
+
+
+
+
+
+# uses faq_index.json #
+
+# import json
+# import re
+# from flask import Flask, request, jsonify, render_template_string
+# import logging
+# from langdetect import detect, DetectorFactory, LangDetectException
+# from rapidfuzz import process, fuzz
+# import string
+# from collections import Counter
+# import math
+
+# app = Flask(__name__)
+
+# # --- CONFIGURATION ---
+# logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+# logger = logging.getLogger(__name__)
+# DetectorFactory.seed = 0
+
+# INDEX_FILE = 'faq_index.json'
+# # Enhanced language support
+# LANGUAGES = ["en", "hi", "id", "hinglish", "es", "fr", "de", "pt", "ar", "bn", "ta", "te", "mr", "gu", "kn", "ml", "pa", "or", "as", "ur"]
+# FUZZY_MATCH_THRESHOLD = 75  # Slightly lowered for better matching
+# MINIMUM_SCORE_THRESHOLD = 0.3  # Lowered for more flexible matching
+# CONTEXT_BONUS_MULTIPLIER = 1.5  # Bonus for contextually relevant matches
+
+# # Language detection patterns for better accuracy
+# LANGUAGE_PATTERNS = {
+#     'hinglish': [
+#         r'\b(hai|hain|kar|kya|kaise|kahan|kyun|matlab|bhai|yaar|abhi|phir|wala|wali)\b',
+#         r'\b(app|download|save|status|whatsapp)\b.*\b(hai|kar|kaise|kya)\b'
+#     ],
+#     'hi': [
+#         r'[\u0900-\u097F]+',  # Devanagari script
+#         r'\b(क्या|कैसे|कहाँ|क्यों|मतलब|अभी|फिर|वाला|वाली|है|हैं|करना|होना)\b'
+#     ],
+#     'ar': [r'[\u0600-\u06FF]+'],  # Arabic script
+#     'bn': [r'[\u0980-\u09FF]+'],  # Bengali script
+#     'ta': [r'[\u0B80-\u0BFF]+'],  # Tamil script
+#     'te': [r'[\u0C00-\u0C7F]+'],  # Telugu script
+#     'mr': [r'[\u0900-\u097F]+'],  # Marathi (Devanagari)
+#     'gu': [r'[\u0A80-\u0AFF]+'],  # Gujarati script
+#     'kn': [r'[\u0C80-\u0CFF]+'],  # Kannada script
+#     'ml': [r'[\u0D00-\u0D7F]+'],  # Malayalam script
+#     'pa': [r'[\u0A00-\u0A7F]+'],  # Punjabi script
+#     'ur': [r'[\u0600-\u06FF]+'],  # Urdu (Arabic script)
+# }
+
+# # --- Load search index ---
+# try:
+#     with open(INDEX_FILE, 'r', encoding='utf-8') as f:
+#         search_index = json.load(f)
+#     logger.info("Search index loaded successfully.")
+# except FileNotFoundError:
+#     logger.error(f"FATAL: '{INDEX_FILE}' not found. Please run build_index.py first.")
+#     search_index = {"documents": [], "idf_scores": {}}
+
+# # --- Enhanced Nonsense Filtering ---
+# IRRELEVANT_TOPICS = {
+#     "vehicles": {
+#         "car", "bike", "truck", "bicycle", "scooter", "train", "aeroplane", "airplane", 
+#         "jet", "boat", "ship", "bus", "auto", "rickshaw", "taxi", "metro", "helicopter",
+#         "motorcycle", "vehicle", "transport", "driving", "parking"
+#     },
+#     "appliances": {
+#         "fridge", "refrigerator", "oven", "stove", "fan", "bulb", "ac", "cooler", 
+#         "mixer", "toaster", "tv", "television", "microwave", "washing", "machine",
+#         "dishwasher", "vacuum", "heater", "iron", "blender", "grinder"
+#     },
+#     "animals": {
+#         "dog", "cat", "elephant", "horse", "monkey", "tiger", "lion", "goat", "cow",
+#         "bird", "fish", "rabbit", "chicken", "pig", "sheep", "buffalo", "deer",
+#         "snake", "lizard", "frog", "insect", "spider", "ant", "bee", "butterfly"
+#     },
+#     "foods": {
+#         "pizza", "burger", "cake", "bread", "milk", "apple", "rice", "chapati", 
+#         "noodles", "icecream", "chicken", "mutton", "fish", "egg", "vegetable",
+#         "fruit", "sweet", "spicy", "cooking", "recipe", "restaurant", "hotel"
+#     },
+#     "clothing": {
+#         "jeans", "shirt", "jacket", "tshirt", "saree", "kurta", "shoes", "cap",
+#         "dress", "pants", "socks", "underwear", "bra", "belt", "watch", "jewelry",
+#         "ring", "necklace", "earring", "bag", "purse", "wallet"
+#     },
+#     "entertainment": {
+#         "movie", "film", "song", "music", "dance", "party", "game", "cricket",
+#         "football", "tennis", "sport", "tv", "serial", "drama", "comedy",
+#         "actor", "actress", "singer", "musician", "celebrity", "star"
+#     },
+#     "education": {
+#         "school", "college", "university", "exam", "test", "study", "book",
+#         "teacher", "student", "homework", "assignment", "project", "degree",
+#         "course", "subject", "math", "science", "history", "geography"
+#     },
+#     "body_parts": {
+#         "head", "hair", "eye", "nose", "mouth", "ear", "hand", "finger", "leg",
+#         "foot", "back", "stomach", "chest", "arm", "shoulder", "knee", "elbow",
+#         "face", "skin", "tooth", "teeth", "tongue", "nail"
+#     },
+#     "nature": {
+#         "tree", "flower", "plant", "garden", "park", "mountain", "river", "sea",
+#         "ocean", "sky", "cloud", "rain", "sun", "moon", "star", "wind", "fire",
+#         "water", "earth", "stone", "rock", "sand", "grass", "leaf"
+#     },
+#     "other": {
+#         "road", "girl", "boy", "kid", "pen", "bottle", "house", "wall", "door",
+#         "window", "chair", "table", "bed", "room", "kitchen", "bathroom", "office",
+#         "market", "shop", "money", "rupee", "dollar", "bank", "atm", "card"
+#     }
+# }
+
+# # Enhanced nonsense filter with more comprehensive coverage
+# NONSENSE_FILTER = {
+#     "download": set.union(*IRRELEVANT_TOPICS.values()),
+#     "save": set.union(*IRRELEVANT_TOPICS.values()),
+#     "install": set.union(*IRRELEVANT_TOPICS.values()),
+#     "upload": set.union(*IRRELEVANT_TOPICS.values()),
+#     "record": set.union(*IRRELEVANT_TOPICS.values()),
+#     "create": set.union(*IRRELEVANT_TOPICS.values()),
+#     "make": set.union(*IRRELEVANT_TOPICS.values()),
+#     "build": set.union(*IRRELEVANT_TOPICS.values()),
+#     "get": set.union(*IRRELEVANT_TOPICS.values()),
+#     "buy": set.union(*IRRELEVANT_TOPICS.values()),
+#     "sell": set.union(*IRRELEVANT_TOPICS.values()),
+#     "find": set.union(*IRRELEVANT_TOPICS.values()),
+#     "search": set.union(*IRRELEVANT_TOPICS.values()),
+# }
+
+# # Context keywords that should boost relevance scores
+# WHATSAPP_CONTEXT_KEYWORDS = {
+#     "whatsapp", "status", "saver", "download", "save", "story", "media", "video", 
+#     "photo", "image", "chat", "message", "contact", "group", "call", "notification",
+#     "backup", "restore", "privacy", "block", "unblock", "mute", "archive", "delete",
+#     "forward", "reply", "share", "send", "receive", "online", "offline", "last seen"
+# }
+
+# def enhanced_language_detection(text):
+#     """Enhanced language detection with pattern matching and fallback"""
+#     text_lower = text.lower()
+    
+#     # First try pattern-based detection for specific languages
+#     for lang, patterns in LANGUAGE_PATTERNS.items():
+#         for pattern in patterns:
+#             if re.search(pattern, text, re.IGNORECASE):
+#                 logger.info(f"Pattern-based detection: {lang}")
+#                 return lang
+    
+#     # Try langdetect library
+#     try:
+#         detected_lang = detect(text)
+#         if detected_lang in LANGUAGES:
+#             logger.info(f"Langdetect detection: {detected_lang}")
+#             return detected_lang
+#     except LangDetectException:
+#         pass
+    
+#     # Check for mixed language indicators (Hinglish)
+#     english_words = len(re.findall(r'\b[a-zA-Z]+\b', text))
+#     total_words = len(text.split())
+#     if total_words > 0 and 0.3 <= (english_words / total_words) <= 0.8:
+#         # Check for Hindi/Devanagari characters
+#         if re.search(r'[\u0900-\u097F]', text) or \
+#            re.search(r'\b(hai|hain|kar|kya|kaise|kahan|kyun|matlab|bhai|yaar)\b', text_lower):
+#             logger.info("Mixed language detection: hinglish")
+#             return 'hinglish'
+    
+#     # Default fallback
+#     logger.info("Defaulting to English")
+#     return 'en'
+
+# def normalize_and_tokenize_query(text):
+#     """Enhanced tokenization with better handling of special characters"""
+#     if not isinstance(text, str): 
+#         return []
+    
+#     text = text.lower()
+#     # Preserve important punctuation and Unicode characters
+#     text = re.sub(r"[^\w\s\u0900-\u097F\u0600-\u06FF\u0980-\u09FF\u0B80-\u0BFF\u0C00-\u0C7F\u0A80-\u0AFF\u0C80-\u0CFF\u0D00-\u0D7F\u0A00-\u0A7F]", " ", text)
+#     # Remove extra whitespace
+#     text = re.sub(r'\s+', ' ', text).strip()
+    
+#     tokens = text.split()
+#     # Remove very short tokens (less than 2 characters) unless they're important
+#     important_short_words = {'id', 'hi', 'ok', 'no', 'go', 'do', 'me', 'my', 'we', 'up'}
+#     tokens = [token for token in tokens if len(token) >= 2 or token in important_short_words]
+    
+#     return tokens
+
+# def is_nonsensical_query(tokens):
+#     """Enhanced nonsense detection with context awareness"""
+#     if not tokens:
+#         return True
+    
+#     # Check for too short queries
+#     if len(tokens) == 1 and tokens[0] not in WHATSAPP_CONTEXT_KEYWORDS:
+#         return True
+    
+#     # Check for nonsensical combinations
+#     for verb, invalid_targets in NONSENSE_FILTER.items():
+#         if verb in tokens:
+#             invalid_count = sum(1 for word in tokens if word in invalid_targets)
+#             # If more than half the query consists of irrelevant terms
+#             if invalid_count > len(tokens) // 2:
+#                 return True
+    
+#     # Check for completely irrelevant queries
+#     irrelevant_count = 0
+#     all_irrelevant = set.union(*IRRELEVANT_TOPICS.values())
+#     for token in tokens:
+#         if token in all_irrelevant:
+#             irrelevant_count += 1
+    
+#     # If more than 70% of tokens are irrelevant and no WhatsApp context
+#     if irrelevant_count > len(tokens) * 0.7:
+#         has_context = any(token in WHATSAPP_CONTEXT_KEYWORDS for token in tokens)
+#         if not has_context:
+#             return True
+    
+#     return False
+
+# def calculate_enhanced_score(user_keywords, doc_keywords, idf_scores):
+#     """Enhanced scoring algorithm with multiple factors"""
+#     if not user_keywords or not doc_keywords:
+#         return 0
+    
+#     total_score = 0
+#     matched_keywords = set()
+#     context_bonus = 0
+    
+#     # Primary fuzzy matching score
+#     for user_word in user_keywords:
+#         best_match = process.extractOne(user_word, doc_keywords, scorer=fuzz.ratio)
+#         if best_match and best_match[1] >= FUZZY_MATCH_THRESHOLD:
+#             matched_keyword = best_match[0]
+#             matched_keywords.add(matched_keyword)
+            
+#             # Base similarity score
+#             similarity_score = best_match[1] / 100
+            
+#             # IDF importance weight
+#             keyword_importance = idf_scores.get(matched_keyword, 0.05)
+            
+#             # Context relevance bonus
+#             if user_word in WHATSAPP_CONTEXT_KEYWORDS:
+#                 context_bonus += 0.2
+            
+#             # Length penalty for very short matches
+#             length_factor = min(len(user_word) / 4, 1.0)
+            
+#             word_score = similarity_score * keyword_importance * length_factor
+#             total_score += word_score
+    
+#     # Coverage bonus - reward matching more unique keywords
+#     coverage_ratio = len(matched_keywords) / len(user_keywords) if user_keywords else 0
+#     coverage_bonus = coverage_ratio * 0.3
+    
+#     # Context bonus for WhatsApp-related queries
+#     final_score = (total_score + coverage_bonus + context_bonus)
+    
+#     # Apply context multiplier if query is clearly WhatsApp-related
+#     whatsapp_keywords_found = sum(1 for kw in user_keywords if kw in WHATSAPP_CONTEXT_KEYWORDS)
+#     if whatsapp_keywords_found >= 1:
+#         final_score *= CONTEXT_BONUS_MULTIPLIER
+    
+#     return final_score
+
+# def find_best_match(user_query):
+#     """Enhanced matching with improved scoring"""
+#     user_keywords = normalize_and_tokenize_query(user_query)
+#     if not user_keywords:
+#         return None
+
+#     documents = search_index.get('documents', [])
+#     idf_scores = search_index.get('idf_scores', {})
+
+#     best_score = 0
+#     best_match_doc = None
+    
+#     # Store all matches for potential ensemble scoring
+#     matches = []
+
+#     for doc in documents:
+#         doc_keywords = doc['keywords']
+#         current_doc_score = calculate_enhanced_score(user_keywords, doc_keywords, idf_scores)
+        
+#         matches.append((doc, current_doc_score))
+        
+#         if current_doc_score > best_score:
+#             best_score = current_doc_score
+#             best_match_doc = doc
+
+#     # Log top matches for debugging
+#     matches.sort(key=lambda x: x[1], reverse=True)
+#     logger.info(f"Top 3 matches for '{user_query}':")
+#     for i, (doc, score) in enumerate(matches[:3]):
+#         logger.info(f"  {i+1}. Score: {score:.3f} - {doc.get('id', 'Unknown')}")
+
+#     if best_match_doc and best_score >= MINIMUM_SCORE_THRESHOLD:
+#         logger.info(f"Selected match for '{user_query}' with score {best_score:.3f}")
+#         return best_match_doc
+#     else:
+#         logger.warning(f"No good match found for '{user_query}' (best score: {best_score:.3f})")
+#         return None
+
+# def get_fallback_response(lang):
+#     """Enhanced fallback responses in multiple languages"""
+#     fallback_responses = {
+#         'en': "I'm sorry, I couldn't understand that. Try asking something about WhatsApp Status Saver, like 'how to save status' or 'download WhatsApp videos'.",
+#         'hi': "माफ करें, मैं समझ नहीं पाया। WhatsApp Status Saver के बारे में कुछ पूछिए जैसे 'स्टेटस कैसे सेव करें' या 'WhatsApp वीडियो डाउनलोड करें'।",
+#         'hinglish': "Sorry, main samajh nahi paya. WhatsApp Status Saver ke bare me kuch pucho jaise 'status kaise save kare' ya 'WhatsApp video download kare'.",
+#         'es': "Lo siento, no pude entender eso. Prueba preguntando algo sobre WhatsApp Status Saver, como 'cómo guardar estado' o 'descargar videos de WhatsApp'.",
+#         'fr': "Désolé, je n'ai pas pu comprendre cela. Essayez de demander quelque chose sur WhatsApp Status Saver, comme 'comment sauvegarder le statut' ou 'télécharger des vidéos WhatsApp'.",
+#         'ar': "آسف، لم أستطع فهم ذلك. جرب أن تسأل شيئًا عن WhatsApp Status Saver، مثل 'كيفية حفظ الحالة' أو 'تحميل فيديوهات WhatsApp'.",
+#         'pt': "Desculpe, não consegui entender isso. Tente perguntar algo sobre WhatsApp Status Saver, como 'como salvar status' ou 'baixar vídeos do WhatsApp'.",
+#     }
+#     return fallback_responses.get(lang, fallback_responses['en'])
+
+# def get_nonsense_response(lang):
+#     """Enhanced nonsense responses in multiple languages"""
+#     nonsense_responses = {
+#         'en': "That doesn't seem related to WhatsApp or Status Saver. Please ask something relevant like 'how to save a status' or 'download WhatsApp media'.",
+#         'hi': "यह WhatsApp या Status Saver से संबंधित नहीं लगता। कृपया कोई प्रासंगिक प्रश्न पूछें जैसे 'स्टेटस कैसे सेव करें' या 'WhatsApp मीडिया डाउनलोड करें'।",
+#         'hinglish': "Ye WhatsApp ya Status Saver se related nahi lagta. Please koi relevant question pucho jaise 'status kaise save kare' ya 'WhatsApp media download kare'.",
+#         'es': "Eso no parece estar relacionado con WhatsApp o Status Saver. Por favor pregunta algo relevante como 'cómo guardar un estado' o 'descargar medios de WhatsApp'.",
+#         'fr': "Cela ne semble pas lié à WhatsApp ou Status Saver. Veuillez poser une question pertinente comme 'comment sauvegarder un statut' ou 'télécharger des médias WhatsApp'.",
+#         'ar': "هذا لا يبدو متعلقًا بـ WhatsApp أو Status Saver. يرجى طرح سؤال ذي صلة مثل 'كيفية حفظ حالة' أو 'تحميل وسائط WhatsApp'.",
+#         'pt': "Isso não parece estar relacionado ao WhatsApp ou Status Saver. Por favor, faça uma pergunta relevante como 'como salvar um status' ou 'baixar mídia do WhatsApp'.",
+#     }
+#     return nonsense_responses.get(lang, nonsense_responses['en'])
+
+# # --- HTML Template (Enhanced) ---
+# HTML_TEMPLATE = """
+# <!DOCTYPE html>
+# <html lang="en">
+# <head>
+#     <meta charset="UTF-8">
+#     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+#     <title>WhatsApp Status Saver - FAQ Bot</title>
+#     <style>
+#         body {
+#             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+#             margin: 0;
+#             padding: 20px;
+#             background: linear-gradient(135deg, #25D366, #128C7E);
+#             min-height: 100vh;
+#         }
+#         .container {
+#             max-width: 800px;
+#             margin: 0 auto;
+#             background: white;
+#             border-radius: 15px;
+#             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+#             overflow: hidden;
+#         }
+#         .header {
+#             background: #075E54;
+#             color: white;
+#             padding: 20px;
+#             text-align: center;
+#         }
+#         .chat-container {
+#             height: 400px;
+#             overflow-y: auto;
+#             padding: 20px;
+#             background: #f0f0f0;
+#         }
+#         .message {
+#             margin: 10px 0;
+#             padding: 10px 15px;
+#             border-radius: 10px;
+#             max-width: 80%;
+#         }
+#         .user-message {
+#             background: #DCF8C6;
+#             margin-left: auto;
+#             text-align: right;
+#         }
+#         .bot-message {
+#             background: white;
+#             border: 1px solid #ddd;
+#         }
+#         .input-container {
+#             display: flex;
+#             padding: 20px;
+#             background: white;
+#         }
+#         .input-container input {
+#             flex: 1;
+#             padding: 12px;
+#             border: 2px solid #25D366;
+#             border-radius: 25px;
+#             outline: none;
+#             font-size: 16px;
+#         }
+#         .input-container button {
+#             background: #25D366;
+#             color: white;
+#             border: none;
+#             padding: 12px 20px;
+#             margin-left: 10px;
+#             border-radius: 25px;
+#             cursor: pointer;
+#             font-size: 16px;
+#         }
+#         .input-container button:hover {
+#             background: #1ea851;
+#         }
+#         .language-info {
+#             text-align: center;
+#             padding: 10px;
+#             font-size: 12px;
+#             color: #666;
+#             background: #f9f9f9;
+#         }
+#     </style>
+# </head>
+# <body>
+#     <div class="container">
+#         <div class="header">
+#             <h1>🗨️ WhatsApp Status Saver FAQ Bot</h1>
+#             <p>Ask me anything about WhatsApp Status Saver!</p>
+#         </div>
+#         <div class="language-info">
+#             Supported languages: English, Hindi, Hinglish, Spanish, French, German, Portuguese, Arabic, Bengali, Tamil, Telugu, Marathi, Gujarati, Kannada, Malayalam, Punjabi, Oriya, Assamese, Urdu
+#         </div>
+#         <div class="chat-container" id="chatContainer">
+#             <div class="message bot-message">
+#                 Hello! I'm here to help you with WhatsApp Status Saver. You can ask me questions in multiple languages!
+#             </div>
+#         </div>
+#         <div class="input-container">
+#             <input type="text" id="messageInput" placeholder="Type your question here..." onkeypress="handleKeyPress(event)">
+#             <button onclick="sendMessage()">Send</button>
+#         </div>
+#     </div>
+
+#     <script>
+#         function handleKeyPress(event) {
+#             if (event.key === 'Enter') {
+#                 sendMessage();
+#             }
+#         }
+
+#         function sendMessage() {
+#             const input = document.getElementById('messageInput');
+#             const message = input.value.trim();
+#             if (!message) return;
+
+#             const chatContainer = document.getElementById('chatContainer');
+            
+#             // Add user message
+#             const userDiv = document.createElement('div');
+#             userDiv.className = 'message user-message';
+#             userDiv.textContent = message;
+#             chatContainer.appendChild(userDiv);
+
+#             // Clear input
+#             input.value = '';
+
+#             // Send to server
+#             fetch('/chat', {
+#                 method: 'POST',
+#                 headers: {
+#                     'Content-Type': 'application/json',
+#                 },
+#                 body: JSON.stringify({message: message})
+#             })
+#             .then(response => response.json())
+#             .then(data => {
+#                 const botDiv = document.createElement('div');
+#                 botDiv.className = 'message bot-message';
+#                 botDiv.textContent = data.response;
+#                 chatContainer.appendChild(botDiv);
+#                 chatContainer.scrollTop = chatContainer.scrollHeight;
+#             })
+#             .catch(error => {
+#                 const errorDiv = document.createElement('div');
+#                 errorDiv.className = 'message bot-message';
+#                 errorDiv.textContent = 'Sorry, there was an error processing your request.';
+#                 chatContainer.appendChild(errorDiv);
+#                 chatContainer.scrollTop = chatContainer.scrollHeight;
+#             });
+
+#             chatContainer.scrollTop = chatContainer.scrollHeight;
+#         }
+#     </script>
+# </body>
+# </html>
+# """
+
+# @app.route('/')
+# def home():
+#     return render_template_string(HTML_TEMPLATE)
+
+# @app.route('/chat', methods=['POST'])
+# def chat():
+#     user_input = request.json.get('message', '').strip()
+#     if not user_input:
+#         return jsonify({"response": "Please enter a question."})
+
+#     # Normalize and tokenize
+#     tokens = normalize_and_tokenize_query(user_input)
+
+#     # Enhanced language detection
+#     try:
+#         reply_lang = enhanced_language_detection(user_input)
+#     except Exception as e:
+#         logger.warning(f"Language detection error: {e}")
+#         reply_lang = 'en'
+
+#     # Check for nonsensical queries
+#     if is_nonsensical_query(tokens):
+#         response_text = get_nonsense_response(reply_lang)
+#         return jsonify({"response": response_text, "detected_language": reply_lang})
+
+#     # Find best matching document
+#     best_doc = find_best_match(user_input)
+
+#     if best_doc:
+#         # Get response in detected language with fallback
+#         response_text = best_doc['answers'].get(reply_lang)
+#         if not response_text:
+#             # Fallback to English if detected language not available
+#             response_text = best_doc['answers'].get('en', 'Sorry, no answer available.')
+        
+#         logger.info(f"Responding in language: {reply_lang}")
+#     else:
+#         response_text = get_fallback_response(reply_lang)
+
+#     return jsonify({
+#         "response": response_text, 
+#         "detected_language": reply_lang,
+#         "query_tokens": tokens[:5]  # First 5 tokens for debugging
+#     })
+
+# if __name__ == '__main__':
+#     logger.info("Starting Enhanced WhatsApp FAQ Bot...")
+#     logger.info(f"Supported languages: {', '.join(LANGUAGES)}")
+#     logger.info(f"Fuzzy match threshold: {FUZZY_MATCH_THRESHOLD}")
+#     logger.info(f"Minimum score threshold: {MINIMUM_SCORE_THRESHOLD}")
+#     app.run(host='0.0.0.0', port=5000, debug=True)
 
 
 # import json
