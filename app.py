@@ -685,7 +685,8 @@ def health():
 if __name__ == '__main__':
     logger.info("Starting WhatsApp FAQ Bot...")
     logger.info(f"Loaded {len(search_index.get('documents', []))} documents from index")
-    app.run(host='0.0.0.0', port=5000, debug=False)
+    app.run(host='0.0.0.0', port=5000, debug=False)  
+    
 
 # uses faq_index.json #
 
