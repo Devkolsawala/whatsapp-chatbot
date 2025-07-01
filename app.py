@@ -15,199 +15,87 @@ DetectorFactory.seed = 0
 
 INDEX_FILE = 'faq_index.json'
 LANGUAGES = ["en", "hi", "id", "hinglish"]
-FUZZY_MATCH_THRESHOLD = 75  # Lowered for better matching
-MINIMUM_SCORE_THRESHOLD = 0.3  # Lowered for flexibility
-ACTION_WEIGHT = 2.0  # Weight for action keywords
+FUZZY_MATCH_THRESHOLD = 75
+MINIMUM_SCORE_THRESHOLD = 0.5 
+ACTION_WEIGHT = 2.0
 
-# --- Load search index with better error handling ---
+# CORRECTED: Added a set of stop words to be removed from queries.
+# This is the key fix to focus the search on meaningful keywords.
+STOP_WORDS = {
+    # English
+    'a', 'an', 'and', 'are', 'as', 'at', 'be', 'by', 'for', 'from', 'has', 'have', 'how', 
+    'in', 'is', 'it', 'of', 'on', 'or', 'that', 'the', 'this', 'to', 'was', 'what', 'when',
+    'where', 'who', 'will', 'with', 'the', 'www', 'if', 'then', 'so', 'i', 'me', 'my', 'do',
+    'myself', 'we', 'our', 'ours', 'you', 'your', 'he', 'him', 'his', 'she', 'her', 'they', 
+    'them', 'their',
+    # Hinglish
+    'kar', 'kya', 'kaise', 'kyu', 'mein', 'par', 'se', 'ko', 'aur', 'ya'
+    # Note: 'hai', 'ho', etc. are removed by HINGLISH_MAPPINGS to 'is', 'be' which are also stop words.
+}
+
+
+# --- Load search index ---
 def load_search_index():
     try:
         if not os.path.exists(INDEX_FILE):
             logger.warning(f"Index file '{INDEX_FILE}' not found. Creating fallback data.")
             return create_fallback_index()
-        
         with open(INDEX_FILE, 'r', encoding='utf-8') as f:
-            search_index = json.load(f)
-        
-        if not isinstance(search_index, dict) or 'documents' not in search_index:
-            logger.warning("Invalid index structure. Creating fallback data.")
-            return create_fallback_index()
-            
-        logger.info(f"Search index loaded successfully with {len(search_index['documents'])} documents.")
-        return search_index
-        
-    except json.JSONDecodeError as e:
-        logger.error(f"JSON decode error in '{INDEX_FILE}': {e}")
-        return create_fallback_index()
-    except Exception as e:
+            return json.load(f)
+    except (json.JSONDecodeError, Exception) as e:
         logger.error(f"Error loading '{INDEX_FILE}': {e}")
         return create_fallback_index()
 
 def create_fallback_index():
-    """Create a basic fallback index for common WhatsApp Status Saver questions"""
-    return {
-        "documents": [
-            {
-                "keywords": ["download", "status", "save", "whatsapp", "story"],
-                "answers": {
-                    "en": "To save a status:\n1. View the status in WhatsApp.\n2. Open Status Saver app to see viewed statuses.\n3. Tap 'Download' to save it.",
-                    "hi": "स्टेटस सेव करने के लिए:\n1. WhatsApp में स्टेटस देखें।\n2. Status Saver ऐप खोलें, जहां देखे गए स्टेटस दिखेंगे।\n3. 'डाउनलोड' पर टैप करें।",
-                    "hinglish": "Status save karne ke liye:\n1. WhatsApp mein status dekho.\n2. Status Saver app kholo, jahan dekhe hue status dikhenge.\n3. 'Download' tap karo."
-                }
-            },
-            {
-                "keywords": ["share", "status", "whatsapp", "send", "forward", "bhej"],
-                "answers": {
-                    "en": "To share a status:\n1. Save the status using Status Saver (see save instructions).\n2. Open the saved status in the app.\n3. Tap 'Share' and select a platform or contact.",
-                    "hi": "स्टेटस शेयर करने के लिए:\n1. Status Saver से स्टेटस सेव करें (सेव करने के निर्देश देखें)।\n2. ऐप में सेव किया हुआ स्टेटस खोलें।\n3. 'शेयर' पर टैप करें और प्लेटफॉर्म या संपर्क चुनें।",
-                    "hinglish": "Status share karne ke liye:\n1. Status Saver se status save karo (save instructions dekho).\n2. App mein saved status kholo.\n3. 'Share' tap karo aur platform ya contact chuno."
-                }
-            },
-            {
-                "keywords": ["permission", "storage", "access", "allow", "settings"],
-                "answers": {
-                    "en": "If download isn’t working, check permissions:\nGo to Phone Settings > Apps > Status Saver > Permissions > Enable Storage.",
-                    "hi": "अगर डाउनलोड काम नहीं कर रहा, अनुमतियां जांचें:\nफोन सेटिंग्स > ऐप्स > Status Saver > अनुमतियां > स्टोरेज चालू करें।",
-                    "hinglish": "Agar download nahi chal raha, permissions check karo:\nPhone Settings > Apps > Status Saver > Permissions > Storage enable karo."
-                }
-            },
-            {
-                "keywords": ["error", "problem", "not", "working", "issue", "failed"],
-                "answers": {
-                    "en": "Common issues:\n1. No storage permission\n2. Low storage space\n3. Bad internet\n4. WhatsApp server issues",
-                    "hi": "आम समस्याएं:\n1. स्टोरेज अनुमति नहीं\n2. कम स्टोरेज स्पेस\n3. खराब इंटरनेट\n4. WhatsApp सर्वर समस्याएं",
-                    "hinglish": "Common problems:\n1. Storage permission nahi\n2. Kam storage space\n3. Kharab internet\n4. WhatsApp server issues"
-                }
-            }
-        ],
-        "idf_scores": {
-            "download": 0.8, "status": 0.9, "save": 0.7, "whatsapp": 0.6,
-            "share": 0.8, "send": 0.7, "forward": 0.7, "bhej": 0.6,
-            "permission": 0.8, "storage": 0.7, "error": 0.6, "problem": 0.6
-        }
-    }
+    return {"documents": [], "idf_scores": {}}
 
 search_index = load_search_index()
 
-# --- Enhanced Nonsense Filtering ---
-IRRELEVANT_TOPICS = {
-    "vehicles": {"car", "bike", "truck", "bicycle", "scooter", "train", "aeroplane", "airplane", "jet", "boat", "ship", "vehicle"},
-    "appliances": {"fridge", "refrigerator", "oven", "stove", "fan", "bulb", "ac", "cooler", "mixer", "toaster", "washing", "machine"},
-    "animals": {"dog", "cat", "elephant", "horse", "monkey", "tiger", "lion", "goat", "cow", "bird", "fish"},
-    "foods": {"pizza", "burger", "cake", "bread", "milk", "apple", "rice", "chapati", "noodles", "icecream", "food", "eat"},
-    "clothing": {"jeans", "shirt", "jacket", "tshirt", "saree", "kurta", "shoes", "cap", "dress", "clothes"},
-    "other": {"road", "tree", "girl", "boy", "kid", "pen", "bottle", "house", "wall", "weather", "time", "date"}
-}
-
-NONSENSE_FILTER = {
-    "download": set.union(*IRRELEVANT_TOPICS.values()),
-    "save": set.union(*IRRELEVANT_TOPICS.values()),
-    "install": set.union(*IRRELEVANT_TOPICS.values()),
-    "upload": set.union(*IRRELEVANT_TOPICS.values()),
-    "record": set.union(*IRRELEVANT_TOPICS.values()),
-    "share": set.union(*IRRELEVANT_TOPICS.values()),
-    "send": set.union(*IRRELEVANT_TOPICS.values()),
-    "forward": set.union(*IRRELEVANT_TOPICS.values()),
-    "bhej": set.union(*IRRELEVANT_TOPICS.values())
-}
-
-SPAM_PATTERNS = [
-    r'^[a-z]{1,3}$',  # Very short nonsense
-    r'^[0-9]+$',      # Only numbers
-    r'(.)\1{4,}',     # Repeated characters
-    r'^[^a-zA-Z0-9\s]+$'  # Only special characters
-]
-
-# Action keywords for intent recognition
+SPAM_PATTERNS = [r'(.)\1{4,}']
 ACTION_KEYWORDS = ["download", "save", "share", "send", "forward", "bhej", "install", "upload", "record"]
-
-# Expanded Hinglish mappings
 HINGLISH_MAPPINGS = {
-    "kese": "how",
-    "kaise": "how",
-    "karu": "do",
-    "karo": "do",
-    "bhej": "share",
-    "share": "share",
-    "save": "save",
-    "download": "save",
-    "kyu": "why",
-    "etna": "so",
-    "hai": "is",
-    "nahi": "not",
-    "ho": "be",
-    "tha": "was",
-    "mein": "in",
-    "par": "on",
-    "se": "from",
-    "ko": "to"
+    "kese": "how", "kaise": "how", "karu": "do", "karo": "do", "bhej": "share",
+    "kyu": "why", "etna": "so", "hai": "is", "nahi": "not", "ho": "be",
+    "tha": "was", "mein": "in", "par": "on", "se": "from", "ko": "to"
 }
 
+# CORRECTED: This function now removes stop words after normalization.
 def normalize_and_tokenize_query(text):
     if not isinstance(text, str) or len(text.strip()) == 0:
         return []
     text = text.lower().strip()
     text = re.sub(r'\s+', ' ', text)
     text = re.sub(r"[^\w\s\u0900-\u097F?!.-]", "", text)
-    tokens = [word for word in text.split() if len(word) > 1]
+    tokens = text.split()
     
-    # Map Hinglish terms
     mapped_tokens = [HINGLISH_MAPPINGS.get(token, token) for token in tokens]
-    return mapped_tokens
+    
+    # Filter out stop words to focus on the query's intent
+    filtered_tokens = [token for token in mapped_tokens if token not in STOP_WORDS]
+    
+    logger.info(f"Original tokens: {mapped_tokens}, Filtered (no stop words): {filtered_tokens}")
+    return filtered_tokens
 
 def is_nonsensical_query(text, tokens):
     for pattern in SPAM_PATTERNS:
         if re.search(pattern, text.lower()):
             return True
-    
-    if len(text.strip()) < 3:
+    if len(text.strip()) < 3 and len(tokens) == 0:
         return True
-    
-    for verb, invalid_targets in NONSENSE_FILTER.items():
-        if verb in tokens and any(word in invalid_targets for word in tokens):
-            return True
-    
-    if len(tokens) == 0:
+    if not tokens:
         return True
-        
     return False
 
 def detect_language_safe(text):
     try:
-        if len(text.strip()) < 3:
-            return 'en'
-        
-        text_lower = text.lower()
-        # Expanded Hinglish keywords
-        hinglish_keywords = [
-            "kese", "kaise", "karu", "karo", "bhej", "kyu", "hai", "etna", "nahi", 
-            "ho", "tha", "mein", "par", "se", "ko", "kya", "abhi", "phir", "wala", 
-            "wali", "aur", "ya", "toh"
-        ]
-        
-        # Check for Devanagari characters or Hinglish keywords
-        has_devanagari = bool(re.search(r'[\u0900-\u097F]', text))
-        has_hinglish = any(keyword in text_lower for keyword in hinglish_keywords)
-        
-        # Check for English words (simple heuristic)
-        english_words = sum(1 for word in text_lower.split() if word.isascii() and word.isalpha())
-        total_words = len(text_lower.split())
-        english_ratio = english_words / total_words if total_words > 0 else 0
-        
-        # Classify as Hinglish if mixed English and Hindi elements are present
-        if (has_devanagari or has_hinglish) and 0.2 <= english_ratio <= 0.8:
-            logger.info(f"Detected Hinglish for '{text}'")
-            return 'hinglish'
-        
-        # Fallback to langdetect
+        if len(text.strip()) < 3: return 'en'
         detected = detect(text)
-        logger.info(f"Langdetect result for '{text}': {detected}")
         return detected if detected in LANGUAGES else 'en'
-    except (LangDetectException, Exception) as e:
-        logger.debug(f"Language detection failed for '{text}': {e}")
+    except (LangDetectException, Exception):
         return 'en'
 
 def find_best_match(user_query):
+    # This now receives tokens with stop words already removed
     user_keywords = normalize_and_tokenize_query(user_query)
     if not user_keywords:
         return None
@@ -215,54 +103,45 @@ def find_best_match(user_query):
     documents = search_index.get('documents', [])
     idf_scores = search_index.get('idf_scores', {})
     
-    if not documents:
-        logger.warning("No documents in search index")
-        return None
-
     best_score = 0
     best_match_doc = None
 
     for doc in documents:
         doc_keywords = doc.get('keywords', [])
-        if not doc_keywords:
-            continue
+        if not doc_keywords: continue
             
         current_doc_score = 0
-        matched_keywords = 0
+        matched_keywords_count = 0
 
         for user_word in user_keywords:
             if user_word in doc_keywords:
-                keyword_importance = idf_scores.get(user_word, 0.1)
-                if user_word in ACTION_KEYWORDS:
-                    keyword_importance *= ACTION_WEIGHT
+                keyword_importance = idf_scores.get(user_word, 0.1) * (ACTION_WEIGHT if user_word in ACTION_KEYWORDS else 1.0)
                 current_doc_score += keyword_importance
-                matched_keywords += 1
+                matched_keywords_count += 1
             else:
                 best_match = process.extractOne(user_word, doc_keywords, scorer=fuzz.ratio)
                 if best_match and best_match[1] >= FUZZY_MATCH_THRESHOLD:
                     matched_keyword = best_match[0]
-                    keyword_importance = idf_scores.get(matched_keyword, 0.05)
-                    if matched_keyword in ACTION_KEYWORDS:
-                        keyword_importance *= ACTION_WEIGHT
+                    keyword_importance = idf_scores.get(matched_keyword, 0.05) * (ACTION_WEIGHT if matched_keyword in ACTION_KEYWORDS else 1.0)
                     fuzzy_score = (best_match[1] / 100) * keyword_importance
                     current_doc_score += fuzzy_score
-                    matched_keywords += 1
+                    matched_keywords_count += 1
 
-        if matched_keywords > 0:
-            current_doc_score *= (1 + (matched_keywords - 1) * 0.2)
+        # Boost score based on number of matched keywords
+        if matched_keywords_count > 0:
+            current_doc_score *= (1 + (matched_keywords_count - 1) * 0.2)
 
         if current_doc_score > best_score:
             best_score = current_doc_score
             best_match_doc = doc
 
     if best_match_doc and best_score >= MINIMUM_SCORE_THRESHOLD:
-        logger.info(f"Found match for '{user_query}' with score {best_score:.3f}")
+        logger.info(f"Found match for '{user_query}' (Doc ID: {best_match_doc.get('id')}) with score {best_score:.3f}")
         return best_match_doc
     else:
         logger.info(f"No good match found for '{user_query}' (best score: {best_score:.3f})")
         return None
 
-# --- HTML Template (unchanged) ---
 HTML_TEMPLATE = """
 <!DOCTYPE html>
 <html lang="en">
@@ -272,337 +151,34 @@ HTML_TEMPLATE = """
     <title>WhatsApp FAQ Bot</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap');
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Roboto', sans-serif;
-            background: #e5ddd5;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            padding: 20px;
-        }
-        
-        .chat-container {
-            width: 100%;
-            max-width: 450px;
-            height: 90vh;
-            max-height: 700px;
-            display: flex;
-            flex-direction: column;
-            background-color: #f0f0f0;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-            overflow: hidden;
-        }
-        
-        .chat-header {
-            background: linear-gradient(135deg, #075E54 0%, #128C7E 100%);
-            color: white;
-            padding: 15px 20px;
-            font-weight: 500;
-            font-size: 1.1rem;
-            text-align: center;
-            position: relative;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        
-        .chat-header h1 {
-            font-size: 1.1rem;
-            font-weight: 500;
-        }
-        
-        .chat-box {
-            flex-grow: 1;
-            padding: 20px;
-            overflow-y: auto;
-            background-color: #e5ddd5;
-            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"><circle cx="20" cy="20" r="1" fill="%23000" opacity="0.02"/></svg>');
-        }
-        
-        .chat-box::-webkit-scrollbar {
-            width: 6px;
-        }
-        
-        .chat-box::-webkit-scrollbar-track {
-            background: transparent;
-        }
-        
-        .chat-box::-webkit-scrollbar-thumb {
-            background: rgba(0, 0, 0, 0.2);
-            border-radius: 10px;
-        }
-        
-        .message {
-            display: flex;
-            margin-bottom: 15px;
-            max-width: 80%;
-            animation: messageSlide 0.3s ease-out;
-        }
-        
-        @keyframes messageSlide {
-            from {
-                opacity: 0;
-                transform: translateY(10px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        .message-content {
-            padding: 10px 15px;
-            border-radius: 12px;
-            line-height: 1.4;
-            white-space: pre-wrap;
-            word-wrap: break-word;
-            position: relative;
-            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-            font-size: 14px;
-        }
-        
-        .user {
-            margin-left: auto;
-            flex-direction: row-reverse;
-        }
-        
-        .user .message-content {
-            background-color: #dcf8c6;
-            color: #303030;
-            border-top-right-radius: 0;
-        }
-        
-        .bot .message-content {
-            background-color: #ffffff;
-            color: #303030;
-            border-top-left-radius: 0;
-        }
-        
-        .typing-indicator {
-            display: none;
-            padding: 10px 15px;
-            background-color: #ffffff;
-            border-radius: 12px;
-            border-top-left-radius: 0;
-            align-items: center;
-            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-            animation: messageSlide 0.3s ease-out;
-        }
-        
-        .typing-indicator span {
-            height: 8px;
-            width: 8px;
-            background-color: #999;
-            border-radius: 50%;
-            display: inline-block;
-            margin: 0 2px;
-            animation: bounce 1.3s infinite ease-in-out;
-        }
-        
-        .typing-indicator span:nth-child(2) { animation-delay: -1.1s; }
-        .typing-indicator span:nth-child(3) { animation-delay: -0.9s; }
-        
-        @keyframes bounce {
-            0%, 80%, 100% { transform: scale(0); }
-            40% { transform: scale(1.0); }
-        }
-        
-        .input-area {
-            display: flex;
-            padding: 10px;
-            background-color: #f0f0f0;
-            border-top: 1px solid #ddd;
-            gap: 10px;
-        }
-        
-        #user-input {
-            flex-grow: 1;
-            border: none;
-            padding: 12px 15px;
-            border-radius: 25px;
-            font-size: 1rem;
-            font-family: 'Roboto', sans-serif;
-            background-color: white;
-            transition: all 0.2s ease;
-        }
-        
-        #user-input:focus {
-            outline: none;
-            box-shadow: 0 0 0 2px rgba(37, 211, 102, 0.3);
-        }
-        
-        #send-btn {
-            background: linear-gradient(135deg, #128C7E 0%, #075E54 100%);
-            color: white;
-            border: none;
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            cursor: pointer;
-            font-size: 24px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transition: all 0.2s ease;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-        }
-        
-        #send-btn:hover {
-            background: linear-gradient(135deg, #075E54 0%, #128C7E 100%);
-            transform: translateY(-1px);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-        }
-        
-        #send-btn:disabled {
-            opacity: 0.6;
-            cursor: not-allowed;
-            transform: none;
-        }
-        
-        .loading { animation: spin 1s linear infinite; }
-        
-        @keyframes spin {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-        
-        @media (max-width: 480px) {
-            body { padding: 10px; }
-            .chat-container { height: 95vh; border-radius: 0; }
-            .message { max-width: 85%; }
-        }
+        body{font-family:'Roboto',sans-serif;background:#e5ddd5;display:flex;justify-content:center;align-items:center;min-height:100vh;padding:20px;margin:0}
+        .chat-container{width:100%;max-width:450px;height:90vh;max-height:700px;display:flex;flex-direction:column;background-color:#f0f0f0;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,.15);overflow:hidden}
+        .chat-header{background:linear-gradient(135deg,#075E54 0%,#128C7E 100%);color:#fff;padding:15px 20px;font-weight:500;font-size:1.1rem;text-align:center;position:relative;box-shadow:0 2px 4px rgba(0,0,0,.1)}.chat-header h1{font-size:1.1rem;font-weight:500}
+        .chat-box{flex-grow:1;padding:20px;overflow-y:auto;background-color:#e5ddd5;background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"><circle cx="20" cy="20" r="1" fill="%23000" opacity="0.02"/></svg>')}
+        .message{display:flex;margin-bottom:15px;max-width:80%;animation:messageSlide .3s ease-out}@keyframes messageSlide{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+        .message-content{padding:10px 15px;border-radius:12px;line-height:1.4;white-space:pre-wrap;word-wrap:break-word;position:relative;box-shadow:0 1px 2px rgba(0,0,0,.1);font-size:14px}
+        .user{margin-left:auto;flex-direction:row-reverse}.user .message-content{background-color:#dcf8c6;color:#303030;border-top-right-radius:0}
+        .bot .message-content{background-color:#fff;color:#303030;border-top-left-radius:0}
+        .typing-indicator{display:none;padding:10px 15px;background-color:#fff;border-radius:12px;border-top-left-radius:0;align-items:center;box-shadow:0 1px 2px rgba(0,0,0,.1);animation:messageSlide .3s ease-out}.typing-indicator span{height:8px;width:8px;background-color:#999;border-radius:50%;display:inline-block;margin:0 2px;animation:bounce 1.3s infinite ease-in-out}.typing-indicator span:nth-child(2){animation-delay:-1.1s}.typing-indicator span:nth-child(3){animation-delay:-.9s}@keyframes bounce{0%,80%,100%{transform:scale(0)}40%{transform:scale(1)}}
+        .input-area{display:flex;padding:10px;background-color:#f0f0f0;border-top:1px solid #ddd;gap:10px}
+        #user-input{flex-grow:1;border:none;padding:12px 15px;border-radius:25px;font-size:1rem;font-family:'Roboto',sans-serif;background-color:#fff;transition:all .2s ease}#user-input:focus{outline:0;box-shadow:0 0 0 2px rgba(37,211,102,.3)}
+        #send-btn{background:linear-gradient(135deg,#128C7E 0%,#075E54 100%);color:#fff;border:none;border-radius:50%;width:50px;height:50px;cursor:pointer;font-size:24px;display:flex;justify-content:center;align-items:center;transition:all .2s ease;box-shadow:0 2px 4px rgba(0,0,0,.2)}#send-btn:hover{background:linear-gradient(135deg,#075E54 0%,#128C7E 100%);transform:translateY(-1px);box-shadow:0 4px 8px rgba(0,0,0,.3)}#send-btn:disabled{opacity:.6;cursor:not-allowed;transform:none}
+        .loading{animation:spin 1s linear infinite}@keyframes spin{from{transform:rotate(0)}to{transform:rotate(360deg)}}
     </style>
 </head>
 <body>
     <div class="chat-container">
-        <div class="chat-header">
-            <h1>WhatsApp FAQ Bot</h1>
-        </div>
+        <div class="chat-header"><h1>WhatsApp FAQ Bot</h1></div>
         <div class="chat-box" id="chat-box">
-            <div class="message bot">
-                <div class="message-content">Hello! I'm here to help with WhatsApp Status Saver questions. Ask me anything about downloading or saving WhatsApp statuses!</div>
-            </div>
+            <div class="message bot"><div class="message-content">Hello! I'm here to help with WhatsApp Status Saver questions. Ask me anything about downloading or saving WhatsApp statuses!</div></div>
         </div>
         <div class="input-area">
             <input type="text" id="user-input" placeholder="Ask about WhatsApp status saving..." autocomplete="off" maxlength="200">
             <button id="send-btn">➤</button>
         </div>
     </div>
-
     <script>
-        const chatBox = document.getElementById('chat-box');
-        const userInput = document.getElementById('user-input');
-        const sendBtn = document.getElementById('send-btn');
-        let isProcessing = false;
-
-        function addMessage(content, type) {
-            const messageDiv = document.createElement('div');
-            messageDiv.classList.add('message', type);
-            
-            const messageContent = document.createElement('div');
-            messageContent.classList.add('message-content');
-            messageContent.textContent = content;
-            
-            messageDiv.appendChild(messageContent);
-            chatBox.appendChild(messageDiv);
-            
-            setTimeout(() => {
-                chatBox.scrollTop = chatBox.scrollHeight;
-            }, 100);
-        }
-
-        function showTypingIndicator() {
-            const typingDiv = document.createElement('div');
-            typingDiv.classList.add('message', 'bot');
-            typingDiv.innerHTML = '<div class="typing-indicator"><span></span><span></span><span></span></div>';
-            chatBox.appendChild(typingDiv);
-            
-            const indicator = typingDiv.querySelector('.typing-indicator');
-            indicator.style.display = 'flex';
-            
-            setTimeout(() => {
-                chatBox.scrollTop = chatBox.scrollHeight;
-            }, 100);
-        }
-
-        function hideTypingIndicator() {
-            const indicator = document.querySelector('.typing-indicator');
-            if (indicator) {
-                indicator.closest('.message').remove();
-            }
-        }
-
-        async function handleSendMessage() {
-            const message = userInput.value.trim();
-            if (!message || isProcessing) return;
-
-            isProcessing = true;
-            sendBtn.disabled = true;
-            sendBtn.innerHTML = '⟳';
-            sendBtn.classList.add('loading');
-
-            addMessage(message, 'user');
-            userInput.value = '';
-
-            showTypingIndicator();
-
-            try {
-                const response = await fetch('/chat', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ message: message })
-                });
-
-                if (!response.ok) {
-                    throw new Error(`HTTP ${response.status}`);
-                }
-
-                const data = await response.json();
-                hideTypingIndicator();
-                
-                setTimeout(() => {
-                    addMessage(data.response || 'Sorry, no response received.', 'bot');
-                }, 300);
-
-            } catch (error) {
-                hideTypingIndicator();
-                console.error('Error:', error);
-                addMessage('Sorry, something went wrong. Please try again later.', 'bot');
-            } finally {
-                isProcessing = false;
-                sendBtn.disabled = false;
-                sendBtn.innerHTML = '➤';
-                sendBtn.classList.remove('loading');
-                userInput.focus();
-            }
-        }
-
-        sendBtn.addEventListener('click', handleSendMessage);
-        
-        userInput.addEventListener('keypress', (e) => {
-            if (e.key === 'Enter' && !e.shiftKey) {
-                e.preventDefault();
-                handleSendMessage();
-            }
-        });
-
-        window.addEventListener('load', () => {
-            userInput.focus();
-        });
-
-        userInput.addEventListener('input', (e) => {
-            const value = e.target.value;
-            if (value.length > 200) {
-                e.target.value = value.substring(0, 200);
-            }
-        });
+        const chatBox=document.getElementById("chat-box"),userInput=document.getElementById("user-input"),sendBtn=document.getElementById("send-btn");let isProcessing=!1;function addMessage(e,t){const s=document.createElement("div");s.classList.add("message",t);const n=document.createElement("div");n.classList.add("message-content"),n.textContent=e,s.appendChild(n),chatBox.appendChild(s),setTimeout(()=>{chatBox.scrollTop=chatBox.scrollHeight},100)}function showTypingIndicator(){const e=document.createElement("div");e.classList.add("message","bot"),e.innerHTML='<div class="typing-indicator"><span></span><span></span><span></span></div>',chatBox.appendChild(e),e.querySelector(".typing-indicator").style.display="flex",setTimeout(()=>{chatBox.scrollTop=chatBox.scrollHeight},100)}function hideTypingIndicator(){const e=document.querySelector(".typing-indicator");e&&e.closest(".message").remove()}async function handleSendMessage(){const e=userInput.value.trim();if(!e||isProcessing)return;isProcessing=!0,sendBtn.disabled=!0,sendBtn.innerHTML="⟳",sendBtn.classList.add("loading"),addMessage(e,"user"),userInput.value="",showTypingIndicator();try{const t=await fetch("/chat",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({message:e})});if(!t.ok)throw new Error(`HTTP ${t.status}`);const s=await t.json();hideTypingIndicator(),setTimeout(()=>{addMessage(s.response||"Sorry, no response received.","bot")},300)}catch(e){hideTypingIndicator(),console.error("Error:",e),addMessage("Sorry, something went wrong. Please try again later.","bot")}finally{isProcessing=!1,sendBtn.disabled=!1,sendBtn.innerHTML="➤",sendBtn.classList.remove("loading"),userInput.focus()}}sendBtn.addEventListener("click",handleSendMessage),userInput.addEventListener("keypress",e=>{e.key==="Enter"&&!e.shiftKey&&(e.preventDefault(),handleSendMessage())}),window.addEventListener("load",()=>{userInput.focus()}),userInput.addEventListener("input",e=>{const t=e.target.value;t.length>200&&(e.target.value=t.substring(0,200))});
     </script>
 </body>
 </html>
@@ -616,77 +192,51 @@ def home():
 def chat():
     try:
         data = request.get_json()
-        if not data or 'message' not in data:
-            return jsonify({"response": "Please send a valid message."}), 400
+        if not data or 'message' not in data or not isinstance(data['message'], str):
+            return jsonify({"response": "Invalid message format."}), 400
 
-        user_input = data['message']
-        
-        if not isinstance(user_input, str):
-            return jsonify({"response": "Please send a text message."})
-        
-        user_input = user_input.strip()
-        if not user_input:
-            return jsonify({"response": "Please enter a question."})
-        
-        if len(user_input) > 200:
-            return jsonify({"response": "Please keep your question under 200 characters."})
+        user_input = data['message'].strip()
+        if not user_input or len(user_input) > 200:
+            return jsonify({"response": "Message is empty or too long."})
 
         tokens = normalize_and_tokenize_query(user_input)
         
         if is_nonsensical_query(user_input, tokens):
-            return jsonify({
-                "response": "I can help you with WhatsApp Status Saver questions. Try asking something like 'how to download status' or 'permission error'."
-            })
-
-        # Define Hinglish-specific words (excluding English words from HINGLISH_MAPPINGS)
-        hinglish_specific_words = {
-            "kese", "kaise", "karu", "karo", "bhej", "kyu", "etna", "hai", "nahi",
-            "ho", "tha", "mein", "par", "se", "ko", "kya", "abhi", "phir", "wala",
-            "wali", "aur", "ya", "toh"
-        }
-
-        # Set initial language with detect_language_safe
-        reply_lang = detect_language_safe(user_input)
-
-        # Split input into original words for exact matching
+            return jsonify({"response": "I can help with WhatsApp Status Saver. Try asking 'how to download status'."})
+        
+        # --- Language Detection ---
+        hinglish_specific_words = {"kese", "kaise", "karu", "karo", "bhej", "kyu"}
         original_tokens = [word.lower() for word in re.split(r'\W+', user_input) if word]
-        # Override to 'hinglish' only if Hinglish-specific words or Devanagari characters are present
-        if any(token in hinglish_specific_words for token in original_tokens) or re.search(r'[\u0900-\u097F]', user_input):
+        
+        if re.search(r'[\u0900-\u097F]', user_input):
+            reply_lang = 'hi'
+        elif any(token in hinglish_specific_words for token in original_tokens):
             reply_lang = 'hinglish'
+        else:
+            reply_lang = detect_language_safe(user_input)
+        
+        logger.info(f"Final detected language for reply: '{reply_lang}'")
 
         best_doc = find_best_match(user_input)
 
         if best_doc and 'answers' in best_doc:
-            response_text = best_doc['answers'].get(reply_lang, best_doc['answers'].get('en', 'Sorry, no answer available in your language.'))
+            response_text = best_doc['answers'].get(reply_lang, best_doc['answers'].get('en'))
         else:
             fallback_responses = {
-                'en': "I couldn't find a specific answer. Try asking about:\n• How to download/save a status\n• How to share a status\n• Permission/storage issues\n• App errors",
-                'hi': "मुझे विशिष्ट उत्तर नहीं मिला। पूछने की कोशिश करें:\n• स्टेटस कैसे डाउनलोड/सेव करें\n• स्टेटस कैसे शेयर करें\n• अनुमति/स्टोरेज समस्याएं\n• ऐप त्रुटियां",
-                'hinglish': "Mujhe specific answer nahi mila. Try kariye:\n• Status kaise download/save kare\n• Status kaise share kare\n• Permission/storage issues\n• App errors"
+                'en': "I couldn't find a specific answer. Try asking about:\n• How to download/save a status\n• Permission or storage issues",
+                'hi': "मुझे विशिष्ट उत्तर नहीं मिला। पूछने की कोशिश करें:\n• स्टेटस कैसे डाउनलोड/सेव करें\n• अनुमति/स्टोरेज समस्याएं",
+                'hinglish': "Mujhe specific answer nahi mila. Try pucho:\n• Status kaise download/save kare\n• Permission/storage issues"
             }
             response_text = fallback_responses.get(reply_lang, fallback_responses['en'])
 
         return jsonify({"response": response_text})
 
     except Exception as e:
-        logger.error(f"Error in chat endpoint: {e}")
-        return jsonify({
-            "response": "Sorry, I encountered an error. Please try again later."
-        }), 500
-    
-@app.route('/health')
-def health():
-    return jsonify({
-        "status": "healthy",
-        "documents_loaded": len(search_index.get('documents', [])),
-        "index_file_exists": os.path.exists(INDEX_FILE)
-    })
+        logger.error(f"Error in chat endpoint: {e}", exc_info=True)
+        return jsonify({"response": "Sorry, I encountered an error."}), 500
 
 if __name__ == '__main__':
-    logger.info("Starting WhatsApp FAQ Bot...")
-    logger.info(f"Loaded {len(search_index.get('documents', []))} documents from index")
-    app.run(host='0.0.0.0', port=5000, debug=False)  
-
+    app.run(host='0.0.0.0', port=5000, debug=False)
 # uses faq_index.json #
 
 # import json
