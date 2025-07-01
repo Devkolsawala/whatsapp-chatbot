@@ -15,8 +15,9 @@ DetectorFactory.seed = 0
 
 INDEX_FILE = 'faq_index.json'
 LANGUAGES = ["en", "hi", "id", "hinglish"]
-FUZZY_MATCH_THRESHOLD = 75  # Slightly lowered for better matching
-MINIMUM_SCORE_THRESHOLD = 0.3  # Slightly lowered for better matching
+FUZZY_MATCH_THRESHOLD = 75  # Lowered for better matching
+MINIMUM_SCORE_THRESHOLD = 0.3  # Lowered for flexibility
+ACTION_WEIGHT = 2.0  # Weight for action keywords
 
 # --- Load search index with better error handling ---
 def load_search_index():
@@ -28,7 +29,6 @@ def load_search_index():
         with open(INDEX_FILE, 'r', encoding='utf-8') as f:
             search_index = json.load(f)
         
-        # Validate index structure
         if not isinstance(search_index, dict) or 'documents' not in search_index:
             logger.warning("Invalid index structure. Creating fallback data.")
             return create_fallback_index()
@@ -50,30 +50,39 @@ def create_fallback_index():
             {
                 "keywords": ["download", "status", "save", "whatsapp", "story"],
                 "answers": {
-                    "en": "To download WhatsApp status: 1. Open the app 2. Go to Status tab 3. Tap the status you want to save 4. Press the download button",
-                    "hi": "WhatsApp स्टेटस डाउनलोड करने के लिए: 1. ऐप खोलें 2. स्टेटस टैब पर जाएं 3. जिस स्टेटस को सेव करना है उस पर टैप करें 4. डाउनलोड बटन दबाएं",
-                    "hinglish": "WhatsApp status download karne ke liye: 1. App kholiye 2. Status tab mein jaiye 3. Jo status save karna hai usse tap kariye 4. Download button dabaye"
+                    "en": "To save a status:\n1. View the status in WhatsApp.\n2. Open Status Saver app to see viewed statuses.\n3. Tap 'Download' to save it.",
+                    "hi": "स्टेटस सेव करने के लिए:\n1. WhatsApp में स्टेटस देखें।\n2. Status Saver ऐप खोलें, जहां देखे गए स्टेटस दिखेंगे।\n3. 'डाउनलोड' पर टैप करें।",
+                    "hinglish": "Status save karne ke liye:\n1. WhatsApp mein status dekho.\n2. Status Saver app kholo, jahan dekhe hue status dikhenge.\n3. 'Download' tap karo."
+                }
+            },
+            {
+                "keywords": ["share", "status", "whatsapp", "send", "forward", "bhej"],
+                "answers": {
+                    "en": "To share a status:\n1. Save the status using Status Saver (see save instructions).\n2. Open the saved status in the app.\n3. Tap 'Share' and select a platform or contact.",
+                    "hi": "स्टेटस शेयर करने के लिए:\n1. Status Saver से स्टेटस सेव करें (सेव करने के निर्देश देखें)।\n2. ऐप में सेव किया हुआ स्टेटस खोलें।\n3. 'शेयर' पर टैप करें और प्लेटफॉर्म या संपर्क चुनें।",
+                    "hinglish": "Status share karne ke liye:\n1. Status Saver se status save karo (save instructions dekho).\n2. App mein saved status kholo.\n3. 'Share' tap karo aur platform ya contact chuno."
                 }
             },
             {
                 "keywords": ["permission", "storage", "access", "allow", "settings"],
                 "answers": {
-                    "en": "If download isn't working, check permissions: Go to Phone Settings > Apps > Status Saver > Permissions > Enable Storage permission",
-                    "hi": "अगर डाउनलोड काम नहीं कर रहा तो अनुमतियां जांचें: फोन सेटिंग्स > ऐप्स > स्टेटस सेवर > अनुमतियां > स्टोरेज अनुमति चालू करें",
-                    "hinglish": "Agar download kaam nahi kar raha to permissions check kariye: Phone Settings > Apps > Status Saver > Permissions > Storage permission enable kariye"
+                    "en": "If download isn’t working, check permissions:\nGo to Phone Settings > Apps > Status Saver > Permissions > Enable Storage.",
+                    "hi": "अगर डाउनलोड काम नहीं कर रहा, अनुमतियां जांचें:\nफोन सेटिंग्स > ऐप्स > Status Saver > अनुमतियां > स्टोरेज चालू करें।",
+                    "hinglish": "Agar download nahi chal raha, permissions check karo:\nPhone Settings > Apps > Status Saver > Permissions > Storage enable karo."
                 }
             },
             {
                 "keywords": ["error", "problem", "not", "working", "issue", "failed"],
                 "answers": {
-                    "en": "Common issues: 1. Storage permission not granted 2. Low phone storage 3. Poor internet connection 4. WhatsApp servers temporarily down",
-                    "hi": "आम समस्याएं: 1. स्टोरेज अनुमति नहीं दी गई 2. फोन में कम स्टोरेज 3. धीमा इंटरनेट कनेक्शन 4. WhatsApp सर्वर अस्थायी रूप से बंद",
-                    "hinglish": "Common problems: 1. Storage permission nahi di gayi 2. Phone mein kam storage 3. Slow internet connection 4. WhatsApp servers temporarily down"
+                    "en": "Common issues:\n1. No storage permission\n2. Low storage space\n3. Bad internet\n4. WhatsApp server issues",
+                    "hi": "आम समस्याएं:\n1. स्टोरेज अनुमति नहीं\n2. कम स्टोरेज स्पेस\n3. खराब इंटरनेट\n4. WhatsApp सर्वर समस्याएं",
+                    "hinglish": "Common problems:\n1. Storage permission nahi\n2. Kam storage space\n3. Kharab internet\n4. WhatsApp server issues"
                 }
             }
         ],
         "idf_scores": {
             "download": 0.8, "status": 0.9, "save": 0.7, "whatsapp": 0.6,
+            "share": 0.8, "send": 0.7, "forward": 0.7, "bhej": 0.6,
             "permission": 0.8, "storage": 0.7, "error": 0.6, "problem": 0.6
         }
     }
@@ -95,10 +104,13 @@ NONSENSE_FILTER = {
     "save": set.union(*IRRELEVANT_TOPICS.values()),
     "install": set.union(*IRRELEVANT_TOPICS.values()),
     "upload": set.union(*IRRELEVANT_TOPICS.values()),
-    "record": set.union(*IRRELEVANT_TOPICS.values())
+    "record": set.union(*IRRELEVANT_TOPICS.values()),
+    "share": set.union(*IRRELEVANT_TOPICS.values()),
+    "send": set.union(*IRRELEVANT_TOPICS.values()),
+    "forward": set.union(*IRRELEVANT_TOPICS.values()),
+    "bhej": set.union(*IRRELEVANT_TOPICS.values())
 }
 
-# Add more sophisticated filtering
 SPAM_PATTERNS = [
     r'^[a-z]{1,3}$',  # Very short nonsense
     r'^[0-9]+$',      # Only numbers
@@ -106,43 +118,90 @@ SPAM_PATTERNS = [
     r'^[^a-zA-Z0-9\s]+$'  # Only special characters
 ]
 
+# Action keywords for intent recognition
+ACTION_KEYWORDS = ["download", "save", "share", "send", "forward", "bhej", "install", "upload", "record"]
+
+# Expanded Hinglish mappings
+HINGLISH_MAPPINGS = {
+    "kese": "how",
+    "kaise": "how",
+    "karu": "do",
+    "karo": "do",
+    "bhej": "share",
+    "share": "share",
+    "save": "save",
+    "download": "save",
+    "kyu": "why",
+    "etna": "so",
+    "hai": "is",
+    "nahi": "not",
+    "ho": "be",
+    "tha": "was",
+    "mein": "in",
+    "par": "on",
+    "se": "from",
+    "ko": "to"
+}
+
 def normalize_and_tokenize_query(text):
     if not isinstance(text, str) or len(text.strip()) == 0:
         return []
     text = text.lower().strip()
-    # Remove excessive whitespace
     text = re.sub(r'\s+', ' ', text)
-    # Keep alphanumeric, spaces, and common punctuation
     text = re.sub(r"[^\w\s\u0900-\u097F?!.-]", "", text)
-    return [word for word in text.split() if len(word) > 1]  # Filter out single characters
+    tokens = [word for word in text.split() if len(word) > 1]
+    
+    # Map Hinglish terms
+    mapped_tokens = [HINGLISH_MAPPINGS.get(token, token) for token in tokens]
+    return mapped_tokens
 
 def is_nonsensical_query(text, tokens):
-    # Check for spam patterns
     for pattern in SPAM_PATTERNS:
         if re.search(pattern, text.lower()):
             return True
     
-    # Check for very short queries
     if len(text.strip()) < 3:
         return True
     
-    # Check for irrelevant combinations
     for verb, invalid_targets in NONSENSE_FILTER.items():
         if verb in tokens and any(word in invalid_targets for word in tokens):
             return True
     
-    # Check if query has any meaningful content
     if len(tokens) == 0:
         return True
         
     return False
 
 def detect_language_safe(text):
-    """Safely detect language with fallback"""
     try:
         if len(text.strip()) < 3:
             return 'en'
+        
+        text_lower = text.lower()
+        # Expanded Hinglish keywords
+        hinglish_keywords = [
+            "kese", "kaise", "karu", "karo", "bhej", "kyu", "hai", "etna", "nahi", 
+            "ho", "tha", "mein", "par", "se", "ko", "kya", "abhi", "phir", "wala", 
+            "wali", "aur", "ya", "toh"
+        ]
+        
+        # Check for Devanagari characters or Hinglish keywords
+        has_devanagari = bool(re.search(r'[\u0900-\u097F]', text))
+        has_hinglish = any(keyword in text_lower for keyword in hinglish_keywords)
+        
+        # Check for English words (simple heuristic)
+        english_words = sum(1 for word in text_lower.split() if word.isascii() and word.isalpha())
+        total_words = len(text_lower.split())
+        english_ratio = english_words / total_words if total_words > 0 else 0
+        
+        # Classify as Hinglish if mixed English and Hindi elements are present
+        if (has_devanagari or has_hinglish) and 0.2 <= english_ratio <= 0.8:
+            logger.info(f"Detected Hinglish for '{text}'")
+            return 'hinglish'
+        
+        # Fallback to langdetect
         detected = detect(text)
+        logger.info(f"Langdetect result for '{text}': {detected}")
         return detected if detected in LANGUAGES else 'en'
     except (LangDetectException, Exception) as e:
         logger.debug(f"Language detection failed for '{text}': {e}")
@@ -172,22 +231,23 @@ def find_best_match(user_query):
         matched_keywords = 0
 
         for user_word in user_keywords:
-            # Try exact match first
             if user_word in doc_keywords:
                 keyword_importance = idf_scores.get(user_word, 0.1)
+                if user_word in ACTION_KEYWORDS:
+                    keyword_importance *= ACTION_WEIGHT
                 current_doc_score += keyword_importance
                 matched_keywords += 1
             else:
-                # Try fuzzy match
                 best_match = process.extractOne(user_word, doc_keywords, scorer=fuzz.ratio)
                 if best_match and best_match[1] >= FUZZY_MATCH_THRESHOLD:
                     matched_keyword = best_match[0]
                     keyword_importance = idf_scores.get(matched_keyword, 0.05)
+                    if matched_keyword in ACTION_KEYWORDS:
+                        keyword_importance *= ACTION_WEIGHT
                     fuzzy_score = (best_match[1] / 100) * keyword_importance
                     current_doc_score += fuzzy_score
                     matched_keywords += 1
 
-        # Boost score based on number of matched keywords
         if matched_keywords > 0:
             current_doc_score *= (1 + (matched_keywords - 1) * 0.2)
 
@@ -202,7 +262,7 @@ def find_best_match(user_query):
         logger.info(f"No good match found for '{user_query}' (best score: {best_score:.3f})")
         return None
 
-# --- HTML Template (same as before but with minor improvements) ---
+# --- HTML Template (unchanged) ---
 HTML_TEMPLATE = """
 <!DOCTYPE html>
 <html lang="en">
@@ -533,13 +593,11 @@ HTML_TEMPLATE = """
             }
         });
 
-        // Auto-focus and input validation
         window.addEventListener('load', () => {
             userInput.focus();
         });
 
         userInput.addEventListener('input', (e) => {
-            // Basic input sanitization
             const value = e.target.value;
             if (value.length > 200) {
                 e.target.value = value.substring(0, 200);
@@ -563,7 +621,6 @@ def chat():
 
         user_input = data['message']
         
-        # Input validation
         if not isinstance(user_input, str):
             return jsonify({"response": "Please send a text message."})
         
@@ -574,7 +631,6 @@ def chat():
         if len(user_input) > 200:
             return jsonify({"response": "Please keep your question under 200 characters."})
 
-        # Normalize and check for nonsense
         tokens = normalize_and_tokenize_query(user_input)
         
         if is_nonsensical_query(user_input, tokens):
@@ -582,23 +638,31 @@ def chat():
                 "response": "I can help you with WhatsApp Status Saver questions. Try asking something like 'how to download status' or 'permission error'."
             })
 
-        # Detect language
+        # Define Hinglish-specific words (excluding English words from HINGLISH_MAPPINGS)
+        hinglish_specific_words = {
+            "kese", "kaise", "karu", "karo", "bhej", "kyu", "etna", "hai", "nahi",
+            "ho", "tha", "mein", "par", "se", "ko", "kya", "abhi", "phir", "wala",
+            "wali", "aur", "ya", "toh"
+        }
+
+        # Set initial language with detect_language_safe
         reply_lang = detect_language_safe(user_input)
 
-        # Find best matching document
+        # Split input into original words for exact matching
+        original_tokens = [word.lower() for word in re.split(r'\W+', user_input) if word]
+        # Override to 'hinglish' only if Hinglish-specific words or Devanagari characters are present
+        if any(token in hinglish_specific_words for token in original_tokens) or re.search(r'[\u0900-\u097F]', user_input):
+            reply_lang = 'hinglish'
+
         best_doc = find_best_match(user_input)
 
         if best_doc and 'answers' in best_doc:
-            response_text = best_doc['answers'].get(
-                reply_lang, 
-                best_doc['answers'].get('en', 'Sorry, no answer available in your language.')
-            )
+            response_text = best_doc['answers'].get(reply_lang, best_doc['answers'].get('en', 'Sorry, no answer available in your language.'))
         else:
-            # Provide helpful fallback responses
             fallback_responses = {
-                'en': "I couldn't find a specific answer to that. Try asking about:\n• How to download WhatsApp status\n• Permission or storage issues\n• App not working problems",
-                'hi': "मुझे इसका विशिष्ट उत्तर नहीं मिला। इनके बारे में पूछने की कोशिश करें:\n• WhatsApp स्टेटस कैसे डाउनलोड करें\n• अनुमति या स्टोरेज की समस्याएं\n• ऐप काम नहीं कर रहा",
-                'hinglish': "Mujhe iska specific answer nahi mila. Ye try kariye:\n• WhatsApp status kaise download kare\n• Permission ya storage issues\n• App kaam nahi kar raha"
+                'en': "I couldn't find a specific answer. Try asking about:\n• How to download/save a status\n• How to share a status\n• Permission/storage issues\n• App errors",
+                'hi': "मुझे विशिष्ट उत्तर नहीं मिला। पूछने की कोशिश करें:\n• स्टेटस कैसे डाउनलोड/सेव करें\n• स्टेटस कैसे शेयर करें\n• अनुमति/स्टोरेज समस्याएं\n• ऐप त्रुटियां",
+                'hinglish': "Mujhe specific answer nahi mila. Try kariye:\n• Status kaise download/save kare\n• Status kaise share kare\n• Permission/storage issues\n• App errors"
             }
             response_text = fallback_responses.get(reply_lang, fallback_responses['en'])
 
@@ -609,10 +673,9 @@ def chat():
         return jsonify({
             "response": "Sorry, I encountered an error. Please try again later."
         }), 500
-
+    
 @app.route('/health')
 def health():
-    """Health check endpoint"""
     return jsonify({
         "status": "healthy",
         "documents_loaded": len(search_index.get('documents', [])),
@@ -622,12 +685,7 @@ def health():
 if __name__ == '__main__':
     logger.info("Starting WhatsApp FAQ Bot...")
     logger.info(f"Loaded {len(search_index.get('documents', []))} documents from index")
-    app.run(host='0.0.0.0', port=5000, debug=False)  # Changed debug to False for production
-
-
-
-
-
+    app.run(host='0.0.0.0', port=5000, debug=False)
 
 # uses faq_index.json #
 
