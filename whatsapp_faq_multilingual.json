@@ -140,7 +140,7 @@
       "hinglish": "Status app mein dikhne ke liye, tumhe pehle use **WhatsApp mein completely dekhna hoga**. Agar dekh liya hai aur fir bhi nahi dikh raha ya purana lag raha hai, to app ka cache clear karo (Settings > Apps > Storage) aur hamara app restart karo."
     },
     "paraphrases": {
-      "en": ["some statuses not showing", "app shows old statuses instead of new ones", "statuses missing", "status no longer available error", "expired status", "can't see new status", "only old status visible", "status not appearing", "where are the statuses"],
+      "en": ["some statuses not showing", "can not see the status","app shows old statuses instead of new ones", "statuses missing", "status no longer available error", "expired status", "can't see new status", "only old status visible", "status not appearing", "where are the statuses"],
       "hi": ["कुछ स्टेटस ऐप में क्यों नहीं दिख रहे हैं", "ऐप नए स्टेटस के बजाय पुराने स्टेटस क्यों दिखाता है", "स्टेटस गायब हैं", "पुराने स्टेटस दिख रहे हैं", "नए स्टेटस कहां हैं"],
       "hinglish": ["kuch status nahi dikh rahe", "sab status kyu nahi aa rahe", "status missing hai", "purane status dikhata hai", "status not available error", "naya status nahi dikh raha", "status kahan hain"],
       "id": ["beberapa status tidak muncul", "aplikasi menampilkan status lama", "status hilang", "tidak bisa lihat status baru", "status tidak muncul"]
